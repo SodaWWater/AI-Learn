@@ -115,6 +115,46 @@
       "verification": "MIT 许可公开题库，不属于企业真实面经；具体解析接口和模型能力必须回到当前官方文档核验",
       "question_summary": "如何从混合文本、表格和图片的 PDF 中保留版面、页码和模态关系，分别建立检索表示，并在答案中恢复可靠引用？",
       "atom_ids": ["RAG-03-003", "RAG-03-004", "RAG-03-006", "RAG-03-014", "RAG-04-011", "RAG-12-011"]
+    },
+    {
+      "id": "RAG-SCENE-012",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q4：Embedding 模型选择与评估",
+      "verification": "公开学习题库，不标记为公司真实面经；模型优劣、维度和指标结论必须由基准论文、模型文档与业务实验核验",
+      "question_summary": "面对中文、多语言、领域术语和短 Query—长 Document 的非对称检索，如何选择 Embedding 模型，并共同评估效果、维度、吞吐、存储、成本及模型升级重建风险？",
+      "atom_ids": ["RAG-05-004", "RAG-05-005", "RAG-05-006", "RAG-05-009", "RAG-05-010", "RAG-05-011", "RAG-05-012", "RAG-06-012"]
+    },
+    {
+      "id": "RAG-SCENE-013",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q10：向量数据库、检索延迟和模型升级等部署挑战",
+      "verification": "公开学习题库，不标记为公司真实面经；将原题中的多项部署挑战拆为存储与索引问题链，具体实现由数据库官方文档核验",
+      "question_summary": "向量数据库在数据增长、高并发、Metadata 过滤、删除更新和 Embedding 模型升级时，如何选择 Exact、HNSW 或 IVF，定位过滤后召回下降，并完成无停机索引迁移？",
+      "atom_ids": ["RAG-05-012", "RAG-06-001", "RAG-06-002", "RAG-06-005", "RAG-06-006", "RAG-06-010", "RAG-06-012", "RAG-06-014", "RAG-11-004"]
+    },
+    {
+      "id": "RAG-SCENE-014",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/discuss/918809114392657920",
+      "source_title": "迅雷 服务端开发（AI）一面",
+      "source_locator": "Q3：使用规则做意图路由时，如何证明规则能够覆盖线上流量",
+      "verification": "发布者自述，非企业官方题库；页面长答案可能包含作者事后整理，只确认题目线索，不直接采信答案",
+      "question_summary": "线上存在复合意图、表达省略、地域歧义和新业务类型时，如何证明规则与模型的意图识别覆盖真实流量，并用影子对比、拒识和错误路由样本发现盲区？",
+      "atom_ids": ["RAG-07-001", "RAG-07-002", "RAG-07-008", "RAG-07-010", "RAG-07-011", "RAG-07-012", "RAG-10-009", "RAG-10-011"]
+    },
+    {
+      "id": "RAG-SCENE-015",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q5：Query 改写、HyDE、Query Expansion 与 Multi-Query",
+      "verification": "公开学习题库，不标记为公司真实面经；题目只证明方法被公开讨论，适用条件与风险由原始论文和当前官方实现核验",
+      "question_summary": "长尾 Query 召回低时，如何在 Multi-Query、HyDE、子问题分解、会话改写和 Step-back Prompting 之间选择，并防止专有名词丢失、语义漂移、噪声放大及延迟失控？",
+      "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-006", "RAG-07-007", "RAG-07-009", "RAG-07-011", "RAG-07-012", "RAG-08-011"]
     }
   ]
 }

@@ -229,6 +229,198 @@
       "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-STORAGE-INDEXING"],
       "use_for": ["扫描 PDF 无法召回的工程现象", "解析子进程超时和临时文件治理", "页码溯源", "可插拔 OCR 接入"],
       "provenance_note": "公开项目实践，不作为 LiteParse 能力与参数的唯一证据；相关产品能力回到官方仓库固定提交核验。"
+    },
+    {
+      "id": "mteb-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2210.07316",
+      "version": "v3, 2023-03-19",
+      "freshness": "stable",
+      "stage_ids": ["PS-EMBEDDING", "PS-EVALUATION"],
+      "use_for": ["Embedding 多任务基准", "检索与语义文本相似度任务边界", "无单一模型在全部任务占优的实验结论", "业务数据集评估必要性"]
+    },
+    {
+      "id": "bge-m3-paper-2025",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2402.03216",
+      "version": "v5, 2025-12-12",
+      "freshness": "research",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "use_for": ["多语言 Embedding", "Dense、Sparse 与 Multi-vector 表示", "长文档和多粒度检索", "自知识蒸馏训练路线"]
+    },
+    {
+      "id": "matryoshka-representation-learning-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2205.13147",
+      "version": "v4, 2024-02-08",
+      "freshness": "stable",
+      "stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-EVALUATION"],
+      "use_for": ["Matryoshka 可截断表示原理", "向量维度与精度权衡", "粗到细表示", "存储和推理成本实验"]
+    },
+    {
+      "id": "cohere-embedding-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cohere.com/v1/docs/embeddings",
+      "version": "v1 API docs reviewed 2026-09-02; Embed v4.0 examples",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-ADVANCED-RAG"],
+      "use_for": ["search_query 与 search_document 输入类型", "多语言和多模态 Embedding", "Matryoshka 输出维度", "Float、Int8 与 Binary 压缩输出"]
+    },
+    {
+      "id": "sentence-transformers-semantic-search-2026",
+      "type": "official_documentation",
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-STORAGE-INDEXING"],
+      "use_for": ["对称与非对称语义检索", "encode_query 与 encode_document", "向量归一化后使用点积", "精确检索与 ANN 的规模边界"]
+    },
+    {
+      "id": "hnsw-paper-2018",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/1603.09320",
+      "version": "v4, 2018-08-14",
+      "freshness": "stable",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "use_for": ["HNSW 分层图结构", "近似最近邻搜索原理", "构建与查询复杂度实验", "Recall 与速度权衡"]
+    },
+    {
+      "id": "pgvector-official-repository-2026",
+      "type": "official_repository",
+      "url": "https://github.com/pgvector/pgvector/tree/e48241b4dcc045b18902914f668d03d1d399dfbe",
+      "version": "e48241b4dcc045b18902914f668d03d1d399dfbe; 2026-08-20",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["PostgreSQL 向量存储", "HNSW 与 IVFFlat 实现", "过滤与 Iterative Scan", "索引更新、删除和维护"],
+      "license": "PostgreSQL"
+    },
+    {
+      "id": "qdrant-indexing-docs-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/manage-data/indexing/",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-DATA-GOVERNANCE"],
+      "use_for": ["Vector Index 与 Payload Index 职责边界", "过滤条件基数估计", "Query Planning", "索引内存和构建成本"]
+    },
+    {
+      "id": "milvus-hnsw-docs-2026",
+      "type": "official_documentation",
+      "url": "https://milvus.io/docs/hnsw.md",
+      "version": "Milvus 3.0.x docs reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "use_for": ["HNSW 工程实现", "M 与 efConstruction 构建参数", "ef 查询参数", "内存、构建时间、延迟和召回权衡"]
+    },
+    {
+      "id": "faiss-official-repository-2026",
+      "type": "official_repository",
+      "url": "https://github.com/facebookresearch/faiss/tree/718002f7cf269f3f3752dde04a4cc3f8eabb0050",
+      "version": "718002f7cf269f3f3752dde04a4cc3f8eabb0050; 2026-09-01",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["向量索引实现族", "Exact、IVF、PQ 与 HNSW 代码入口", "CPU 与 GPU 检索", "索引基准与距离度量实现"],
+      "license": "MIT"
+    },
+    {
+      "id": "azure-agentic-retrieval-overview-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview",
+      "version": "page updated 2026-06-12; GA API 2026-04-01 and full feature set 2026-08-01-preview; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "use_for": ["复杂与多意图查询规划", "会话历史理解", "并行子查询", "知识源选择", "规划努力级别、延迟和成本权衡"]
+    },
+    {
+      "id": "adaptive-rag-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2403.14403",
+      "version": "v2, 2024-03-28; NAACL 2024",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "use_for": ["按问题复杂度选择检索策略", "无检索、单步检索和迭代检索路由", "复杂度分类器", "自适应检索实验"]
+    },
+    {
+      "id": "cohere-query-routing-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cohere.com/docs/routing-queries-to-data-sources",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-RETRIEVAL"],
+      "use_for": ["查询分类与数据源路由", "结构化输出实现", "多数据源工具描述", "路由错误对检索链路的影响"]
+    },
+    {
+      "id": "intent-understanding-clarification-eacl-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.eacl-industry.14/",
+      "version": "EACL 2026 Industry Track; reviewed 2026-09-02",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "use_for": ["意图分类与澄清组合", "歧义查询检测", "轻量模型实现", "拒识和澄清评估"]
+    },
+    {
+      "id": "hyde-2022",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2212.10496",
+      "version": "v1, 2022-12-20",
+      "freshness": "stable",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-EMBEDDING", "PS-RETRIEVAL"],
+      "use_for": ["HyDE 假设文档嵌入", "无监督零样本稠密检索", "生成文档到真实语料的向量瓶颈", "多任务和多语言实验"]
+    },
+    {
+      "id": "rewrite-retrieve-read-emnlp-2023",
+      "type": "paper",
+      "url": "https://aclanthology.org/2023.emnlp-main.322/",
+      "version": "EMNLP 2023; DOI 10.18653/v1/2023.emnlp-main.322",
+      "freshness": "stable",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "use_for": ["Rewrite-Retrieve-Read 框架", "可训练查询重写器", "Black-box LLM 的检索适配", "重写与检索端到端评估"]
+    },
+    {
+      "id": "step-back-prompting-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2310.06117",
+      "version": "v2, 2024-03-12; ICLR 2024",
+      "freshness": "stable",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-ANSWER-GENERATION"],
+      "use_for": ["Step-back Prompting 抽象问题生成", "事实与原则检索", "原问题和抽象问题联合推理", "知识问答和多跳推理实验"]
+    },
+    {
+      "id": "qrecc-naacl-2021",
+      "type": "paper",
+      "url": "https://aclanthology.org/2021.naacl-main.44/",
+      "version": "NAACL 2021; DOI 10.18653/v1/2021.naacl-main.44",
+      "freshness": "stable",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["会话查询重写", "省略与指代消解", "独立查询生成", "开放域会话问答评估"]
+    },
+    {
+      "id": "azure-semantic-query-rewrite-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/semantic-how-to-query-rewrite",
+      "version": "page updated 2026-07-02; API 2026-08-01-preview; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["生成式查询改写 API", "原查询与多个改写并行检索", "Preview 状态和失败降级", "精确标识符被改写丢失的风险"]
+    },
+    {
+      "id": "cohere-parallel-query-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cohere.com/docs/generating-parallel-queries",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-QUERY-ROUTING", "PS-RESULT-FUSION"],
+      "use_for": ["复合查询分解", "并行查询生成", "多数据源检索", "结果汇合前的查询规划实现"]
+    },
+    {
+      "id": "nowcoder-xunlei-ai-intent-routing-2026",
+      "type": "first_person_interview",
+      "url": "https://www.nowcoder.com/discuss/918809114392657920",
+      "version": "page published 2026-08-17; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["规则意图路由覆盖率问题", "复合意图、表达省略和歧义", "影子流量对比", "拒识率与错误路由率"],
+      "provenance_note": "发布者自述为迅雷服务端开发（AI）一面；页面同时包含整理后的长答案，只把题目出现和场景作为线索，技术结论另回到论文与官方文档核验。"
     }
   ]
 }

@@ -16,10 +16,10 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
-    "current_sources": 26,
-    "public_problem_leads": 11,
+    "current_sources": 47,
+    "public_problem_leads": 15,
     "search_stages_total": 18,
-    "search_stages_round_1_complete": 4,
+    "search_stages_round_1_complete": 8,
     "coverage_saturated_stages": 0,
     "latest_search_date": "2026-09-02"
   },
@@ -230,14 +230,14 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-002",
-    "instruction": "Continue first-round Chinese and English source and public-question searches for PS-EMBEDDING through PS-ADVANCED-RAG; register source decisions and node-specific logs without marking coverage saturated."
+    "instruction": "Continue first-round Chinese and English source and public-question searches for PS-QUERY-ROUTING through PS-ADVANCED-RAG; next complete PS-QUERY-ROUTING through PS-RERANKING, register source decisions and node-specific logs, and do not mark coverage saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
     "Do not continue batch-generating RAG-04 and later chapters under the old template.",
     "Do not mark the legacy first drafts as formal content.",
     "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
-    "The first search round is complete only for PS-DATA-INGESTION through PS-CHUNKING; the remaining 14 stages are still not started.",
+    "The first search round is complete for PS-DATA-INGESTION through PS-QUERY-REWRITE; the remaining 10 stages are still not started.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
 }
