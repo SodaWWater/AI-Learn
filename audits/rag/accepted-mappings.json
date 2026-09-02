@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-02",
+  "status": "partial",
+  "rule": "一个来源单元可以支持多个原子知识点；只有人工确认的映射进入本文件。",
+  "mappings": [
+    {
+      "source_unit_id": "RU-3ce75b911ef9",
+      "decision": "map",
+      "atom_ids": ["RAG-01-001"],
+      "note": "章节入口，仅证明来源覆盖 RAG 基础，不作为完整答案。"
+    },
+    {
+      "source_unit_id": "RU-688177e0f7bf",
+      "decision": "map",
+      "atom_ids": ["RAG-01-002"],
+      "note": "知识冻结问题。"
+    },
+    {
+      "source_unit_id": "RU-89f609a78b3b",
+      "decision": "map",
+      "atom_ids": ["RAG-01-002"],
+      "note": "与知识冻结同一原子，但保留独立来源。"
+    },
+    {
+      "source_unit_id": "RU-df36578080e9",
+      "decision": "map",
+      "atom_ids": ["RAG-01-002"],
+      "note": "知识时效与训练截止日期。"
+    },
+    {
+      "source_unit_id": "RU-92ef9bf78e07",
+      "decision": "map",
+      "atom_ids": ["RAG-01-003"],
+      "note": "企业私域知识未进入模型参数。"
+    },
+    {
+      "source_unit_id": "RU-31bd0ac1b1a0",
+      "decision": "map",
+      "atom_ids": ["RAG-01-005"],
+      "note": "微调作为知识注入方式的描述，需要后续事实边界审计。"
+    },
+    {
+      "source_unit_id": "RU-bac6600ff602",
+      "decision": "map",
+      "atom_ids": ["RAG-01-005"],
+      "note": "RAG 与参数更新的区别。"
+    },
+    {
+      "source_unit_id": "RU-31f4f9d4ff81",
+      "decision": "map",
+      "atom_ids": ["RAG-01-005"],
+      "note": "RAG 与微调组合使用的经验性表述，后续需要补充反例和边界。"
+    },
+    {
+      "source_unit_id": "RU-a669d01a04c9",
+      "decision": "map",
+      "atom_ids": ["RAG-12-019"],
+      "note": "自动模块分类被人工纠正为高级范式。"
+    },
+    {
+      "source_unit_id": "RU-81621e93aef8",
+      "decision": "map",
+      "atom_ids": ["RAG-01-001", "RAG-02-001", "RAG-02-002"],
+      "note": "一道题同时包含定义、离线与在线流程，不能压成单一知识点。"
+    },
+    {
+      "source_unit_id": "RU-ebb237c2035b",
+      "decision": "map",
+      "atom_ids": ["RAG-01-002", "RAG-01-003", "RAG-01-004"],
+      "note": "覆盖时效、私域知识和幻觉缓解三个不同问题。"
+    },
+    {
+      "source_unit_id": "RU-a06661cbb463",
+      "decision": "map",
+      "atom_ids": ["RAG-01-005"],
+      "note": "RAG 与微调比较题。"
+    }
+  ]
+}

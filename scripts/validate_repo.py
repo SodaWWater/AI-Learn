@@ -20,6 +20,9 @@ REQUIRED = [
     "knowledge/rag/README.md",
     "knowledge/rag/catalog.json",
     "knowledge/rag/catalog.md",
+    "audits/rag/source-units.json",
+    "audits/rag/atom-suggestions.json",
+    "audits/rag/accepted-mappings.json",
     "audits/rag/acceptance.md",
     "templates/knowledge-note.md",
 ]
@@ -149,10 +152,37 @@ def main() -> int:
             for candidate in mapping.get("candidates", []):
                 if candidate.get("atom_id") not in atom_ids:
                     errors.append(f"候选引用未知知识原子：{candidate.get('atom_id')}")
-        if args.strict_rag:
-            pending = [item for item in mappings if item.get("review_status") == "pending"]
-            if pending:
-                errors.append(f"严格 RAG 验收仍有 {len(pending)} 个原子映射待人工复核")
+    accepted_path = ROOT / "audits/rag/accepted-mappings.json"
+    accepted_source_unit_ids: set[str] = set()
+    if accepted_path.exists():
+        accepted = load_json("audits/rag/accepted-mappings.json", errors)
+        accepted_mappings = accepted.get("mappings", [])
+        accepted_ids = [item.get("source_unit_id") for item in accepted_mappings]
+        accepted_source_unit_ids = set(accepted_ids)
+        if repeated := duplicates(accepted_ids):
+            errors.append(f"accepted-mappings.json 来源单元重复：{repeated[:10]}")
+        for mapping in accepted_mappings:
+            if mapping.get("source_unit_id") not in source_unit_ids:
+                errors.append(f"人工映射引用未知来源单元：{mapping.get('source_unit_id')}")
+            decision = mapping.get("decision")
+            atom_refs = mapping.get("atom_ids", [])
+            if decision == "map" and not atom_refs:
+                errors.append(f"人工 map 决策没有知识原子：{mapping.get('source_unit_id')}")
+            for atom_id in atom_refs:
+                if atom_id not in atom_ids:
+                    errors.append(f"人工映射引用未知知识原子：{atom_id}")
+    elif args.strict_rag:
+        errors.append("严格 RAG 验收缺少 accepted-mappings.json")
+
+    if args.strict_rag and inventory_path.exists():
+        reviewable_ids = {
+            unit.get("id")
+            for unit in load_json("audits/rag/source-units.json", errors).get("units", [])
+            if unit.get("review_status") == "mapped"
+        }
+        remaining = reviewable_ids - accepted_source_unit_ids
+        if remaining:
+            errors.append(f"严格 RAG 验收仍有 {len(remaining)} 个来源单元待人工复核")
 
     if args.strict_rag:
         acceptance = (ROOT / "audits/rag/acceptance.md").read_text(encoding="utf-8")
