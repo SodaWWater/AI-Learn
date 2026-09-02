@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-02",
+  "batch": "RAG-03 文档解析与数据治理",
+  "rule": "同类工具标题可共享一项人工决策，但每个来源单元 ID 仍独立计入覆盖率。",
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-9d57ab0abeac"],
+      "decision": "map",
+      "atom_ids": ["RAG-01-008"],
+      "note": "Prompt Engineering 与 Context Engineering 对比，不属于文档解析；纠正自动误分类。"
+    },
+    {
+      "source_unit_ids": ["RU-bb9ce88f79e0"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-013", "RAG-12-011"],
+      "note": "多模态 RAG 文档解析工具选型。"
+    },
+    {
+      "source_unit_ids": ["RU-1f9ed5fe4d3c", "RU-b96a8e1ac7e6", "RU-fb860b22653f"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-013"],
+      "note": "文档解析方案或项目清单入口。"
+    },
+    {
+      "source_unit_ids": ["RU-e9c653e1db8c"],
+      "decision": "map",
+      "atom_ids": ["RAG-02-004", "RAG-03-013"],
+      "note": "Pipeline 式解析方案同时说明组件边界和工具选型。"
+    },
+    {
+      "source_unit_ids": ["RU-506350bc4b21", "RU-6a6b8627f25a", "RU-ea0d5db065c4", "RU-cc48baaa0340", "RU-ced27b7f2593"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-013"],
+      "note": "解析方案的效果比较、快速选型和决策树。"
+    },
+    {
+      "source_unit_ids": ["RU-91058b8a681d", "RU-14bb7259f218"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-014"],
+      "note": "解析优化、常见错误和解决策略。"
+    },
+    {
+      "source_unit_ids": ["RU-feb9d4bebc50"],
+      "decision": "map",
+      "atom_ids": ["RAG-02-004", "RAG-03-009", "RAG-03-013", "RAG-03-014"],
+      "note": "完整解析 Pipeline 覆盖组件组合、清洗、工具与质量回退。"
+    },
+    {
+      "source_unit_ids": ["RU-4500767c70c8"],
+      "decision": "map",
+      "atom_ids": ["RAG-13-004", "RAG-13-012"],
+      "note": "文档解析的面试题和选型表达。"
+    },
+    {
+      "source_unit_ids": ["RU-e05d10f2f7f4", "RU-b5009110a47b", "RU-d01ba7d0b6d2", "RU-fa308899f4ef", "RU-6dfeb60beb79", "RU-cbf329dc4e61", "RU-5aa1bc0de488"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-013"],
+      "note": "通用、端到端或平台型文档解析器的能力与选型。"
+    },
+    {
+      "source_unit_ids": ["RU-1d8de4ba3db1", "RU-9c27e40b7fcd", "RU-dd684394d26c", "RU-b1f13990a71a", "RU-ae3205ad5e54"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-003", "RAG-03-013"],
+      "note": "面向扫描文档或文档图像的 OCR/解析模型。"
+    },
+    {
+      "source_unit_ids": ["RU-3812f3d1cc50", "RU-71d4f439c7d8", "RU-0e53780d39eb", "RU-675952fb7b33", "RU-257f987e06bd", "RU-3dbc74e008e8"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-007", "RAG-03-013", "RAG-12-011"],
+      "note": "视觉语言模型用于图片、图表和多模态文档理解。"
+    },
+    {
+      "source_unit_ids": ["RU-8fd0f9626b2d"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-004", "RAG-03-006", "RAG-03-013"],
+      "note": "PP-Structure 同时覆盖版面与表格结构恢复。"
+    },
+    {
+      "source_unit_ids": ["RU-9c9669ac165b"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-003"],
+      "note": "文本识别/OCR 方法入口。"
+    },
+    {
+      "source_unit_ids": ["RU-7689763f1fc7", "RU-cf8c395f410b", "RU-38096cd17315", "RU-fe984a40233a", "RU-bf5760b0cdcd"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-003", "RAG-03-013"],
+      "note": "OCR 工具能力与选型。"
+    },
+    {
+      "source_unit_ids": ["RU-b42205fef89a"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-004"],
+      "note": "版式布局分析方法入口。"
+    },
+    {
+      "source_unit_ids": ["RU-c274523ad28e", "RU-208f3d6eda48", "RU-0adb110acb1a", "RU-43d9656a698b", "RU-e7558eb1c339", "RU-2fb0378c2d7f"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-004", "RAG-03-013"],
+      "note": "版面检测、布局理解或结构恢复模型。"
+    },
+    {
+      "source_unit_ids": ["RU-cc872c3742a2"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-008"],
+      "note": "公式解析方法入口。"
+    },
+    {
+      "source_unit_ids": ["RU-4ed5ca0cc789", "RU-807e81dfd085", "RU-68c156f750c3"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-008", "RAG-03-013"],
+      "note": "公式识别与 LaTeX 解析工具。"
+    },
+    {
+      "source_unit_ids": ["RU-d0f8360bef84"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-006"],
+      "note": "表格解析方法入口。"
+    },
+    {
+      "source_unit_ids": ["RU-a5ec7e80ac53", "RU-7348eeb45857", "RU-a97813278ad8"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-006", "RAG-03-013"],
+      "note": "表格结构识别和解析工具。"
+    },
+    {
+      "source_unit_ids": ["RU-9f3a410e2a6a"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-001", "RAG-03-002", "RAG-03-004", "RAG-03-005", "RAG-03-013", "RAG-03-014"],
+      "note": "多格式解析、PDF 坑点、版面噪声、工具和抽检策略。"
+    },
+    {
+      "source_unit_ids": ["RU-fdf8d95db21d"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-003", "RAG-03-009"],
+      "note": "OCR 流程、识别噪声及后处理。"
+    },
+    {
+      "source_unit_ids": ["RU-5d87e664650a"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-006", "RAG-03-007", "RAG-03-015"],
+      "note": "表格、图片及图文相邻关系处理。"
+    },
+    {
+      "source_unit_ids": ["RU-75593695b35f"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-009", "RAG-03-010", "RAG-03-012"],
+      "note": "编码、空白、格式、去重和 PII 清洗。"
+    },
+    {
+      "source_unit_ids": ["RU-3340349c0991", "RU-36022916cf83", "RU-c9b0ad984cb8"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-001", "RAG-03-002", "RAG-03-013", "RAG-03-014"],
+      "note": "Go、Java、Python 的 MIME 路由和 PDF/文本解析实现。"
+    },
+    {
+      "source_unit_ids": ["RU-3afb795c9016", "RU-3904d7cbb8e2", "RU-28d65fd7b2ed"],
+      "decision": "map",
+      "atom_ids": ["RAG-02-004", "RAG-03-013"],
+      "note": "Go、Java、Python 的解析到分块 ETL 组件组合。"
+    },
+    {
+      "source_unit_ids": ["RU-241691196486"],
+      "decision": "map",
+      "atom_ids": ["RAG-02-007", "RAG-06-003", "RAG-06-004"],
+      "note": "内容实际是 Chunk 的向量、原文、元数据及 ID 存储结构；纠正自动误分类。"
+    },
+    {
+      "source_unit_ids": ["RU-2937ee9ff003"],
+      "decision": "map",
+      "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-009"],
+      "note": "内容实际是 Query Rewrite、HyDE、多角度扩写和会话指代补全；纠正自动误分类。"
+    },
+    {
+      "source_unit_ids": ["RU-859ab7a3a2f8"],
+      "decision": "map",
+      "atom_ids": ["RAG-03-001", "RAG-03-002", "RAG-03-003", "RAG-03-004", "RAG-03-006", "RAG-03-007", "RAG-03-008", "RAG-03-013", "RAG-03-014"],
+      "note": "生产文档预处理的多格式、PDF、OCR、表格、图片、代码、工具成本和质量问题。"
+    }
+  ]
+}

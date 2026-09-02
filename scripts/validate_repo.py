@@ -156,19 +156,29 @@ def main() -> int:
     accepted_path = ROOT / "audits/rag/accepted-mappings.json"
     accepted_source_unit_ids: set[str] = set()
     if accepted_path.exists():
-        accepted = load_json("audits/rag/accepted-mappings.json", errors)
-        accepted_mappings = accepted.get("mappings", [])
-        accepted_ids = [item.get("source_unit_id") for item in accepted_mappings]
+        accepted_files = [accepted_path, *sorted((ROOT / "audits/rag/reviewed").glob("*.json"))]
+        accepted_mappings = []
+        for path in accepted_files:
+            payload = load_json(str(path.relative_to(ROOT)), errors)
+            accepted_mappings.extend(payload.get("mappings", []))
+        accepted_ids: list[str] = []
+        for item in accepted_mappings:
+            if "source_unit_ids" in item:
+                accepted_ids.extend(item.get("source_unit_ids", []))
+            else:
+                accepted_ids.append(item.get("source_unit_id"))
         accepted_source_unit_ids = set(accepted_ids)
         if repeated := duplicates(accepted_ids):
             errors.append(f"accepted-mappings.json 来源单元重复：{repeated[:10]}")
         for mapping in accepted_mappings:
-            if mapping.get("source_unit_id") not in source_unit_ids:
-                errors.append(f"人工映射引用未知来源单元：{mapping.get('source_unit_id')}")
+            unit_refs = mapping.get("source_unit_ids", [mapping.get("source_unit_id")])
+            for unit_ref in unit_refs:
+                if unit_ref not in source_unit_ids:
+                    errors.append(f"人工映射引用未知来源单元：{unit_ref}")
             decision = mapping.get("decision")
             atom_refs = mapping.get("atom_ids", [])
             if decision == "map" and not atom_refs:
-                errors.append(f"人工 map 决策没有知识原子：{mapping.get('source_unit_id')}")
+                errors.append(f"人工 map 决策没有知识原子：{unit_refs[:3]}")
             for atom_id in atom_refs:
                 if atom_id not in atom_ids:
                     errors.append(f"人工映射引用未知知识原子：{atom_id}")
