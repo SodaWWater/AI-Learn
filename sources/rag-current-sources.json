@@ -167,7 +167,7 @@
       "id": "parsebench-2026",
       "type": "paper",
       "url": "https://arxiv.org/abs/2604.08538",
-      "version": "v1, 2026-04-09; reviewed 2026-09-02",
+      "version": "v2; reviewed 2026-09-02",
       "freshness": "research",
       "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EVALUATION"],
       "use_for": ["文档解析基准", "复杂文档任务覆盖", "解析器能力与 Agent 下游使用的连接"]
@@ -701,6 +701,51 @@
       "freshness": "research",
       "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-ADVANCED-RAG", "PS-EVALUATION"],
       "use_for": ["Visual Document Retrieval", "Vision Language Model", "Multi-vector Late Interaction", "文档截图直接检索"]
+    },
+    {
+      "id": "debezium-features-docs-2026",
+      "type": "official_documentation",
+      "url": "https://debezium.io/documentation/reference/stable/features.html",
+      "version": "stable docs reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Log-based Change Data Capture", "数据库变更事件", "Polling 与 Dual Write 边界", "事件顺序和完整性"]
+    },
+    {
+      "id": "debezium-architecture-docs-2026",
+      "type": "official_documentation",
+      "url": "https://debezium.io/documentation/reference/stable/architecture.html",
+      "version": "stable docs reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["CDC Pipeline Architecture", "Kafka Connect Source/Sink", "变更事件传播", "下游索引更新连接"]
+    },
+    {
+      "id": "nist-privacy-framework-2020",
+      "type": "official_documentation",
+      "url": "https://www.nist.gov/document/nist-privacy-frameworkv10pdf",
+      "version": "NIST Privacy Framework 1.0, 2020-01-16",
+      "freshness": "stable",
+      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Privacy Risk Management", "Identify-P、Govern-P、Control-P、Communicate-P、Protect-P", "数据处理与保留治理"]
+    },
+    {
+      "id": "aws-genai-data-lifecycle-guidance-2026",
+      "type": "official_documentation",
+      "url": "https://docs.aws.amazon.com/pdfs/prescriptive-guidance/latest/strategy-data-considerations-gen-ai/strategy-data-considerations-gen-ai.pdf",
+      "version": "AWS Prescriptive Guidance reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Generative AI Data Lifecycle", "数据安全和策略", "来源到消费的治理", "云上工程实践"]
+    },
+    {
+      "id": "query-adaptive-semantic-chunking-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2605.22834",
+      "version": "v2, 2026-05; reviewed 2026-09-02",
+      "freshness": "research",
+      "stage_ids": ["PS-CHUNKING", "PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Query-adaptive Chunking", "Contextual Window Expansion", "查询时动态边界", "静态切分替代路线"]
     }
   ]
 }

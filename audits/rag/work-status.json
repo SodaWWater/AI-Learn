@@ -16,10 +16,11 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
-    "current_sources": 78,
+    "current_sources": 83,
     "public_problem_leads": 21,
     "search_stages_total": 18,
     "search_stages_round_1_complete": 18,
+    "search_stages_round_2_complete": 4,
     "coverage_saturated_stages": 0,
     "latest_search_date": "2026-09-02"
   },
@@ -230,7 +231,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-002",
-    "instruction": "Continue without waiting for user confirmation: run an independent second-round gap search across all 18 stages, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds before coverage_saturated."
+    "instruction": "Continue without waiting for user confirmation: complete the independent second-round gap search for PS-EMBEDDING through PS-ADVANCED-RAG, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds before coverage_saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
