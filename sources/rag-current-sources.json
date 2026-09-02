@@ -746,6 +746,143 @@
       "freshness": "research",
       "stage_ids": ["PS-CHUNKING", "PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-EVALUATION"],
       "use_for": ["Query-adaptive Chunking", "Contextual Window Expansion", "查询时动态边界", "静态切分替代路线"]
+    },
+    {
+      "id": "e5-base-v2-model-card-2026",
+      "type": "official_documentation",
+      "url": "https://huggingface.co/intfloat/e5-base-v2/tree/f52bf8e",
+      "version": "model revision f52bf8e; reviewed 2026-09-02",
+      "license": "MIT",
+      "freshness": "active",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["E5 Query/Passage Prefix Contract", "Mean Pooling and L2 Normalization", "512 Token Truncation", "English-only Model Limitation"]
+    },
+    {
+      "id": "bge-m3-model-card-2026",
+      "type": "official_documentation",
+      "url": "https://huggingface.co/BAAI/bge-m3/raw/ecf34d3096437e53f2c163f370b4135980d2e024/README.md",
+      "version": "model-card revision ecf34d3096437e53f2c163f370b4135980d2e024; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-RERANKING"],
+      "use_for": ["Dense、Sparse and Multi-vector Outputs", "BGE-M3 Query Instruction Contract", "FP16 Accuracy Trade-off", "Fine-tuning Entry Point"]
+    },
+    {
+      "id": "sentence-transformers-hard-negative-docs-2026",
+      "type": "official_documentation",
+      "url": "https://www.sbert.net/docs/package_reference/util/hard_negatives.html",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-EVALUATION"],
+      "use_for": ["Hard Negative Mining", "False-negative Guard Margins", "Cross-encoder Rescoring", "Prompt-aware Cache Invalidation"]
+    },
+    {
+      "id": "sentence-transformers-embedding-quantization-docs-2026",
+      "type": "official_documentation",
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/embedding-quantization/README.html",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Binary and Scalar Quantization", "Calibration Embeddings", "Quantized Retrieval Rescoring", "Accuracy-Memory-Latency Regression"]
+    },
+    {
+      "id": "diskann-paper-2019",
+      "type": "paper",
+      "url": "https://proceedings.neurips.cc/paper/2019/hash/09853c7fb1d3f8ee67a61b6bf4a7f8e6-Abstract.html",
+      "version": "NeurIPS 2019",
+      "freshness": "stable",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["SSD-backed Approximate Nearest Neighbor Search", "Vamana Graph Index", "Billion-scale Recall-Latency-Density Trade-off", "Hardware-specific Benchmark Boundary"]
+    },
+    {
+      "id": "qdrant-multitenancy-docs-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/manage-data/multitenancy/",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Payload-based Multitenancy", "Tenant Index", "Collection-per-tenant Boundary", "Tenant Isolation and Cardinality"]
+    },
+    {
+      "id": "qdrant-consistency-docs-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/scaling/consistency-guarantees/",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Replication", "Write Ordering", "Read Consistency", "Availability-Consistency Trade-off"]
+    },
+    {
+      "id": "milvus-clustering-compaction-docs-2026",
+      "type": "official_documentation",
+      "url": "https://milvus.io/docs/v2.6.x/clustering-compaction.md",
+      "version": "Milvus 2.6.x docs reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Clustering Compaction", "PartitionStats", "Segment Pruning", "Filter-selectivity Benchmark"]
+    },
+    {
+      "id": "milvus-backup-docs-2026",
+      "type": "official_documentation",
+      "url": "https://milvus.io/docs/milvus_backup_cli.md",
+      "version": "Milvus docs reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Milvus Backup CLI", "Collection Backup and Restore", "Cross-storage Restore Configuration", "Recovery Validation"]
+    },
+    {
+      "id": "langchain-self-query-hana-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.langchain.com/oss/javascript/integrations/retrievers/self_query/hanavector_self_query",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-STORAGE-INDEXING"],
+      "use_for": ["Self-query Retriever", "Attribute Schema", "Natural-language-to-Metadata Filter", "Structured Query Translation"]
+    },
+    {
+      "id": "azure-search-security-filter-docs-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search",
+      "version": "page updated 2026-08-24; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Document-level Security Filter", "Authenticated Principal Injection", "OData search.in Filter", "Authorization Boundary"]
+    },
+    {
+      "id": "ood-intent-detection-emnlp-2025",
+      "type": "paper",
+      "url": "https://aclanthology.org/2025.findings-emnlp.791/",
+      "version": "Findings of EMNLP 2025",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-EVALUATION"],
+      "use_for": ["Near-OOD Intent Detection", "Semantic and Covariate Shift", "Reject Option", "ID/OOD Error Trade-off"]
+    },
+    {
+      "id": "ia-rag-temporal-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2606.06044",
+      "version": "v1, 2026-06-04",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-ADVANCED-RAG", "PS-EVALUATION"],
+      "use_for": ["Temporal Constraint Understanding", "Interval Algebra", "Incomplete Temporal Boundary", "Temporal Retrieval Evaluation"]
+    },
+    {
+      "id": "rag-fusion-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2402.03367",
+      "version": "v1, 2024-01-31",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-EVALUATION"],
+      "use_for": ["Multi-query Generation plus RRF", "Original-query Preservation", "Off-topic Expansion Failure", "Latency and Relevance Evaluation"]
+    },
+    {
+      "id": "nowcoder-enterprise-rag-system-interview-2026",
+      "type": "first_person_interview",
+      "url": "https://www.nowcoder.com/discuss/904058990026420224",
+      "version": "page published 2026-07-07; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Enterprise RAG System Design Question", "Incremental Indexing", "Multi-tenant Isolation", "P99 Latency and Retrieval Evaluation"],
+      "provenance_note": "发布者自述为企业 SaaS 公司第三轮面试；公司身份、指标和实现数据未经企业官方确认，只登记题目条件，技术结论另用官方文档和论文核验。"
     }
   ]
 }

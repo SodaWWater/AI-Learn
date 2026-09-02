@@ -16,11 +16,11 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
-    "current_sources": 83,
-    "public_problem_leads": 21,
+    "current_sources": 98,
+    "public_problem_leads": 22,
     "search_stages_total": 18,
     "search_stages_round_1_complete": 18,
-    "search_stages_round_2_complete": 4,
+    "search_stages_round_2_complete": 8,
     "coverage_saturated_stages": 0,
     "latest_search_date": "2026-09-02"
   },
@@ -231,14 +231,14 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-002",
-    "instruction": "Continue without waiting for user confirmation: complete the independent second-round gap search for PS-EMBEDDING through PS-ADVANCED-RAG, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds before coverage_saturated."
+    "instruction": "Continue without waiting for user confirmation: complete the independent second-round gap search for PS-QUERY-ROUTING through PS-ADVANCED-RAG, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds before coverage_saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
     "Do not continue batch-generating RAG-04 and later chapters under the old template.",
     "Do not mark the legacy first drafts as formal content.",
     "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
-    "The first search round is complete for all 18 RAG stages; no stage is coverage_saturated because independent gap rounds are still pending.",
+    "The first search round is complete for all 18 RAG stages; the second round is complete for the first 8 stages, and no stage is coverage_saturated because every completed second-round stage produced new knowledge or problem types.",
     "Continue stage work without pausing for user confirmation; use validated GitHub commits as the review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
