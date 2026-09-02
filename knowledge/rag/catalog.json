@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "domain": "RAG",
+  "status": "inventory_draft",
+  "rules": {
+    "meaning": "每个 atom 是一个不可因主题相近而删除的独立学习单元。",
+    "canonical_gate": "完成来源映射、重复关系、冲突核验和一手资料审计后才能标记 canonical。"
+  },
+  "sections": [
+    {
+      "id": "RAG-01",
+      "title": "基础与边界",
+      "atoms": [
+        {"id": "RAG-01-001", "title": "RAG 的定义、核心组件与工作目标"},
+        {"id": "RAG-01-002", "title": "知识截止、知识空白与知识更新问题"},
+        {"id": "RAG-01-003", "title": "企业私域知识接入与可审计性"},
+        {"id": "RAG-01-004", "title": "RAG 对幻觉的缓解能力与边界"},
+        {"id": "RAG-01-005", "title": "RAG 与微调的区别、组合和选型"},
+        {"id": "RAG-01-006", "title": "RAG 与长上下文的区别、组合和选型"},
+        {"id": "RAG-01-007", "title": "RAG 与传统搜索系统的区别和联系"},
+        {"id": "RAG-01-008", "title": "RAG 与模型记忆、上下文工程的关系"},
+        {"id": "RAG-01-009", "title": "适合使用 RAG 的任务与业务条件"},
+        {"id": "RAG-01-010", "title": "不适合使用 RAG 或收益有限的场景"}
+      ]
+    },
+    {
+      "id": "RAG-02",
+      "title": "系统架构与生命周期",
+      "atoms": [
+        {"id": "RAG-02-001", "title": "离线知识库构建全流程"},
+        {"id": "RAG-02-002", "title": "在线问答全流程"},
+        {"id": "RAG-02-003", "title": "召回、过滤、生成三段式链路"},
+        {"id": "RAG-02-004", "title": "解析器、切分器、嵌入器、索引和检索器的边界"},
+        {"id": "RAG-02-005", "title": "Retriever、Reranker 与 Generator 的边界"},
+        {"id": "RAG-02-006", "title": "RAG 数据流、控制流和错误流"},
+        {"id": "RAG-02-007", "title": "来源、文档、Chunk 与答案的可追溯链路"},
+        {"id": "RAG-02-008", "title": "批处理、流式摄取与事件驱动更新"},
+        {"id": "RAG-02-009", "title": "模块化接口与组件可替换性"},
+        {"id": "RAG-02-010", "title": "任务状态、幂等与失败恢复边界"}
+      ]
+    },
+    {
+      "id": "RAG-03",
+      "title": "文档解析与数据治理",
+      "atoms": [
+        {"id": "RAG-03-001", "title": "PDF、Word、HTML、Markdown 等来源类型"},
+        {"id": "RAG-03-002", "title": "文本型 PDF 的解析问题"},
+        {"id": "RAG-03-003", "title": "扫描文档与 OCR 流程"},
+        {"id": "RAG-03-004", "title": "版面分析、多栏与阅读顺序恢复"},
+        {"id": "RAG-03-005", "title": "页眉、页脚、脚注和目录噪声处理"},
+        {"id": "RAG-03-006", "title": "表格结构保留、序列化与结构化检索"},
+        {"id": "RAG-03-007", "title": "图片、图表、流程图和 Caption 处理"},
+        {"id": "RAG-03-008", "title": "公式、代码与特殊内容解析"},
+        {"id": "RAG-03-009", "title": "文本清洗、编码和格式标准化"},
+        {"id": "RAG-03-010", "title": "文档级、段落级和近似重复检测"},
+        {"id": "RAG-03-011", "title": "文档元数据、来源和时间字段设计"},
+        {"id": "RAG-03-012", "title": "入库前权限、PII 脱敏与合规检查"},
+        {"id": "RAG-03-013", "title": "解析工具与 Pipeline 方案选型"},
+        {"id": "RAG-03-014", "title": "解析质量抽检、错误率和回退策略"},
+        {"id": "RAG-03-015", "title": "多模态文档的元素关联与阅读顺序"}
+      ]
+    },
+    {
+      "id": "RAG-04",
+      "title": "Chunking",
+      "atoms": [
+        {"id": "RAG-04-001", "title": "Chunking 的目标与检索、生成双重约束"},
+        {"id": "RAG-04-002", "title": "固定字符或 Token 长度切分"},
+        {"id": "RAG-04-003", "title": "递归字符切分"},
+        {"id": "RAG-04-004", "title": "按标题、段落和文档结构切分"},
+        {"id": "RAG-04-005", "title": "语义切分与边界阈值"},
+        {"id": "RAG-04-006", "title": "滑动窗口与 Chunk Overlap"},
+        {"id": "RAG-04-007", "title": "父子文档切分和命中回溯"},
+        {"id": "RAG-04-008", "title": "Sentence Window Retrieval"},
+        {"id": "RAG-04-009", "title": "命题化切分与原子事实"},
+        {"id": "RAG-04-010", "title": "Contextual Chunking 与上下文补充"},
+        {"id": "RAG-04-011", "title": "表格、代码和多模态内容的专项切分"},
+        {"id": "RAG-04-012", "title": "Chunk Size 的选择与过大、过小问题"},
+        {"id": "RAG-04-013", "title": "Overlap 的收益、冗余和存储代价"},
+        {"id": "RAG-04-014", "title": "Chunk ID、Parent ID 和版本设计"},
+        {"id": "RAG-04-015", "title": "Chunking 策略的离线评估和消融实验"}
+      ]
+    },
+    {
+      "id": "RAG-05",
+      "title": "Embedding",
+      "atoms": [
+        {"id": "RAG-05-001", "title": "Embedding 的语义空间与检索作用"},
+        {"id": "RAG-05-002", "title": "Word2Vec、BERT、SBERT 与现代 Embedding 演进"},
+        {"id": "RAG-05-003", "title": "对比学习、正负样本和训练目标"},
+        {"id": "RAG-05-004", "title": "Query 与 Document 的非对称编码"},
+        {"id": "RAG-05-005", "title": "通用、领域、多语言 Embedding 选择"},
+        {"id": "RAG-05-006", "title": "向量维度、精度、速度和存储权衡"},
+        {"id": "RAG-05-007", "title": "Cosine、Inner Product 与 L2 距离"},
+        {"id": "RAG-05-008", "title": "向量归一化与相似度实现细节"},
+        {"id": "RAG-05-009", "title": "Matryoshka 与可截断向量"},
+        {"id": "RAG-05-010", "title": "Embedding Benchmark 与业务数据集评估"},
+        {"id": "RAG-05-011", "title": "批量 Embedding、缓存与吞吐优化"},
+        {"id": "RAG-05-012", "title": "Embedding 模型升级与向量重建"}
+      ]
+    },
+    {
+      "id": "RAG-06",
+      "title": "存储与索引",
+      "atoms": [
+        {"id": "RAG-06-001", "title": "向量数据库的职责与普通数据库的差异"},
+        {"id": "RAG-06-002", "title": "精确检索与近似最近邻 ANN"},
+        {"id": "RAG-06-003", "title": "向量、文本、元数据和主键 Schema"},
+        {"id": "RAG-06-004", "title": "Document ID、Chunk ID 与 Parent ID"},
+        {"id": "RAG-06-005", "title": "HNSW 原理、参数与权衡"},
+        {"id": "RAG-06-006", "title": "IVF 原理、nlist、nprobe 与权衡"},
+        {"id": "RAG-06-007", "title": "PQ、量化和压缩索引"},
+        {"id": "RAG-06-008", "title": "倒排索引、稀疏向量和全文索引"},
+        {"id": "RAG-06-009", "title": "向量索引与关键词索引的共存"},
+        {"id": "RAG-06-010", "title": "元数据过滤与过滤前后执行顺序"},
+        {"id": "RAG-06-011", "title": "FAISS、Milvus、Qdrant、Chroma、Pinecone 与 pgvector 选型"},
+        {"id": "RAG-06-012", "title": "数据规模、QPS、延迟、召回率和成本基准"},
+        {"id": "RAG-06-013", "title": "分区、分片、副本与冷热数据"},
+        {"id": "RAG-06-014", "title": "新增、删除、更新和索引 Compaction"},
+        {"id": "RAG-06-015", "title": "索引构建、加载、预热和持久化"}
+      ]
+    },
+    {
+      "id": "RAG-07",
+      "title": "Query 理解",
+      "atoms": [
+        {"id": "RAG-07-001", "title": "Query 清洗、规范化与语言检测"},
+        {"id": "RAG-07-002", "title": "意图识别和是否检索判断"},
+        {"id": "RAG-07-003", "title": "Query Rewrite 的目标和约束"},
+        {"id": "RAG-07-004", "title": "Multi-Query 查询扩展"},
+        {"id": "RAG-07-005", "title": "HyDE 假设文档嵌入"},
+        {"id": "RAG-07-006", "title": "复杂问题的子问题分解"},
+        {"id": "RAG-07-007", "title": "Step-back Prompting"},
+        {"id": "RAG-07-008", "title": "实体、时间、地域和权限过滤条件抽取"},
+        {"id": "RAG-07-009", "title": "多轮会话中的独立问题改写"},
+        {"id": "RAG-07-010", "title": "查询路由与知识源选择"},
+        {"id": "RAG-07-011", "title": "Query 增强失败、语义漂移与约束"},
+        {"id": "RAG-07-012", "title": "Query 增强策略的离线评估"}
+      ]
+    },
+    {
+      "id": "RAG-08",
+      "title": "检索、融合与重排",
+      "atoms": [
+        {"id": "RAG-08-001", "title": "Dense Retrieval 语义检索"},
+        {"id": "RAG-08-002", "title": "Sparse Retrieval 与关键词检索"},
+        {"id": "RAG-08-003", "title": "BM25 原理、参数和局限"},
+        {"id": "RAG-08-004", "title": "Hybrid Search 混合检索"},
+        {"id": "RAG-08-005", "title": "多路召回的通道设计"},
+        {"id": "RAG-08-006", "title": "RRF 排名融合"},
+        {"id": "RAG-08-007", "title": "加权分数融合与分数归一化"},
+        {"id": "RAG-08-008", "title": "Top-K、相似度阈值与动态候选集"},
+        {"id": "RAG-08-009", "title": "Bi-Encoder 与 Cross-Encoder"},
+        {"id": "RAG-08-010", "title": "Reranker 模型选择、批处理和阈值"},
+        {"id": "RAG-08-011", "title": "MMR、去重和结果多样性"},
+        {"id": "RAG-08-012", "title": "时间衰减、新鲜度和热度信号"},
+        {"id": "RAG-08-013", "title": "多跳、迭代和依赖前序结果的检索"},
+        {"id": "RAG-08-014", "title": "检索结果过滤与可信来源控制"},
+        {"id": "RAG-08-015", "title": "低相关、零召回和噪声召回的恢复策略"},
+        {"id": "RAG-08-016", "title": "检索阶段延迟、并发和缓存优化"}
+      ]
+    },
+    {
+      "id": "RAG-09",
+      "title": "上下文与生成",
+      "atoms": [
+        {"id": "RAG-09-001", "title": "System Prompt、问题、证据和输出约束的组装"},
+        {"id": "RAG-09-002", "title": "上下文预算与 Token 分配"},
+        {"id": "RAG-09-003", "title": "检索结果排序和上下文位置"},
+        {"id": "RAG-09-004", "title": "Lost in the Middle 问题与缓解"},
+        {"id": "RAG-09-005", "title": "Contextual Compression 与证据压缩"},
+        {"id": "RAG-09-006", "title": "基于证据的 Grounded Generation"},
+        {"id": "RAG-09-007", "title": "引用编号、出处和可追溯答案"},
+        {"id": "RAG-09-008", "title": "证据不足时的拒答与不确定性表达"},
+        {"id": "RAG-09-009", "title": "RAG 幻觉类型和产生链路"},
+        {"id": "RAG-09-010", "title": "生成后事实核查与证据对齐"},
+        {"id": "RAG-09-011", "title": "来源可信度与多源交叉验证"},
+        {"id": "RAG-09-012", "title": "事实、观点和推断的区分"},
+        {"id": "RAG-09-013", "title": "来源冲突、时效冲突和答案合并"},
+        {"id": "RAG-09-014", "title": "结构化输出与答案 Schema"},
+        {"id": "RAG-09-015", "title": "长上下文与 Prompt Caching 的边界"}
+      ]
+    },
+    {
+      "id": "RAG-10",
+      "title": "评估",
+      "atoms": [
+        {"id": "RAG-10-001", "title": "解析、检索、生成和端到端分层评估"},
+        {"id": "RAG-10-002", "title": "Golden Dataset 与问题、答案、证据标注"},
+        {"id": "RAG-10-003", "title": "人工数据、日志数据和合成数据构建"},
+        {"id": "RAG-10-004", "title": "Precision、Recall、Hit Rate 与 Coverage"},
+        {"id": "RAG-10-005", "title": "MRR、MAP 与 nDCG 排序指标"},
+        {"id": "RAG-10-006", "title": "Reranker 评估和候选集条件"},
+        {"id": "RAG-10-007", "title": "Answer Correctness、Relevancy 与 Completeness"},
+        {"id": "RAG-10-008", "title": "Faithfulness、Groundedness 与幻觉评估"},
+        {"id": "RAG-10-009", "title": "Citation Accuracy 与 Citation Completeness"},
+        {"id": "RAG-10-010", "title": "RAGAS 等自动评测框架"},
+        {"id": "RAG-10-011", "title": "LLM-as-a-Judge 的偏差和校准"},
+        {"id": "RAG-10-012", "title": "人工抽检、评分标准和一致性"},
+        {"id": "RAG-10-013", "title": "线上任务成功、满意度和 A/B 实验"},
+        {"id": "RAG-10-014", "title": "失败归因、消融实验与回归测试"}
+      ]
+    },
+    {
+      "id": "RAG-11",
+      "title": "生产工程与治理",
+      "atoms": [
+        {"id": "RAG-11-001", "title": "文档变更检测、哈希和事件来源"},
+        {"id": "RAG-11-002", "title": "新增、修改、删除的增量更新"},
+        {"id": "RAG-11-003", "title": "新旧数据和模型分布不一致"},
+        {"id": "RAG-11-004", "title": "索引版本、双写、灰度和原子切换"},
+        {"id": "RAG-11-005", "title": "知识新鲜度、时间衰减和过期策略"},
+        {"id": "RAG-11-006", "title": "Embedding、检索、Rerank 和答案缓存"},
+        {"id": "RAG-11-007", "title": "批处理、异步和并行流水线"},
+        {"id": "RAG-11-008", "title": "在线延迟预算与阶段耗时拆解"},
+        {"id": "RAG-11-009", "title": "高并发、限流、背压和资源隔离"},
+        {"id": "RAG-11-010", "title": "超时、重试、熔断和故障转移"},
+        {"id": "RAG-11-011", "title": "检索和生成降级策略"},
+        {"id": "RAG-11-012", "title": "多租户数据隔离"},
+        {"id": "RAG-11-013", "title": "文档级、Chunk 级 ACL 权限过滤"},
+        {"id": "RAG-11-014", "title": "PII、数据保留和删除合规"},
+        {"id": "RAG-11-015", "title": "间接 Prompt Injection 与恶意文档"},
+        {"id": "RAG-11-016", "title": "数据投毒、来源伪造和信息泄露"},
+        {"id": "RAG-11-017", "title": "Tracing、日志、反馈和可观测性"},
+        {"id": "RAG-11-018", "title": "Token、模型、存储和检索成本优化"},
+        {"id": "RAG-11-019", "title": "备份、恢复、重建和灾难恢复"}
+      ]
+    },
+    {
+      "id": "RAG-12",
+      "title": "高级范式",
+      "atoms": [
+        {"id": "RAG-12-001", "title": "Naive RAG 的流程和局限"},
+        {"id": "RAG-12-002", "title": "Advanced RAG 的查询、检索和生成优化"},
+        {"id": "RAG-12-003", "title": "Modular RAG 的组件化和路由"},
+        {"id": "RAG-12-004", "title": "Agentic RAG 的动态决策闭环"},
+        {"id": "RAG-12-005", "title": "Adaptive Retrieval 与是否检索判断"},
+        {"id": "RAG-12-006", "title": "Self-RAG 的检索和反思控制"},
+        {"id": "RAG-12-007", "title": "CRAG 的检索评估和纠错"},
+        {"id": "RAG-12-008", "title": "Multi-Step 与 Iterative Retrieval"},
+        {"id": "RAG-12-009", "title": "GraphRAG 的图构建、社区和全局检索"},
+        {"id": "RAG-12-010", "title": "知识图谱与向量检索的组合"},
+        {"id": "RAG-12-011", "title": "多模态 RAG 的解析、索引、路由和生成"},
+        {"id": "RAG-12-012", "title": "视觉文档检索与 Late Interaction"},
+        {"id": "RAG-12-013", "title": "Agentic Search 与传统搜索、传统 RAG"},
+        {"id": "RAG-12-014", "title": "Deep Research 的任务分解和搜索规划"},
+        {"id": "RAG-12-015", "title": "Deep Research 的多源交叉验证"},
+        {"id": "RAG-12-016", "title": "信息饱和、搜索预算和停止条件"},
+        {"id": "RAG-12-017", "title": "长研究任务的中间证据和上下文组织"},
+        {"id": "RAG-12-018", "title": "高级 RAG 的成本、风险和适用边界"}
+      ]
+    },
+    {
+      "id": "RAG-13",
+      "title": "项目与面试应用",
+      "atoms": [
+        {"id": "RAG-13-001", "title": "RAG 30 秒定义回答"},
+        {"id": "RAG-13-002", "title": "RAG 完整流程口述"},
+        {"id": "RAG-13-003", "title": "从零设计企业 RAG 系统"},
+        {"id": "RAG-13-004", "title": "Chunk、Embedding、向量库和 Reranker 选型表达"},
+        {"id": "RAG-13-005", "title": "检索优化方案和实验依据"},
+        {"id": "RAG-13-006", "title": "RAG 框架、平台和开源项目选型"},
+        {"id": "RAG-13-007", "title": "最小 RAG 与生产级代码结构"},
+        {"id": "RAG-13-008", "title": "无召回、噪声、幻觉和高延迟排障"},
+        {"id": "RAG-13-009", "title": "用指标证明 RAG 优化效果"},
+        {"id": "RAG-13-010", "title": "RAG 项目 STAR 叙事"},
+        {"id": "RAG-13-011", "title": "不同岗位的 RAG 回答深度"},
+        {"id": "RAG-13-012", "title": "原始面试题、追问与标准知识双向映射"}
+      ]
+    }
+  ]
+}
+

@@ -13,7 +13,8 @@ RAG 是第一套端到端试点，用来验证整个知识整理流程。
 - [x] 建立 AI 一级分类
 - [x] 建立标准知识文档模板
 - [x] 建立 RAG 一级知识分类和验收规则
-- [ ] 完成 RAG 来源单元全量盘点
+- [x] 完成 RAG 来源单元全量盘点（658 个来源单元）
+- [x] 建立 RAG 原子知识目录（183 个待审计原子）
 - [ ] 完成 RAG 知识原子化、去重和冲突审计
 - [ ] 完成 RAG 标准知识正文
 - [ ] 生成 RAG 学习路线、思维导图和复习资料
@@ -54,6 +55,8 @@ flowchart LR
 
 具体版本和纳管策略见 [`sources/registry.json`](sources/registry.json)。
 
+RAG 当前盘点见 [`audits/rag/source-units.md`](audits/rag/source-units.md)，原子知识目录见 [`knowledge/rag/catalog.md`](knowledge/rag/catalog.md)。
+
 ## 内容边界
 
 - 原始来源与自己的标准知识正文分开管理。
@@ -78,4 +81,3 @@ python scripts/validate_repo.py --strict-rag
 ## 发布说明
 
 本仓库计划公开发布。外部资料仍归各自作者所有；未明确许可的来源只登记链接、版本和知识映射，不重新发布完整原文。仓库级许可证将在原创内容与第三方材料边界完成审计后再决定。
-

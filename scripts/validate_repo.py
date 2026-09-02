@@ -18,6 +18,8 @@ REQUIRED = [
     "taxonomy/domains.json",
     "taxonomy/rag-topics.json",
     "knowledge/rag/README.md",
+    "knowledge/rag/catalog.json",
+    "knowledge/rag/catalog.md",
     "audits/rag/acceptance.md",
     "templates/knowledge-note.md",
 ]
@@ -56,6 +58,7 @@ def main() -> int:
     scope = load_json("sources/rag-scope.json", errors)
     domains = load_json("taxonomy/domains.json", errors)
     rag_topics = load_json("taxonomy/rag-topics.json", errors)
+    rag_catalog = load_json("knowledge/rag/catalog.json", errors)
 
     sources = registry.get("sources", [])
     source_ids = [item.get("id", "") for item in sources]
@@ -78,6 +81,26 @@ def main() -> int:
         errors.append(f"RAG 主题 ID 重复：{repeated}")
     if topic_ids != [f"RAG-{index:02d}" for index in range(1, 14)]:
         errors.append("RAG 主题必须连续覆盖 RAG-01 到 RAG-13")
+
+    catalog_sections = rag_catalog.get("sections", [])
+    catalog_section_ids = [section.get("id", "") for section in catalog_sections]
+    if catalog_section_ids != topic_ids:
+        errors.append("RAG catalog 的章节顺序必须与 rag-topics.json 一致")
+    atom_ids: list[str] = []
+    for section in catalog_sections:
+        section_id = section.get("id", "")
+        atoms = section.get("atoms", [])
+        if not atoms:
+            errors.append(f"RAG catalog 的 {section_id} 没有知识原子")
+        for atom in atoms:
+            atom_id = atom.get("id", "")
+            atom_ids.append(atom_id)
+            if not re.fullmatch(rf"{re.escape(section_id)}-\d{{3}}", atom_id):
+                errors.append(f"知识原子 ID 与章节不匹配：{atom_id}")
+            if not atom.get("title"):
+                errors.append(f"知识原子缺少标题：{atom_id}")
+    if repeated := duplicates(atom_ids):
+        errors.append(f"知识原子 ID 重复：{repeated}")
 
     for item in scope.get("sources", []):
         if item.get("source_id") not in source_ids:
@@ -106,6 +129,31 @@ def main() -> int:
     elif args.strict_rag:
         errors.append("严格 RAG 验收缺少 audits/rag/source-units.json")
 
+    suggestions_path = ROOT / "audits/rag/atom-suggestions.json"
+    if suggestions_path.exists():
+        suggestions = load_json("audits/rag/atom-suggestions.json", errors)
+        mappings = suggestions.get("mappings", [])
+        source_unit_ids = {
+            item.get("id")
+            for item in load_json("audits/rag/source-units.json", errors).get("units", [])
+        }
+        mapped_unit_ids = [item.get("source_unit_id") for item in mappings]
+        if set(mapped_unit_ids) != source_unit_ids:
+            errors.append("atom-suggestions.json 未与来源单元形成一一对应")
+        if repeated := duplicates(mapped_unit_ids):
+            errors.append(f"atom-suggestions.json 来源单元重复：{repeated[:10]}")
+        for mapping in mappings:
+            accepted = mapping.get("accepted_atom_id")
+            if accepted is not None and accepted not in atom_ids:
+                errors.append(f"接受了未知知识原子：{accepted}")
+            for candidate in mapping.get("candidates", []):
+                if candidate.get("atom_id") not in atom_ids:
+                    errors.append(f"候选引用未知知识原子：{candidate.get('atom_id')}")
+        if args.strict_rag:
+            pending = [item for item in mappings if item.get("review_status") == "pending"]
+            if pending:
+                errors.append(f"严格 RAG 验收仍有 {len(pending)} 个原子映射待人工复核")
+
     if args.strict_rag:
         acceptance = (ROOT / "audits/rag/acceptance.md").read_text(encoding="utf-8")
         unchecked = len(re.findall(r"^- \[ \]", acceptance, re.M))
@@ -119,10 +167,12 @@ def main() -> int:
         return 1
 
     print("VALIDATION PASSED")
-    print(f"sources={len(source_ids)} domains={len(domain_ids)} rag_topics={len(topic_ids)}")
+    print(
+        f"sources={len(source_ids)} domains={len(domain_ids)} "
+        f"rag_topics={len(topic_ids)} rag_atoms={len(atom_ids)}"
+    )
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
