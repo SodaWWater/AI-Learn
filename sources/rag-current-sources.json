@@ -3,6 +3,30 @@
   "reviewed_at": "2026-09-02",
   "sources": [
     {
+      "id": "rag-original-2020",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "version": "v4, 2021-04-12; NeurIPS 2020",
+      "freshness": "stable",
+      "use_for": ["RAG 原始定义", "参数化与非参数化记忆", "Retriever 与 Generator 关系"]
+    },
+    {
+      "id": "realm-2020",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2002.08909",
+      "version": "v1, 2020-02-10",
+      "freshness": "stable",
+      "use_for": ["检索增强语言模型历史", "非参数知识的模块性与可解释性"]
+    },
+    {
+      "id": "lost-in-the-middle-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2307.03172",
+      "version": "v3, 2023-11-20",
+      "freshness": "research",
+      "use_for": ["长上下文利用边界", "相关信息位置对性能的影响"]
+    },
+    {
       "id": "agentic-rag-survey-2025",
       "type": "paper",
       "url": "https://arxiv.org/abs/2501.09136",

@@ -21,6 +21,8 @@ REQUIRED = [
     "knowledge/rag/catalog.json",
     "knowledge/rag/catalog.md",
     "learning/rag/draft-overview.md",
+    "learning/rag/overview.md",
+    "learning/rag/formal-status.json",
     "interview/rag/public-scenarios.json",
     "audits/rag/source-units.json",
     "audits/rag/atom-suggestions.json",
@@ -64,6 +66,7 @@ def main() -> int:
     domains = load_json("taxonomy/domains.json", errors)
     rag_topics = load_json("taxonomy/rag-topics.json", errors)
     rag_catalog = load_json("knowledge/rag/catalog.json", errors)
+    formal_status = load_json("learning/rag/formal-status.json", errors)
 
     sources = registry.get("sources", [])
     source_ids = [item.get("id", "") for item in sources]
@@ -109,6 +112,37 @@ def main() -> int:
                 errors.append(f"知识原子缺少标题：{atom_id}")
     if repeated := duplicates(atom_ids):
         errors.append(f"知识原子 ID 重复：{repeated}")
+
+    catalog_atoms_by_section = {
+        section.get("id", ""): {
+            atom.get("id", "") for atom in section.get("atoms", [])
+        }
+        for section in catalog_sections
+    }
+    completed_module_ids: list[str] = []
+    for module in formal_status.get("completed_modules", []):
+        module_id = module.get("id", "")
+        completed_module_ids.append(module_id)
+        if module_id not in catalog_atoms_by_section:
+            errors.append(f"正式产物登记了未知模块：{module_id}")
+            continue
+        for artifact_type in ("map", "chapter"):
+            rel_path = module.get(artifact_type, "")
+            path = ROOT / rel_path
+            if not rel_path or not path.is_file():
+                errors.append(f"{module_id} 缺少正式 {artifact_type}：{rel_path}")
+                continue
+            artifact_atom_ids = set(
+                re.findall(r"RAG-\d{2}-\d{3}", path.read_text(encoding="utf-8"))
+            )
+            missing_atoms = catalog_atoms_by_section[module_id] - artifact_atom_ids
+            if missing_atoms:
+                errors.append(
+                    f"{module_id} 正式 {artifact_type} 漏掉知识原子："
+                    f"{sorted(missing_atoms)}"
+                )
+    if repeated := duplicates(completed_module_ids):
+        errors.append(f"正式产物模块重复登记：{repeated}")
 
     for item in scope.get("sources", []):
         if item.get("source_id") not in source_ids:

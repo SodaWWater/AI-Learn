@@ -1,8 +1,16 @@
 # RAG 标准知识库
 
-当前状态：`inventory`。正在完成来源盘点，尚未宣布知识体系完备。
+当前状态：`building`。来源盘点已经完成，来源单元正在逐条人工复核；`RAG-01` 至 `RAG-03` 已生成第一版标准正文，但在严格来源验收前不宣布为终稿。
 
 详细原子知识目录见 [`catalog.md`](catalog.md)，机器可读版本见 [`catalog.json`](catalog.json)。当前目录用于防止不同角度的细节在去重时被错误删除；其中条目尚未全部完成来源映射和事实核验。
+
+已生成正文：
+
+- [`RAG-01` 基础、价值与能力边界](chapters/rag-01-foundations.md)
+- [`RAG-02` 系统架构与生命周期](chapters/rag-02-architecture-lifecycle.md)
+- [`RAG-03` 文档解析与数据治理](chapters/rag-03-document-parsing-governance.md)
+
+学习总览和多图导航见 [`learning/rag/overview.md`](../../learning/rag/overview.md)。
 
 ## 预定知识主干
 
@@ -20,6 +28,6 @@
 | `RAG-10` | 评估 | 数据集、检索指标、生成指标、端到端指标、人工评估、线上实验与失败归因 |
 | `RAG-11` | 生产工程与治理 | 增量更新、缓存、延迟、吞吐、多租户、ACL、PII、安全、可观测性与成本 |
 | `RAG-12` | 高级范式 | Advanced/Modular/Agentic RAG、Self-RAG、CRAG、Adaptive、GraphRAG、多模态与 Deep Research |
-| `RAG-13` | 项目与面试应用 | 系统设计、选型、排障、项目指标、代码实践、口述与追问 |
+| `RAG-13` | 项目与面试应用 | 系统设计、选型、排障、项目指标、代码实践及有公开出处的题目关联 |
 
 以上只是分类骨架，不代表最终知识点清单。最终清单必须由来源覆盖矩阵和权威资料补漏共同确定。
