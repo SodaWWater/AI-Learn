@@ -883,6 +883,97 @@
       "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Enterprise RAG System Design Question", "Incremental Indexing", "Multi-tenant Isolation", "P99 Latency and Retrieval Evaluation"],
       "provenance_note": "发布者自述为企业 SaaS 公司第三轮面试；公司身份、指标和实现数据未经企业官方确认，只登记题目条件，技术结论另用官方文档和论文核验。"
+    },
+    {
+      "id": "ragrouter-bench-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2602.00296",
+      "version": "v2, 2026-04-04",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Query-Corpus Compatibility", "Adaptive RAG Paradigm Routing", "Effectiveness-Efficiency Trade-off", "Routing Benchmark Protocol"]
+    },
+    {
+      "id": "ircot-2023",
+      "type": "paper",
+      "url": "https://aclanthology.org/2023.acl-long.557/",
+      "version": "ACL 2023",
+      "freshness": "stable",
+      "stage_ids": ["PS-RETRIEVAL", "PS-QUERY-ROUTING", "PS-ADVANCED-RAG", "PS-EVALUATION"],
+      "use_for": ["Interleaved Retrieval and Reasoning", "Multi-step Question Answering", "Intermediate-state Querying", "Iterative Retrieval Boundary"]
+    },
+    {
+      "id": "iterative-rag-diagnostic-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2601.19827",
+      "version": "v5, 2026-07-31; TMLR 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-RETRIEVAL", "PS-QUERY-ROUTING", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Iterative Retrieval Diagnostic", "Hop Coverage", "Distractor Latch", "Early-stop Calibration"]
+    },
+    {
+      "id": "score-normalization-data-fusion-2006",
+      "type": "paper",
+      "url": "https://link.springer.com/chapter/10.1007/11880592_57",
+      "version": "AIRS 2006",
+      "freshness": "stable",
+      "stage_ids": ["PS-RESULT-FUSION", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Score Normalization", "Data Fusion", "CombSUM and CombMNZ Preconditions", "Fusion Method Evaluation"]
+    },
+    {
+      "id": "mmr-diversity-reranking-1998",
+      "type": "paper",
+      "url": "https://aclanthology.org/X98-1025/",
+      "version": "TIPSTER 1998",
+      "freshness": "stable",
+      "stage_ids": ["PS-RERANKING", "PS-RESULT-FUSION", "PS-CONTEXT-ASSEMBLY"],
+      "use_for": ["Maximal Marginal Relevance", "Relevance-Diversity Trade-off", "Redundancy Reduction", "Diversity-aware Selection"]
+    },
+    {
+      "id": "sentence-transformers-cross-encoder-efficiency-2026",
+      "type": "official_documentation",
+      "url": "https://sbert.net/docs/cross_encoder/usage/efficiency.html",
+      "version": "page and benchmarks reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Cross-encoder Batching", "FP16 and BF16", "ONNX and OpenVINO", "INT8 Quantization and Hardware-specific Benchmarking"]
+    },
+    {
+      "id": "sentence-transformers-cross-encoder-training-2026",
+      "type": "official_documentation",
+      "url": "https://www.sbert.net/docs/cross_encoder/training_overview.html",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RERANKING", "PS-EVALUATION"],
+      "use_for": ["Domain Reranker Fine-tuning", "Hard-negative Training", "Loss and Dataset Contract", "Cross-encoder Evaluation"]
+    },
+    {
+      "id": "dynamicrag-2025",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2505.07233",
+      "version": "v2, 2025-05-16",
+      "freshness": "research",
+      "stage_ids": ["PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Dynamic Top-K Reranking", "Query-dependent Document Count", "Generator-feedback Optimization", "Answer-quality-aligned Selection"]
+    },
+    {
+      "id": "rrpo-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.acl-long.1406/",
+      "version": "ACL 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["ReRanking Preference Optimization", "Context Utility versus Relevance", "LLM-feedback Reward", "Sequential Document-set Selection"]
+    },
+    {
+      "id": "nowcoder-rag-ten-questions-2025",
+      "type": "public_question_bank",
+      "url": "https://www.nowcoder.com/feed/main/detail/d15b819dd04c4fdda9c2cc82d8fadbbc",
+      "version": "page published 2025-07-15; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Retrieval Bias Question", "Multi-document Conflict Question", "Iterative Retrieval Question", "Freshness Boundary Question"],
+      "provenance_note": "公开学习题库，不是发布者自述的真实企业面试；只登记可定位问题，页面答案不作为技术结论证据。"
     }
   ]
 }

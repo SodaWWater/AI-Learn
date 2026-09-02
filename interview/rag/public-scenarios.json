@@ -225,6 +225,26 @@
       "verification": "发布者自述，非企业官方题库；公司、指标与实现数据未经官方确认，只保留问题条件，答案必须由数据库官方文档、论文和自有基准独立核验",
       "question_summary": "为大量企业租户设计支持复杂文档、增量更新、文档级权限、检索质量目标和 P99 延迟目标的 RAG 系统时，如何选择索引与隔离方式，规划分片副本、无停机模型迁移、备份恢复和分层评测？",
       "atom_ids": ["RAG-03-003", "RAG-04-007", "RAG-05-012", "RAG-06-010", "RAG-06-012", "RAG-06-013", "RAG-06-014", "RAG-11-002", "RAG-11-004", "RAG-11-008", "RAG-11-012", "RAG-11-013", "RAG-11-019"]
+    },
+    {
+      "id": "RAG-SCENE-023",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/feed/main/detail/d15b819dd04c4fdda9c2cc82d8fadbbc",
+      "source_title": "10 道 RAG 大模型必备面试题",
+      "source_locator": "Q4：如何解决 Retrieval Bias（检索偏置）",
+      "verification": "公开学习题库，不标记为公司真实面经；原页面答案仅作问题线索，检索充分性、拒答和迭代检索方案必须由论文、官方文档与目标数据实验核验",
+      "question_summary": "当检索结果质量不足但生成器仍会强制作答时，如何识别 Retrieval Bias（检索偏置），区分零召回、低相关和证据不足，并在过滤、拒答、回退及迭代检索之间选择？",
+      "atom_ids": ["RAG-08-008", "RAG-08-013", "RAG-08-015", "RAG-09-006", "RAG-09-008", "RAG-09-009", "RAG-10-014"]
+    },
+    {
+      "id": "RAG-SCENE-024",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/feed/main/detail/d15b819dd04c4fdda9c2cc82d8fadbbc",
+      "source_title": "10 道 RAG 大模型必备面试题",
+      "source_locator": "Q3：RAG 如何处理多文档冲突信息",
+      "verification": "公开学习题库，不标记为公司真实面经；来源权威度、时间边界和答案合并规则必须由独立证据与业务策略核验",
+      "question_summary": "多个已召回文档在事实、时间或观点上互相冲突时，如何保留来源与时间 Metadata（元数据），进行可信度排序和交叉验证，并在答案中显式呈现共识、分歧与不确定性？",
+      "atom_ids": ["RAG-08-014", "RAG-09-007", "RAG-09-011", "RAG-09-012", "RAG-09-013", "RAG-10-008", "RAG-10-009"]
     }
   ]
 }
