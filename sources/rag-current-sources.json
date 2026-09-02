@@ -974,6 +974,87 @@
       "stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-ADVANCED-RAG"],
       "use_for": ["Retrieval Bias Question", "Multi-document Conflict Question", "Iterative Retrieval Question", "Freshness Boundary Question"],
       "provenance_note": "公开学习题库，不是发布者自述的真实企业面试；只登记可定位问题，页面答案不作为技术结论证据。"
+    },
+    {
+      "id": "sara-context-compression-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.acl-long.661/",
+      "version": "ACL 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "use_for": ["Selective Context Compression", "Fine-grained Fact Preservation", "Fixed Token Budget", "Text and Semantic-vector Hybrid Context"]
+    },
+    {
+      "id": "openai-structured-outputs-docs-2026",
+      "type": "official_documentation",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["JSON Schema-constrained Output", "Strict Schema Adherence", "Refusal Handling", "Structured Output Boundary"]
+    },
+    {
+      "id": "evidence-based-generation-survey-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.acl-long.1430/",
+      "version": "ACL 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION"],
+      "use_for": ["Citation and Attribution Taxonomy", "Pre/In/Post-generation Attribution", "Evidence Granularity", "Citation Evaluation Dimensions"]
+    },
+    {
+      "id": "llm-judge-vulnerabilities-2025",
+      "type": "paper",
+      "url": "https://aclanthology.org/2025.gem-1.33/",
+      "version": "GEM 2025",
+      "freshness": "research",
+      "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["LLM-as-a-Judge Alignment", "Judge Vulnerabilities", "Adversarial Evaluation", "Human-reference Calibration"]
+    },
+    {
+      "id": "nist-ai-incident-response-2026",
+      "type": "official_documentation",
+      "url": "https://www.nist.gov/document/incident-response-preparation-ai-systems",
+      "version": "NIST guidance published 2026; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-PRODUCTION-GOVERNANCE", "PS-DATA-GOVERNANCE", "PS-EVALUATION"],
+      "use_for": ["AI Incident Response Preparation", "Roles and Escalation", "Evidence Preservation", "Exercises and Recovery Readiness"]
+    },
+    {
+      "id": "modular-rag-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2407.21059",
+      "version": "v1, 2024-07-30",
+      "freshness": "research",
+      "stage_ids": ["PS-ADVANCED-RAG", "PS-QUERY-ROUTING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Modular RAG Architecture", "Modules and Operators", "Routing and Scheduling", "Reconfigurable RAG Pipelines"]
+    },
+    {
+      "id": "enterprise-deep-research-termination-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.acl-industry.116/",
+      "version": "ACL Industry 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-ADVANCED-RAG", "PS-QUERY-ROUTING", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Evidence-aware Termination", "Controlled Information Flow", "Enterprise Deep Research", "Search Budget and Stopping"]
+    },
+    {
+      "id": "agentic-rag-tracer-2026",
+      "type": "paper",
+      "url": "https://aclanthology.org/2026.findings-acl.66/",
+      "version": "Findings of ACL 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-ADVANCED-RAG", "PS-RETRIEVAL", "PS-QUERY-ROUTING", "PS-EVALUATION"],
+      "use_for": ["Hop-aware Agentic RAG Evaluation", "Trace-level Failure Diagnosis", "Multi-step Retrieval Reasoning", "Trajectory Metrics"]
+    },
+    {
+      "id": "openai-deep-research-system-card-2025",
+      "type": "official_engineering_report",
+      "url": "https://cdn.openai.com/deep-research-system-card.pdf",
+      "version": "system card published 2025; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-ADVANCED-RAG", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Deep Research Capability Boundary", "Web Research Risk", "Citation-bearing Research Output", "Safety Evaluation"]
     }
   ]
 }
