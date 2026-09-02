@@ -12,23 +12,31 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
+    "AGENTS.md",
     "README.md",
+    "docs/PROJECT_PLAN.md",
     "sources/registry.json",
     "sources/rag-scope.json",
     "taxonomy/domains.json",
     "taxonomy/rag-topics.json",
     "knowledge/rag/README.md",
+    "knowledge/rag/CONTENT_STANDARD.md",
+    "knowledge/rag/TERMINOLOGY.md",
     "knowledge/rag/catalog.json",
     "knowledge/rag/catalog.md",
     "learning/rag/draft-overview.md",
     "learning/rag/overview.md",
     "learning/rag/formal-status.json",
+    "taxonomy/rag-graph-model.json",
+    "taxonomy/rag-terminology.json",
+    "audits/rag/work-status.json",
     "interview/rag/public-scenarios.json",
     "audits/rag/source-units.json",
     "audits/rag/atom-suggestions.json",
     "audits/rag/accepted-mappings.json",
     "audits/rag/acceptance.md",
     "templates/knowledge-note.md",
+    "templates/problem-question.md",
 ]
 
 
@@ -67,6 +75,9 @@ def main() -> int:
     rag_topics = load_json("taxonomy/rag-topics.json", errors)
     rag_catalog = load_json("knowledge/rag/catalog.json", errors)
     formal_status = load_json("learning/rag/formal-status.json", errors)
+    graph_model = load_json("taxonomy/rag-graph-model.json", errors)
+    terminology = load_json("taxonomy/rag-terminology.json", errors)
+    work_status = load_json("audits/rag/work-status.json", errors)
 
     sources = registry.get("sources", [])
     source_ids = [item.get("id", "") for item in sources]
@@ -112,6 +123,92 @@ def main() -> int:
                 errors.append(f"知识原子缺少标题：{atom_id}")
     if repeated := duplicates(atom_ids):
         errors.append(f"知识原子 ID 重复：{repeated}")
+
+    graph_node_type_ids = [
+        item.get("id", "") for item in graph_model.get("node_types", [])
+    ]
+    graph_edge_type_ids = [
+        item.get("id", "") for item in graph_model.get("edge_types", [])
+    ]
+    if repeated := duplicates(graph_node_type_ids):
+        errors.append(f"知识图谱节点类型重复：{repeated}")
+    if repeated := duplicates(graph_edge_type_ids):
+        errors.append(f"知识图谱关系类型重复：{repeated}")
+    required_graph_nodes = {
+        "backbone", "pipeline_stage", "knowledge", "problem_question",
+        "solution", "implementation", "evaluation", "source",
+    }
+    if missing := required_graph_nodes - set(graph_node_type_ids):
+        errors.append(f"知识图谱缺少核心节点类型：{sorted(missing)}")
+    required_graph_edges = {
+        "contains", "branches_to", "merges_into", "overlaps_with",
+        "problem_at", "solved_by", "implemented_by", "evaluated_by",
+        "supported_by",
+    }
+    if missing := required_graph_edges - set(graph_edge_type_ids):
+        errors.append(f"知识图谱缺少核心关系类型：{sorted(missing)}")
+
+    term_items = terminology.get("terms", [])
+    term_ids = [item.get("id", "") for item in term_items]
+    term_displays = [item.get("display", "") for item in term_items]
+    if terminology.get("term_count") != len(term_items):
+        errors.append("rag-terminology.json 的 term_count 与实际数组长度不一致")
+    if len(term_items) < 100:
+        errors.append("RAG 机器术语表少于 100 条，可能没有从 Markdown 完整生成")
+    if repeated := duplicates(term_ids):
+        errors.append(f"术语 ID 重复：{repeated[:10]}")
+    if repeated := duplicates(term_displays):
+        errors.append(f"术语规范表达重复：{repeated[:10]}")
+    for term in term_items:
+        if not term.get("label_zh") or not term.get("label_en"):
+            errors.append(f"术语缺少中英文名称：{term.get('id')}")
+
+    phase_ids = [item.get("id", "") for item in work_status.get("phases", [])]
+    work_item_ids = [
+        item.get("id", "") for item in work_status.get("work_items", [])
+    ]
+    if repeated := duplicates(phase_ids):
+        errors.append(f"项目阶段 ID 重复：{repeated}")
+    if repeated := duplicates(work_item_ids):
+        errors.append(f"工作项 ID 重复：{repeated}")
+    next_work_item = work_status.get("next_action", {}).get("work_item_id")
+    if next_work_item not in work_item_ids:
+        errors.append(f"下一工作项不存在：{next_work_item}")
+    for item in work_status.get("work_items", []):
+        for dependency in item.get("depends_on", []):
+            if dependency not in work_item_ids:
+                errors.append(
+                    f"工作项 {item.get('id')} 依赖未知工作项：{dependency}"
+                )
+
+    knowledge_template = (ROOT / "templates/knowledge-note.md").read_text(
+        encoding="utf-8"
+    )
+    required_knowledge_headings = [
+        "## 1. 知识点概要",
+        "## 2. 技术原理",
+        "## 3. 实际开发中的位置和使用方式",
+        "## 4. 具体技术或框架实现",
+        "## 相关工程问题/面试题",
+    ]
+    for heading in required_knowledge_headings:
+        if heading not in knowledge_template:
+            errors.append(f"知识模板缺少标题：{heading}")
+    problem_template = (ROOT / "templates/problem-question.md").read_text(
+        encoding="utf-8"
+    )
+    required_problem_headings = [
+        "## 1. 问题或题目",
+        "## 4. 关联流程节点",
+        "## 5. 根因分支",
+        "## 6. 解决方案分支",
+        "## 8. 具体技术或框架实现",
+        "## 9. 验证方法",
+        "## 10. 关联知识章节",
+    ]
+    for heading in required_problem_headings:
+        if heading not in problem_template:
+            errors.append(f"问题模板缺少标题：{heading}")
 
     catalog_atoms_by_section = {
         section.get("id", ""): {

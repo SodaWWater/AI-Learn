@@ -1,5 +1,7 @@
 # AI 知识分类规范
 
+检索增强生成（Retrieval-Augmented Generation，RAG）的节点类型、关系类型和图约束见 [`rag-graph-model.json`](rag-graph-model.json)，机器可读双语术语见 [`rag-terminology.json`](rag-terminology.json)。两者分别由项目规划和 [`knowledge/rag/TERMINOLOGY.md`](../knowledge/rag/TERMINOLOGY.md) 约束。
+
 ## 分类原则
 
 - 一级领域回答“主要属于哪一类知识”。
@@ -19,4 +21,3 @@
 | `conflicts` | 来源结论不一致 | 否，必须核验 |
 | `versioned` | 不同版本下的不同结论 | 否 |
 | `related` | 有关但不存在包含关系 | 否 |
-

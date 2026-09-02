@@ -8,6 +8,8 @@
 
 RAG 是第一套端到端试点，用来验证整个知识整理流程。
 
+项目目标、信息架构、阶段规划、验收标准和 Agent 交接方式见 [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)。其他 Agent 开始工作前必须先阅读 [`AGENTS.md`](AGENTS.md) 和机器可读状态 [`audits/rag/work-status.json`](audits/rag/work-status.json)。
+
 - [x] 建立仓库目录和公开发布边界
 - [x] 固定首批来源及 Commit
 - [x] 建立 AI 一级分类
@@ -16,22 +18,27 @@ RAG 是第一套端到端试点，用来验证整个知识整理流程。
 - [x] 完成 RAG 来源单元全量盘点（695 个来源单元）
 - [x] 建立 RAG 原子知识目录（187 个待审计原子）
 - [ ] 完成 RAG 知识原子化、去重和冲突审计
-- [ ] 完成 RAG 标准知识正文（RAG-01 至 RAG-03 已完成第一版）
-- [ ] 生成 RAG 学习路线、总览图和模块关系图（总览与前三模块已完成第一版）
+- [x] 完成新版项目规划、双语术语规范、图模型和协作基线
+- [ ] 扩充 RAG 公开面试题、工程问题和一手技术来源
+- [ ] 建立底层有向知识图谱（Directed Knowledge Graph）
+- [ ] 重写 RAG 标准知识正文（旧 RAG-01 至 RAG-03 已标记为待重写草稿）
+- [ ] 生成完整流程、全局地铁图和多种局部学习视图
 - [ ] 生成 RAG 面试题、追问和项目场景
 
 ## 知识生产流程
 
 ```mermaid
-flowchart LR
-    A["外部来源"] --> B["来源登记与版本冻结"]
-    B --> C["知识单元提取"]
-    C --> D["分类、关系与冲突审计"]
-    D --> E["去重后的标准知识库"]
-    E --> F["学习路线与思维导图"]
-    E --> G["面试问答与项目表达"]
-    C --> H["来源覆盖矩阵"]
-    H --> D
+flowchart TD
+    A["外部来源（External Source）"] --> B["来源登记与版本冻结（Source Registration and Version Pinning）"]
+    B --> C["来源单元提取（Source Unit Extraction）"]
+    C --> D["知识、问题与实现拆解（Knowledge, Problem and Implementation Extraction）"]
+    D --> E["保守去重与冲突审计（Conservative Deduplication and Conflict Audit）"]
+    E --> F["有向知识图谱（Directed Knowledge Graph）"]
+    F --> G["完整流程与多视图（Workflow and Multiple Views）"]
+    F --> H["节点问题与综合问题（Stage and Cross-stage Problems）"]
+    F --> I["标准知识章节（Knowledge Chapter）"]
+    C --> J["覆盖矩阵（Coverage Matrix）"]
+    J --> E
 ```
 
 ## 目录
@@ -46,6 +53,7 @@ flowchart LR
 | `audits/` | 来源覆盖、去重、冲突、版本和遗漏检查 |
 | `templates/` | 标准知识文档与来源审计模板 |
 | `scripts/` | 来源盘点、索引生成和仓库校验脚本 |
+| `docs/` | 项目整体规划、协作和交接说明 |
 
 ## 首批来源
 
@@ -56,6 +64,8 @@ flowchart LR
 具体版本和纳管策略见 [`sources/registry.json`](sources/registry.json)。
 
 RAG 当前盘点见 [`audits/rag/source-units.md`](audits/rag/source-units.md)，原子知识目录见 [`knowledge/rag/catalog.md`](knowledge/rag/catalog.md)。
+
+当前统一术语见 [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)，知识图谱受控模型见 [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)。
 
 ## 内容边界
 

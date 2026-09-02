@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-02",
+  "domain": "RAG",
+  "status": "approved_initial_model",
+  "description": "检索增强生成（Retrieval-Augmented Generation，RAG）底层有向知识图谱（Directed Knowledge Graph）的受控节点、关系和来源模型。",
+  "node_types": [
+    {
+      "id": "backbone",
+      "name": "主干（Backbone）",
+      "purpose": "表示拥有独立完整体系的技术主线。",
+      "examples": ["RAG", "VECTOR_DATABASE", "AGENT", "PROMPT_ENGINEERING"]
+    },
+    {
+      "id": "pipeline_stage",
+      "name": "流程节点（Pipeline Stage）",
+      "purpose": "表示主干中的处理阶段或换乘节点。"
+    },
+    {
+      "id": "knowledge",
+      "name": "知识节点（Knowledge Node）",
+      "purpose": "表示可独立讲解的概念、机制、约束或方法。"
+    },
+    {
+      "id": "algorithm",
+      "name": "算法节点（Algorithm Node）",
+      "purpose": "表示具有明确机制、输入输出和复杂度的算法。"
+    },
+    {
+      "id": "capability",
+      "name": "系统能力（System Capability）",
+      "purpose": "表示系统、数据库或框架提供的独立能力。"
+    },
+    {
+      "id": "problem_question",
+      "name": "工程问题/面试题（Engineering Problem / Interview Question）",
+      "purpose": "统一承载工程现象和公开面试题，通过来源类型区分。"
+    },
+    {
+      "id": "cause",
+      "name": "根因（Root Cause）",
+      "purpose": "表示工程问题的候选原因。"
+    },
+    {
+      "id": "solution",
+      "name": "解决方案（Solution）",
+      "purpose": "表示处理问题的方案、策略或决策分支。"
+    },
+    {
+      "id": "implementation",
+      "name": "具体实现（Implementation）",
+      "purpose": "表示框架、组件、应用程序编程接口、代码或部署实现。"
+    },
+    {
+      "id": "evaluation",
+      "name": "评估方法（Evaluation Method）",
+      "purpose": "表示指标、数据集、实验或验证方法。"
+    },
+    {
+      "id": "source",
+      "name": "来源证据（Source Evidence）",
+      "purpose": "表示论文、官方文档、面经、题库、仓库或用户资料。"
+    }
+  ],
+  "edge_types": [
+    {"id": "contains", "name": "包含（Contains）", "directed": true},
+    {"id": "next_stage", "name": "下一阶段（Next Stage）", "directed": true},
+    {"id": "branches_to", "name": "分支到（Branches To）", "directed": true},
+    {"id": "merges_into", "name": "汇合到（Merges Into）", "directed": true},
+    {"id": "depends_on", "name": "依赖（Depends On）", "directed": true},
+    {"id": "uses", "name": "使用（Uses）", "directed": true},
+    {"id": "implements", "name": "实现（Implements）", "directed": true},
+    {"id": "overlaps_with", "name": "跨主干重叠（Overlaps With）", "directed": false},
+    {"id": "alternative_to", "name": "替代（Alternative To）", "directed": false},
+    {"id": "combined_with", "name": "组合（Combined With）", "directed": false},
+    {"id": "prerequisite_of", "name": "前置（Prerequisite Of）", "directed": true},
+    {"id": "observed_as", "name": "表现为（Observed As）", "directed": true},
+    {"id": "problem_at", "name": "出现问题于（Problem At）", "directed": true},
+    {"id": "caused_by", "name": "由其导致（Caused By）", "directed": true},
+    {"id": "solved_by", "name": "由其解决（Solved By）", "directed": true},
+    {"id": "implemented_by", "name": "具体实现（Implemented By）", "directed": true},
+    {"id": "evaluated_by", "name": "由其评估（Evaluated By）", "directed": true},
+    {"id": "asked_as", "name": "被问作（Asked As）", "directed": true},
+    {"id": "supported_by", "name": "来源支持（Supported By）", "directed": true},
+    {"id": "supersedes", "name": "替代旧版本（Supersedes）", "directed": true},
+    {"id": "conflicts_with", "name": "存在冲突（Conflicts With）", "directed": false}
+  ],
+  "problem_provenance_types": [
+    {
+      "id": "first_person_interview",
+      "name": "第一人称面经（First-person Interview Report）",
+      "may_claim_real_interview": true
+    },
+    {
+      "id": "public_question_bank",
+      "name": "公开题库（Public Question Bank）",
+      "may_claim_real_interview": false
+    },
+    {
+      "id": "project_interview_exercise",
+      "name": "项目型考题（Project Interview Exercise）",
+      "may_claim_real_interview": false
+    },
+    {
+      "id": "engineering_case",
+      "name": "工程问题（Engineering Case）",
+      "may_claim_real_interview": false
+    },
+    {
+      "id": "secondary_index",
+      "name": "二次索引（Secondary Index）",
+      "may_claim_real_interview": false
+    }
+  ],
+  "required_node_fields": [
+    "id",
+    "type",
+    "label_zh",
+    "label_en",
+    "status",
+    "reviewed_at",
+    "source_refs"
+  ],
+  "optional_node_fields": [
+    "abbreviation",
+    "domain_ids",
+    "module_ids",
+    "summary",
+    "applicable_versions",
+    "freshness_class",
+    "provenance_type",
+    "source_locator",
+    "chapter_path",
+    "problem_path",
+    "supersedes",
+    "tags"
+  ],
+  "required_edge_fields": [
+    "id",
+    "type",
+    "from",
+    "to",
+    "explanation",
+    "source_refs",
+    "review_status"
+  ],
+  "node_id_patterns": {
+    "backbone": "^BB-[A-Z0-9-]+$",
+    "pipeline_stage": "^PS-[A-Z0-9-]+$",
+    "knowledge": "^RAG-\\d{2}-\\d{3}$",
+    "algorithm": "^ALG-[A-Z0-9-]+$",
+    "capability": "^CAP-[A-Z0-9-]+$",
+    "problem_question": "^PQ-RAG-\\d{4}$",
+    "cause": "^CAUSE-RAG-\\d{4}$",
+    "solution": "^SOL-RAG-\\d{4}$",
+    "implementation": "^IMP-RAG-\\d{4}$",
+    "evaluation": "^EVAL-[A-Z0-9-]+$",
+    "source": "^SRC-[A-Z0-9-]+$"
+  },
+  "review_statuses": [
+    "discovered",
+    "inventory_draft",
+    "source_mapped",
+    "fact_checked",
+    "content_draft",
+    "reviewed",
+    "superseded"
+  ],
+  "graph_invariants": [
+    "Every non-source node must have at least one supported_by edge before reviewed status.",
+    "Every problem_question node must have at least one problem_at edge.",
+    "Every problem_question node must have provenance_type and source locator unless it is engineering_case.",
+    "Every solution node must connect to at least one problem_question through solved_by or its inverse representation.",
+    "Every implementation node must connect to a knowledge or solution node.",
+    "Every formal learning view must reference node IDs from the graph.",
+    "No unregistered edge type may be published.",
+    "Undirected relationships must be normalized to a stable endpoint order to prevent duplicates."
+  ],
+  "example_subgraph": {
+    "description": "向量数据库（Vector Database）与检索增强生成（Retrieval-Augmented Generation，RAG）的层级和重叠示例。",
+    "nodes": [
+      {"id": "BB-RAG", "type": "backbone", "label_zh": "检索增强生成", "label_en": "Retrieval-Augmented Generation"},
+      {"id": "BB-VECTOR-DATABASE", "type": "backbone", "label_zh": "向量数据库", "label_en": "Vector Database"},
+      {"id": "PS-STORAGE-INDEXING", "type": "pipeline_stage", "label_zh": "存储与索引", "label_en": "Storage and Indexing"},
+      {"id": "CAP-VECTOR-INDEX", "type": "capability", "label_zh": "向量索引", "label_en": "Vector Index"},
+      {"id": "CAP-ANN-SEARCH", "type": "capability", "label_zh": "近似最近邻检索", "label_en": "Approximate Nearest Neighbor Search"},
+      {"id": "ALG-HNSW", "type": "algorithm", "label_zh": "分层可导航小世界图", "label_en": "Hierarchical Navigable Small World"}
+    ],
+    "edges": [
+      {"type": "contains", "from": "BB-RAG", "to": "PS-STORAGE-INDEXING"},
+      {"type": "overlaps_with", "from": "PS-STORAGE-INDEXING", "to": "BB-VECTOR-DATABASE"},
+      {"type": "contains", "from": "BB-VECTOR-DATABASE", "to": "CAP-VECTOR-INDEX"},
+      {"type": "contains", "from": "CAP-VECTOR-INDEX", "to": "CAP-ANN-SEARCH"},
+      {"type": "implements", "from": "ALG-HNSW", "to": "CAP-ANN-SEARCH"}
+    ]
+  }
+}
+

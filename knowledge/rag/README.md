@@ -1,16 +1,18 @@
 # RAG 标准知识库
 
-当前状态：`building`。来源盘点已经完成，来源单元正在逐条人工复核；`RAG-01` 至 `RAG-03` 已生成第一版标准正文，但在严格来源验收前不宣布为终稿。
+当前状态：`restructuring`。来源盘点已经完成，来源单元正在逐条人工复核。`RAG-01` 至 `RAG-03` 的第一版正文早于最新双语、图优先和问题驱动标准，现统一标记为待重写草稿，不视为正式正文。
 
 详细原子知识目录见 [`catalog.md`](catalog.md)，机器可读版本见 [`catalog.json`](catalog.json)。当前目录用于防止不同角度的细节在去重时被错误删除；其中条目尚未全部完成来源映射和事实核验。
 
-已生成正文：
+待重写草稿：
 
 - [`RAG-01` 基础、价值与能力边界](chapters/rag-01-foundations.md)
 - [`RAG-02` 系统架构与生命周期](chapters/rag-02-architecture-lifecycle.md)
 - [`RAG-03` 文档解析与数据治理](chapters/rag-03-document-parsing-governance.md)
 
 学习总览和多图导航见 [`learning/rag/overview.md`](../../learning/rag/overview.md)。
+
+正式内容必须遵守 [`CONTENT_STANDARD.md`](CONTENT_STANDARD.md) 和 [`TERMINOLOGY.md`](TERMINOLOGY.md)。整体执行顺序见 [`docs/PROJECT_PLAN.md`](../../docs/PROJECT_PLAN.md)。
 
 ## 预定知识主干
 

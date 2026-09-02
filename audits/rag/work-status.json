@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-02",
+  "project": "AI-Learn",
+  "pilot_domain": "RAG",
+  "authoritative_plan": "docs/PROJECT_PLAN.md",
+  "current_phase": "P2-source-and-question-expansion",
+  "overall_status": "in_progress",
+  "baseline": {
+    "registered_primary_sources": 4,
+    "source_units": 695,
+    "catalog_atoms": 187,
+    "source_units_pending_manual_review": 522,
+    "acceptance_items_remaining": 16,
+    "baseline_commit": "00d830129bca0914010da64ba4d845df8046d75b",
+    "baseline_date": "2026-09-02"
+  },
+  "content_status": {
+    "legacy_first_drafts": [
+      {
+        "module_id": "RAG-01",
+        "chapter": "knowledge/rag/chapters/rag-01-foundations.md",
+        "map": "learning/rag/maps/rag-01.md",
+        "status": "needs_rewrite_under_new_standard"
+      },
+      {
+        "module_id": "RAG-02",
+        "chapter": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
+        "map": "learning/rag/maps/rag-02.md",
+        "status": "needs_rewrite_under_new_standard"
+      },
+      {
+        "module_id": "RAG-03",
+        "chapter": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
+        "map": "learning/rag/maps/rag-03.md",
+        "status": "needs_rewrite_under_new_standard"
+      }
+    ],
+    "formal_content_ready": false,
+    "reason": "New bilingual terminology, graph-first information architecture, and problem-driven learning path supersede the first-draft format."
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "name": "仓库与来源基线",
+      "status": "completed",
+      "depends_on": [],
+      "deliverables": [
+        "sources/registry.json",
+        "sources/rag-scope.json",
+        "audits/rag/source-units.json",
+        "knowledge/rag/catalog.json",
+        "scripts/validate_repo.py"
+      ]
+    },
+    {
+      "id": "P1",
+      "name": "需求重构与协作基线",
+      "status": "completed",
+      "depends_on": ["P0"],
+      "deliverables": [
+        "docs/PROJECT_PLAN.md",
+        "AGENTS.md",
+        "knowledge/rag/TERMINOLOGY.md",
+        "taxonomy/rag-graph-model.json",
+        "audits/rag/work-status.json",
+        "templates/knowledge-note.md",
+        "templates/problem-question.md"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "来源扩充与题目全量盘点",
+      "status": "in_progress",
+      "depends_on": ["P1"],
+      "deliverables": [
+        "expanded source registry",
+        "problem and interview question inventory",
+        "node-specific search logs",
+        "coverage saturation records"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "底层知识图谱构建",
+      "status": "pending",
+      "depends_on": ["P2"],
+      "deliverables": [
+        "RAG graph nodes",
+        "RAG graph edges",
+        "source evidence edges",
+        "orphan and conflict reports"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "完整流程和多视图",
+      "status": "pending",
+      "depends_on": ["P3"],
+      "deliverables": [
+        "complete RAG workflow prerequisite",
+        "global metro map",
+        "cross-backbone views",
+        "local node maps",
+        "user query paths"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "主干节点工程问题和面试题",
+      "status": "pending",
+      "depends_on": ["P3", "P4"],
+      "deliverables": [
+        "stage problem and interview pages",
+        "stage indexes",
+        "problem-to-node mappings"
+      ]
+    },
+    {
+      "id": "P6",
+      "name": "跨节点综合问题",
+      "status": "pending",
+      "depends_on": ["P5"],
+      "deliverables": [
+        "cross-stage diagnosis pages",
+        "system design problems",
+        "cross-stage graph views"
+      ]
+    },
+    {
+      "id": "P7",
+      "name": "标准知识章节重写与补全",
+      "status": "pending",
+      "depends_on": ["P3", "P5"],
+      "deliverables": [
+        "rewritten RAG-01 to RAG-03",
+        "remaining knowledge chapters",
+        "framework implementation sections",
+        "bidirectional problem links"
+      ]
+    },
+    {
+      "id": "P8",
+      "name": "严格验收与发布",
+      "status": "pending",
+      "depends_on": ["P2", "P3", "P4", "P5", "P6", "P7"],
+      "deliverables": [
+        "source coverage report",
+        "knowledge coverage report",
+        "problem coverage report",
+        "graph coverage report",
+        "strict validation result",
+        "release notes"
+      ]
+    }
+  ],
+  "work_items": [
+    {
+      "id": "WP-P1-001",
+      "title": "建立项目整体规划与 Agent 入口",
+      "priority": 1,
+      "status": "completed",
+      "depends_on": [],
+      "outputs": ["docs/PROJECT_PLAN.md", "AGENTS.md", "audits/rag/work-status.json"]
+    },
+    {
+      "id": "WP-P1-002",
+      "title": "建立强制双语术语规范",
+      "priority": 2,
+      "status": "completed",
+      "depends_on": ["WP-P1-001"],
+      "outputs": ["knowledge/rag/TERMINOLOGY.md", "machine-readable terminology registry"]
+    },
+    {
+      "id": "WP-P1-003",
+      "title": "建立知识图谱节点和关系模型",
+      "priority": 3,
+      "status": "completed",
+      "depends_on": ["WP-P1-001"],
+      "outputs": ["taxonomy/rag-graph-model.json"]
+    },
+    {
+      "id": "WP-P1-004",
+      "title": "更新知识和问题模板",
+      "priority": 4,
+      "status": "completed",
+      "depends_on": ["WP-P1-002", "WP-P1-003"],
+      "outputs": ["templates/knowledge-note.md", "templates/problem-question.md"]
+    },
+    {
+      "id": "WP-P1-005",
+      "title": "扩展自动校验以覆盖新规划",
+      "priority": 5,
+      "status": "completed",
+      "depends_on": ["WP-P1-004"],
+      "outputs": ["scripts/validate_repo.py", "validation evidence"]
+    },
+    {
+      "id": "WP-P2-001",
+      "title": "定义节点级中英文检索矩阵",
+      "priority": 6,
+      "status": "pending",
+      "depends_on": ["WP-P1-005"],
+      "outputs": ["node search matrix", "search log template"]
+    },
+    {
+      "id": "WP-P2-002",
+      "title": "扩充公开面试题与工程问题来源",
+      "priority": 7,
+      "status": "pending",
+      "depends_on": ["WP-P2-001"],
+      "outputs": ["expanded sources", "question inventory", "source mappings"]
+    },
+    {
+      "id": "WP-P3-001",
+      "title": "建立检索增强生成主干节点第一版",
+      "priority": 8,
+      "status": "pending",
+      "depends_on": ["WP-P2-002"],
+      "outputs": ["graph nodes", "graph edges", "coverage report"]
+    }
+  ],
+  "next_action": {
+    "work_item_id": "WP-P2-001",
+    "instruction": "Define the node-level Chinese and English search matrix and search-log template before expanding public interview questions and engineering sources."
+  },
+  "global_blockers": [],
+  "handoff_notes": [
+    "Do not continue batch-generating RAG-04 and later chapters under the old template.",
+    "Do not mark the legacy first drafts as formal content.",
+    "Complete Phase 1 templates and validation before starting large-scale source expansion.",
+    "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
+  ]
+}

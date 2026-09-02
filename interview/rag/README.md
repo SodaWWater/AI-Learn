@@ -1,6 +1,8 @@
 # RAG 公开面试题关联
 
-这里不生产背诵式答案，也不自行模拟“某公司场景题”。本目录只负责把可追溯的公开题目连接到标准知识点。
+本目录统一管理工程问题/面试题（Engineering Problem / Interview Question）。问题既是快速学习入口，也是从实际工程现象反向连接多个流程节点、根因、方案、实现和验证方法的核心节点。
+
+主线学习顺序为：完整检索增强生成流程（RAG Workflow）前置内容 → 各主干节点问题 → 跨节点综合问题 → 完整系统设计。这里不生产背诵式答案，也不自行模拟“某公司真实面试题”。
 
 来源分为：
 
@@ -12,3 +14,5 @@
 每条记录必须包含来源类型、原始链接、发布日期或固定 Commit、题目定位、关联知识点 ID 和核验状态。可以做简短转述，不复制整篇面经或第三方答案。
 
 当前已核验的题目与知识映射见 [`public-scenarios.json`](public-scenarios.json)。
+
+新问题页面使用 [`templates/problem-question.md`](../../templates/problem-question.md)，整体规划见 [`docs/PROJECT_PLAN.md`](../../docs/PROJECT_PLAN.md)。

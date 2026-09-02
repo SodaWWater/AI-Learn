@@ -1,25 +1,26 @@
 {
   "schema_version": 1,
   "updated_at": "2026-09-02",
-  "status": "building",
-  "completed_modules": [
+  "status": "restructure_required",
+  "note": "The first drafts predate the approved bilingual, graph-first, problem-driven content standard and must be rewritten before formal publication.",
+  "legacy_draft_modules": [
     {
       "id": "RAG-01",
       "map": "learning/rag/maps/rag-01.md",
       "chapter": "knowledge/rag/chapters/rag-01-foundations.md",
-      "review_status": "first_complete_draft"
+      "review_status": "needs_rewrite_under_new_standard"
     },
     {
       "id": "RAG-02",
       "map": "learning/rag/maps/rag-02.md",
       "chapter": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
-      "review_status": "first_complete_draft"
+      "review_status": "needs_rewrite_under_new_standard"
     },
     {
       "id": "RAG-03",
       "map": "learning/rag/maps/rag-03.md",
       "chapter": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
-      "review_status": "first_complete_draft"
+      "review_status": "needs_rewrite_under_new_standard"
     }
   ]
 }
