@@ -75,6 +75,90 @@
       "decision": "map",
       "atom_ids": ["RAG-01-005"],
       "note": "RAG 与微调比较题。"
+    },
+    {
+      "source_unit_id": "RU-98a2782c3c12",
+      "decision": "map",
+      "atom_ids": ["RAG-01-008"],
+      "note": "Claude Code 三层记忆架构属于 RAG 与外部记忆的关系，不属于 RAG 主流程。"
+    },
+    {
+      "source_unit_id": "RU-aaa9c81a7ee5",
+      "decision": "map",
+      "atom_ids": ["RAG-01-008"],
+      "note": "Agent 长期记忆以 RAG 为实现方式，保留在 RAG 与记忆边界原子。"
+    },
+    {
+      "source_unit_id": "RU-7a29f0bc8394",
+      "decision": "not_applicable",
+      "atom_ids": [],
+      "note": "内容是单 Agent 与多 Agent 架构，不是 RAG 知识；纠正自动误分类。"
+    },
+    {
+      "source_unit_id": "RU-6ea41bd833f7",
+      "decision": "map",
+      "atom_ids": ["RAG-03-014", "RAG-12-011", "RAG-13-008"],
+      "note": "多模态 RAG 的表格、页码、图表和阅读顺序失败模式，同时支持质量回退与排障。"
+    },
+    {
+      "source_unit_id": "RU-ab9c7a95f273",
+      "decision": "map",
+      "atom_ids": ["RAG-12-011", "RAG-13-007", "RAG-13-009"],
+      "note": "多模态 RAG 最小项目设计及分类型评测。"
+    },
+    {
+      "source_unit_id": "RU-9c102100683d",
+      "decision": "map",
+      "atom_ids": ["RAG-03-004", "RAG-03-006", "RAG-03-007", "RAG-03-008", "RAG-03-015", "RAG-12-011"],
+      "note": "结构化解析需保留阅读顺序、表格、图片、公式及跨模态元素关系。"
+    },
+    {
+      "source_unit_id": "RU-6b544d83ebbe",
+      "decision": "map",
+      "atom_ids": ["RAG-03-001", "RAG-03-011", "RAG-11-001", "RAG-12-011"],
+      "note": "多模态摄取的文件类型、来源元数据、哈希和可复现要求。"
+    },
+    {
+      "source_unit_id": "RU-f216e21f0b1a",
+      "decision": "map",
+      "atom_ids": ["RAG-07-010", "RAG-12-011", "RAG-12-012"],
+      "note": "文本、布局、表格、图像和图索引并存，并按问题类型路由。"
+    },
+    {
+      "source_unit_id": "RU-cbbde9da5735",
+      "decision": "map",
+      "atom_ids": ["RAG-02-002", "RAG-13-007"],
+      "note": "概念级最小 RAG 在线闭环代码。"
+    },
+    {
+      "source_unit_id": "RU-907399bd1cdf",
+      "decision": "map",
+      "atom_ids": ["RAG-01-001", "RAG-02-001", "RAG-02-002"],
+      "note": "定义段同时明确离线建库和在线问答两条链路。"
+    },
+    {
+      "source_unit_id": "RU-67b50c5ef071",
+      "decision": "map",
+      "atom_ids": ["RAG-02-001", "RAG-02-002", "RAG-02-005", "RAG-02-007"],
+      "note": "完整流程同时覆盖组件边界、重排、引用与回流。"
+    },
+    {
+      "source_unit_id": "RU-2a9c784fd331",
+      "decision": "map",
+      "atom_ids": ["RAG-02-001", "RAG-02-004", "RAG-03-001", "RAG-04-006", "RAG-04-012", "RAG-05-001"],
+      "note": "离线阶段包含加载、切分、重叠、向量化和入库；拆分映射防止步骤细节丢失。"
+    },
+    {
+      "source_unit_id": "RU-c28afd30f144",
+      "decision": "map",
+      "atom_ids": ["RAG-02-001", "RAG-02-002", "RAG-02-007"],
+      "note": "串联离线与在线流程，并强调热更新和答案溯源。"
+    },
+    {
+      "source_unit_id": "RU-0c99238b7abd",
+      "decision": "map",
+      "atom_ids": ["RAG-02-002"],
+      "note": "来源清单中的在线流程题目入口，仅作为题目覆盖证明。"
     }
   ]
 }
