@@ -17,6 +17,8 @@ mindmap
     RAG_05_010["RAG-05-010 Embedding Benchmark 与业务数据集评估"]
     RAG_05_011["RAG-05-011 批量 Embedding、缓存与吞吐优化"]
     RAG_05_012["RAG-05-012 Embedding 模型升级与向量重建"]
+    RAG_05_013["RAG-05-013 领域检索器微调、适配器与 Embedding 变换"]
+    RAG_05_014["RAG-05-014 检索器与生成器偏好对齐及 LLM 监督信号"]
 ```
 
-共 **12** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。
+共 **14** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。

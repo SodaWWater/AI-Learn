@@ -64,7 +64,14 @@
         "resources/multimodal/evaluation-checklist.md",
         "resources/multimodal/tools-and-projects.md"
       ]
+    },
+    {
+      "source_id": "user-rag-experience-pdf",
+      "collector": "manual_index",
+      "files": [
+        "大模型 RAG 经验面.pdf#pages=1-15"
+      ],
+      "index_file": "sources/manual-rag-units.json"
     }
   ]
 }
-

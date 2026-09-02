@@ -21,6 +21,7 @@ REQUIRED = [
     "knowledge/rag/catalog.json",
     "knowledge/rag/catalog.md",
     "learning/rag/draft-overview.md",
+    "interview/rag/public-scenarios.json",
     "audits/rag/source-units.json",
     "audits/rag/atom-suggestions.json",
     "audits/rag/accepted-mappings.json",
@@ -69,7 +70,10 @@ def main() -> int:
     if repeated := duplicates(source_ids):
         errors.append(f"来源 ID 重复：{repeated}")
     for source in sources:
-        if not re.fullmatch(r"[0-9a-f]{40}", source.get("commit", "")):
+        if source.get("source_type") == "user_provided_pdf":
+            if not re.fullmatch(r"[0-9a-f]{64}", source.get("sha256", "")):
+                errors.append(f"来源 {source.get('id')} 的 SHA-256 不是 64 位")
+        elif not re.fullmatch(r"[0-9a-f]{40}", source.get("commit", "")):
             errors.append(f"来源 {source.get('id')} 的 Commit 不是 40 位 SHA")
         if not source.get("import_policy"):
             errors.append(f"来源 {source.get('id')} 缺少 import_policy")
@@ -202,6 +206,25 @@ def main() -> int:
         errors.append("RAG 模块思维导图没有覆盖全部原子知识点")
     if repeated := duplicates(mindmap_atom_ids):
         errors.append(f"RAG 模块思维导图重复知识原子：{repeated[:10]}")
+
+    scenarios = load_json("interview/rag/public-scenarios.json", errors).get("scenarios", [])
+    scenario_ids = [item.get("id", "") for item in scenarios]
+    if repeated := duplicates(scenario_ids):
+        errors.append(f"公开场景题 ID 重复：{repeated[:10]}")
+    allowed_scenario_types = {
+        "first_person_interview", "public_question_bank",
+        "project_interview_exercise", "secondary_index",
+    }
+    for scenario in scenarios:
+        if scenario.get("source_type") not in allowed_scenario_types:
+            errors.append(f"公开场景题来源类型无效：{scenario.get('id')}")
+        if not str(scenario.get("source_url", "")).startswith("https://"):
+            errors.append(f"公开场景题缺少 HTTPS 来源：{scenario.get('id')}")
+        if not scenario.get("verification"):
+            errors.append(f"公开场景题缺少核验说明：{scenario.get('id')}")
+        for atom_id in scenario.get("atom_ids", []):
+            if atom_id not in atom_ids:
+                errors.append(f"公开场景题引用未知知识原子：{atom_id}")
 
     if args.strict_rag and inventory_path.exists():
         reviewable_ids = {

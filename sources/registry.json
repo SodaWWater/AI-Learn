@@ -34,7 +34,20 @@
       "copyright_note": "当前固定版本未在根目录发现许可证文件。",
       "import_policy": "登记链接、版本、标题和知识映射；不复制发布完整正文、PDF 或图片。",
       "domains": ["AGENT", "EVALUATION", "FRAMEWORK", "MULTI_AGENT", "PROMPT", "PROTOCOL", "RAG", "TOOLS"]
+    },
+    {
+      "id": "user-rag-experience-pdf",
+      "name": "大模型 RAG 经验面",
+      "source_type": "user_provided_pdf",
+      "artifact_name": "大模型 RAG 经验面.pdf",
+      "sha256": "2b87bf55861ef8eff0e2ecd4755224bca9eed57add3efa35123f0e08554763fb",
+      "document_created_at": "2024-08-03",
+      "reviewed_at": "2026-09-02",
+      "license_status": "unknown",
+      "copyright_note": "用户提供的学习 PDF，作者元数据为 NINGMEI；公开传播许可未知。",
+      "import_policy": "不把 PDF 或大段原文提交到公开仓库；只登记文件哈希、页码、短标题和自己的知识映射。",
+      "evidence_quality": "secondary_unverified",
+      "domains": ["RAG"]
     }
   ]
 }
-

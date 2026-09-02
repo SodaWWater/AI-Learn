@@ -181,6 +181,31 @@ def xiaolin_units(units: list[dict], source_id: str, repo: Path) -> None:
             )
 
 
+def manual_index_units(units: list[dict], source_id: str, index_path: Path) -> None:
+    payload = load_json(index_path)
+    source = next(
+        (item for item in payload.get("sources", []) if item.get("source_id") == source_id),
+        None,
+    )
+    if source is None:
+        add_unit(units, source_id, str(index_path), "file", "人工来源索引缺失", "missing")
+        return
+    path = source["path"]
+    for item in source.get("units", []):
+        title = clean_text(item["title"])
+        units.append({
+            "id": make_id(source_id, path, item["locator"], title),
+            "source_id": source_id,
+            "path": path,
+            "locator": item["locator"],
+            "title": title,
+            "kind": "manual_heading",
+            "heading_level": None,
+            "canonical_topic": item["canonical_topic"],
+            "review_status": "mapped",
+        })
+
+
 def write_outputs(units: list[dict], output_json: Path, output_md: Path) -> None:
     by_source = Counter(unit["source_id"] for unit in units)
     by_status = Counter(unit["review_status"] for unit in units)
@@ -242,6 +267,9 @@ def main() -> int:
     units: list[dict] = []
     for source in scope["sources"]:
         source_id = source["source_id"]
+        if source["collector"] == "manual_index":
+            manual_index_units(units, source_id, REPO_ROOT / source["index_file"])
+            continue
         root = roots[source_id]
         if source["collector"] == "xiaolin_question_bank":
             xiaolin_units(units, source_id, root)

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-02",
+  "rules": {
+    "meaning": "题目只用于连接知识，不提供背诵话术。",
+    "provenance": "first_person_interview 代表发布者自述，不代表企业官方确认；project_interview_exercise 是公开项目考题，不标记为公司真题。"
+  },
+  "scenarios": [
+    {
+      "id": "RAG-SCENE-001",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/discuss/882634966025175040",
+      "source_title": "字节 AI 应用岗：个人面试经历与补充笔记",
+      "source_locator": "第 2 节：Recall@5 与评测集；附录现场碎片",
+      "verification": "发布者自述，非企业官方题库",
+      "question_summary": "已有 Recall@5 指标时，如何证明结果足够好，评测集规模和分布如何设计，怎样建立公平基线并区分检索错误与生成错误？",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-003", "RAG-10-004", "RAG-10-009", "RAG-10-011", "RAG-10-013"]
+    },
+    {
+      "id": "RAG-SCENE-002",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/discuss/882634966025175040",
+      "source_title": "字节 AI 应用岗：个人面试经历与补充笔记",
+      "source_locator": "第 4 节：法律文本 Chunking",
+      "verification": "发布者自述，非企业官方题库",
+      "question_summary": "法律条文包含条、款、项、引用关系和扫描件噪声时，如何设计结构解析、父子 Chunk、Metadata、Hybrid Retrieval、Rerank、引用和质检？",
+      "atom_ids": ["RAG-03-003", "RAG-03-004", "RAG-03-014", "RAG-04-004", "RAG-04-007", "RAG-04-014", "RAG-08-004", "RAG-08-010", "RAG-09-007", "RAG-11-005"]
+    },
+    {
+      "id": "RAG-SCENE-003",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/discuss/882634966025175040",
+      "source_title": "字节 AI 应用岗：个人面试经历与补充笔记",
+      "source_locator": "附录：500 份 PDF、5 万 Chunk 与 512 Token",
+      "verification": "发布者自述，非企业官方题库",
+      "question_summary": "面对给定文档量、Chunk 数和固定 Token 长度，如何验证切分参数自洽，并用数据而不是经验值证明选择？",
+      "atom_ids": ["RAG-04-012", "RAG-04-013", "RAG-04-015", "RAG-06-012", "RAG-10-009"]
+    },
+    {
+      "id": "RAG-SCENE-004",
+      "source_type": "project_interview_exercise",
+      "source_url": "https://github.com/hebutBryant/rag_interview",
+      "source_title": "RAG 面试题项目：VectorRAG",
+      "source_locator": "README 考题 1",
+      "verification": "公开项目型考题，不属于企业真实面经",
+      "question_summary": "补全 Query/Document Embedding、批量建库、FAISS Top-K 检索、ID 映射、上下文生成和准确率记录的完整 VectorRAG 链路。",
+      "atom_ids": ["RAG-05-004", "RAG-05-008", "RAG-05-011", "RAG-06-003", "RAG-06-015", "RAG-08-008", "RAG-09-006", "RAG-13-007"]
+    },
+    {
+      "id": "RAG-SCENE-005",
+      "source_type": "project_interview_exercise",
+      "source_url": "https://github.com/hebutBryant/rag_interview",
+      "source_title": "RAG 面试题项目：GraphRAG",
+      "source_locator": "README 考题 2",
+      "verification": "公开项目型考题，不属于企业真实面经",
+      "question_summary": "实现实体召回、多跳子图抽取、路径去重、语义剪枝、生产者消费者队列、提前停止，并分析路径爆炸和图算法选型。",
+      "atom_ids": ["RAG-08-013", "RAG-11-007", "RAG-12-009", "RAG-12-010", "RAG-12-020", "RAG-13-007"]
+    },
+    {
+      "id": "RAG-SCENE-006",
+      "source_type": "project_interview_exercise",
+      "source_url": "https://github.com/hebutBryant/rag_interview",
+      "source_title": "RAG 面试题项目：Benchmark",
+      "source_locator": "README 考题 3",
+      "verification": "公开项目型考题，不属于企业真实面经",
+      "question_summary": "把 VectorRAG 和 GraphRAG 日志转换为评测数据，计算 Faithfulness、Context Precision 和 Context Recall，并输出可比较的明细结果。",
+      "atom_ids": ["RAG-10-003", "RAG-10-004", "RAG-10-006", "RAG-10-008", "RAG-10-013", "RAG-13-009"]
+    }
+  ]
+}

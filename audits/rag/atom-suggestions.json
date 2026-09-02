@@ -4,7 +4,7 @@
   "warning": "本文件仅提供人工复核候选，不是已接受的覆盖矩阵。",
   "counts": {
     "not_applicable": 42,
-    "pending": 616
+    "pending": 653
   },
   "mappings": [
     {
@@ -2840,14 +2840,14 @@
           "score": 0.1004
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.076
-        },
-        {
           "atom_id": "RAG-13-004",
           "atom_title": "Chunk、Embedding、向量库和 Reranker 选型表达",
           "score": 0.0756
+        },
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.0647
         }
       ]
     },
@@ -2939,14 +2939,14 @@
           "score": 0.1043
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0789
-        },
-        {
           "atom_id": "RAG-13-004",
           "atom_title": "Chunk、Embedding、向量库和 Reranker 选型表达",
           "score": 0.0778
+        },
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.0673
         }
       ]
     },
@@ -4572,14 +4572,14 @@
           "score": 0.1471
         },
         {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.1424
+        },
+        {
           "atom_id": "RAG-12-011",
           "atom_title": "多模态 RAG 的解析、索引、路由和生成",
           "score": 0.1328
-        },
-        {
-          "atom_id": "RAG-12-005",
-          "atom_title": "Adaptive Retrieval 与是否检索判断",
-          "score": 0.1126
         }
       ]
     },
@@ -4968,9 +4968,9 @@
           "score": 0.1381
         },
         {
-          "atom_id": "RAG-12-005",
-          "atom_title": "Adaptive Retrieval 与是否检索判断",
-          "score": 0.116
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.1309
         }
       ]
     },
@@ -5027,6 +5027,11 @@
       "accepted_atom_id": null,
       "candidates": [
         {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.1606
+        },
+        {
           "atom_id": "RAG-12-012",
           "atom_title": "视觉文档检索与 Late Interaction",
           "score": 0.1486
@@ -5035,11 +5040,6 @@
           "atom_id": "RAG-12-005",
           "atom_title": "Adaptive Retrieval 与是否检索判断",
           "score": 0.1451
-        },
-        {
-          "atom_id": "RAG-12-008",
-          "atom_title": "Multi-Step 与 Iterative Retrieval",
-          "score": 0.1447
         }
       ]
     },
@@ -8395,9 +8395,9 @@
           "score": 0.0978
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0659
+          "atom_id": "RAG-13-007",
+          "atom_title": "最小 RAG 与生产级代码结构",
+          "score": 0.0628
         }
       ]
     },
@@ -8505,14 +8505,14 @@
           "score": 0.2563
         },
         {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.169
+        },
+        {
           "atom_id": "RAG-12-015",
           "atom_title": "Deep Research 的多源交叉验证",
           "score": 0.1369
-        },
-        {
-          "atom_id": "RAG-12-002",
-          "atom_title": "Advanced RAG 的查询、检索和生成优化",
-          "score": 0.1315
         }
       ]
     },
@@ -8556,9 +8556,9 @@
           "score": 0.0945
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0919
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0895
         }
       ]
     },
@@ -8625,9 +8625,9 @@
           "score": 0.0945
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0919
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0895
         }
       ]
     },
@@ -8655,9 +8655,9 @@
           "score": 0.0945
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0919
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0895
         }
       ]
     },
@@ -8678,9 +8678,9 @@
           "score": 0.0947
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0921
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0896
         }
       ]
     },
@@ -9007,9 +9007,9 @@
           "score": 0.0947
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0921
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0896
         }
       ]
     },
@@ -9030,9 +9030,9 @@
           "score": 0.0947
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0921
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0896
         }
       ]
     },
@@ -9053,9 +9053,9 @@
           "score": 0.0947
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0921
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0896
         }
       ]
     },
@@ -9076,9 +9076,9 @@
           "score": 0.1003
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0974
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0947
         }
       ]
     },
@@ -9099,9 +9099,9 @@
           "score": 0.1003
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0974
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0947
         }
       ]
     },
@@ -9163,14 +9163,14 @@
           "score": 0.0635
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0558
-        },
-        {
           "atom_id": "RAG-13-004",
           "atom_title": "Chunk、Embedding、向量库和 Reranker 选型表达",
           "score": 0.0531
+        },
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.048
         }
       ]
     },
@@ -9260,9 +9260,9 @@
           "score": 0.1033
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.1003
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0974
         }
       ]
     },
@@ -9283,9 +9283,9 @@
           "score": 0.0974
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0947
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0921
         }
       ]
     },
@@ -9329,9 +9329,9 @@
           "score": 0.0974
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0947
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0921
         }
       ]
     },
@@ -9375,9 +9375,9 @@
           "score": 0.0974
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0947
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0921
         }
       ]
     },
@@ -9699,14 +9699,14 @@
           "score": 0.1202
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.1071
-        },
-        {
           "atom_id": "RAG-13-002",
           "atom_title": "RAG 完整流程口述",
           "score": 0.0933
+        },
+        {
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0884
         }
       ]
     },
@@ -9794,9 +9794,9 @@
           "score": 0.068
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0667
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0654
         }
       ]
     },
@@ -10323,9 +10323,9 @@
           "score": 0.1019
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.099
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0962
         }
       ]
     },
@@ -10364,13 +10364,13 @@
           "score": 0.1019
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.099
-        },
-        {
           "atom_id": "RAG-13-003",
           "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0962
+        },
+        {
+          "atom_id": "RAG-13-010",
+          "atom_title": "RAG 项目 STAR 叙事",
           "score": 0.0962
         }
       ]
@@ -10415,9 +10415,9 @@
           "score": 0.086
         },
         {
-          "atom_id": "RAG-05-006",
-          "atom_title": "向量维度、精度、速度和存储权衡",
-          "score": 0.0667
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.0684
         }
       ]
     },
@@ -10727,19 +10727,19 @@
       "accepted_atom_id": null,
       "candidates": [
         {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.1135
+        },
+        {
+          "atom_id": "RAG-12-019",
+          "atom_title": "RAG 范式的概念与分类维度",
+          "score": 0.1082
+        },
+        {
           "atom_id": "RAG-12-018",
           "atom_title": "高级 RAG 的成本、风险和适用边界",
           "score": 0.1057
-        },
-        {
-          "atom_id": "RAG-12-007",
-          "atom_title": "CRAG 的检索评估和纠错",
-          "score": 0.0932
-        },
-        {
-          "atom_id": "RAG-12-013",
-          "atom_title": "Agentic Search 与传统搜索、传统 RAG",
-          "score": 0.0896
         }
       ]
     },
@@ -10750,6 +10750,11 @@
       "accepted_atom_id": null,
       "candidates": [
         {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.2058
+        },
+        {
           "atom_id": "RAG-12-009",
           "atom_title": "GraphRAG 的图构建、社区和全局检索",
           "score": 0.2012
@@ -10758,11 +10763,6 @@
           "atom_id": "RAG-12-010",
           "atom_title": "知识图谱与向量检索的组合",
           "score": 0.1187
-        },
-        {
-          "atom_id": "RAG-12-013",
-          "atom_title": "Agentic Search 与传统搜索、传统 RAG",
-          "score": 0.1086
         }
       ]
     },
@@ -10806,9 +10806,9 @@
           "score": 0.1169
         },
         {
-          "atom_id": "RAG-12-001",
-          "atom_title": "Naive RAG 的流程和局限",
-          "score": 0.1031
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.1086
         }
       ]
     },
@@ -10824,14 +10824,14 @@
           "score": 0.0951
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0889
-        },
-        {
           "atom_id": "RAG-13-010",
           "atom_title": "RAG 项目 STAR 叙事",
           "score": 0.087
+        },
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.0762
         }
       ]
     },
@@ -11123,13 +11123,13 @@
           "score": 0.0947
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.0921
-        },
-        {
           "atom_id": "RAG-13-003",
           "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0896
+        },
+        {
+          "atom_id": "RAG-13-010",
+          "atom_title": "RAG 项目 STAR 叙事",
           "score": 0.0896
         }
       ]
@@ -11549,6 +11549,857 @@
       ]
     },
     {
+      "source_unit_id": "RU-0712773d7e48",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-01-004",
+          "atom_title": "RAG 对幻觉的缓解能力与边界",
+          "score": 0.0977
+        },
+        {
+          "atom_id": "RAG-01-008",
+          "atom_title": "RAG 与模型记忆、上下文工程的关系",
+          "score": 0.0932
+        },
+        {
+          "atom_id": "RAG-01-010",
+          "atom_title": "不适合使用 RAG 或收益有限的场景",
+          "score": 0.0918
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-2762e630da8c",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-04-002",
+          "atom_title": "固定字符或 Token 长度切分",
+          "score": 0.165
+        },
+        {
+          "atom_id": "RAG-04-011",
+          "atom_title": "表格、代码和多模态内容的专项切分",
+          "score": 0.1432
+        },
+        {
+          "atom_id": "RAG-04-003",
+          "atom_title": "递归字符切分",
+          "score": 0.1385
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-21c8a6cc3ca2",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.4329
+        },
+        {
+          "atom_id": "RAG-05-005",
+          "atom_title": "通用、领域、多语言 Embedding 选择",
+          "score": 0.3079
+        },
+        {
+          "atom_id": "RAG-05-001",
+          "atom_title": "Embedding 的语义空间与检索作用",
+          "score": 0.281
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-48712a97c6fa",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-08-002",
+          "atom_title": "Sparse Retrieval 与关键词检索",
+          "score": 0.1236
+        },
+        {
+          "atom_id": "RAG-08-001",
+          "atom_title": "Dense Retrieval 语义检索",
+          "score": 0.0814
+        },
+        {
+          "atom_id": "RAG-08-004",
+          "atom_title": "Hybrid Search 混合检索",
+          "score": 0.0683
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-550f857e4b21",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-08-016",
+          "atom_title": "检索阶段延迟、并发和缓存优化",
+          "score": 0.1366
+        },
+        {
+          "atom_id": "RAG-08-014",
+          "atom_title": "检索结果过滤与可信来源控制",
+          "score": 0.0759
+        },
+        {
+          "atom_id": "RAG-08-010",
+          "atom_title": "Reranker 模型选择、批处理和阈值",
+          "score": 0.0685
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-7a1a6df1d547",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-08-010",
+          "atom_title": "Reranker 模型选择、批处理和阈值",
+          "score": 0.27
+        },
+        {
+          "atom_id": "RAG-08-014",
+          "atom_title": "检索结果过滤与可信来源控制",
+          "score": 0.1472
+        },
+        {
+          "atom_id": "RAG-08-001",
+          "atom_title": "Dense Retrieval 语义检索",
+          "score": 0.0924
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-94937ab1c9d3",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-12-010",
+          "atom_title": "知识图谱与向量检索的组合",
+          "score": 0.1974
+        },
+        {
+          "atom_id": "RAG-12-012",
+          "atom_title": "视觉文档检索与 Late Interaction",
+          "score": 0.122
+        },
+        {
+          "atom_id": "RAG-12-011",
+          "atom_title": "多模态 RAG 的解析、索引、路由和生成",
+          "score": 0.1205
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-9faa7f2d4d30",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-06-011",
+          "atom_title": "FAISS、Milvus、Qdrant、Chroma、Pinecone 与 pgvector 选型",
+          "score": 0.2788
+        },
+        {
+          "atom_id": "RAG-06-006",
+          "atom_title": "IVF 原理、nlist、nprobe 与权衡",
+          "score": 0.1289
+        },
+        {
+          "atom_id": "RAG-06-004",
+          "atom_title": "Document ID、Chunk ID 与 Parent ID",
+          "score": 0.1082
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-ba21574938ab",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-06-010",
+          "atom_title": "元数据过滤与过滤前后执行顺序",
+          "score": 0.1575
+        },
+        {
+          "atom_id": "RAG-06-003",
+          "atom_title": "向量、文本、元数据和主键 Schema",
+          "score": 0.1089
+        },
+        {
+          "atom_id": "RAG-06-012",
+          "atom_title": "数据规模、QPS、延迟、召回率和成本基准",
+          "score": 0.0876
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-4e8e9d9ebd25",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-07-005",
+          "atom_title": "HyDE 假设文档嵌入",
+          "score": 0.1571
+        },
+        {
+          "atom_id": "RAG-07-010",
+          "atom_title": "查询路由与知识源选择",
+          "score": 0.0648
+        },
+        {
+          "atom_id": "RAG-07-004",
+          "atom_title": "Multi-Query 查询扩展",
+          "score": 0.0575
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-c9a34bb7e9ae",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-09-001",
+          "atom_title": "System Prompt、问题、证据和输出约束的组装",
+          "score": 0.1993
+        },
+        {
+          "atom_id": "RAG-09-015",
+          "atom_title": "长上下文与 Prompt Caching 的边界",
+          "score": 0.1934
+        },
+        {
+          "atom_id": "RAG-09-005",
+          "atom_title": "Contextual Compression 与证据压缩",
+          "score": 0.1004
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-56fe3e307365",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.1082
+        },
+        {
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.1017
+        },
+        {
+          "atom_id": "RAG-13-010",
+          "atom_title": "RAG 项目 STAR 叙事",
+          "score": 0.1017
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-0b3987a6153c",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.1333
+        },
+        {
+          "atom_id": "RAG-13-002",
+          "atom_title": "RAG 完整流程口述",
+          "score": 0.1159
+        },
+        {
+          "atom_id": "RAG-13-010",
+          "atom_title": "RAG 项目 STAR 叙事",
+          "score": 0.1085
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-e970be502ecf",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-12-011",
+          "atom_title": "多模态 RAG 的解析、索引、路由和生成",
+          "score": 0.1857
+        },
+        {
+          "atom_id": "RAG-12-002",
+          "atom_title": "Advanced RAG 的查询、检索和生成优化",
+          "score": 0.1333
+        },
+        {
+          "atom_id": "RAG-12-007",
+          "atom_title": "CRAG 的检索评估和纠错",
+          "score": 0.1274
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-04ee6d492082",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-01-005",
+          "atom_title": "RAG 与微调的区别、组合和选型",
+          "score": 0.1185
+        },
+        {
+          "atom_id": "RAG-01-001",
+          "atom_title": "RAG 的定义、核心组件与工作目标",
+          "score": 0.1179
+        },
+        {
+          "atom_id": "RAG-01-008",
+          "atom_title": "RAG 与模型记忆、上下文工程的关系",
+          "score": 0.1153
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-68e54b3d3a34",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-01-001",
+          "atom_title": "RAG 的定义、核心组件与工作目标",
+          "score": 0.2211
+        },
+        {
+          "atom_id": "RAG-01-008",
+          "atom_title": "RAG 与模型记忆、上下文工程的关系",
+          "score": 0.1557
+        },
+        {
+          "atom_id": "RAG-01-009",
+          "atom_title": "适合使用 RAG 的任务与业务条件",
+          "score": 0.1427
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-2106d6b0e69e",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-08-008",
+          "atom_title": "Top-K、相似度阈值与动态候选集",
+          "score": 0.1136
+        },
+        {
+          "atom_id": "RAG-08-010",
+          "atom_title": "Reranker 模型选择、批处理和阈值",
+          "score": 0.0756
+        },
+        {
+          "atom_id": "RAG-08-014",
+          "atom_title": "检索结果过滤与可信来源控制",
+          "score": 0.0667
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-539c2f5ccfad",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-001",
+          "atom_title": "Embedding 的语义空间与检索作用",
+          "score": 0.0595
+        },
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.0456
+        },
+        {
+          "atom_id": "RAG-05-007",
+          "atom_title": "Cosine、Inner Product 与 L2 距离",
+          "score": 0.0412
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-e7e7cdbda29c",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-04-001",
+          "atom_title": "Chunking 的目标与检索、生成双重约束",
+          "score": 0.1963
+        },
+        {
+          "atom_id": "RAG-04-015",
+          "atom_title": "Chunking 策略的离线评估和消融实验",
+          "score": 0.1934
+        },
+        {
+          "atom_id": "RAG-04-006",
+          "atom_title": "滑动窗口与 Chunk Overlap",
+          "score": 0.1748
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-42cfbcc5fd11",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-001",
+          "atom_title": "Embedding 的语义空间与检索作用",
+          "score": 0.1164
+        },
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.05
+        },
+        {
+          "atom_id": "RAG-05-005",
+          "atom_title": "通用、领域、多语言 Embedding 选择",
+          "score": 0.0333
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-43282bca0fd1",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.3376
+        },
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.304
+        },
+        {
+          "atom_id": "RAG-05-011",
+          "atom_title": "批量 Embedding、缓存与吞吐优化",
+          "score": 0.27
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-5cd5ced93446",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-07-003",
+          "atom_title": "Query Rewrite 的目标和约束",
+          "score": 0.3384
+        },
+        {
+          "atom_id": "RAG-07-004",
+          "atom_title": "Multi-Query 查询扩展",
+          "score": 0.286
+        },
+        {
+          "atom_id": "RAG-07-012",
+          "atom_title": "Query 增强策略的离线评估",
+          "score": 0.1265
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-6c346e019aaa",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.3742
+        },
+        {
+          "atom_id": "RAG-05-005",
+          "atom_title": "通用、领域、多语言 Embedding 选择",
+          "score": 0.3484
+        },
+        {
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.3377
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-f0c904f46041",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-003",
+          "atom_title": "对比学习、正负样本和训练目标",
+          "score": 0.1059
+        },
+        {
+          "atom_id": "RAG-05-004",
+          "atom_title": "Query 与 Document 的非对称编码",
+          "score": 0.0894
+        },
+        {
+          "atom_id": "RAG-05-008",
+          "atom_title": "向量归一化与相似度实现细节",
+          "score": 0.0589
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-0fa44151c67d",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-014",
+          "atom_title": "检索器与生成器偏好对齐及 LLM 监督信号",
+          "score": 0.1288
+        },
+        {
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.0711
+        },
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.0634
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-1ec1b9bf5df1",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-05-014",
+          "atom_title": "检索器与生成器偏好对齐及 LLM 监督信号",
+          "score": 0.2856
+        },
+        {
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.1031
+        },
+        {
+          "atom_id": "RAG-05-012",
+          "atom_title": "Embedding 模型升级与向量重建",
+          "score": 0.0481
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-83a30c9939c8",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-08-010",
+          "atom_title": "Reranker 模型选择、批处理和阈值",
+          "score": 0.242
+        },
+        {
+          "atom_id": "RAG-08-014",
+          "atom_title": "检索结果过滤与可信来源控制",
+          "score": 0.1488
+        },
+        {
+          "atom_id": "RAG-08-001",
+          "atom_title": "Dense Retrieval 语义检索",
+          "score": 0.0831
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-b3a9ad3a5b0f",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-09-010",
+          "atom_title": "生成后事实核查与证据对齐",
+          "score": 0.1555
+        },
+        {
+          "atom_id": "RAG-09-016",
+          "atom_title": "面向检索证据输入的生成器适配与微调",
+          "score": 0.1194
+        },
+        {
+          "atom_id": "RAG-09-009",
+          "atom_title": "RAG 幻觉类型和产生链路",
+          "score": 0.0962
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-2cb5af9d0f71",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-01-005",
+          "atom_title": "RAG 与微调的区别、组合和选型",
+          "score": 0.1219
+        },
+        {
+          "atom_id": "RAG-01-008",
+          "atom_title": "RAG 与模型记忆、上下文工程的关系",
+          "score": 0.119
+        },
+        {
+          "atom_id": "RAG-01-006",
+          "atom_title": "RAG 与长上下文的区别、组合和选型",
+          "score": 0.1167
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-4b04c1ce53dd",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-09-016",
+          "atom_title": "面向检索证据输入的生成器适配与微调",
+          "score": 0.5008
+        },
+        {
+          "atom_id": "RAG-09-009",
+          "atom_title": "RAG 幻觉类型和产生链路",
+          "score": 0.0864
+        },
+        {
+          "atom_id": "RAG-09-003",
+          "atom_title": "检索结果排序和上下文位置",
+          "score": 0.0683
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-a33737fbb836",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-01-005",
+          "atom_title": "RAG 与微调的区别、组合和选型",
+          "score": 0.2965
+        },
+        {
+          "atom_id": "RAG-01-006",
+          "atom_title": "RAG 与长上下文的区别、组合和选型",
+          "score": 0.281
+        },
+        {
+          "atom_id": "RAG-01-008",
+          "atom_title": "RAG 与模型记忆、上下文工程的关系",
+          "score": 0.172
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-b5ad10570a62",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-02-003",
+          "atom_title": "召回、过滤、生成三段式链路",
+          "score": 0.1151
+        },
+        {
+          "atom_id": "RAG-02-006",
+          "atom_title": "RAG 数据流、控制流和错误流",
+          "score": 0.1112
+        },
+        {
+          "atom_id": "RAG-02-004",
+          "atom_title": "解析器、切分器、嵌入器、索引和检索器的边界",
+          "score": 0.0961
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-ea7686eb828c",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-03-001",
+          "atom_title": "PDF、Word、HTML、Markdown 等来源类型",
+          "score": 0.3727
+        },
+        {
+          "atom_id": "RAG-03-002",
+          "atom_title": "文本型 PDF 的解析问题",
+          "score": 0.0738
+        },
+        {
+          "atom_id": "RAG-03-007",
+          "atom_title": "图片、图表、流程图和 Caption 处理",
+          "score": 0.0642
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-0ac698807696",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-03-007",
+          "atom_title": "图片、图表、流程图和 Caption 处理",
+          "score": 0.1679
+        },
+        {
+          "atom_id": "RAG-03-002",
+          "atom_title": "文本型 PDF 的解析问题",
+          "score": 0.1151
+        },
+        {
+          "atom_id": "RAG-03-001",
+          "atom_title": "PDF、Word、HTML、Markdown 等来源类型",
+          "score": 0.0703
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-283543d91acf",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-03-001",
+          "atom_title": "PDF、Word、HTML、Markdown 等来源类型",
+          "score": 0.1029
+        },
+        {
+          "atom_id": "RAG-03-002",
+          "atom_title": "文本型 PDF 的解析问题",
+          "score": 0.1028
+        },
+        {
+          "atom_id": "RAG-03-004",
+          "atom_title": "版面分析、多栏与阅读顺序恢复",
+          "score": 0.0978
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-5724989fe4bf",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-03-002",
+          "atom_title": "文本型 PDF 的解析问题",
+          "score": 0.1163
+        },
+        {
+          "atom_id": "RAG-03-011",
+          "atom_title": "文档元数据、来源和时间字段设计",
+          "score": 0.0896
+        },
+        {
+          "atom_id": "RAG-03-009",
+          "atom_title": "文本清洗、编码和格式标准化",
+          "score": 0.0744
+        }
+      ]
+    },
+    {
+      "source_unit_id": "RU-c855dc089d08",
+      "review_status": "pending",
+      "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
+      "accepted_atom_id": null,
+      "candidates": [
+        {
+          "atom_id": "RAG-04-001",
+          "atom_title": "Chunking 的目标与检索、生成双重约束",
+          "score": 0.2978
+        },
+        {
+          "atom_id": "RAG-04-015",
+          "atom_title": "Chunking 策略的离线评估和消融实验",
+          "score": 0.2355
+        },
+        {
+          "atom_id": "RAG-04-010",
+          "atom_title": "Contextual Chunking 与上下文补充",
+          "score": 0.2053
+        }
+      ]
+    },
+    {
       "source_unit_id": "RU-688177e0f7bf",
       "review_status": "pending",
       "reason": "机器候选，必须人工确认；低分不代表可以遗漏。",
@@ -11749,9 +12600,9 @@
           "score": 0.0935
         },
         {
-          "atom_id": "RAG-13-001",
-          "atom_title": "RAG 30 秒定义回答",
-          "score": 0.091
+          "atom_id": "RAG-13-003",
+          "atom_title": "从零设计企业 RAG 系统",
+          "score": 0.0886
         }
       ]
     },
@@ -12797,6 +13648,11 @@
       "accepted_atom_id": null,
       "candidates": [
         {
+          "atom_id": "RAG-05-013",
+          "atom_title": "领域检索器微调、适配器与 Embedding 变换",
+          "score": 0.2857
+        },
+        {
           "atom_id": "RAG-05-001",
           "atom_title": "Embedding 的语义空间与检索作用",
           "score": 0.2837
@@ -12805,11 +13661,6 @@
           "atom_id": "RAG-05-012",
           "atom_title": "Embedding 模型升级与向量重建",
           "score": 0.2698
-        },
-        {
-          "atom_id": "RAG-05-005",
-          "atom_title": "通用、领域、多语言 Embedding 选择",
-          "score": 0.2641
         }
       ]
     },
@@ -13331,14 +14182,14 @@
           "score": 0.1614
         },
         {
+          "atom_id": "RAG-12-019",
+          "atom_title": "RAG 范式的概念与分类维度",
+          "score": 0.1597
+        },
+        {
           "atom_id": "RAG-12-008",
           "atom_title": "Multi-Step 与 Iterative Retrieval",
           "score": 0.1178
-        },
-        {
-          "atom_id": "RAG-12-004",
-          "atom_title": "Agentic RAG 的动态决策闭环",
-          "score": 0.0967
         }
       ]
     },
@@ -14338,19 +15189,19 @@
       "accepted_atom_id": null,
       "candidates": [
         {
+          "atom_id": "RAG-12-019",
+          "atom_title": "RAG 范式的概念与分类维度",
+          "score": 0.1498
+        },
+        {
+          "atom_id": "RAG-12-020",
+          "atom_title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式",
+          "score": 0.125
+        },
+        {
           "atom_id": "RAG-12-012",
           "atom_title": "视觉文档检索与 Late Interaction",
           "score": 0.1069
-        },
-        {
-          "atom_id": "RAG-12-002",
-          "atom_title": "Advanced RAG 的查询、检索和生成优化",
-          "score": 0.0982
-        },
-        {
-          "atom_id": "RAG-12-015",
-          "atom_title": "Deep Research 的多源交叉验证",
-          "score": 0.0849
         }
       ]
     },

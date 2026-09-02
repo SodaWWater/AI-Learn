@@ -96,7 +96,9 @@
         {"id": "RAG-05-009", "title": "Matryoshka 与可截断向量"},
         {"id": "RAG-05-010", "title": "Embedding Benchmark 与业务数据集评估"},
         {"id": "RAG-05-011", "title": "批量 Embedding、缓存与吞吐优化"},
-        {"id": "RAG-05-012", "title": "Embedding 模型升级与向量重建"}
+        {"id": "RAG-05-012", "title": "Embedding 模型升级与向量重建"},
+        {"id": "RAG-05-013", "title": "领域检索器微调、适配器与 Embedding 变换"},
+        {"id": "RAG-05-014", "title": "检索器与生成器偏好对齐及 LLM 监督信号"}
       ]
     },
     {
@@ -178,7 +180,8 @@
         {"id": "RAG-09-012", "title": "事实、观点和推断的区分"},
         {"id": "RAG-09-013", "title": "来源冲突、时效冲突和答案合并"},
         {"id": "RAG-09-014", "title": "结构化输出与答案 Schema"},
-        {"id": "RAG-09-015", "title": "长上下文与 Prompt Caching 的边界"}
+        {"id": "RAG-09-015", "title": "长上下文与 Prompt Caching 的边界"},
+        {"id": "RAG-09-016", "title": "面向检索证据输入的生成器适配与微调"}
       ]
     },
     {
@@ -248,14 +251,14 @@
         {"id": "RAG-12-016", "title": "信息饱和、搜索预算和停止条件"},
         {"id": "RAG-12-017", "title": "长研究任务的中间证据和上下文组织"},
         {"id": "RAG-12-018", "title": "高级 RAG 的成本、风险和适用边界"},
-        {"id": "RAG-12-019", "title": "RAG 范式的概念与分类维度"}
+        {"id": "RAG-12-019", "title": "RAG 范式的概念与分类维度"},
+        {"id": "RAG-12-020", "title": "GraphRAG 的 Local、Global、DRIFT 与基础搜索模式"}
       ]
     },
     {
       "id": "RAG-13",
       "title": "项目与面试应用",
       "atoms": [
-        {"id": "RAG-13-001", "title": "RAG 30 秒定义回答"},
         {"id": "RAG-13-002", "title": "RAG 完整流程口述"},
         {"id": "RAG-13-003", "title": "从零设计企业 RAG 系统"},
         {"id": "RAG-13-004", "title": "Chunk、Embedding、向量库和 Reranker 选型表达"},
