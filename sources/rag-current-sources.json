@@ -548,6 +548,159 @@
       "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING", "PS-EVALUATION"],
       "use_for": ["从向量检索演进到 BM25、RRF 和 Reranker 的公开项目场景", "候选集不变时重排指标变化", "场景闸门和降级链路", "评测集局限"],
       "provenance_note": "公开项目复盘，不是公司真实面经；作者明确指出实现仍有粗糙处。指标与参数只作为场景线索，不推广成通用结论。"
+    },
+    {
+      "id": "recomp-context-compression-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2310.04408",
+      "version": "v1, 2023-10-06",
+      "freshness": "research",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "use_for": ["Context Compression", "Extractive 与 Abstractive Compressor", "Selective Augmentation", "压缩与答案质量实验"]
+    },
+    {
+      "id": "alce-citation-evaluation-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2305.14627",
+      "version": "v2, 2023-10-31",
+      "freshness": "stable",
+      "stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["长文本答案引用", "Citation Correctness 与 Completeness", "自动引用评估", "检索和生成联合基准"]
+    },
+    {
+      "id": "sufficient-context-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2411.06037",
+      "version": "v1, 2024-11-09",
+      "freshness": "research",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["Sufficient Context 判定", "检索不足与生成使用失败分离", "Guided Abstention", "答案正确率与覆盖率权衡"]
+    },
+    {
+      "id": "ragtruth-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2401.00396",
+      "version": "v2, 2024-03-12",
+      "freshness": "research",
+      "stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["RAG Hallucination Corpus", "Word-level Hallucination Annotation", "任务与模型覆盖", "幻觉检测训练和评估"]
+    },
+    {
+      "id": "ragas-eacl-2024",
+      "type": "paper",
+      "url": "https://aclanthology.org/2024.eacl-demo.16/",
+      "version": "EACL 2024 Demo; DOI 10.18653/v1/2024.eacl-demo.16",
+      "freshness": "stable",
+      "stage_ids": ["PS-EVALUATION", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION"],
+      "use_for": ["Reference-free RAG Evaluation", "Faithfulness", "Answer Relevance", "Context Relevance"]
+    },
+    {
+      "id": "ares-rag-evaluation-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2311.09476",
+      "version": "v2, 2024-06-18",
+      "freshness": "research",
+      "stage_ids": ["PS-EVALUATION", "PS-RETRIEVAL", "PS-ANSWER-GENERATION"],
+      "use_for": ["Automated RAG Evaluation", "Synthetic Training Data", "Prediction-powered Inference", "少量人工标注条件"]
+    },
+    {
+      "id": "ragchecker-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2408.08067",
+      "version": "v1, 2024-08-15",
+      "freshness": "research",
+      "stage_ids": ["PS-EVALUATION", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION"],
+      "use_for": ["Fine-grained RAG Diagnosis", "Retriever 与 Generator 分层指标", "Claim-level Evaluation", "错误归因"]
+    },
+    {
+      "id": "llm-as-judge-mtbench-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2306.05685",
+      "version": "v4, 2023-12-24",
+      "freshness": "stable",
+      "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["LLM-as-a-Judge", "Position Bias", "Verbosity 与 Self-enhancement Bias", "Judge Agreement"]
+    },
+    {
+      "id": "owasp-llm-top10-2025",
+      "type": "official_documentation",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
+      "version": "OWASP Top 10 for LLM Applications 2025",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Prompt Injection", "Sensitive Information Disclosure", "Data and Model Poisoning", "Excessive Agency"]
+    },
+    {
+      "id": "nist-genai-profile-2024",
+      "type": "official_documentation",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "version": "NIST AI 600-1, 2024-07",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Generative AI Risk Management", "Govern、Map、Measure、Manage", "Content Provenance", "Incident Disclosure and Monitoring"]
+    },
+    {
+      "id": "poisonedrag-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2402.07867",
+      "version": "v1, 2024-02-12",
+      "freshness": "research",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Knowledge Corruption Attack", "恶意文本注入", "检索与生成攻击目标", "数据投毒评估"]
+    },
+    {
+      "id": "indirect-prompt-injection-wild-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2601.07072",
+      "version": "v1, 2026-01",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Indirect Prompt Injection", "公开内容中的真实攻击载荷", "检索屏障", "文档与 Agent 安全边界"]
+    },
+    {
+      "id": "langsmith-observability-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.langchain.com/oss/python/langchain/observability",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Tracing", "Run Metadata", "在线链路观测", "评测和生产反馈连接"]
+    },
+    {
+      "id": "self-rag-2023",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2310.11511",
+      "version": "v1, 2023-10-17; ICLR 2024",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Adaptive Retrieval", "Reflection Tokens", "Retrieval、Generation 与 Critique 控制", "事实性和引用实验"]
+    },
+    {
+      "id": "corrective-rag-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2401.15884",
+      "version": "v2, 2024-10-14",
+      "freshness": "research",
+      "stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Retrieval Evaluator", "Correct、Incorrect 与 Ambiguous 分支", "Web Search 扩展", "Knowledge Refinement"]
+    },
+    {
+      "id": "graphrag-local-global-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2404.16130",
+      "version": "v1, 2024-04-24",
+      "freshness": "research",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG", "PS-EVALUATION"],
+      "use_for": ["GraphRAG Community Hierarchy", "Community Summary", "Local-to-global Query-focused Summarization", "全局语料问题"]
+    },
+    {
+      "id": "colpali-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2407.01449",
+      "version": "v1, 2024-07-01",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-ADVANCED-RAG", "PS-EVALUATION"],
+      "use_for": ["Visual Document Retrieval", "Vision Language Model", "Multi-vector Late Interaction", "文档截图直接检索"]
     }
   ]
 }

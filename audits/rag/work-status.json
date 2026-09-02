@@ -16,10 +16,10 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
-    "current_sources": 61,
-    "public_problem_leads": 19,
+    "current_sources": 78,
+    "public_problem_leads": 21,
     "search_stages_total": 18,
-    "search_stages_round_1_complete": 12,
+    "search_stages_round_1_complete": 18,
     "coverage_saturated_stages": 0,
     "latest_search_date": "2026-09-02"
   },
@@ -230,14 +230,14 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-002",
-    "instruction": "Continue without waiting for user confirmation: complete the first-round searches for PS-CONTEXT-ASSEMBLY through PS-ADVANCED-RAG, persist each stage in GitHub, and do not mark coverage saturated."
+    "instruction": "Continue without waiting for user confirmation: run an independent second-round gap search across all 18 stages, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds before coverage_saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
     "Do not continue batch-generating RAG-04 and later chapters under the old template.",
     "Do not mark the legacy first drafts as formal content.",
     "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
-    "The first search round is complete for PS-DATA-INGESTION through PS-RERANKING; the remaining 6 stages are still not started.",
+    "The first search round is complete for all 18 RAG stages; no stage is coverage_saturated because independent gap rounds are still pending.",
     "Continue stage work without pausing for user confirmation; use validated GitHub commits as the review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]

@@ -195,6 +195,26 @@
       "verification": "公开项目复盘，不属于企业真实面经；作者数据只能说明其测试集，不能推广为通用收益",
       "question_summary": "Reranker 不新增候选却增加明显延迟时，怎样选择进入重排的候选数、最终 Top-N、跳过重排条件和降级链路，并分别解释 Recall、NDCG 与 MRR 的变化？",
       "atom_ids": ["RAG-08-008", "RAG-08-009", "RAG-08-010", "RAG-08-011", "RAG-08-016", "RAG-10-002", "RAG-10-003", "RAG-10-004"]
+    },
+    {
+      "id": "RAG-SCENE-020",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q6：Lost in the Middle",
+      "verification": "公开学习题库，不标记为公司真实面经；位置效应和缓解方案必须回到原始论文与目标模型实验核验",
+      "question_summary": "相关证据已经召回但位于长上下文中间、被重复片段或冲突证据淹没时，如何分配 Token 预算、排序、去重、压缩并验证没有丢失关键依据？",
+      "atom_ids": ["RAG-09-002", "RAG-09-003", "RAG-09-004", "RAG-09-005", "RAG-09-011", "RAG-09-013", "RAG-10-014"]
+    },
+    {
+      "id": "RAG-SCENE-021",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q8：如何全面评估 RAG 系统",
+      "verification": "公开学习题库，不标记为公司真实面经；指标定义与自动化工具能力必须由论文和官方文档核验",
+      "question_summary": "一次回答失败时，如何区分解析、召回、排序、上下文、生成和引用错误，并联合设计 Golden Dataset、分层指标、LLM-as-a-Judge 校准、人工抽检及线上 A/B 实验？",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-004", "RAG-10-005", "RAG-10-007", "RAG-10-008", "RAG-10-009", "RAG-10-011", "RAG-10-013", "RAG-10-014"]
     }
   ]
 }
