@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-09-02",
+  "sources": [
+    {
+      "id": "xiaolin-ai-learning",
+      "name": "小林 AI 面试题本地化学习库",
+      "repository": "https://github.com/SodaWWater/xiaolin-ai-learning",
+      "commit": "7c363bb44d06f4ae2f05c2374d05760e1eef0ff1",
+      "commit_date": "2026-08-31T11:26:14+08:00",
+      "license_status": "no_repository_license",
+      "copyright_note": "README 声明原站内容版权归小林面试笔记所有。",
+      "import_policy": "登记题目、标题、来源定位和知识映射；不在公开仓库重新发布完整原文与图片。",
+      "domains": ["AGENT", "FRAMEWORK", "LLM", "RAG", "TOOLS"]
+    },
+    {
+      "id": "ai-agent-interview-guide",
+      "name": "AI Agent Interview Guide",
+      "repository": "https://github.com/bcefghj/ai-agent-interview-guide",
+      "commit": "9a987322f2d82ddabe4c1aabc7b4795749fa90a2",
+      "commit_date": "2026-04-01T20:38:17+08:00",
+      "license_status": "MIT",
+      "copyright_note": "仓库根目录包含 MIT License；再利用时保留许可证与版权声明。",
+      "import_policy": "提取知识映射、重新组织总结；代码引用须保留 MIT 声明。",
+      "domains": ["AGENT", "FRAMEWORK", "LLM", "PROMPT", "RAG", "TOOLS"]
+    },
+    {
+      "id": "agent-guide",
+      "name": "AgentGuide",
+      "repository": "https://github.com/adongwanai/AgentGuide",
+      "commit": "d4fe53f4a9153123b159d0e6b632117a34721a92",
+      "commit_date": "2026-08-25T12:23:28+08:00",
+      "license_status": "not_declared_in_checked_tree",
+      "copyright_note": "当前固定版本未在根目录发现许可证文件。",
+      "import_policy": "登记链接、版本、标题和知识映射；不复制发布完整正文、PDF 或图片。",
+      "domains": ["AGENT", "EVALUATION", "FRAMEWORK", "MULTI_AGENT", "PROMPT", "PROTOCOL", "RAG", "TOOLS"]
+    }
+  ]
+}
+

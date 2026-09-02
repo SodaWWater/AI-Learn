@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "domain": "RAG",
+  "topics": [
+    {"id": "RAG-01", "name": "基础与边界", "keywords": ["定义", "为什么", "微调", "长上下文", "传统搜索", "知识截止", "私域", "幻觉"]},
+    {"id": "RAG-02", "name": "系统架构与生命周期", "keywords": ["完整流程", "流水线", "离线", "在线", "pipeline", "架构", "数据流"]},
+    {"id": "RAG-03", "name": "文档解析与数据治理", "keywords": ["解析", "OCR", "表格", "图片", "清洗", "去重", "元数据", "脱敏", "文档治理"]},
+    {"id": "RAG-04", "name": "Chunking", "keywords": ["Chunk", "切块", "切分", "分块", "父子", "滑动窗口", "语义边界"]},
+    {"id": "RAG-05", "name": "Embedding", "keywords": ["Embedding", "嵌入", "向量化", "相似度", "维度", "对比学习"]},
+    {"id": "RAG-06", "name": "存储与索引", "keywords": ["向量数据库", "FAISS", "Milvus", "Qdrant", "Chroma", "HNSW", "IVF", "PQ", "索引"]},
+    {"id": "RAG-07", "name": "Query 理解", "keywords": ["Query", "查询改写", "查询扩展", "子问题", "HyDE", "Step-back", "意图识别", "路由"]},
+    {"id": "RAG-08", "name": "检索、融合与重排", "keywords": ["检索", "召回", "BM25", "Hybrid", "混合检索", "RRF", "重排", "Rerank", "MMR", "Cross-Encoder"]},
+    {"id": "RAG-09", "name": "上下文与生成", "keywords": ["Prompt", "生成", "上下文", "引用", "拒答", "Grounding", "Lost in the Middle", "答案", "事实性"]},
+    {"id": "RAG-10", "name": "评估", "keywords": ["评估", "指标", "RAGAS", "Recall", "MRR", "nDCG", "Faithfulness", "正确性", "消融"]},
+    {"id": "RAG-11", "name": "生产工程与治理", "keywords": ["生产", "增量更新", "缓存", "延迟", "吞吐", "高并发", "多租户", "权限", "安全", "成本", "可观测"]},
+    {"id": "RAG-12", "name": "高级范式", "keywords": ["Advanced RAG", "Modular RAG", "Agentic RAG", "Self-RAG", "CRAG", "Adaptive RAG", "GraphRAG", "多模态", "Deep Research", "多步检索"]},
+    {"id": "RAG-13", "name": "项目与面试应用", "keywords": ["面试", "项目", "代码", "框架", "工具", "选型", "实战", "场景", "问题"]}
+  ]
+}
+

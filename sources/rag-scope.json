@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "domain": "RAG",
+  "sources": [
+    {
+      "source_id": "xiaolin-ai-learning",
+      "collector": "xiaolin_question_bank",
+      "files": [
+        "source-manifest.json",
+        "questions-data.js"
+      ]
+    },
+    {
+      "source_id": "ai-agent-interview-guide",
+      "collector": "markdown_and_code",
+      "files": [
+        "docs/01-面试八股文/03-RAG技术.md",
+        "project-java/src/main/java/com/agent/platform/etl/DocumentChunker.java",
+        "project-java/src/main/java/com/agent/platform/etl/DocumentParser.java",
+        "project-java/src/main/java/com/agent/platform/etl/ETLPipeline.java",
+        "project-java/src/main/java/com/agent/platform/service/rag/MultiRetriever.java",
+        "project-java/src/main/java/com/agent/platform/service/rag/RAGGenerator.java",
+        "project-java/src/main/java/com/agent/platform/service/rag/Reranker.java",
+        "project-python/app/etl/chunker.py",
+        "project-python/app/etl/parser.py",
+        "project-python/app/etl/pipeline.py",
+        "project-python/app/core/rag/retriever.py",
+        "project-python/app/core/rag/reranker.py",
+        "project-python/app/core/rag/generator.py",
+        "project-go/internal/etl/chunker.go",
+        "project-go/internal/etl/parser.go",
+        "project-go/internal/etl/pipeline.go",
+        "project-go/internal/rag/retriever.go",
+        "project-go/internal/rag/reranker.go",
+        "project-go/internal/rag/generator.go"
+      ]
+    },
+    {
+      "source_id": "agent-guide",
+      "collector": "markdown_and_resources",
+      "files": [
+        "docs/04-interview/02-rag-questions.md",
+        "docs/02-tech-stack/08-vector-db-basics.md",
+        "docs/02-tech-stack/20-rag-full-pipeline.md",
+        "docs/03-practice/02-high-availability-rag.md",
+        "docs/04-interview/18-agent-interview-playbooks/agentic-rag-deep-research-playbook.md",
+        "docs/01-theory/09-evaluation-metrics.md",
+        "docs/02-tech-stack/11-context-engineering-practices.md",
+        "docs/02-tech-stack/14-context-engineering.md",
+        "docs/02-tech-stack/18-context-engineering-guide.md",
+        "resources/rag/README.md",
+        "resources/rag/document-parsing.md",
+        "resources/rag/vector-db.md",
+        "resources/rag/projects.md",
+        "resources/rag/papers/README.md",
+        "resources/rag/papers/agentic_rag/README.md",
+        "resources/rag/papers/agentic_rag/agentic_rag.md",
+        "resources/rag/papers/agentic_rag/AgenticRAG微调数据集合成思路RAGShaper(1).pdf",
+        "resources/rag/papers/graphrag/AtomicRAG.pdf",
+        "resources/rag/papers/graphrag/我们是否仍需要 GraphRAG？针对智能体搜索系统的 RAG 与 GraphRAG 基准测试.pdf",
+        "resources/rag/papers/multimodal_rag/VimRAG 通过多模态记忆图在检索增强生成中导航大规模视觉上下文.pdf",
+        "resources/multimodal/README.md",
+        "resources/multimodal/multimodal-rag-pipeline.md",
+        "resources/multimodal/evaluation-checklist.md",
+        "resources/multimodal/tools-and-projects.md"
+      ]
+    }
+  ]
+}
+

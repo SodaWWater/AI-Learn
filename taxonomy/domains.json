@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "domains": [
+    {"id": "LLM", "name": "大语言模型基础", "description": "Transformer、训练、解码、推理与模型能力基础。"},
+    {"id": "PROMPT", "name": "Prompt 与上下文工程", "description": "提示设计、上下文选择、压缩、隔离与信息组织。"},
+    {"id": "RAG", "name": "检索增强生成", "description": "知识入库、检索、重排、生成、评估和生产治理。"},
+    {"id": "AGENT", "name": "Agent", "description": "Agent 架构、控制循环、规划、反思、记忆与执行。"},
+    {"id": "TOOLS", "name": "工具调用", "description": "Function Calling、工具设计、执行与错误处理。"},
+    {"id": "PROTOCOL", "name": "协议与能力封装", "description": "MCP、Skill、A2A、ACP 等协议和能力边界。"},
+    {"id": "FRAMEWORK", "name": "开发框架", "description": "LangChain、LangGraph、LlamaIndex、LangChain4j 等。"},
+    {"id": "MULTI_AGENT", "name": "多智能体", "description": "协作、路由、共享状态、Handoff 与通信。"},
+    {"id": "TRAINING", "name": "训练与对齐", "description": "预训练、SFT、微调、偏好优化与强化学习。"},
+    {"id": "INFERENCE", "name": "推理与部署", "description": "推理服务、量化、缓存、吞吐和成本优化。"},
+    {"id": "EVALUATION", "name": "评测、安全与可观测性", "description": "离线评测、在线指标、Tracing、安全和治理。"},
+    {"id": "PROJECT", "name": "项目与面试表达", "description": "项目设计、排障、复盘、面试题和表达模板。"}
+  ]
+}
+
