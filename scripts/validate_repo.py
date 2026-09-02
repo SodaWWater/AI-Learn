@@ -20,6 +20,7 @@ REQUIRED = [
     "knowledge/rag/README.md",
     "knowledge/rag/catalog.json",
     "knowledge/rag/catalog.md",
+    "learning/rag/draft-overview.md",
     "audits/rag/source-units.json",
     "audits/rag/atom-suggestions.json",
     "audits/rag/accepted-mappings.json",
@@ -173,6 +174,24 @@ def main() -> int:
                     errors.append(f"人工映射引用未知知识原子：{atom_id}")
     elif args.strict_rag:
         errors.append("严格 RAG 验收缺少 accepted-mappings.json")
+
+    mindmap_dir = ROOT / "learning/rag/draft-modules"
+    mindmap_files = sorted(mindmap_dir.glob("rag-*.md"))
+    expected_mindmap_files = {
+        f"{section.get('id', '').lower()}.md" for section in rag_catalog.get("sections", [])
+    }
+    actual_mindmap_files = {path.name for path in mindmap_files}
+    if actual_mindmap_files != expected_mindmap_files:
+        errors.append("RAG 模块思维导图文件未与目录模块一一对应")
+    mindmap_atom_ids: list[str] = []
+    for path in mindmap_files:
+        mindmap_atom_ids.extend(
+            re.findall(r"RAG-\d{2}-\d{3}", path.read_text(encoding="utf-8"))
+        )
+    if set(mindmap_atom_ids) != set(atom_ids):
+        errors.append("RAG 模块思维导图没有覆盖全部原子知识点")
+    if repeated := duplicates(mindmap_atom_ids):
+        errors.append(f"RAG 模块思维导图重复知识原子：{repeated[:10]}")
 
     if args.strict_rag and inventory_path.exists():
         reviewable_ids = {
