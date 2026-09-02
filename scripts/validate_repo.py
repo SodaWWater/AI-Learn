@@ -474,7 +474,8 @@ def main() -> int:
         errors.append(f"公开场景题 ID 重复：{repeated[:10]}")
     allowed_scenario_types = {
         "first_person_interview", "public_question_bank",
-        "project_interview_exercise", "secondary_index",
+        "project_interview_exercise", "engineering_practice",
+        "secondary_index",
     }
     for scenario in scenarios:
         if scenario.get("source_type") not in allowed_scenario_types:

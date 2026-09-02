@@ -3,7 +3,7 @@
   "reviewed_at": "2026-09-02",
   "rules": {
     "meaning": "题目只用于连接知识，不提供背诵话术。",
-    "provenance": "first_person_interview 代表发布者自述，不代表企业官方确认；project_interview_exercise 是公开项目考题，不标记为公司真题。"
+    "provenance": "first_person_interview 代表发布者自述，不代表企业官方确认；project_interview_exercise 是公开项目考题；engineering_practice 是公开项目或工程复盘，三者都不自动标记为公司真题。"
   },
   "scenarios": [
     {
@@ -155,6 +155,46 @@
       "verification": "公开学习题库，不标记为公司真实面经；题目只证明方法被公开讨论，适用条件与风险由原始论文和当前官方实现核验",
       "question_summary": "长尾 Query 召回低时，如何在 Multi-Query、HyDE、子问题分解、会话改写和 Step-back Prompting 之间选择，并防止专有名词丢失、语义漂移、噪声放大及延迟失控？",
       "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-006", "RAG-07-007", "RAG-07-009", "RAG-07-011", "RAG-07-012", "RAG-08-011"]
+    },
+    {
+      "id": "RAG-SCENE-016",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q9：Adaptive RAG、Iterative RAG、Self-RAG、CRAG 与 Agentic RAG",
+      "verification": "公开学习题库，不标记为公司真实面经；范式定义与路由机制必须回到各自原始论文核验",
+      "question_summary": "一个请求什么时候无需检索、只需单次检索、需要多次检索或应路由到外部工具，如何设计置信度、成本预算、降级和错误路由评估？",
+      "atom_ids": ["RAG-07-002", "RAG-07-010", "RAG-07-012", "RAG-08-013", "RAG-12-004", "RAG-12-005", "RAG-12-006", "RAG-12-007"]
+    },
+    {
+      "id": "RAG-SCENE-017",
+      "source_type": "public_question_bank",
+      "source_url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "source_title": "Agent 面试-RAG 篇",
+      "source_locator": "Q5：向量、BM25、Hybrid Search、RRF 与 Rerank",
+      "verification": "公开学习题库，不标记为公司真实面经；各方法适用条件和实现由原始论文及官方文档核验",
+      "question_summary": "产品编号和专业术语依赖精确匹配、口语问题又依赖语义检索时，如何设计 Dense、Sparse 与 Hybrid Search 多路召回，并诊断零召回、噪声召回和权限过滤问题？",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004", "RAG-08-005", "RAG-08-008", "RAG-08-014", "RAG-08-015"]
+    },
+    {
+      "id": "RAG-SCENE-018",
+      "source_type": "engineering_practice",
+      "source_url": "https://www.nowcoder.com/discuss/906597462301818880",
+      "source_title": "RAG 的检索链路优化演变过程",
+      "source_locator": "BM25 + 向量召回、RRF 融合和去重候选链路",
+      "verification": "公开项目复盘，不属于企业真实面经；项目指标、参数和公式实现必须独立复核",
+      "question_summary": "BM25 与向量检索的原始分数尺度不可直接比较且会返回重复 Chunk 时，如何用 RRF 或分数归一化融合、去重，并验证某个通道没有被系统性淹没？",
+      "atom_ids": ["RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-007", "RAG-08-008", "RAG-08-011", "RAG-10-009"]
+    },
+    {
+      "id": "RAG-SCENE-019",
+      "source_type": "engineering_practice",
+      "source_url": "https://www.nowcoder.com/discuss/906597462301818880",
+      "source_title": "RAG 的检索链路优化演变过程",
+      "source_locator": "RRF 候选集后接 Reranker 的场景闸门、Top-N 和评测结果",
+      "verification": "公开项目复盘，不属于企业真实面经；作者数据只能说明其测试集，不能推广为通用收益",
+      "question_summary": "Reranker 不新增候选却增加明显延迟时，怎样选择进入重排的候选数、最终 Top-N、跳过重排条件和降级链路，并分别解释 Recall、NDCG 与 MRR 的变化？",
+      "atom_ids": ["RAG-08-008", "RAG-08-009", "RAG-08-010", "RAG-08-011", "RAG-08-016", "RAG-10-002", "RAG-10-003", "RAG-10-004"]
     }
   ]
 }

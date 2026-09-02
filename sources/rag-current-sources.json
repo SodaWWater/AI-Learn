@@ -421,6 +421,133 @@
       "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["规则意图路由覆盖率问题", "复合意图、表达省略和歧义", "影子流量对比", "拒识率与错误路由率"],
       "provenance_note": "发布者自述为迅雷服务端开发（AI）一面；页面同时包含整理后的长答案，只把题目出现和场景作为线索，技术结论另回到论文与官方文档核验。"
+    },
+    {
+      "id": "bm25-foundations-2009",
+      "type": "paper",
+      "url": "https://www.staff.city.ac.uk/~sbrp622/papers/foundations_bm25_review.pdf",
+      "version": "Foundations and Trends in Information Retrieval 2009, Vol. 3 No. 4",
+      "freshness": "stable",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-EVALUATION"],
+      "use_for": ["概率相关性框架", "BM25 公式和参数", "词频饱和与文档长度归一化", "稀疏检索基线"]
+    },
+    {
+      "id": "dense-passage-retrieval-2020",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2004.04906",
+      "version": "v3, 2020-09-30; EMNLP 2020",
+      "freshness": "stable",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Dense Passage Retrieval", "Dual-encoder 检索器", "In-batch Negative", "开放域问答检索实验"]
+    },
+    {
+      "id": "colbert-2020",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2004.12832",
+      "version": "v2, 2020-06-04; SIGIR 2020; DOI 10.1145/3397271.3401075",
+      "freshness": "stable",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "use_for": ["Late Interaction", "Token-level Multi-vector Retrieval", "质量与成本权衡", "索引吞吐和存储占用"]
+    },
+    {
+      "id": "splade-2021",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2107.05720",
+      "version": "v1, 2021-07-12",
+      "freshness": "stable",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-EVALUATION"],
+      "use_for": ["Learned Sparse Retrieval", "词项扩展", "稀疏正则化", "倒排索引兼容的神经检索"]
+    },
+    {
+      "id": "reciprocal-rank-fusion-2009",
+      "type": "paper",
+      "url": "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf",
+      "version": "SIGIR 2009; DOI 10.1145/1571941.1572114",
+      "freshness": "stable",
+      "stage_ids": ["PS-RESULT-FUSION", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Reciprocal Rank Fusion 原始定义", "基于排名而非原始分数的融合", "多检索系统组合实验"]
+    },
+    {
+      "id": "azure-hybrid-search-overview-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview",
+      "version": "page updated 2026-08-31; API example 2026-04-01; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING", "PS-STORAGE-INDEXING"],
+      "use_for": ["全文与向量并行检索", "Hybrid Search 当前 API", "过滤模式", "RRF 与 Semantic Ranker 链路"]
+    },
+    {
+      "id": "azure-hybrid-rrf-ranking-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking",
+      "version": "page updated 2026-06-08; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RESULT-FUSION", "PS-RETRIEVAL", "PS-RERANKING"],
+      "use_for": ["RRF 分数解释", "多向量查询与全文查询融合", "RRF 分数与 Semantic Reranker Score 区分"]
+    },
+    {
+      "id": "elasticsearch-retrievers-docs-2026",
+      "type": "official_documentation",
+      "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/retrievers",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING"],
+      "use_for": ["Standard、kNN、RRF 与 Linear Retriever", "Retriever Tree", "多路结果组合", "当前 Elasticsearch 检索 API"]
+    },
+    {
+      "id": "llamaindex-router-docs-2026",
+      "type": "official_documentation",
+      "url": "https://developers.llamaindex.ai/python/framework/module_guides/querying/router/",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-RETRIEVAL"],
+      "use_for": ["Router Query Engine", "Selector 与工具描述", "单路和多路知识源选择", "查询路由框架实现"]
+    },
+    {
+      "id": "sentence-transformers-retrieve-rerank-2026",
+      "type": "official_documentation",
+      "url": "https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "use_for": ["Bi-encoder 召回与 Cross-encoder 重排", "候选集两阶段架构", "查询文档联合编码", "延迟与候选数边界"]
+    },
+    {
+      "id": "cohere-rerank-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cohere.com/docs/reranking-with-cohere",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Rerank API", "文本与半结构化数据重排", "Top-N 和批量调用", "生产调用接口"]
+    },
+    {
+      "id": "monot5-2020",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2003.06713",
+      "version": "v1, 2020-03-15",
+      "freshness": "stable",
+      "stage_ids": ["PS-RERANKING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Sequence-to-sequence Document Ranking", "T5 点式重排", "Zero-shot Transfer", "MS MARCO 与 Robust04 实验"]
+    },
+    {
+      "id": "rankgpt-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2304.09542",
+      "version": "v3, 2024-12-28; EMNLP 2023",
+      "freshness": "research",
+      "stage_ids": ["PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["LLM Listwise Reranking", "Permutation Generation", "滑动窗口重排", "蒸馏与成本效率"]
+    },
+    {
+      "id": "nowcoder-rag-retrieval-evolution-2026",
+      "type": "engineering_practice",
+      "url": "https://www.nowcoder.com/discuss/906597462301818880",
+      "version": "page published 2026-07-14; reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING", "PS-EVALUATION"],
+      "use_for": ["从向量检索演进到 BM25、RRF 和 Reranker 的公开项目场景", "候选集不变时重排指标变化", "场景闸门和降级链路", "评测集局限"],
+      "provenance_note": "公开项目复盘，不是公司真实面经；作者明确指出实现仍有粗糙处。指标与参数只作为场景线索，不推广成通用结论。"
     }
   ]
 }
