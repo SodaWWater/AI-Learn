@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-02",
+  "domain": "RAG",
+  "status": "approved_for_execution",
+  "purpose": "为检索增强生成（Retrieval-Augmented Generation，RAG）18 个主干节点提供可复现的中英文资料与题目补漏入口。矩阵规定搜索范围；实际检索式、结果和取舍写入节点检索日志。",
+  "coverage_statement": "coverage_saturated 仅表示在记录日期、检索式和来源范围内达到阶段性饱和，不表示互联网永久绝对完整。",
+  "search_families": [
+    {
+      "id": "concept_and_principle",
+      "purpose": "定义、原理、算法、经典方法和当前方法",
+      "query_patterns_zh": ["{stage_zh} 原理 方法 RAG", "{term_zh} 论文 原理"],
+      "query_patterns_en": ["{stage_en} RAG principles methods", "{term_en} paper official"]
+    },
+    {
+      "id": "engineering_problem",
+      "purpose": "故障现象、根因、边界、选型和生产问题",
+      "query_patterns_zh": ["RAG {stage_zh} 问题 故障 优化", "{term_zh} 生产实践 踩坑"],
+      "query_patterns_en": ["RAG {stage_en} failure troubleshooting production", "{term_en} limitations best practices"]
+    },
+    {
+      "id": "implementation",
+      "purpose": "框架、组件、应用程序编程接口和代码实现",
+      "query_patterns_zh": ["RAG {stage_zh} 框架 实现 API", "{term_zh} 开源 实现"],
+      "query_patterns_en": ["RAG {stage_en} implementation official docs API", "{term_en} reference implementation GitHub"]
+    },
+    {
+      "id": "evaluation",
+      "purpose": "数据集、指标、实验、基准和验证方法",
+      "query_patterns_zh": ["RAG {stage_zh} 评估 指标 基准", "{term_zh} 消融 实验"],
+      "query_patterns_en": ["RAG {stage_en} evaluation metrics benchmark", "{term_en} ablation study dataset"]
+    },
+    {
+      "id": "public_interview",
+      "purpose": "第一人称面经、公开题库和项目型考题",
+      "query_patterns_zh": ["RAG {stage_zh} 面试题", "RAG {term_zh} 面经", "site:nowcoder.com RAG {term_zh} 面试"],
+      "query_patterns_en": ["RAG {stage_en} interview question", "retrieval augmented generation {term_en} interview", "RAG system design interview {term_en}"]
+    },
+    {
+      "id": "freshness_and_security",
+      "purpose": "近两年新增能力、安全问题、版本变化和被替代方案",
+      "query_patterns_zh": ["RAG {stage_zh} 最新 版本 安全", "{term_zh} 2025 2026"],
+      "query_patterns_en": ["RAG {stage_en} 2025 2026 official", "{term_en} security version migration"]
+    }
+  ],
+  "source_priority": {
+    "technical_claims": ["original_paper", "official_documentation", "official_repository", "official_engineering_report", "reproducible_technical_report"],
+    "question_provenance": ["first_person_interview", "public_question_bank", "project_interview_exercise", "secondary_index"],
+    "rule": "公开面经只证明题目曾出现；技术答案必须另由一手技术来源核验。二次索引能够回到原始页面时必须登记原始页面。"
+  },
+  "required_facets": ["principle", "implementation", "engineering_problems", "solutions", "evaluation", "public_interview_questions", "freshness", "security_or_governance", "cross_stage_relations"],
+  "saturation_rule": {
+    "registered_sources_processed": true,
+    "all_required_facets_covered": true,
+    "primary_source_gap_check_completed": true,
+    "public_interview_search_completed": true,
+    "minimum_independent_gap_rounds": 2,
+    "minimum_consecutive_rounds_without_new_type": 2,
+    "unresolved_conflicts_recorded": true
+  },
+  "stages": [
+    {
+      "order": 1,
+      "id": "PS-DATA-INGESTION",
+      "label_zh": "数据摄取",
+      "label_en": "Data Ingestion",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["数据摄取", "文档加载器", "增量同步", "变更数据捕获", "幂等性"],
+      "query_terms_en": ["data ingestion", "document loader", "incremental synchronization", "change data capture", "idempotency"],
+      "problem_terms_zh": ["重复摄取", "漏同步", "断点续传", "数据删除传播", "连接器限流"],
+      "problem_terms_en": ["duplicate ingestion", "missed updates", "checkpoint resume", "deletion propagation", "connector rate limit"],
+      "cross_stage_targets": ["PS-DOCUMENT-PARSING", "PS-DATA-GOVERNANCE", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 2,
+      "id": "PS-DOCUMENT-PARSING",
+      "label_zh": "文档解析",
+      "label_en": "Document Parsing",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["文档解析", "光学字符识别", "版面分析", "阅读顺序", "表格解析", "多模态文档解析"],
+      "query_terms_en": ["document parsing", "OCR", "layout analysis", "reading order", "table extraction", "multimodal document parsing"],
+      "problem_terms_zh": ["扫描件乱码", "多栏错序", "表格丢失", "页眉页脚噪声", "公式图片丢失"],
+      "problem_terms_en": ["scanned PDF OCR errors", "multi-column reading order", "table loss", "header footer noise", "formula image extraction"],
+      "cross_stage_targets": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-CHUNKING", "PS-ADVANCED-RAG"]
+    },
+    {
+      "order": 3,
+      "id": "PS-DATA-GOVERNANCE",
+      "label_zh": "数据治理",
+      "label_en": "Data Governance",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["数据治理", "数据清洗", "近似重复检测", "元数据", "个人身份信息", "访问控制列表"],
+      "query_terms_en": ["data governance", "data cleaning", "near-duplicate detection", "metadata", "PII", "access control list"],
+      "problem_terms_zh": ["知识冲突", "敏感信息泄露", "权限继承", "脏数据", "数据保留删除"],
+      "problem_terms_en": ["knowledge conflict", "sensitive data leakage", "permission inheritance", "dirty data", "retention deletion"],
+      "cross_stage_targets": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 4,
+      "id": "PS-CHUNKING",
+      "label_zh": "文本切分",
+      "label_en": "Chunking",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["文本切分", "结构化切分", "语义切分", "父子文档检索", "句子窗口检索", "上下文化切分"],
+      "query_terms_en": ["chunking", "structure-aware chunking", "semantic chunking", "parent-child retrieval", "sentence window retrieval", "contextual chunking"],
+      "problem_terms_zh": ["片段过大过小", "语义割裂", "跨页表格", "分块重叠", "召回粒度与生成粒度不一致"],
+      "problem_terms_en": ["chunk too large or small", "semantic fragmentation", "cross-page table", "chunk overlap", "retrieval generation granularity mismatch"],
+      "cross_stage_targets": ["PS-DOCUMENT-PARSING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY"]
+    },
+    {
+      "order": 5,
+      "id": "PS-EMBEDDING",
+      "label_zh": "向量嵌入",
+      "label_en": "Embedding",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["向量嵌入", "嵌入模型", "对比学习", "向量归一化", "多语言嵌入", "领域嵌入"],
+      "query_terms_en": ["embedding", "embedding model", "contrastive learning", "vector normalization", "multilingual embedding", "domain embedding"],
+      "problem_terms_zh": ["维度不匹配", "模型升级重建索引", "查询文档分布偏移", "长文本截断", "语义相似事实不相关"],
+      "problem_terms_en": ["embedding dimension mismatch", "model migration reindex", "query document distribution shift", "long text truncation", "semantic similarity factual irrelevance"],
+      "cross_stage_targets": ["PS-CHUNKING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"]
+    },
+    {
+      "order": 6,
+      "id": "PS-STORAGE-INDEXING",
+      "label_zh": "存储与索引",
+      "label_en": "Storage and Indexing",
+      "track": "offline_knowledge_construction",
+      "query_terms_zh": ["向量数据库", "向量索引", "倒排索引", "近似最近邻检索", "HNSW", "IVF", "乘积量化", "元数据过滤"],
+      "query_terms_en": ["vector database", "vector index", "inverted index", "approximate nearest neighbor", "HNSW", "IVF", "product quantization", "metadata filtering"],
+      "problem_terms_zh": ["索引更新一致性", "过滤后召回下降", "内存容量", "分片热点", "删除与压缩", "多租户隔离"],
+      "problem_terms_en": ["index update consistency", "post-filter recall loss", "memory capacity", "shard hotspot", "deletion compaction", "multi-tenant isolation"],
+      "cross_stage_targets": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 7,
+      "id": "PS-QUERY-UNDERSTANDING",
+      "label_zh": "查询理解",
+      "label_en": "Query Understanding",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["查询理解", "意图识别", "实体识别", "时间解析", "歧义消解", "会话指代消解"],
+      "query_terms_en": ["query understanding", "intent classification", "entity recognition", "temporal parsing", "ambiguity resolution", "conversational coreference"],
+      "problem_terms_zh": ["短查询歧义", "多轮指代", "时间条件遗漏", "领域术语识别", "意图误判"],
+      "problem_terms_en": ["short query ambiguity", "multi-turn coreference", "missing temporal constraint", "domain entity recognition", "intent misclassification"],
+      "cross_stage_targets": ["PS-QUERY-REWRITE", "PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-ANSWER-GENERATION"]
+    },
+    {
+      "order": 8,
+      "id": "PS-QUERY-REWRITE",
+      "label_zh": "查询改写",
+      "label_en": "Query Rewrite",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["查询改写", "多查询扩展", "假设文档嵌入", "查询分解", "退步提示", "会话查询改写"],
+      "query_terms_en": ["query rewrite", "multi-query expansion", "HyDE", "query decomposition", "step-back prompting", "conversational query rewriting"],
+      "problem_terms_zh": ["改写偏离原意", "召回噪声增加", "复杂问题未分解", "专有名词丢失", "改写成本延迟"],
+      "problem_terms_en": ["rewrite intent drift", "recall noise increase", "failed query decomposition", "proper noun loss", "rewrite latency cost"],
+      "cross_stage_targets": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-RESULT-FUSION"]
+    },
+    {
+      "order": 9,
+      "id": "PS-QUERY-ROUTING",
+      "label_zh": "查询路由",
+      "label_en": "Query Routing",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["查询路由", "数据源路由", "检索器路由", "语义路由", "自适应检索", "无需检索判断"],
+      "query_terms_en": ["query routing", "data source routing", "retriever routing", "semantic router", "adaptive retrieval", "no-retrieval decision"],
+      "problem_terms_zh": ["路由误判", "跨库查询", "知识源选择", "检索与工具调用选择", "路由降级"],
+      "problem_terms_en": ["routing misclassification", "cross-index query", "knowledge source selection", "retrieval versus tool selection", "routing fallback"],
+      "cross_stage_targets": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-ADVANCED-RAG"]
+    },
+    {
+      "order": 10,
+      "id": "PS-RETRIEVAL",
+      "label_zh": "检索",
+      "label_en": "Retrieval",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["稠密检索", "稀疏检索", "BM25", "混合检索", "多路召回", "元数据过滤"],
+      "query_terms_en": ["dense retrieval", "sparse retrieval", "BM25", "hybrid search", "multi-channel retrieval", "metadata filtering"],
+      "problem_terms_zh": ["零召回", "召回不准", "关键词与语义冲突", "过滤顺序", "权限过滤", "多跳检索"],
+      "problem_terms_en": ["zero recall", "low retrieval precision", "lexical semantic mismatch", "filter ordering", "permission-aware retrieval", "multi-hop retrieval"],
+      "cross_stage_targets": ["PS-STORAGE-INDEXING", "PS-QUERY-REWRITE", "PS-RESULT-FUSION", "PS-RERANKING", "PS-EVALUATION"]
+    },
+    {
+      "order": 11,
+      "id": "PS-RESULT-FUSION",
+      "label_zh": "结果融合",
+      "label_en": "Result Fusion",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["结果融合", "倒数排名融合", "分数归一化", "多路召回融合", "去重合并"],
+      "query_terms_en": ["result fusion", "reciprocal rank fusion", "score normalization", "multi-retriever fusion", "result deduplication"],
+      "problem_terms_zh": ["不同检索分数不可比", "重复候选", "通道权重", "长尾通道淹没", "融合参数选择"],
+      "problem_terms_en": ["incomparable retrieval scores", "duplicate candidates", "channel weighting", "long-tail channel suppression", "fusion parameter tuning"],
+      "cross_stage_targets": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"]
+    },
+    {
+      "order": 12,
+      "id": "PS-RERANKING",
+      "label_zh": "重排",
+      "label_en": "Reranking",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["重排", "重排模型", "交叉编码器", "最大边际相关性", "多样性重排", "大模型重排"],
+      "query_terms_en": ["reranking", "reranker", "cross-encoder", "maximal marginal relevance", "diversity reranking", "LLM reranking"],
+      "problem_terms_zh": ["重排延迟", "候选截断", "相关但不支持答案", "多样性不足", "领域迁移"],
+      "problem_terms_en": ["reranking latency", "candidate truncation", "relevant but not answer-supporting", "low diversity", "domain shift"],
+      "cross_stage_targets": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION"]
+    },
+    {
+      "order": 13,
+      "id": "PS-CONTEXT-ASSEMBLY",
+      "label_zh": "上下文组装",
+      "label_en": "Context Assembly",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["上下文组装", "上下文压缩", "去重", "证据排序", "Lost in the Middle", "词元预算"],
+      "query_terms_en": ["context assembly", "contextual compression", "context deduplication", "evidence ordering", "lost in the middle", "token budget"],
+      "problem_terms_zh": ["上下文超长", "证据冲突", "重复片段", "关键信息位置", "跨片段关联丢失"],
+      "problem_terms_en": ["context overflow", "conflicting evidence", "duplicate chunks", "evidence position effect", "cross-chunk relation loss"],
+      "cross_stage_targets": ["PS-CHUNKING", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION"]
+    },
+    {
+      "order": 14,
+      "id": "PS-ANSWER-GENERATION",
+      "label_zh": "答案生成",
+      "label_en": "Answer Generation",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["基于检索证据的生成", "提示词", "结构化输出", "拒答", "答案合成", "多文档生成"],
+      "query_terms_en": ["grounded generation", "RAG prompt", "structured output", "abstention", "answer synthesis", "multi-document generation"],
+      "problem_terms_zh": ["召回正确但答案错误", "脱离证据", "指令冲突", "拒答阈值", "答案不完整"],
+      "problem_terms_en": ["correct retrieval wrong answer", "ungrounded generation", "instruction conflict", "abstention threshold", "incomplete answer"],
+      "cross_stage_targets": ["PS-CONTEXT-ASSEMBLY", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 15,
+      "id": "PS-CITATION-VERIFICATION",
+      "label_zh": "引用与验证",
+      "label_en": "Citation and Verification",
+      "track": "online_query_and_answering",
+      "query_terms_zh": ["引用生成", "引用验证", "事实依据性", "忠实度", "声明证据对齐", "拒答"],
+      "query_terms_en": ["citation generation", "citation verification", "groundedness", "faithfulness", "claim evidence alignment", "abstention"],
+      "problem_terms_zh": ["引用不存在", "引用不支持声明", "引用粒度", "证据冲突", "无证据回答"],
+      "problem_terms_en": ["nonexistent citation", "citation does not support claim", "citation granularity", "conflicting evidence", "answer without evidence"],
+      "cross_stage_targets": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 16,
+      "id": "PS-EVALUATION",
+      "label_zh": "评估",
+      "label_en": "Evaluation",
+      "track": "evaluation_and_feedback",
+      "query_terms_zh": ["检索评估", "生成评估", "端到端评估", "黄金数据集", "RAGAS", "大语言模型裁判", "失败归因"],
+      "query_terms_en": ["retrieval evaluation", "generation evaluation", "end-to-end RAG evaluation", "golden dataset", "RAGAS", "LLM-as-a-judge", "failure attribution"],
+      "problem_terms_zh": ["离线线上不一致", "指标不相关", "裁判偏差", "无标注数据", "回归漏检", "检索生成归因"],
+      "problem_terms_en": ["offline online mismatch", "metric misalignment", "judge bias", "missing labels", "regression blind spot", "retrieval generation attribution"],
+      "cross_stage_targets": ["PS-RETRIEVAL", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"]
+    },
+    {
+      "order": 17,
+      "id": "PS-PRODUCTION-GOVERNANCE",
+      "label_zh": "生产治理",
+      "label_en": "Production Governance",
+      "track": "production_governance",
+      "query_terms_zh": ["访问控制", "安全治理", "可观测性", "性能成本", "灰度发布", "灾难恢复", "间接提示注入", "数据投毒"],
+      "query_terms_en": ["access control", "RAG security governance", "observability", "performance cost", "canary release", "disaster recovery", "indirect prompt injection", "data poisoning"],
+      "problem_terms_zh": ["越权检索", "提示注入", "知识库投毒", "高延迟高成本", "版本回滚", "缓存污染", "租户隔离"],
+      "problem_terms_en": ["unauthorized retrieval", "prompt injection", "knowledge base poisoning", "high latency cost", "version rollback", "cache poisoning", "tenant isolation"],
+      "cross_stage_targets": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-STORAGE-INDEXING", "PS-ANSWER-GENERATION", "PS-EVALUATION"]
+    },
+    {
+      "order": 18,
+      "id": "PS-ADVANCED-RAG",
+      "label_zh": "高级检索增强生成",
+      "label_en": "Advanced RAG",
+      "track": "cross_stage_advanced_patterns",
+      "query_terms_zh": ["高级 RAG", "模块化 RAG", "智能体 RAG", "自适应检索", "Self-RAG", "CRAG", "GraphRAG", "多模态 RAG", "RAG 与长上下文"],
+      "query_terms_en": ["advanced RAG", "modular RAG", "agentic RAG", "adaptive retrieval", "Self-RAG", "Corrective RAG", "GraphRAG", "multimodal RAG", "RAG versus long context"],
+      "problem_terms_zh": ["是否需要检索", "多步检索停止", "图检索选型", "RAG 与微调选型", "RAG 与长上下文路由", "智能体成本失控"],
+      "problem_terms_en": ["whether to retrieve", "multi-step retrieval stopping", "graph retrieval selection", "RAG versus fine-tuning", "RAG long-context routing", "agentic retrieval cost control"],
+      "cross_stage_targets": ["PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"]
+    }
+  ]
+}

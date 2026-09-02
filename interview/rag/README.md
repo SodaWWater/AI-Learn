@@ -15,4 +15,6 @@
 
 当前已核验的题目与知识映射见 [`public-scenarios.json`](public-scenarios.json)。
 
+公开题目来源的发现范围、检索式和剩余缺口见 [`sources/rag-search-matrix.json`](../../sources/rag-search-matrix.json) 与 [`audits/rag/search-coverage.json`](../../audits/rag/search-coverage.json)。公开题目中的答案不作为技术结论证据，必须回到原始论文（Original Paper）、官方文档（Official Documentation）或官方代码仓库（Official Repository）核验。
+
 新问题页面使用 [`templates/problem-question.md`](../../templates/problem-question.md)，整体规划见 [`docs/PROJECT_PLAN.md`](../../docs/PROJECT_PLAN.md)。

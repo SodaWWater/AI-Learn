@@ -15,6 +15,14 @@
     "baseline_commit": "00d830129bca0914010da64ba4d845df8046d75b",
     "baseline_date": "2026-09-02"
   },
+  "research_expansion": {
+    "current_sources": 26,
+    "public_problem_leads": 11,
+    "search_stages_total": 18,
+    "search_stages_round_1_complete": 4,
+    "coverage_saturated_stages": 0,
+    "latest_search_date": "2026-09-02"
+  },
   "content_status": {
     "legacy_first_drafts": [
       {
@@ -199,15 +207,15 @@
       "id": "WP-P2-001",
       "title": "定义节点级中英文检索矩阵",
       "priority": 6,
-      "status": "pending",
+      "status": "completed",
       "depends_on": ["WP-P1-005"],
-      "outputs": ["node search matrix", "search log template"]
+      "outputs": ["sources/rag-search-matrix.json", "templates/source-search-log.md", "audits/rag/search-coverage.json"]
     },
     {
       "id": "WP-P2-002",
       "title": "扩充公开面试题与工程问题来源",
       "priority": 7,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P2-001"],
       "outputs": ["expanded sources", "question inventory", "source mappings"]
     },
@@ -221,14 +229,15 @@
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P2-001",
-    "instruction": "Define the node-level Chinese and English search matrix and search-log template before expanding public interview questions and engineering sources."
+    "work_item_id": "WP-P2-002",
+    "instruction": "Continue first-round Chinese and English source and public-question searches for PS-EMBEDDING through PS-ADVANCED-RAG; register source decisions and node-specific logs without marking coverage saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
     "Do not continue batch-generating RAG-04 and later chapters under the old template.",
     "Do not mark the legacy first drafts as formal content.",
-    "Complete Phase 1 templates and validation before starting large-scale source expansion.",
+    "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
+    "The first search round is complete only for PS-DATA-INGESTION through PS-CHUNKING; the remaining 14 stages are still not started.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-02",
+  "matrix": "sources/rag-search-matrix.json",
+  "log_template": "templates/source-search-log.md",
+  "status": "first_round_in_progress",
+  "completion_rule": "所有 18 个节点至少完成第一轮中英文检索和登记，才满足 Phase 2 第一轮完成定义；coverage_saturated 还需连续两轮独立补漏无新增类型。",
+  "stages": [
+    {"stage_id": "PS-DATA-INGESTION", "status": "round_complete", "completed_rounds": 1, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-data-ingestion-r1.md"]},
+    {"stage_id": "PS-DOCUMENT-PARSING", "status": "round_complete", "completed_rounds": 1, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-document-parsing-r1.md"]},
+    {"stage_id": "PS-DATA-GOVERNANCE", "status": "round_complete", "completed_rounds": 1, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-data-governance-r1.md"]},
+    {"stage_id": "PS-CHUNKING", "status": "round_complete", "completed_rounds": 1, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-chunking-r1.md"]},
+    {"stage_id": "PS-EMBEDDING", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-STORAGE-INDEXING", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-QUERY-UNDERSTANDING", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-QUERY-REWRITE", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-QUERY-ROUTING", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-RETRIEVAL", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-RESULT-FUSION", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-RERANKING", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-CONTEXT-ASSEMBLY", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-ANSWER-GENERATION", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-CITATION-VERIFICATION", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-EVALUATION", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-PRODUCTION-GOVERNANCE", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []},
+    {"stage_id": "PS-ADVANCED-RAG", "status": "not_started", "completed_rounds": 0, "consecutive_rounds_without_new_type": 0, "last_searched_at": null, "log_paths": []}
+  ]
+}

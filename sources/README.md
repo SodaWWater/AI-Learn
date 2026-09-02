@@ -12,3 +12,10 @@
 
 RAG 的首批纳管文件见 [`rag-scope.json`](rag-scope.json)。
 
+## 检索增强生成（Retrieval-Augmented Generation，RAG）扩充入口
+
+- [`rag-current-sources.json`](rag-current-sources.json)：论文、官方文档、官方代码仓库、工程实践和公开题目的当前来源登记；
+- [`rag-search-matrix.json`](rag-search-matrix.json)：18 个流程节点（Pipeline Stage）的中英文检索矩阵与阶段性饱和规则；
+- [`../audits/rag/search-coverage.json`](../audits/rag/search-coverage.json)：逐节点检索轮次和覆盖状态；
+- [`../audits/rag/search-logs/`](../audits/rag/search-logs/)：实际检索式、候选来源、取舍、冲突和缺口记录；
+- [`../templates/source-search-log.md`](../templates/source-search-log.md)：后续检索轮次的统一模板。

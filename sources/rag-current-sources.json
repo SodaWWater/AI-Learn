@@ -89,6 +89,146 @@
       "version": "a1518d4b77a8fb370615fd105ffe8e274462b572",
       "freshness": "active",
       "use_for": ["发现公开面经线索", "回链牛客等原始帖子"]
+    },
+    {
+      "id": "azure-ai-search-rag-overview-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+      "version": "page updated 2026-08-04; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-DATA-GOVERNANCE", "PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "use_for": ["多源数据摄取", "增量索引", "解析与切分流水线", "权限感知检索", "经典 RAG 与 Agentic Retrieval 边界"]
+    },
+    {
+      "id": "azure-indexer-change-delete-detection-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/search-how-to-index-azure-blob-changed-deleted",
+      "version": "page updated 2026-06-02; API example 2026-04-01; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["增量变更检测", "删除传播", "软删除", "文档键稳定性", "索引重建条件"]
+    },
+    {
+      "id": "azure-document-access-control-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview",
+      "version": "page updated 2026-08-12; includes 2026-08-01-preview; reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-CHUNKING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["文档级权限", "ACL 与 RBAC 元数据摄取", "切片权限投影", "查询时安全裁剪", "权限同步时延"]
+    },
+    {
+      "id": "unstructured-partitioning-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.unstructured.io/concepts/partitioning",
+      "version": "reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-ADVANCED-RAG"],
+      "use_for": ["文档元素化解析", "Fast、High Res、VLM 与 Auto 策略", "表格和图片处理", "质量、速度与成本权衡"]
+    },
+    {
+      "id": "unstructured-chunking-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.unstructured.io/concepts/chunking",
+      "version": "reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-EMBEDDING"],
+      "use_for": ["元素感知切分", "标题、页面、相似度切分", "表格切分", "重叠参数", "上下文化切分的当前接口"]
+    },
+    {
+      "id": "unstructured-pii-redaction-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.unstructured.io/business/security-compliance/pii-redaction",
+      "version": "reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-DATA-GOVERNANCE", "PS-CHUNKING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["PII 检测与脱敏位置", "概率检测边界", "置信阈值", "审计元数据", "与下游模型调用的数据边界"]
+    },
+    {
+      "id": "langchain-text-splitters-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.langchain.com/oss/python/integrations/splitters",
+      "version": "reviewed 2026-09-02",
+      "freshness": "volatile",
+      "stage_ids": ["PS-CHUNKING"],
+      "use_for": ["RecursiveCharacterTextSplitter", "字符与 Token 切分", "文档结构切分", "当前安装与调用入口"]
+    },
+    {
+      "id": "liteparse-official-repository-2026",
+      "type": "official_repository",
+      "url": "https://github.com/run-llama/liteparse",
+      "version": "b2e76ec5b0c1cb4eb11d67296e916792f4fb5858; v2.14.3; 2026-09-01",
+      "license": "Apache-2.0",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-DATA-INGESTION", "PS-ADVANCED-RAG"],
+      "use_for": ["本地 PDF 空间文本解析", "选择性 OCR", "复杂度路由", "结构化 JSON 和 Markdown 输出", "多语言绑定与命令行接口"]
+    },
+    {
+      "id": "parsebench-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2604.08538",
+      "version": "v1, 2026-04-09; reviewed 2026-09-02",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EVALUATION"],
+      "use_for": ["文档解析基准", "复杂文档任务覆盖", "解析器能力与 Agent 下游使用的连接"]
+    },
+    {
+      "id": "semantic-chunking-cost-naacl-2025",
+      "type": "paper",
+      "url": "https://aclanthology.org/2025.findings-naacl.114/",
+      "version": "Findings of NAACL 2025; DOI 10.18653/v1/2025.findings-naacl.114",
+      "freshness": "research",
+      "stage_ids": ["PS-CHUNKING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["固定切分与语义切分比较", "计算成本", "文档检索、证据检索和答案生成实验", "语义切分并非稳定占优的反例"]
+    },
+    {
+      "id": "late-chunking-2025",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2409.04701",
+      "version": "v3; reviewed 2026-09-02",
+      "freshness": "research",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL"],
+      "use_for": ["长上下文嵌入后切分", "上下文感知片段表示", "传统先切分后嵌入的替代路线"]
+    },
+    {
+      "id": "chunking-embedding-sensitivity-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2603.06976",
+      "version": "v1, 2026-03; reviewed 2026-09-02",
+      "freshness": "research",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-EVALUATION"],
+      "use_for": ["切分策略系统比较", "Embedding 模型敏感性", "切分与表示的交互影响"]
+    },
+    {
+      "id": "nowcoder-agent-rag-question-bank-2026",
+      "type": "public_question_bank",
+      "url": "https://www.nowcoder.com/discuss/878352209799364608",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["公开 RAG 题目线索", "文本切分选型", "完整流水线", "生产部署挑战"],
+      "provenance_note": "作者称来自个人面试题库，但页面没有逐题给出公司、轮次和时间；按公开题库而不是公司真实面经登记。"
+    },
+    {
+      "id": "imranmatin-rag-interview-questions-2026",
+      "type": "public_question_bank",
+      "url": "https://github.com/ImranMatin/rag-interview-questions",
+      "version": "0045d88e2e26a8cde939cd2ede44c20953a902d8; 2026-05-26",
+      "license": "MIT",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["100 道公开 RAG 题目盘点", "文档更新删除", "切分对检索质量的影响", "多模态文档解析", "高级 RAG 范式"],
+      "provenance_note": "公开学习题库，不声称题目来自具体公司的真实面试。题库答案必须另用一手技术来源核验。"
+    },
+    {
+      "id": "nowcoder-liteparse-paismart-engineering-2026",
+      "type": "engineering_practice",
+      "url": "https://www.nowcoder.com/discuss/893799808496902144",
+      "version": "page reviewed 2026-09-02",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-STORAGE-INDEXING"],
+      "use_for": ["扫描 PDF 无法召回的工程现象", "解析子进程超时和临时文件治理", "页码溯源", "可插拔 OCR 接入"],
+      "provenance_note": "公开项目实践，不作为 LiteParse 能力与参数的唯一证据；相关产品能力回到官方仓库固定提交核验。"
     }
   ]
 }

@@ -17,6 +17,7 @@ REQUIRED = [
     "docs/PROJECT_PLAN.md",
     "sources/registry.json",
     "sources/rag-scope.json",
+    "sources/rag-current-sources.json",
     "taxonomy/domains.json",
     "taxonomy/rag-topics.json",
     "knowledge/rag/README.md",
@@ -30,6 +31,8 @@ REQUIRED = [
     "taxonomy/rag-graph-model.json",
     "taxonomy/rag-terminology.json",
     "audits/rag/work-status.json",
+    "sources/rag-search-matrix.json",
+    "audits/rag/search-coverage.json",
     "interview/rag/public-scenarios.json",
     "audits/rag/source-units.json",
     "audits/rag/atom-suggestions.json",
@@ -37,6 +40,7 @@ REQUIRED = [
     "audits/rag/acceptance.md",
     "templates/knowledge-note.md",
     "templates/problem-question.md",
+    "templates/source-search-log.md",
 ]
 
 
@@ -78,6 +82,9 @@ def main() -> int:
     graph_model = load_json("taxonomy/rag-graph-model.json", errors)
     terminology = load_json("taxonomy/rag-terminology.json", errors)
     work_status = load_json("audits/rag/work-status.json", errors)
+    current_sources = load_json("sources/rag-current-sources.json", errors)
+    search_matrix = load_json("sources/rag-search-matrix.json", errors)
+    search_coverage = load_json("audits/rag/search-coverage.json", errors)
 
     sources = registry.get("sources", [])
     source_ids = [item.get("id", "") for item in sources]
@@ -180,6 +187,129 @@ def main() -> int:
                 errors.append(
                     f"工作项 {item.get('id')} 依赖未知工作项：{dependency}"
                 )
+
+    expected_stage_ids = [
+        "PS-DATA-INGESTION",
+        "PS-DOCUMENT-PARSING",
+        "PS-DATA-GOVERNANCE",
+        "PS-CHUNKING",
+        "PS-EMBEDDING",
+        "PS-STORAGE-INDEXING",
+        "PS-QUERY-UNDERSTANDING",
+        "PS-QUERY-REWRITE",
+        "PS-QUERY-ROUTING",
+        "PS-RETRIEVAL",
+        "PS-RESULT-FUSION",
+        "PS-RERANKING",
+        "PS-CONTEXT-ASSEMBLY",
+        "PS-ANSWER-GENERATION",
+        "PS-CITATION-VERIFICATION",
+        "PS-EVALUATION",
+        "PS-PRODUCTION-GOVERNANCE",
+        "PS-ADVANCED-RAG",
+    ]
+    search_stages = search_matrix.get("stages", [])
+    matrix_stage_ids = [item.get("id", "") for item in search_stages]
+    if matrix_stage_ids != expected_stage_ids:
+        errors.append("RAG 检索矩阵必须按规划顺序完整覆盖 18 个流程节点")
+    required_stage_fields = {
+        "order", "id", "label_zh", "label_en", "track",
+        "query_terms_zh", "query_terms_en", "problem_terms_zh",
+        "problem_terms_en", "cross_stage_targets",
+    }
+    for index, stage in enumerate(search_stages, 1):
+        if missing := required_stage_fields - set(stage):
+            errors.append(f"检索矩阵节点 {stage.get('id')} 缺少字段：{sorted(missing)}")
+        if stage.get("order") != index:
+            errors.append(f"检索矩阵节点顺序错误：{stage.get('id')}")
+        for target in stage.get("cross_stage_targets", []):
+            if target not in expected_stage_ids:
+                errors.append(f"检索矩阵节点 {stage.get('id')} 引用了未知关联节点：{target}")
+    search_family_ids = [
+        item.get("id", "") for item in search_matrix.get("search_families", [])
+    ]
+    required_search_families = {
+        "concept_and_principle", "engineering_problem", "implementation",
+        "evaluation", "public_interview", "freshness_and_security",
+    }
+    if missing := required_search_families - set(search_family_ids):
+        errors.append(f"RAG 检索矩阵缺少检索族：{sorted(missing)}")
+
+    coverage_stages = search_coverage.get("stages", [])
+    coverage_stage_ids = [item.get("stage_id", "") for item in coverage_stages]
+    if coverage_stage_ids != expected_stage_ids:
+        errors.append("RAG 检索覆盖记录未与 18 个流程节点一一对应")
+    allowed_search_statuses = {
+        "not_started", "searching", "round_complete", "coverage_saturated",
+    }
+    for stage in coverage_stages:
+        if stage.get("status") not in allowed_search_statuses:
+            errors.append(f"检索覆盖状态无效：{stage.get('stage_id')}")
+        if stage.get("completed_rounds", 0) < 0:
+            errors.append(f"检索轮数不能为负数：{stage.get('stage_id')}")
+        if stage.get("status") == "coverage_saturated":
+            if stage.get("completed_rounds", 0) < 2:
+                errors.append(f"检索覆盖过早标记饱和：{stage.get('stage_id')}")
+            if stage.get("consecutive_rounds_without_new_type", 0) < 2:
+                errors.append(f"检索覆盖缺少连续两轮无新增证据：{stage.get('stage_id')}")
+        for rel_path in stage.get("log_paths", []):
+            if not (ROOT / rel_path).is_file():
+                errors.append(f"检索覆盖引用了不存在的日志：{rel_path}")
+
+    current_source_items = current_sources.get("sources", [])
+    current_source_ids = [item.get("id", "") for item in current_source_items]
+    if repeated := duplicates(current_source_ids):
+        errors.append(f"RAG 当前来源 ID 重复：{repeated}")
+    allowed_current_source_types = {
+        "paper", "official_documentation", "official_repository",
+        "official_engineering_report", "first_person_interview",
+        "public_question_bank", "project_interview_exercise",
+        "engineering_practice", "secondary_index",
+    }
+    for source in current_source_items:
+        source_id = source.get("id")
+        if source.get("type") not in allowed_current_source_types:
+            errors.append(f"RAG 当前来源类型无效：{source_id}")
+        if not str(source.get("url", "")).startswith("https://"):
+            errors.append(f"RAG 当前来源缺少 HTTPS 链接：{source_id}")
+        if not source.get("version") or not source.get("freshness"):
+            errors.append(f"RAG 当前来源缺少版本或时效等级：{source_id}")
+        if not source.get("use_for"):
+            errors.append(f"RAG 当前来源缺少纳管范围：{source_id}")
+        for stage_id in source.get("stage_ids", []):
+            if stage_id not in expected_stage_ids:
+                errors.append(f"RAG 当前来源 {source_id} 引用了未知流程节点：{stage_id}")
+
+    expansion = work_status.get("research_expansion", {})
+    if expansion.get("current_sources") != len(current_source_items):
+        errors.append("工作状态中的 RAG 当前来源数与来源登记不一致")
+    if expansion.get("search_stages_total") != len(expected_stage_ids):
+        errors.append("工作状态中的检索节点总数与检索矩阵不一致")
+    round_one_complete = sum(
+        item.get("completed_rounds", 0) >= 1 for item in coverage_stages
+    )
+    if expansion.get("search_stages_round_1_complete") != round_one_complete:
+        errors.append("工作状态中的第一轮完成节点数与覆盖记录不一致")
+    saturated_count = sum(
+        item.get("status") == "coverage_saturated" for item in coverage_stages
+    )
+    if expansion.get("coverage_saturated_stages") != saturated_count:
+        errors.append("工作状态中的覆盖饱和节点数与覆盖记录不一致")
+
+    search_log_template = (ROOT / "templates/source-search-log.md").read_text(
+        encoding="utf-8"
+    )
+    required_search_log_headings = [
+        "## 2. 实际检索式",
+        "## 3. 候选来源和取舍",
+        "## 4. 本轮新增类型",
+        "## 5. 公开面试题来源核验",
+        "## 6. 九类覆盖检查",
+        "## 8. 饱和判定",
+    ]
+    for heading in required_search_log_headings:
+        if heading not in search_log_template:
+            errors.append(f"来源检索日志模板缺少标题：{heading}")
 
     knowledge_template = (ROOT / "templates/knowledge-note.md").read_text(
         encoding="utf-8"
