@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-02",
+  "verified_at": "2026-09-04",
+  "scope": "Four pre-registered volatile official documentation or repository URLs; no source discovery was performed.",
+  "source_count": 4,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "sentence-transformers-semantic-search-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-004", "RAG-05-008", "RAG-06-002", "RAG-06-012"],
+      "verified_claims": ["Sentence Transformers distinguishes asymmetric search, where a short query retrieves a longer corpus passage, from symmetric search.", "Its current guide recommends encode_query for queries and encode_document for corpus entries in asymmetric retrieval.", "The guide describes exact semantic_search usage for corpora up to about one million entries and notes that ANN can return results that are not exact."],
+      "boundary": "The one-million-entry guidance, API names and performance recommendations are library-version guidance, not a capacity guarantee for every model, hardware or index configuration."
+    },
+    {
+      "source_id": "pgvector-official-repository-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-005", "RAG-06-006", "RAG-06-010", "RAG-06-012", "RAG-06-015"],
+      "verified_claims": ["The pinned pgvector repository documents HNSW and IVFFlat index types for PostgreSQL vector search.", "Its HNSW section states a better speed-recall trade-off than IVFFlat together with slower builds and greater memory use, and documents m, ef_construction and ef_search parameters.", "The repository documents filtering, iterative scans, loading and index-maintenance topics as implementation concerns."],
+      "boundary": "This is pgvector behavior at the pinned commit. Relative performance, memory use and filtering behavior must be measured with the chosen PostgreSQL version, data distribution and workload."
+    },
+    {
+      "source_id": "qdrant-indexing-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-005", "RAG-06-010", "RAG-06-011", "RAG-06-012"],
+      "verified_claims": ["Qdrant documents HNSW vector indexes and Payload indexes as separate mechanisms.", "Its indexing guide states that Payload indexes accelerate filtering on structured fields and high-cardinality metadata during similarity search."],
+      "boundary": "The index selection and query-planning behavior are Qdrant product behavior; cardinality, memory and latency choices remain workload-specific."
+    },
+    {
+      "source_id": "faiss-official-repository-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-001", "RAG-06-002", "RAG-06-005", "RAG-06-006", "RAG-06-007", "RAG-06-011"],
+      "verified_claims": ["The pinned Faiss repository describes the project as a library for efficient similarity search and clustering of dense vectors.", "The repository exposes vector-index, approximate-search and GPU implementation material at the pinned revision."],
+      "boundary": "Repository capability labels do not establish a production configuration or benchmark outcome. Algorithm, recall and hardware choices require task-specific evaluation."
+    }
+  ]
+}
