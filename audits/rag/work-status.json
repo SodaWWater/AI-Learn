@@ -249,12 +249,92 @@
       ]
     },
     {
-      "id": "WP-P3-001",
-      "title": "建立检索增强生成主干节点第一版",
+      "id": "WP-P2-004",
+      "title": "完成原始来源双向覆盖验收",
       "priority": 9,
       "status": "pending",
       "depends_on": ["WP-P2-003"],
-      "outputs": ["graph nodes", "graph edges", "coverage report"]
+      "outputs": ["100 percent original-source coverage report", "deduplication and exclusion audit"]
+    },
+    {
+      "id": "WP-P2-005",
+      "title": "融合已登记外部证据并核验事实与时效",
+      "priority": 10,
+      "status": "pending",
+      "depends_on": ["WP-P2-004"],
+      "outputs": ["external evidence mappings", "freshness and conflict records", "verified public question leads"]
+    },
+    {
+      "id": "WP-P3-001",
+      "title": "建立去重后的标准知识节点",
+      "priority": 11,
+      "status": "pending",
+      "depends_on": ["WP-P2-005"],
+      "outputs": ["canonical knowledge nodes", "solution and implementation nodes", "problem and evaluation nodes"]
+    },
+    {
+      "id": "WP-P3-002",
+      "title": "建立底层有向知识图谱",
+      "priority": 12,
+      "status": "pending",
+      "depends_on": ["WP-P3-001"],
+      "outputs": ["graph nodes", "graph edges", "source evidence edges"]
+    },
+    {
+      "id": "WP-P3-003",
+      "title": "完成知识图谱覆盖与冲突审计",
+      "priority": 13,
+      "status": "pending",
+      "depends_on": ["WP-P3-002"],
+      "outputs": ["orphan report", "unsupported node report", "conflict and reverse-mapping report"]
+    },
+    {
+      "id": "WP-P4-001",
+      "title": "生成完整流程前置学习内容",
+      "priority": 14,
+      "status": "pending",
+      "depends_on": ["WP-P3-003"],
+      "outputs": ["complete RAG workflow prerequisite"]
+    },
+    {
+      "id": "WP-P4-002",
+      "title": "生成全局、主干、重叠、路径和节点局部图",
+      "priority": 15,
+      "status": "pending",
+      "depends_on": ["WP-P4-001"],
+      "outputs": ["global metro map", "backbone maps", "overlap maps", "local node maps", "problem path maps"]
+    },
+    {
+      "id": "WP-P5-001",
+      "title": "按主干顺序生成节点工程问题和公开面试题",
+      "priority": 16,
+      "status": "pending",
+      "depends_on": ["WP-P4-002"],
+      "outputs": ["18 stage problem sets", "problem-to-node mappings", "source-verified public questions"]
+    },
+    {
+      "id": "WP-P6-001",
+      "title": "生成跨节点综合问题与系统设计问题",
+      "priority": 17,
+      "status": "pending",
+      "depends_on": ["WP-P5-001"],
+      "outputs": ["cross-stage diagnosis pages", "system design problems", "cross-stage graph views"]
+    },
+    {
+      "id": "WP-P7-001",
+      "title": "按四段式标准重写并补全详细知识章节",
+      "priority": 18,
+      "status": "pending",
+      "depends_on": ["WP-P3-003", "WP-P5-001"],
+      "outputs": ["formal knowledge chapters", "framework implementation sections", "bidirectional problem links"]
+    },
+    {
+      "id": "WP-P8-001",
+      "title": "执行严格验收并发布当前版本",
+      "priority": 19,
+      "status": "pending",
+      "depends_on": ["WP-P6-001", "WP-P7-001"],
+      "outputs": ["strict validation result", "coverage reports", "release notes"]
     }
   ],
   "next_action": {

@@ -12,12 +12,13 @@
 
 1. [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)
 2. [`audits/rag/work-status.json`](audits/rag/work-status.json)
-3. [`docs/LOCAL_AGENT_HANDOFF.md`](docs/LOCAL_AGENT_HANDOFF.md)
-4. [`audits/rag/manual-review-status.json`](audits/rag/manual-review-status.json)
-5. [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)
-6. [`knowledge/rag/CONTENT_STANDARD.md`](knowledge/rag/CONTENT_STANDARD.md)
-7. [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)
-8. 当前任务涉及的来源登记、审计文件和模板
+3. [`docs/RAG_EXECUTION_ROADMAP.md`](docs/RAG_EXECUTION_ROADMAP.md)
+4. [`docs/LOCAL_AGENT_HANDOFF.md`](docs/LOCAL_AGENT_HANDOFF.md)
+5. [`audits/rag/manual-review-status.json`](audits/rag/manual-review-status.json)
+6. [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)
+7. [`knowledge/rag/CONTENT_STANDARD.md`](knowledge/rag/CONTENT_STANDARD.md)
+8. [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)
+9. 当前任务涉及的来源登记、审计文件和模板
 
 不要只根据 `README.md`、旧章节或聊天摘要推断当前方向。
 

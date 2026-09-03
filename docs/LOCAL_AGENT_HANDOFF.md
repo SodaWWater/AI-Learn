@@ -126,11 +126,12 @@ git diff --check
 1. AGENTS.md
 2. docs/PROJECT_PLAN.md
 3. audits/rag/work-status.json
-4. docs/LOCAL_AGENT_HANDOFF.md
-5. audits/rag/manual-review-status.json
-6. knowledge/rag/TERMINOLOGY.md
-7. knowledge/rag/CONTENT_STANDARD.md
-8. taxonomy/rag-graph-model.json
+4. docs/RAG_EXECUTION_ROADMAP.md
+5. docs/LOCAL_AGENT_HANDOFF.md
+6. audits/rag/manual-review-status.json
+7. knowledge/rag/TERMINOLOGY.md
+8. knowledge/rag/CONTENT_STANDARD.md
+9. taxonomy/rag-graph-model.json
 
 当前用户决策：停止新的外部搜索。前三轮 18/18 和第四轮 4/18 只作为已保存证据；不得继续第四轮剩余 14 个节点。当前唯一任务是完成 522 个待审原始资料语义单元的人工核验与覆盖证明。
 

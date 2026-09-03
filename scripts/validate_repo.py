@@ -33,6 +33,7 @@ REQUIRED = [
     "taxonomy/rag-terminology.json",
     "audits/rag/work-status.json",
     "docs/LOCAL_AGENT_HANDOFF.md",
+    "docs/RAG_EXECUTION_ROADMAP.md",
     "audits/rag/manual-review-status.json",
     "audits/rag/original-source-coverage.md",
     "sources/rag-search-matrix.json",

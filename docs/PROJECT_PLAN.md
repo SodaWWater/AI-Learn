@@ -5,6 +5,8 @@
 > 更新日期：2026-09-02  
 > 权威性：本文件是项目范围、产出结构、执行顺序和验收口径的主规划。其他文件与本规划冲突时，应先修正文档冲突，再继续生产内容。
 
+检索增强生成（Retrieval-Augmented Generation，RAG）从当前来源审核到最终发布的不可跳跃工作包、质量门和防跑偏规则，见 [`RAG_EXECUTION_ROADMAP.md`](RAG_EXECUTION_ROADMAP.md)。
+
 ## 1. 项目背景
 
 现有人工智能（Artificial Intelligence，AI）学习资料和面试资料普遍存在以下问题：
@@ -598,12 +600,13 @@
 1. [`AGENTS.md`](../AGENTS.md)；
 2. 本项目整体规划；
 3. [`audits/rag/work-status.json`](../audits/rag/work-status.json)；
-4. [`docs/LOCAL_AGENT_HANDOFF.md`](LOCAL_AGENT_HANDOFF.md)；
-5. [`audits/rag/manual-review-status.json`](../audits/rag/manual-review-status.json)；
-6. [`knowledge/rag/TERMINOLOGY.md`](../knowledge/rag/TERMINOLOGY.md)；
-7. [`knowledge/rag/CONTENT_STANDARD.md`](../knowledge/rag/CONTENT_STANDARD.md)；
-8. [`taxonomy/rag-graph-model.json`](../taxonomy/rag-graph-model.json)；
-9. 当前工作包涉及的来源、审计和模板文件。
+4. [`docs/RAG_EXECUTION_ROADMAP.md`](RAG_EXECUTION_ROADMAP.md)；
+5. [`docs/LOCAL_AGENT_HANDOFF.md`](LOCAL_AGENT_HANDOFF.md)；
+6. [`audits/rag/manual-review-status.json`](../audits/rag/manual-review-status.json)；
+7. [`knowledge/rag/TERMINOLOGY.md`](../knowledge/rag/TERMINOLOGY.md)；
+8. [`knowledge/rag/CONTENT_STANDARD.md`](../knowledge/rag/CONTENT_STANDARD.md)；
+9. [`taxonomy/rag-graph-model.json`](../taxonomy/rag-graph-model.json)；
+10. 当前工作包涉及的来源、审计和模板文件。
 
 交接时必须记录：
 
