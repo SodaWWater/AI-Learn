@@ -13,9 +13,9 @@
     "all_source_units": 695,
     "semantic_units": 653,
     "preclassified_structural_resource_or_placeholder_units": 42,
-    "manually_reviewed_semantic_units": 241,
-    "pending_manual_semantic_units": 412,
-    "manual_semantic_coverage_percent": 36.91
+    "manually_reviewed_semantic_units": 266,
+    "pending_manual_semantic_units": 387,
+    "manual_semantic_coverage_percent": 40.74
   },
   "source_queue": [
     {
@@ -43,10 +43,10 @@
       "source_id": "agent-guide",
       "all_units": 448,
       "semantic_units": 409,
-      "manually_reviewed_semantic_units": 63,
-      "pending_manual_semantic_units": 346,
-      "status": "pending",
-      "next_source_unit_id": "RU-dd5a6a9f6619"
+      "manually_reviewed_semantic_units": 88,
+      "pending_manual_semantic_units": 321,
+      "status": "in_progress",
+      "next_source_unit_id": "RU-900078e46212"
     },
     {
       "order": 4,
@@ -76,8 +76,8 @@
     "checkpoint_after_each_batch": true
   },
   "current_cursor": {
-    "source_id": "ai-agent-interview-guide",
-    "source_unit_id": "RU-58be80727d76"
+    "source_id": "agent-guide",
+    "source_unit_id": "RU-900078e46212"
   },
   "completion_gate": [
     "pending_manual_semantic_units_equals_zero",
@@ -88,5 +88,5 @@
     "original_source_coverage_report_is_complete",
     "normal_repository_validation_passes"
   ],
-  "next_action": "Review the next 20 to 30 ai-agent-interview-guide units beginning at RU-58be80727d76; read the pinned source body and preserve complete semantic boundaries."
+  "next_action": "Review the next 20 to 30 agent-guide units beginning at RU-900078e46212; read the pinned source body at d4fe53f4a9153123b159d0e6b632117a34721a92 and preserve complete semantic boundaries."
 }

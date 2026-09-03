@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 241,
-    "pending_manual_semantic_units": 412,
-    "current_source_id": "ai-agent-interview-guide",
-    "current_source_unit_id": "RU-58be80727d76",
+    "manually_reviewed_semantic_units": 266,
+    "pending_manual_semantic_units": 387,
+    "current_source_id": "agent-guide",
+    "current_source_unit_id": "RU-900078e46212",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 ai-agent-interview-guide source units beginning at RU-58be80727d76 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the next 20 to 30 agent-guide source units beginning at RU-900078e46212 against the source body at commit d4fe53f4a9153123b159d0e6b632117a34721a92. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -356,6 +356,7 @@
     "The third xiaolin-ai-learning manual semantic batch is complete: 28 units from RU-1fd9c00e810e through RU-4a10af947e2b; it preserves the four-layer retrieval framework, advanced RAG paradigms, vector-plus-graph boundaries, hallucination controls and layered evaluation while flagging pedagogical taxonomies and fixed thresholds.",
     "The fourth xiaolin-ai-learning batch completes that source: 24 units from RU-6b17b2d8cca7 through RU-2a33ed3b9bbd; dynamic updates and deployment difficulty were preserved, sixteen manifest-only duplicates were explicitly linked, and RAG-04-017 was added for document-side hypothetical-question indexing.",
     "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
+    "agent-guide batch 01 reviewed 25 semantic units from RU-dd5a6a9f6619 through RU-182795f71d81 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 5, exact_duplicate 1, partial_overlap 12, cross_node 7, non_rag 0. The next unit is RU-900078e46212.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
 }
