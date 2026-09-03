@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "2026-09-03-xiaolin-batch-03",
+    "source_id": "xiaolin-ai-learning",
+    "reviewed_at": "2026-09-03",
+    "source_commit": "7c363bb44d06f4ae2f05c2374d05760e1eef0ff1",
+    "first_source_unit_id": "RU-1fd9c00e810e",
+    "last_source_unit_id": "RU-4a10af947e2b",
+    "source_body_reviewed": true,
+    "unit_count": 28
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "decision_counts": {
+    "retain": 13,
+    "exact_duplicate": 0,
+    "partial_overlap": 8,
+    "cross_node": 7,
+    "non_rag": 0
+  },
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-1fd9c00e810e"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-02-006", "RAG-08-015", "RAG-09-006", "RAG-10-001", "RAG-10-014"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "note": "与检索失败链路已有内容重叠，但保留‘上游证据缺失限制下游生成上限’这一因果关系。",
+      "preserved_details": ["正确证据未进入候选或上下文时，生成器无法仅靠提示词恢复私域事实", "检索成功不等于答案必然正确，生成、上下文和来源质量仍需单独治理", "优化优先级应由分层指标和失败样本决定"],
+      "verification_flags": ["‘检索是唯一命脉’和‘只要检索准确生成自然不会差’属于过度概括", "检索是否具有最高投入产出比取决于当前系统瓶颈，必须先做归因"]
+    },
+    {
+      "source_unit_ids": ["RU-cbc9d67f793c"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-001", "RAG-07-003", "RAG-08-005", "RAG-08-010", "RAG-10-001", "RAG-10-014"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "note": "四层框架把索引、查询、召回和重排序串成诊断路径，适合作为学习导航，但不是严格互斥的系统分层。",
+      "preserved_details": ["索引层决定可被检索的表示与粒度", "查询层调整原始问题和约束", "召回层通过多个检索路径增加覆盖", "重排序层在候选预算内提高相关证据顺序", "每层都必须连接独立评测和消融"],
+      "verification_flags": ["文档解析、嵌入、过滤、上下文组装和生成未被四层框架完整覆盖，因此不能把它当完整 RAG 系统流程"]
+    },
+    {
+      "source_unit_ids": ["RU-c211b09ac42b"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-04-001", "RAG-04-007", "RAG-04-008", "RAG-04-012", "RAG-04-014", "RAG-08-013"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY"],
+      "note": "与小块检索大块返回已有内容重叠，但新增摘要索引和按查询路由多粒度索引的实现分支。",
+      "preserved_details": ["小片段的语义聚焦与大上下文的可理解性构成粒度权衡", "父子分块以 child_id/parent_id 连接检索表示和返回内容", "摘要索引用生成摘要建立检索表示、命中后返回原文", "章节、段落、句子等多粒度索引可由查询类型选择或并行召回"],
+      "verification_flags": ["150/500 token 只是示例", "摘要可能遗漏、改写或捏造事实，必须保留原文映射并评估", "多粒度路由增加存储、去重、融合和运维成本，不保证自动提升"]
+    },
+    {
+      "source_unit_ids": ["RU-befe2dc675de"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-007", "RAG-07-009", "RAG-07-011", "RAG-07-012"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "汇总直接改写、多查询、HyDE 和 Step-back 的触发症状及风险，与第二批方法单元部分重叠。",
+      "preserved_details": ["直接改写处理口语、歧义和会话指代", "多查询覆盖不同角度并保留原始查询", "HyDE 用假设文档表示缩小查询体与文档体差异", "Step-back 同时需要背景问题与原始具体问题的证据", "不同方法必须按查询类别路由而非全部串联"],
+      "verification_flags": ["‘口语和书面语向量必然相距较远’取决于模型和训练数据", "多查询数量、HyDE 稳定领域和 Step-back 适用范围均需离线评测"]
+    },
+    {
+      "source_unit_ids": ["RU-ec5e58999ff8"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-007", "RAG-08-015", "RAG-08-016"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "与稠密、BM25 和 RRF 已审内容重叠，保留从单路失败类型到通道组合与融合选择的完整推理。",
+      "preserved_details": ["精确型号与同义表达形成互补查询类型", "不同通道原始分数的标度与分布通常不可直接比较", "RRF 使用名次，归一化加权使用分数，两者各有信息损失与调参成本", "并行召回仍会增加后端负载和尾延迟"],
+      "verification_flags": ["BM25 不能简化为 TF-IDF 分数", "RRF 的 k=60 是经验默认值而非稳定最优", "‘RRF 是标配且几乎零成本’不纳入规范结论"]
+    },
+    {
+      "source_unit_ids": ["RU-467efbebacc7"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-08-009", "RAG-08-010", "RAG-09-002", "RAG-09-004", "RAG-10-006", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "与双编码器/交叉编码器已有内容重叠，但保留候选噪声、上下文预算和 Lost in the Middle 共同驱动重排序的因果链。",
+      "preserved_details": ["双编码器支持预计算文档表示和大规模候选召回", "交叉编码器联合建模查询与单个候选，代价随候选数增长", "重排后截断同时控制相关性、词元成本和长上下文干扰", "本地模型与托管 API 都需比较语言、吞吐、延迟、合规和成本"],
+      "verification_flags": ["20～30 到 3～5 只是示例候选预算", "BGE、BCE、Cohere 和 Jina 的具体版本、语言效果与定价需阶段 C 核验", "重排并不保证答案质量显著提升"]
+    },
+    {
+      "source_unit_ids": ["RU-05bb0e7029be"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-007", "RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-08-004", "RAG-08-010", "RAG-10-014", "RAG-11-008", "RAG-11-018", "RAG-13-005"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "组合策略必须从症状、数据和预算反推，并以逐层消融确认收益，不能把来源推荐程度转成固定生产套餐。",
+      "preserved_details": ["粒度不匹配时评估父子或多粒度索引", "表述鸿沟和会话指代时评估查询改写", "单路漏召时评估稠密加稀疏", "候选噪声高时评估重排", "每增加模块都测量质量、延迟、成本和故障面"],
+      "verification_flags": ["‘父子索引+向量/BM25+重排覆盖大多数场景’是经验建议而非验收基线", "不得把公开组合包装为学习者真实生产经验"]
+    },
+    {
+      "source_unit_ids": ["RU-8bdb5c2d634f"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-002", "RAG-07-010", "RAG-08-013", "RAG-08-015", "RAG-09-008", "RAG-12-005", "RAG-12-018", "RAG-12-019"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留高级范式的需求来源：固定单次流程无法针对是否检索、检索质量、知识盲区和多步依赖动态决策。",
+      "preserved_details": ["无需外部知识的问题可绕过检索", "低质量证据应触发拒答、改写、换源或再检索", "复杂问题可能依赖前序结果形成多轮检索", "知识库无覆盖时需要显式降级策略而非默认生成"],
+      "verification_flags": ["天气等问题不是‘不需要检索’，而是需要路由到实时工具或外部数据源", "动态流程并不自动优于固定流程，增加了延迟、成本和不可预测性"]
+    },
+    {
+      "source_unit_ids": ["RU-d5e6f16a60dd"],
+      "decision": "retain",
+      "atom_ids": ["RAG-12-001", "RAG-12-002", "RAG-12-003", "RAG-12-018", "RAG-12-019", "RAG-13-006"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "保留 Naive、Advanced 和 Modular RAG 的结构差异，但把‘三代演进’定位为教学分类而不是严格时间线。",
+      "preserved_details": ["Naive RAG 以单次检索和直接生成构成最小链路", "Advanced RAG 在检索前后加入查询增强、重排和压缩", "Modular RAG 将检索、改写、路由、生成与校验变为可替换模块", "LlamaIndex Workflow 与 LangGraph 可作为工作流编排实现示例"],
+      "verification_flags": ["三种形态会并存且定义在不同论文和框架中并不完全一致", "‘多数生产系统使用 Advanced RAG’及框架能力属于时效性结论，阶段 C 核验"]
+    },
+    {
+      "source_unit_ids": ["RU-1d96a805b8f9"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-12-004", "RAG-12-005", "RAG-12-006", "RAG-12-007", "RAG-12-008", "RAG-12-009", "RAG-12-018", "RAG-12-020"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-CITATION-VERIFICATION", "PS-ADVANCED-RAG", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "同一单元覆盖 Self-RAG、CRAG、GraphRAG 和 Agentic RAG 四条不同控制主干，必须分别建模再建立对比关系。",
+      "preserved_details": ["Self-RAG 论文方案通过检索与反思控制标记学习何时检索、相关性、支持度和效用", "CRAG 在检索质量评估后路由本地证据、外部搜索或混合路径", "GraphRAG 预处理实体关系、社区和层次摘要，并区分局部与全局查询", "Agentic RAG 在循环中根据中间证据决定下一次查询、工具和停止条件", "所有动态路径都需要最大迭代、超时、预算和失败降级"],
+      "verification_flags": ["Self-RAG 的反思标记、训练要求和开源基础模型必须按原论文核验；通用模型可模拟反思流程但不等同论文模型", "CRAG 原论文还包含知识精炼与查询改写，来源描述是简化版", "GraphRAG 的发布时间、查询模式和实现随版本变化，阶段 C 使用微软论文与官方仓库", "‘工程复杂度中/高’是定性意见，不可代替容量和风险评估"]
+    },
+    {
+      "source_unit_ids": ["RU-fe1199bd3dc2"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-08-001", "RAG-08-013", "RAG-12-008", "RAG-12-010"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "note": "保留向量相似检索不显式编码关系边的限制，但纠正其‘天然只能单跳、重复检索也不可能多跳’的绝对说法。",
+      "preserved_details": ["单次 query-to-chunk 近邻检索擅长定位直接相关局部证据", "需要实体链、依赖链或路径约束的问题往往不能由一次近邻检索完整回答", "迭代检索可由前序答案生成下一跳查询，但缺少显式关系约束时更易漂移和漏链"],
+      "verification_flags": ["向量检索可被查询分解、迭代检索和记忆编排成多跳流程，因此不是机制上绝对做不到", "是否需要图取决于问题分布、关系稳定性和可接受成本"]
+    },
+    {
+      "source_unit_ids": ["RU-5d98da6052a0"],
+      "decision": "retain",
+      "atom_ids": ["RAG-06-001", "RAG-06-008", "RAG-12-009", "RAG-12-010"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "note": "保留图数据库以节点、边和属性表达实体关系并执行约束遍历的能力，以及它与语义检索的互补边界。",
+      "preserved_details": ["图查询适合从已识别实体沿指定关系类型执行多跳遍历", "语义检索负责模糊文本匹配，图遍历负责显式拓扑和路径约束", "Neo4j 等图数据库也可提供向量索引，但向量搜索与图遍历仍是不同算子", "图数据库不等同于完整 GraphRAG"],
+      "verification_flags": ["Cypher 和 Neo4j 是实现示例，产品能力需按版本核验", "图中关系的正确性取决于抽取、实体消歧、来源和更新时间"]
+    },
+    {
+      "source_unit_ids": ["RU-d318c5d8abe7"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-008", "RAG-07-010", "RAG-08-005", "RAG-08-013", "RAG-12-010", "RAG-09-007"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-CITATION-VERIFICATION", "PS-ADVANCED-RAG"],
+      "note": "保留向量入口、实体链接、图遍历、证据融合和生成的组合链路，并补出来源中隐含的实体对齐步骤。",
+      "preserved_details": ["可先用文本检索定位候选文档和入口实体", "实体链接需把名称、别名和歧义映射到稳定图节点", "图查询沿竞争、任职等限定关系获取路径证据", "文本片段与路径三元组或节点属性统一进入证据上下文", "最终答案需回溯文本来源和图关系来源"],
+      "verification_flags": ["向量检索并非唯一入口，也可先做命名实体识别或结构化字段查找", "直接把所有路径塞入模型会产生噪声，需限制深度、关系类型和候选预算"]
+    },
+    {
+      "source_unit_ids": ["RU-7e46394ce783"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-013", "RAG-12-009", "RAG-12-010", "RAG-12-018", "RAG-13-004"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-ADVANCED-RAG", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留企业关系、医疗关联、代码依赖和供应链溯源四类图增强候选场景及共同判据。",
+      "preserved_details": ["问题答案依赖多个实体和显式关系链", "需要直接与间接依赖、上下游、共同关联或路径约束", "关系重复查询且图结构相对稳定时，预构建图更有价值", "路径结果需要与原始文档证据结合而非只返回图结论"],
+      "verification_flags": ["医疗、金融和安全场景属于高风险领域，图推断不能替代权威数据验证和人工审查", "‘几秒遍历’取决于图规模、查询、索引和部署，不保留为通用性能结论"]
+    },
+    {
+      "source_unit_ids": ["RU-e8af62120425"],
+      "decision": "retain",
+      "atom_ids": ["RAG-12-010", "RAG-12-018", "RAG-11-001", "RAG-11-002", "RAG-11-018", "RAG-13-004"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留不上图数据库的判断：若查询主要定位描述性片段且关系问题占比低，图抽取和维护可能不经济。",
+      "preserved_details": ["图构建包含实体抽取、关系抽取、实体消歧、来源绑定和模式设计", "增量文档还需同步更新图与向量索引", "抽取错误会形成可被多次遍历放大的错误边", "是否上图应比较关系型查询占比、基线失败率、质量增益和总拥有成本"],
+      "verification_flags": ["‘同时出现多个实体并询问关系’可作初筛规则但不是充分条件", "普通关系数据库、搜索引擎、结构化元数据过滤或迭代检索也可能满足需求"]
+    },
+    {
+      "source_unit_ids": ["RU-02601fdc756e"],
+      "decision": "retain",
+      "atom_ids": ["RAG-01-004", "RAG-08-015", "RAG-09-009", "RAG-09-011", "RAG-09-012", "RAG-09-013"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "保留检索缺失与有证据但生成不受约束两类主路径，同时扩展为完整幻觉来源分类。",
+      "preserved_details": ["零召回、误召回或召回不完整导致证据缺失", "模型可能忽略证据、混合片段、引入参数记忆或生成无证据细节", "知识源本身可能错误、过期或相互冲突", "上下文截断、排序和引用错配也会产生不忠实答案"],
+      "verification_flags": ["RAG 幻觉不只有来源中的两类，正式知识必须覆盖来源质量、上下文处理、生成与引用链", "模型没有可靠依据时也可能拒答，不能写成必然编造"]
+    },
+    {
+      "source_unit_ids": ["RU-6afae3a4fc55"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-001", "RAG-09-006", "RAG-09-007", "RAG-09-008", "RAG-10-008"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "与证据约束提示词已有内容重叠，保留规则结构和它只能治理生成行为、不能修复检索的边界。",
+      "preserved_details": ["明确限定答案只能使用给定证据", "证据不足时提供拒答或澄清出口", "要求每个关键结论标注来源", "禁止把未明确陈述的推断伪装为事实", "用忠实度和拒答误判评估提示词"],
+      "verification_flags": ["提示词不能强制或保证模型遵守规则，必须与程序化校验和评测配合", "过强约束可能降低完整性和用户体验"]
+    },
+    {
+      "source_unit_ids": ["RU-57a7eb66df26"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-008", "RAG-08-010", "RAG-08-015", "RAG-09-008", "RAG-10-002", "RAG-10-014", "RAG-11-011"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留基于检索质量门控的拒答路径，以及用可回答/不可回答样本校准阈值的工程方法。",
+      "preserved_details": ["候选经重排或相关性分类器产生质量信号", "低于阈值可拒答、澄清、转人工或切换知识源", "阈值数据集同时包含库内有答案和库外无答案问题", "应分别观察错误拒答与错误放行而不是只看总准确率"],
+      "verification_flags": ["重排分数不一定是 0～1 概率且不同模型不可直接比较", "0.3～0.6 是无条件经验范围，不纳入规范默认值", "金融、医疗阈值更高也不能脱离风险成本和验证数据直接设定"]
+    },
+    {
+      "source_unit_ids": ["RU-351f752dc5dc"],
+      "decision": "retain",
+      "atom_ids": ["RAG-09-010", "RAG-09-012", "RAG-10-008", "RAG-10-011", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留生成后把答案拆成声明并逐条验证是否受证据支持的机制。",
+      "preserved_details": ["先抽取可验证的原子声明", "对每条声明执行证据蕴含或支持度判断", "无支持声明可删除、降级措辞、标记无法核实或触发重试", "验证器可用同一或不同模型，也可结合自然语言推断模型和规则", "记录验证结果用于离线错误分析"],
+      "verification_flags": ["第二次模型调用不必然使成本精确翻倍，取决于模型、上下文和批处理", "同源模型可能产生相关错误，LLM 验证器也需要校准和人工抽检", "高风险场景不能只依赖模型自审"]
+    },
+    {
+      "source_unit_ids": ["RU-a9bfcd86a8d7"],
+      "decision": "retain",
+      "atom_ids": ["RAG-09-007", "RAG-09-010", "RAG-09-014", "RAG-10-009", "RAG-10-011"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "保留声明级结构化输出、来源编号存在性检查与证据支持检查的实现链路。",
+      "preserved_details": ["输出 Schema 可包含答案、声明列表、每条声明的 source_ids 和不确定性字段", "程序先验证来源编号是否来自本次允许证据集合", "随后验证被引用片段是否真实支持对应声明", "引用应能回连文档、版本和片段位置", "引用准确率与完整率需要独立评估"],
+      "verification_flags": ["存在有效 source_id 不代表引用支持结论，不能只做编号存在性校验", "模型自报 high/medium/low confidence 未经校准，不能直接当真实置信度"]
+    },
+    {
+      "source_unit_ids": ["RU-ddc2cb84f5bd"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-08-015", "RAG-09-006", "RAG-09-007", "RAG-09-008", "RAG-09-010", "RAG-09-014", "RAG-10-008", "RAG-10-009", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "四种方案对应检索门控、生成约束、结构化引用和生成后核验的纵深防御，必须按风险与预算组合。",
+      "preserved_details": ["基础链路至少需要证据约束和证据不足处理", "高可信场景增加声明级引用和程序化验证", "生成后核验提供另一层防线但增加延迟与成本", "拒答、错误放行、引用错误、忠实度、任务完成率和人工转接需共同衡量"],
+      "verification_flags": ["‘普通场景前两项能解决大半’和‘高风险四项全上即可最高准确’没有证据且可能造成安全错觉", "医疗、法律、金融和合规任务还需权威来源、政策控制、人工复核与适用法规治理", "检索质量不是全部幻觉的唯一或最大来源，需按失败数据归因"]
+    },
+    {
+      "source_unit_ids": ["RU-1dc7496bb7dc"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-013", "RAG-10-014", "RAG-11-003", "RAG-11-017"],
+      "related_stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留持续评估作为知识、模型、切分、查询分布和系统版本变化后的回归控制机制。",
+      "preserved_details": ["将主观好坏拆为解析、检索、生成、引用和端到端指标", "每次索引、模型、提示词或数据更新都运行回归集", "线上分布变化需要把失败样本回灌到离线集合", "评估结果必须关联系统与数据版本"],
+      "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-569bf89e560c"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-012", "RAG-10-014", "RAG-13-009"],
+      "related_stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "与持续评估动机部分重叠，保留从改动比较、问题定位到收益证明的三个使用目的。",
+      "preserved_details": ["少量随意抽查不能代表查询分布", "分层指标帮助区分未召回、排序靠后、生成不忠实和回答跑题", "优化前后需在冻结测试集比较并报告不确定性", "测试集外仍需线上实验和人工审查"],
+      "verification_flags": ["客观指标也依赖标注定义和采样偏差，不应与真实业务价值画等号"]
+    },
+    {
+      "source_unit_ids": ["RU-fccf61dced7c"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-011", "RAG-10-012", "RAG-10-014"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "保留 RAG 评估的三个困难：开放式答案多样、错误跨层传播和高质量标注昂贵。",
+      "preserved_details": ["自然语言答案通常没有唯一字符串标准", "最终错误可能来自检索、上下文、生成、引用或源数据", "证据相关性、答案正确性和可回答性需要明确标注准则", "自动评审降低规模成本但引入裁判偏差", "人工与自动评估需要抽样校准"],
+      "verification_flags": ["把评估只拆成检索与生成两层仍是简化；正式体系还要覆盖解析、权限、安全、延迟、成本和端到端任务"]
+    },
+    {
+      "source_unit_ids": ["RU-9f335a051249"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-002", "RAG-10-004", "RAG-10-005", "RAG-10-006", "RAG-10-014"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "note": "保留问题到相关证据标识的检索测试集，以及 Hit@K 与 MRR 分别衡量覆盖和首个相关结果排名的区别。",
+      "preserved_details": ["测试样本需要问题、相关文档或片段集合以及可选分级相关性", "Hit@K 判断前 K 是否至少出现相关证据", "MRR 使用首个相关结果倒数排名，适合单答案或重视首个命中场景", "多个相关证据和分级相关性还需 Recall@K、MAP 或 nDCG", "应分别评估初召与重排后的排序"],
+      "verification_flags": ["Hit@5 0.7/0.8 和 MRR 0.5 不是通用好坏阈值", "低 Hit@K 不只由嵌入或切分导致，过滤、索引、标注和查询处理也可能出错", "MRR 低不能直接归因重排模型，必须比较重排前后"]
+    },
+    {
+      "source_unit_ids": ["RU-d34ef9fb730a"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-10-004", "RAG-10-007", "RAG-10-008", "RAG-10-010", "RAG-10-011", "RAG-10-012", "RAG-11-018"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "Ragas 自动评测同时覆盖上下文与答案指标，使用 LLM-as-a-Judge 时必须连接版本、裁判校准、成本和人工抽检。",
+      "preserved_details": ["Faithfulness 检查答案声明能否由检索上下文支持", "Answer Relevancy 检查答案是否响应问题而非仅事实有据", "Context Recall 检查必要信息是否被上下文覆盖", "Context Precision 检查相关上下文的排序与噪声", "自动裁判需在代表性样本上与人工评分比较一致性", "核心回归集、抽样集和不同成本裁判模型可分层运行"],
+      "verification_flags": ["项目规范名、指标定义、是否需要 reference/ground truth 及实现会随 Ragas 版本变化，阶段 C 查官方文档", "0.8/0.7 目标值、200～500 条抽样、GPT-4o 到 mini 成本降低 10 倍均是未给条件的版本敏感示例", "LLM-as-a-Judge 不等于无需人工标注"]
+    },
+    {
+      "source_unit_ids": ["RU-d0ffaeec7756"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-001", "RAG-05-010", "RAG-08-004", "RAG-08-010", "RAG-09-001", "RAG-09-008", "RAG-09-010", "RAG-10-001", "RAG-10-014"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "保留由低指标回溯候选故障节点的诊断图，但禁止一项指标只对应一个根因。",
+      "preserved_details": ["低 Context Recall 可检查语料覆盖、切分、嵌入、查询、过滤和召回通道", "低 Context Precision 可检查候选数、融合、去重和重排", "低 Faithfulness 可检查证据质量、上下文冲突、提示词、生成器和核验", "低 Answer Relevancy 可检查意图理解、问题改写、证据偏题和生成指令", "通过组件级指标、trace 和消融缩小根因"],
+      "verification_flags": ["来源把每个低指标映射到单一优化手段过于简单", "Context Precision 并非只代表‘噪音多’，其具体含义取决于所用指标版本和排序定义"]
+    },
+    {
+      "source_unit_ids": ["RU-4a10af947e2b"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-10-003", "RAG-10-012", "RAG-10-013", "RAG-10-014", "RAG-11-003", "RAG-11-017", "RAG-13-009"],
+      "related_stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留离线回归与线上业务反馈之间的闭环，以及分布偏移后更新测试集和指标权重的路径。",
+      "preserved_details": ["点踩、追问、转人工、空回答和会话解决率提供不同线上信号", "每个指标都需明确定义窗口、分母、去重和分群", "门控变严可能提高转人工率但降低错误放行，需联合评价", "线上失败样本经隐私处理、人工归因后进入回归集", "离线改进通过 A/B 实验或灰度发布验证真实任务影响"],
+      "verification_flags": ["追问不一定表示答非所问，转人工与空回答也不一定表示系统变差；这些是代理信号而非事实标签", "离线指标不是唯一标准，线上指标也受界面、流量和用户行为混杂影响", "‘线上是最终衡量标准’应改为业务目标、安全护栏、离线质量和线上结果共同决策"]
+    }
+  ]
+}

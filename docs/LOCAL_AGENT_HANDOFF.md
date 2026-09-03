@@ -10,7 +10,7 @@
 - 4 个用户指定来源已经固定版本并登记；
 - 695 个来源单元（Source Unit）已经机械盘点；
 - 其中 653 个是待语义审核的检索增强生成（Retrieval-Augmented Generation，RAG）内容单元，42 个已经标为结构、资源或占位单元；
-- 653 个语义单元中，189 个已人工审核，464 个待人工审核；
+- 653 个语义单元中，217 个已人工审核，436 个待人工审核；
 - 用户 PDF《大模型 RAG 经验面》37/37 已人工审核完成；
 - 18 个流程节点的三轮外部检索已经完成；
 - 当前登记 170 个外部时效/一手来源和 26 条公开工程问题/面试题线索；
@@ -37,7 +37,7 @@
 
 执行顺序固定为：
 
-1. `xiaolin-ai-learning`：52 个待审语义单元；这是用户当前主要学习来源；
+1. `xiaolin-ai-learning`：24 个待审语义单元；这是用户当前主要学习来源；
 2. `ai-agent-interview-guide`：66 个待审语义单元；
 3. `agent-guide`：346 个待审语义单元；
 4. `user-rag-experience-pdf`：0 个待审语义单元，37/37 已完成。
@@ -133,7 +133,7 @@ git diff --check
 8. knowledge/rag/CONTENT_STANDARD.md
 9. taxonomy/rag-graph-model.json
 
-当前用户决策：停止新的外部搜索。前三轮 18/18 和第四轮 4/18 只作为已保存证据；不得继续第四轮剩余 14 个节点。当前唯一任务是按 audits/rag/manual-review-status.json 的实时数量完成待审原始资料语义单元的人工核验与覆盖证明；当前检查点为已审 189、待审 464，下一单元为 RU-1fd9c00e810e。
+当前用户决策：停止新的外部搜索。前三轮 18/18 和第四轮 4/18 只作为已保存证据；不得继续第四轮剩余 14 个节点。当前唯一任务是按 audits/rag/manual-review-status.json 的实时数量完成待审原始资料语义单元的人工核验与覆盖证明；当前检查点为已审 217、待审 436，下一单元为 RU-6b17b2d8cca7。完成 `xiaolin-ai-learning` 剩余 24 个单元后，再进入 `ai-agent-interview-guide`。
 
 先运行 python scripts/review_queue.py --summary 和 python scripts/review_queue.py --limit 25，按队列从 xiaolin-ai-learning 开始。必须在仓库外按 sources/registry.json 的固定 Commit 检出来源并阅读正文及上下文；不能只根据标题判断。每批审核 20～30 个单元并保持语义边界完整。每个单元必须记录 retain、exact_duplicate、partial_overlap、cross_node 或 non_rag 之一；只有语义、条件和结论都相同才可标为 exact_duplicate。部分重叠、实现差异、反例、版本差异、工程条件和评估方法全部保留。
 

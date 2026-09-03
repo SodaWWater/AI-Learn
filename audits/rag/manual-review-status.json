@@ -13,9 +13,9 @@
     "all_source_units": 695,
     "semantic_units": 653,
     "preclassified_structural_resource_or_placeholder_units": 42,
-    "manually_reviewed_semantic_units": 189,
-    "pending_manual_semantic_units": 464,
-    "manual_semantic_coverage_percent": 28.94
+    "manually_reviewed_semantic_units": 217,
+    "pending_manual_semantic_units": 436,
+    "manual_semantic_coverage_percent": 33.23
   },
   "source_queue": [
     {
@@ -23,10 +23,10 @@
       "source_id": "xiaolin-ai-learning",
       "all_units": 127,
       "semantic_units": 127,
-      "manually_reviewed_semantic_units": 75,
-      "pending_manual_semantic_units": 52,
+      "manually_reviewed_semantic_units": 103,
+      "pending_manual_semantic_units": 24,
       "status": "in_progress",
-      "next_source_unit_id": "RU-1fd9c00e810e"
+      "next_source_unit_id": "RU-6b17b2d8cca7"
     },
     {
       "order": 2,
@@ -77,7 +77,7 @@
   },
   "current_cursor": {
     "source_id": "xiaolin-ai-learning",
-    "source_unit_id": "RU-1fd9c00e810e"
+    "source_unit_id": "RU-6b17b2d8cca7"
   },
   "completion_gate": [
     "pending_manual_semantic_units_equals_zero",
@@ -88,5 +88,5 @@
     "original_source_coverage_report_is_complete",
     "normal_repository_validation_passes"
   ],
-  "next_action": "Review the next 20 to 30 xiaolin-ai-learning units beginning at RU-1fd9c00e810e; read the pinned source body and preserve complete semantic boundaries."
+  "next_action": "Review the remaining 24 xiaolin-ai-learning units beginning at RU-6b17b2d8cca7; read the pinned source body and complete this source without crossing into the next source."
 }

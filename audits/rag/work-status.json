@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 189,
-    "pending_manual_semantic_units": 464,
+    "manually_reviewed_semantic_units": 217,
+    "pending_manual_semantic_units": 436,
     "current_source_id": "xiaolin-ai-learning",
-    "current_source_unit_id": "RU-1fd9c00e810e",
+    "current_source_unit_id": "RU-6b17b2d8cca7",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 xiaolin-ai-learning source units beginning at RU-1fd9c00e810e against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the remaining 24 xiaolin-ai-learning source units beginning at RU-6b17b2d8cca7 against the source body at the pinned commit and complete this source. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -353,6 +353,7 @@
     "The current authoritative task is WP-P2-003. Follow docs/LOCAL_AGENT_HANDOFF.md and audits/rag/manual-review-status.json.",
     "The first xiaolin-ai-learning manual semantic batch is complete: 30 units from RU-472404dfeb98 through RU-b8136aeda954; three missing canonical atoms were added and version-sensitive claims were flagged for Phase C verification.",
     "The second xiaolin-ai-learning manual semantic batch is complete: 28 units from RU-2a918774067b through RU-230c4827a530; all distinct implementation details were mapped to existing atoms, and unverified product, benchmark, complexity and tuning claims were explicitly flagged.",
+    "The third xiaolin-ai-learning manual semantic batch is complete: 28 units from RU-1fd9c00e810e through RU-4a10af947e2b; it preserves the four-layer retrieval framework, advanced RAG paradigms, vector-plus-graph boundaries, hallucination controls and layered evaluation while flagging pedagogical taxonomies and fixed thresholds.",
     "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
