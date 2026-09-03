@@ -3,7 +3,7 @@
   "updated_at": "2026-09-03",
   "matrix": "sources/rag-search-matrix.json",
   "log_template": "templates/source-search-log.md",
-  "status": "third_round_in_progress",
+  "status": "third_round_complete",
   "completion_rule": "所有 18 个节点至少完成第一轮中英文检索和登记，才满足 Phase 2 第一轮完成定义；coverage_saturated 还需连续两轮独立补漏无新增类型。",
   "stages": [
     {"stage_id": "PS-DATA-INGESTION", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-data-ingestion-r1.md", "audits/rag/search-logs/2026-09-02-data-ingestion-r2.md", "audits/rag/search-logs/2026-09-03-data-ingestion-r3.md"]},
@@ -22,7 +22,7 @@
     {"stage_id": "PS-ANSWER-GENERATION", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-answer-generation-r1.md", "audits/rag/search-logs/2026-09-02-answer-generation-r2.md", "audits/rag/search-logs/2026-09-03-answer-generation-r3.md"]},
     {"stage_id": "PS-CITATION-VERIFICATION", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-citation-verification-r1.md", "audits/rag/search-logs/2026-09-02-citation-verification-r2.md", "audits/rag/search-logs/2026-09-03-citation-verification-r3.md"]},
     {"stage_id": "PS-EVALUATION", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-evaluation-r1.md", "audits/rag/search-logs/2026-09-02-evaluation-r2.md", "audits/rag/search-logs/2026-09-03-evaluation-r3.md"]},
-    {"stage_id": "PS-PRODUCTION-GOVERNANCE", "status": "round_complete", "completed_rounds": 2, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-production-governance-r1.md", "audits/rag/search-logs/2026-09-02-production-governance-r2.md"]},
-    {"stage_id": "PS-ADVANCED-RAG", "status": "round_complete", "completed_rounds": 2, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-02", "log_paths": ["audits/rag/search-logs/2026-09-02-advanced-rag-r1.md", "audits/rag/search-logs/2026-09-02-advanced-rag-r2.md"]}
+    {"stage_id": "PS-PRODUCTION-GOVERNANCE", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-production-governance-r1.md", "audits/rag/search-logs/2026-09-02-production-governance-r2.md", "audits/rag/search-logs/2026-09-03-production-governance-r3.md"]},
+    {"stage_id": "PS-ADVANCED-RAG", "status": "round_complete", "completed_rounds": 3, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-advanced-rag-r1.md", "audits/rag/search-logs/2026-09-02-advanced-rag-r2.md", "audits/rag/search-logs/2026-09-03-advanced-rag-r3.md"]}
   ]
 }

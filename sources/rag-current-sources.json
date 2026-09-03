@@ -1433,6 +1433,76 @@
       "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["RAG Funnel Failure Framing", "Trace-based Bad-case Diagnosis", "Node-level Metrics", "Golden-dataset Regression Workflow"],
       "provenance_note": "公开工程讲解，不是公司面试原题或一手技术规范；只用于补充问题表达，技术结论由论文、官方文档和实验复核。"
+    },
+    {
+      "id": "opentelemetry-genai-semconv-2026",
+      "type": "official_repository",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/fee465db333bdd6a7d2faa320edab5cf3101a4f4/docs/gen-ai/gen-ai-spans.md",
+      "version": "commit fee465db333bdd6a7d2faa320edab5cf3101a4f4; GenAI conventions Development status; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["GenAI Span Contract", "Retrieval Data-source and Top-k Attributes", "Prompt Model and Tool Version Trace", "Opt-in Query Document and Message Content", "Telemetry Schema Version Pinning"],
+      "provenance_note": "固定提交可复核当前字段，但该仓库明确把 GenAI Semantic Conventions（生成式人工智能语义约定）标为 Development（开发中）；实现必须固定版本并维护迁移映射。"
+    },
+    {
+      "id": "owasp-mcp-security-cheat-sheet-2026",
+      "type": "official_documentation",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html",
+      "version": "current OWASP Cheat Sheet; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-ROUTING", "PS-CONTEXT-ASSEMBLY", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Tool Poisoning and Rug Pull", "Cross-server Tool Shadowing", "Least-privilege Tool Credentials", "Human Approval with Full Parameters", "Message Signing Replay Protection and Central Audit"],
+      "provenance_note": "OWASP 安全清单用于威胁建模和控制检查；具体签名算法、时间窗、扫描器与部署方式仍需按组织威胁模型和正式协议验证。"
+    },
+    {
+      "id": "atbench-agent-trajectory-safety-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2604.02022",
+      "version": "v4, 2026-08-20",
+      "freshness": "research",
+      "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Trajectory-level Agent Safety", "Risk-source Failure-mode and Harm Taxonomy", "Delayed-trigger Long-context Risk", "Heterogeneous Tool-pool Evaluation", "Intermediate-action Diagnosis"],
+      "provenance_note": "预印本基准用于补充轨迹级安全诊断，不把其模型排名或数据分布直接推广到企业 Agentic RAG（智能体检索增强生成）流量。"
+    },
+    {
+      "id": "openrag-soc-indirect-injection-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2601.10923",
+      "version": "v2, 2026-01-20; WWW 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Social-web Indirect Prompt Injection", "Web-native Carrier Survival", "Sparse and Dense Retriever Rank Shift", "Sanitization and Attribution-gated Answering", "Attack Utility and Latency Joint Evaluation"],
+      "provenance_note": "论文提供可复现社会网页载体测试路线；其语料和攻击分布不代表所有站点，防御需要在目标采集器、解析器和模型上重新测试。"
+    },
+    {
+      "id": "unidoc-bench-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2510.03663",
+      "version": "v3, 2026-01-05",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Document-centric Multimodal RAG", "Text Table Figure Evidence Linking", "Text-only Image-only Fusion and Joint-retrieval Comparison", "Standardized Candidate Pools and Metrics", "Visual-spatial Information Loss from OCR Flattening"],
+      "provenance_note": "论文的四范式统一协议用于补跨模态选型维度；数据集结论仍需按中文、领域、解析器和模型重测。"
+    },
+    {
+      "id": "mm-mepa-multimodal-rag-poisoning-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2603.00172",
+      "version": "v1, 2026-02-26",
+      "freshness": "research",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Multimodal RAG Metadata Poisoning", "Image-text Entry Attack Surface", "Retriever and Generator Cross-layer Effect", "Metadata-only Attack Detection Gap", "Defense-aware Multimodal Evaluation"],
+      "provenance_note": "预印本报告特定攻击、检索器和生成器上的结果；只登记攻击面与实验维度，不把成功率推广成通用数值。"
+    },
+    {
+      "id": "nowcoder-ai-app-intern-rag-eval-2026",
+      "type": "first_person_interview",
+      "url": "https://www.nowcoder.com/feed/main/detail/76f5be8b8bd5420b94d32a66e26a7ad9",
+      "version": "interview dated 2026-07-25; page reviewed 2026-09-03",
+      "freshness": "active",
+      "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["RAG Evaluation-set Construction Question", "Near-perfect Hit-rate Credibility Question", "Pretraining-contamination Question", "Private Held-out Dataset Question", "Tool Registration Permission and Scope Question"],
+      "provenance_note": "发布者自述为 AI 应用开发实习生线上技术面试；只登记明确出现的问题和日期，技术答案回到论文、官方规范与自有实验核验。"
     }
   ]
 }

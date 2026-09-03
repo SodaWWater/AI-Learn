@@ -16,12 +16,12 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
-    "current_sources": 158,
-    "public_problem_leads": 24,
+    "current_sources": 165,
+    "public_problem_leads": 26,
     "search_stages_total": 18,
     "search_stages_round_1_complete": 18,
     "search_stages_round_2_complete": 18,
-    "search_stages_round_3_complete": 16,
+    "search_stages_round_3_complete": 18,
     "coverage_saturated_stages": 0,
     "latest_search_date": "2026-09-03"
   },
@@ -232,15 +232,16 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-002",
-    "instruction": "Continue without waiting for user confirmation: complete third-round independent gap searches for the remaining 2 stages, resolve registered gaps and conflicts, persist checkpoints in GitHub, and require two consecutive no-new-type rounds plus all prerequisites before coverage_saturated."
+    "instruction": "Continue without waiting for user confirmation: execute the fourth-round independent gap-search protocol across all 18 stages, starting with unresolved source-family, public-question, implementation-contract and reproducibility gaps; reset the no-new-type counter whenever any new type appears, and require two consecutive no-new-type rounds plus all prerequisites before coverage_saturated."
   },
   "global_blockers": [],
   "handoff_notes": [
     "Do not continue batch-generating RAG-04 and later chapters under the old template.",
     "Do not mark the legacy first drafts as formal content.",
     "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
-    "The first and second search rounds are complete for all 18 RAG stages; third-round independent searches are complete for the first sixteen stages from Data Ingestion through Evaluation.",
-    "All sixteen third-round stages produced new knowledge or problem types, so their consecutive no-new-type counts remain zero and no stage is coverage_saturated.",
+    "The first, second and third independent search rounds are complete for all 18 RAG stages.",
+    "All eighteen third-round stages produced new knowledge or problem types, so their consecutive no-new-type counts remain zero and no stage is coverage_saturated.",
+    "The authoritative next-round procedure is audits/rag/fourth-round-protocol.md; third-round completion is a checkpoint, not a claim of absolute completeness.",
     "Continue stage work without pausing for user confirmation; use validated GitHub commits as the review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]

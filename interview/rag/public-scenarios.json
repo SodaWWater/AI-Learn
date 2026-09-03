@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-09-02",
+  "reviewed_at": "2026-09-03",
   "rules": {
     "meaning": "题目只用于连接知识，不提供背诵话术。",
     "provenance": "first_person_interview 代表发布者自述，不代表企业官方确认；project_interview_exercise 是公开项目考题；engineering_practice 是公开项目或工程复盘，三者都不自动标记为公司真题。"
@@ -245,6 +245,26 @@
       "verification": "公开学习题库，不标记为公司真实面经；来源权威度、时间边界和答案合并规则必须由独立证据与业务策略核验",
       "question_summary": "多个已召回文档在事实、时间或观点上互相冲突时，如何保留来源与时间 Metadata（元数据），进行可信度排序和交叉验证，并在答案中显式呈现共识、分歧与不确定性？",
       "atom_ids": ["RAG-08-014", "RAG-09-007", "RAG-09-011", "RAG-09-012", "RAG-09-013", "RAG-10-008", "RAG-10-009"]
+    },
+    {
+      "id": "RAG-SCENE-025",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/feed/main/detail/76f5be8b8bd5420b94d32a66e26a7ad9",
+      "source_title": "AI 应用开发实习生面试记录",
+      "source_locator": "RAG 评测追问 1—6",
+      "verification": "发布者自述为 2026-07-25 线上技术面试，非企业官方题库；只保留问题条件，指标和结论必须由评测资产与实验核验",
+      "question_summary": "RAG 评测命中率接近 100% 时，如何排查样本过小、针对性调参、训练或提示泄漏、公开文档进入模型预训练数据等污染，并用私有未见数据、冻结快照和分层置信区间证明结果可信？",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-003", "RAG-10-004", "RAG-10-011", "RAG-10-012", "RAG-10-014"]
+    },
+    {
+      "id": "RAG-SCENE-026",
+      "source_type": "first_person_interview",
+      "source_url": "https://www.nowcoder.com/feed/main/detail/76f5be8b8bd5420b94d32a66e26a7ad9",
+      "source_title": "AI 应用开发实习生面试记录",
+      "source_locator": "Agent 架构与记忆追问 4",
+      "verification": "发布者自述为 2026-07-25 线上技术面试，非企业官方题库；工具协议、安全控制和权限传播由正式规范与安全指导独立核验",
+      "question_summary": "Agentic RAG（智能体检索增强生成）中的工具怎样注册并描述参数、权限和作用范围，如何把请求用户身份与最小权限传播到每次工具调用，并防止工具描述投毒、跨服务越权和高风险调用绕过人工确认？",
+      "atom_ids": ["RAG-11-012", "RAG-11-013", "RAG-11-015", "RAG-11-016", "RAG-11-017", "RAG-12-004", "RAG-12-018"]
     }
   ]
 }
