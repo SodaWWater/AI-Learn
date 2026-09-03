@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-15",
+  "verified_at": "2026-09-04",
+  "scope": "Four pre-registered research-paper URLs for multilingual/multi-function embeddings, HNSW, dense passage retrieval and late interaction; no source discovery was performed.",
+  "source_count": 4,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "bge-m3-paper-2025",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": ["RAG-05-005", "RAG-05-016", "RAG-08-001", "RAG-08-002", "RAG-08-009"],
+      "verified_claims": ["The BGE-M3 paper reports one embedding model supporting dense, sparse and multi-vector retrieval functionalities.", "It describes support for more than 100 languages and inputs from short sentences through long documents up to 8,192 tokens in its reported setup.", "The training method includes self-knowledge distillation that integrates relevance signals from different retrieval functionalities."],
+      "boundary": "These are paper-reported model capabilities and experiments, not a universal multilingual or long-document guarantee. Model revision, language, tokenization and deployment memory must be evaluated for the target corpus."
+    },
+    {
+      "source_id": "hnsw-paper-2018",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-06-005", "RAG-06-006", "RAG-06-012", "RAG-06-015"],
+      "verified_claims": ["The HNSW paper defines a graph-based approximate nearest-neighbor method using a hierarchy of proximity graphs over nested subsets of stored elements.", "The construction samples maximum layer membership with an exponentially decaying distribution and searches from upper layers into lower layers.", "The paper reports logarithmic complexity scaling and discusses neighbor-selection heuristics that improve high-recall behavior under the evaluated conditions."],
+      "boundary": "The algorithmic description and reported scaling are research-paper results; real recall, build cost, memory and latency depend on implementation, data distribution and parameter settings."
+    },
+    {
+      "source_id": "dense-passage-retrieval-2020",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-05-003", "RAG-08-001", "RAG-08-009", "RAG-10-004"],
+      "verified_claims": ["DPR presents dense passage retrieval using learned question and passage representations in a dual-encoder framework.", "In the reported open-domain QA experiments, the dense retriever improves top-20 passage retrieval accuracy over the compared Lucene-BM25 baseline by the stated 9-19 percentage points.", "The paper connects passage-retrieval quality to downstream open-domain QA results across its evaluated benchmarks."],
+      "boundary": "The percentage gains are tied to the paper's datasets, training data, negative sampling and BM25 baseline; they do not imply dense retrieval dominates lexical retrieval for every domain or query type."
+    },
+    {
+      "source_id": "colbert-2020",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-05-016", "RAG-08-001", "RAG-08-009", "RAG-06-007"],
+      "verified_claims": ["ColBERT describes contextualized late interaction over BERT for passage search.", "The approach represents query and document tokens separately and performs fine-grained interaction at search time rather than a single pooled document score.", "The paper evaluates quality and efficiency trade-offs for passage search under its indexed-token and late-interaction design."],
+      "boundary": "The architecture and reported trade-offs are specific to the paper's model and index implementation; token-level storage, latency and quality must be measured for the chosen corpus and hardware."
+    }
+  ]
+}

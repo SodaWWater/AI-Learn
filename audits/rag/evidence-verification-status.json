@@ -4,8 +4,8 @@
   "work_item_id": "WP-P2-005",
   "scope": "only sources/rag-current-sources.json; no new external search",
   "registered_sources": 170,
-  "verified_sources": 55,
-  "pending_sources": 115,
+  "verified_sources": 59,
+  "pending_sources": 111,
   "freshness_inventory": {
     "foundational": 1,
     "stable": 25,
@@ -27,7 +27,8 @@
     "audits/rag/evidence/2026-09-04-foundation-batch-11.json",
     "audits/rag/evidence/2026-09-04-foundation-batch-12.json",
     "audits/rag/evidence/2026-09-04-foundation-batch-13.json",
-    "audits/rag/evidence/2026-09-04-foundation-batch-14.json"
+    "audits/rag/evidence/2026-09-04-foundation-batch-14.json",
+    "audits/rag/evidence/2026-09-04-foundation-batch-15.json"
   ],
   "next_priority": "Continue with the remaining volatile official documentation and official repositories. Verify claim boundaries from each registered URL before treating a source as evidence for formal knowledge."
 }
