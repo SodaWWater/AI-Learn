@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-10",
+  "verified_at": "2026-09-04",
+  "scope": "Three pre-registered volatile official documentation URLs for embedding migration, ANN recall evaluation and hybrid-query filtering; no source discovery was performed.",
+  "source_count": 3,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "qdrant-embedding-model-migration-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-012", "RAG-06-012", "RAG-11-004", "RAG-11-006"],
+      "verified_claims": ["Qdrant documents blue-green embedding migration with two parallel collections, dual writes during re-embedding, traffic cutover and dual-write disablement.", "The guide states that named vectors can provide a single-collection alternative on supported versions, while blue-green migration works across collection types.", "It explicitly warns that duplicated payloads add resource cost and that deletes or partial updates need pausing or additional migration logic."],
+      "boundary": "This is a Qdrant migration procedure, not a universal zero-downtime guarantee. Cutover validation, update ordering, rollback and resource capacity require deployment-specific tests."
+    },
+    {
+      "source_id": "qdrant-ann-recall-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-005", "RAG-06-006", "RAG-08-008", "RAG-10-004", "RAG-10-014"],
+      "verified_claims": ["Qdrant defines ANN recall as how closely approximate nearest-neighbor search matches exact kNN, measured with recall@k.", "The tutorial separates ANN-index recall from retrieval relevance, end-to-end pipeline output quality and business impact as different evaluation layers.", "It presents exact search as a reference for evaluating approximate search rather than as a production replacement in every workload."],
+      "boundary": "The evaluation layering is Qdrant guidance. Dataset, query set, k, distance metric, index settings and hardware determine measured recall and latency; ANN recall alone does not establish answer quality."
+    },
+    {
+      "source_id": "azure-hybrid-query-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-08-004", "RAG-08-008", "RAG-08-014", "RAG-08-016", "RAG-11-013"],
+      "verified_claims": ["Azure AI Search documents preFilter as the default vector-filter mode in hybrid queries and describes postFilter and strictPostFilter as alternatives, with strictPostFilter marked Preview.", "The guide states that post-filtering can return fewer results than top-n and explains that filters can be applied before query execution or after retrieval to trim results.", "It warns that a targeted vector-subquery filter can override a global filter, including security-trimming filters, so filter scope must be reviewed explicitly."],
+      "boundary": "These are Azure AI Search API semantics, including Preview behavior. Filter mode, candidate budget, security trimming and tail latency require workload-specific authorization and recall regression tests."
+    }
+  ]
+}
