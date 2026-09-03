@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 241,
-    "pending_manual_semantic_units": 412,
+    "manually_reviewed_semantic_units": 268,
+    "pending_manual_semantic_units": 385,
     "current_source_id": "ai-agent-interview-guide",
-    "current_source_unit_id": "RU-58be80727d76",
+    "current_source_unit_id": "RU-cd7cb291ab7d",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 ai-agent-interview-guide source units beginning at RU-58be80727d76 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the next 20 to 30 ai-agent-interview-guide source units beginning at RU-cd7cb291ab7d against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -355,6 +355,7 @@
     "The second xiaolin-ai-learning manual semantic batch is complete: 28 units from RU-2a918774067b through RU-230c4827a530; all distinct implementation details were mapped to existing atoms, and unverified product, benchmark, complexity and tuning claims were explicitly flagged.",
     "The third xiaolin-ai-learning manual semantic batch is complete: 28 units from RU-1fd9c00e810e through RU-4a10af947e2b; it preserves the four-layer retrieval framework, advanced RAG paradigms, vector-plus-graph boundaries, hallucination controls and layered evaluation while flagging pedagogical taxonomies and fixed thresholds.",
     "The fourth xiaolin-ai-learning batch completes that source: 24 units from RU-6b17b2d8cca7 through RU-2a33ed3b9bbd; dynamic updates and deployment difficulty were preserved, sixteen manifest-only duplicates were explicitly linked, and RAG-04-017 was added for document-side hypothetical-question indexing.",
+    "The first ai-agent-interview-guide batch is complete: 27 units from RU-58be80727d76 through RU-3ecd1042ae0b; it preserves document parsing, chunking, embedding, vector indexing, retrieval and fusion distinctions without adding new canonical atoms. Continue at RU-cd7cb291ab7d.",
     "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
