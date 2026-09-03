@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "2026-09-03-xiaolin-batch-02",
+    "source_id": "xiaolin-ai-learning",
+    "reviewed_at": "2026-09-03",
+    "source_commit": "7c363bb44d06f4ae2f05c2374d05760e1eef0ff1",
+    "first_source_unit_id": "RU-2a918774067b",
+    "last_source_unit_id": "RU-230c4827a530",
+    "source_body_reviewed": true,
+    "unit_count": 28
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "decision_counts": {
+    "retain": 11,
+    "exact_duplicate": 0,
+    "partial_overlap": 8,
+    "cross_node": 9,
+    "non_rag": 0
+  },
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-2a918774067b"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-05-007", "RAG-06-001", "RAG-06-002", "RAG-06-005"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "与上一批向量数据库职责部分重叠，但保留暴力精确近邻与近似最近邻索引的规模动机；近似最近邻只是数据库能力之一，不能等同整个数据库。",
+      "preserved_details": ["向量记录通常还需关联原文和元数据", "全库逐一计算距离的成本随数据量线性增长", "近似最近邻以可控召回损失交换查询速度"],
+      "verification_flags": ["HNSW 查询复杂度不能无条件写成严格 O(log N)，实际性能受图质量、参数、数据分布和实现影响", "关系数据库及其向量扩展也可支持相似检索，不能写成绝对二分"]
+    },
+    {
+      "source_unit_ids": ["RU-ab0a405d8eb6"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-06-011", "RAG-06-012", "RAG-06-013", "RAG-06-014", "RAG-11-008", "RAG-11-009", "RAG-11-014", "RAG-11-018"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "数据库选型跨越数据规模、检索负载、扩缩容、读写路径、运维能力、合规和成本，保留产品例子但不固化产品排名。",
+      "preserved_details": ["Chroma、Qdrant、Weaviate 和 Milvus 被作为不同部署与能力侧重点的候选示例", "增量更新与查询稳定性会影响架构选择", "分布式、水平扩容和读写资源隔离是选型维度而不是产品结论"],
+      "verification_flags": ["各产品是否支持分布式、生产部署、结构化查询及适用规模会随版本变化，阶段 C 必须查官方文档", "‘Milvus 功能最全、扩展性最强’和按百万至十亿条直接选型属于未经基准验证的绝对化表述"]
+    },
+    {
+      "source_unit_ids": ["RU-b2b7cdb07e9b"],
+      "decision": "retain",
+      "atom_ids": ["RAG-06-003", "RAG-06-005", "RAG-06-014", "RAG-06-015"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留 Milvus 集合、分段、索引生命周期及 HNSW 参数与性能权衡的产品实现视角。",
+      "preserved_details": ["Collection 记录向量、片段标识、原文与元数据字段", "新增数据、Growing/Sealed Segment、索引构建与查询可见性构成生命周期", "HNSW 的 M、efConstruction 与查询 ef 分别影响建图、内存、召回和延迟"],
+      "verification_flags": ["Segment 合并、封存、索引构建和参数名称属于 Milvus 版本敏感行为，应按使用版本核验", "M=16～32、efConstruction=100～200、ef=50～200 只是调参起点，不能代替业务评测"]
+    },
+    {
+      "source_unit_ids": ["RU-2b548968f740"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-05-006", "RAG-06-005", "RAG-06-007", "RAG-06-012", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "容量估算、量化、索引参数、硬件条件、分位延迟和并发必须作为一个可复现实验记录，不能拆成脱离环境的数字。",
+      "preserved_details": ["原始 float32 向量容量可按条数乘维度乘 4 字节估算", "进程内存还包括图索引、元数据、管理结构与操作系统缓存", "示例记录包含 150 万条、1024 维、HNSW M=16、efConstruction=128、查询 ef=100、16 核 32GB 和千兆网络", "示例比较 SQ8 前后内存、召回与 P50/P99/QPS"],
+      "verification_flags": ["该公开文章中的‘我们项目’数据只能视为来源案例，不得改写为本仓库作者或学习者的真实经历", "10～12GB、量化后约 3GB、召回下降小于 1 个百分点、P50 20ms、P99 60ms、100 QPS 均需按版本、硬件、数据和测试方法复现", "SQ8 的真实节省不等于整个进程内存严格缩至四分之一"]
+    },
+    {
+      "source_unit_ids": ["RU-5b56dfd0c4ab"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-06-007", "RAG-06-014", "RAG-06-015", "RAG-11-007", "RAG-11-008", "RAG-11-009", "RAG-11-018"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留内存换页与增量写入引发尾延迟抖动的诊断链，同时把量化、内存映射、错峰和分批写入定位为需验证的候选方案。",
+      "preserved_details": ["先监控内存、swap、CPU、磁盘输入输出和分位延迟，再判断是否为索引算法问题", "SQ8 与 mmap 是不同的内存治理手段", "大批写入、分段生命周期、压实或索引构建可能争用查询资源", "错峰写入和控制批次大小属于写入节流方案"],
+      "verification_flags": ["20ms 到 2s、60ms 到 300ms、每批 500～1000 条和批间暂停是来源案例而非通用参数", "‘原始向量只在精排时读取且延迟影响不大’依赖索引与重排实现，不能作为 Milvus 通用机制", "Segment compaction 与 index build 对在线查询的具体影响必须按 Milvus 版本和部署架构核验"]
+    },
+    {
+      "source_unit_ids": ["RU-3211434fe35c"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-01-002", "RAG-01-003", "RAG-01-004", "RAG-02-002", "RAG-07-003", "RAG-09-006"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION"],
+      "note": "保留在线链路存在的三个入口问题：上下文容量不足、模型参数知识与外部知识不一致、用户问题不适合直接检索。",
+      "preserved_details": ["不能把整个知识库无选择地装入模型上下文", "检索先缩小证据范围再生成", "口语、指代和歧义会降低直接检索质量"],
+      "verification_flags": ["是否必须改写应由查询类型和评测决定，清晰查询可直接检索或与改写结果并行"]
+    },
+    {
+      "source_unit_ids": ["RU-8c099e6fa8ea"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-05-001", "RAG-05-004", "RAG-05-007", "RAG-05-008", "RAG-05-012"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "保留查询编码必须进入与文档表示兼容的向量空间，以及模型升级触发索引迁移的工程约束。",
+      "preserved_details": ["查询向量的维度、归一化、距离度量和模型版本必须与索引契约兼容", "更换不兼容的嵌入模型后通常需要重算文档向量并重建或迁移索引", "查询编码器与文档编码器可以是经共同训练的非对称双编码器"],
+      "verification_flags": ["‘Query 和文档必须用完全相同模型’过于绝对；关键是使用模型定义的兼容查询/文档编码方式和同一索引契约"]
+    },
+    {
+      "source_unit_ids": ["RU-b4150656adea"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-06-002", "RAG-06-005", "RAG-06-008", "RAG-08-001", "RAG-08-002", "RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-008"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-RERANKING"],
+      "note": "该步骤同时包含近似最近邻搜索、稠密/稀疏多路召回和结果融合，不能把三者压成单一向量检索动作。",
+      "preserved_details": ["向量索引从稠密表示中获取候选", "BM25 等稀疏检索补足精确术语和编号匹配", "RRF 可在分数不可直接比较时按排名融合", "融合后的较大 Top-K 候选再交给重排"],
+      "verification_flags": ["各路候选数、融合参数和最终 Top-K 必须通过检索评测和延迟预算确定"]
+    },
+    {
+      "source_unit_ids": ["RU-ecef47106560"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-009", "RAG-08-010", "RAG-10-006", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留双编码器粗召回与交叉编码器精排之间的计算分工和候选收缩位置。",
+      "preserved_details": ["双编码器可预计算文档向量以服务全库检索", "交叉编码器联合读取查询与候选以获得更细粒度相关性", "只对有限候选逐项打分以控制在线延迟", "最终进入上下文的数量需同时考虑相关性和词元预算"],
+      "verification_flags": ["BGE、Cohere 等模型名称和能力属于候选示例，阶段 C 按官方模型卡与业务集评测", "固定 Top-20 到 Top-3～5 不是通用配置"]
+    },
+    {
+      "source_unit_ids": ["RU-6a82ea5c90b8"],
+      "decision": "retain",
+      "atom_ids": ["RAG-09-001", "RAG-09-002", "RAG-09-006", "RAG-09-007", "RAG-09-008"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION"],
+      "note": "保留检索结果进入生成前的提示词组装契约：证据边界、来源编号、回答约束和证据不足策略。",
+      "preserved_details": ["上下文片段需带来源标识并按预算选择", "提示词要求依据所给证据而不是模型记忆自由补全", "证据不足时拒答、澄清或声明未知", "答案中的引用编号应能回连原始来源"],
+      "verification_flags": ["提示词约束只能降低无依据生成风险，不能保证事实正确；仍需引用和事实核验"]
+    },
+    {
+      "source_unit_ids": ["RU-0bad5a993141"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-02-007", "RAG-09-006", "RAG-09-007", "RAG-09-010", "RAG-11-006", "RAG-11-007", "RAG-11-008"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "答案生成与溯源同时依赖上游证据标识、在线并行调度、缓存和生成后核验，是跨节点可观测链路。",
+      "preserved_details": ["输出不仅包含答案，还应保留证据片段与原文来源", "稠密检索与 BM25 等无依赖分支可并行", "高频查询可缓存查询表示、检索结果或最终答案，但需定义失效规则", "生成后可检查引用与陈述是否被证据支持"],
+      "verification_flags": ["各步骤耗时和总延迟是环境敏感数据，必须实测而不是沿用示例", "缓存可能造成知识更新后返回陈旧答案，必须连接版本与失效策略"]
+    },
+    {
+      "source_unit_ids": ["RU-8a755c16ede1"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "保留检索相关性的两种基础信号：词面重合与语义接近，以及两者各自无法覆盖的查询类型。",
+      "preserved_details": ["产品型号、错误码、专有名词和编号常依赖精确词面", "同义改写和不同措辞常依赖语义表示", "相关性并非单一相似度，需由查询与证据任务定义"],
+      "verification_flags": ["稀疏与稠密检索能力只能描述为倾向，不得写成绝对能或不能召回"]
+    },
+    {
+      "source_unit_ids": ["RU-9949de959568"],
+      "decision": "retain",
+      "atom_ids": ["RAG-06-008", "RAG-08-002", "RAG-08-003"],
+      "related_stage_ids": ["PS-DOCUMENT-PARSING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "保留 BM25 的倒排索引、词频饱和、逆文档频率、文档长度归一化及精确术语检索机制。",
+      "preserved_details": ["倒排索引从词项定位包含该词项的文档", "TF 饱和避免重复词频无限增加相关性", "IDF 提高稀有词项权重", "长度归一化减少长文档天然占优", "分词器、停用词、同义词和领域词典影响中文检索"],
+      "verification_flags": ["BM25 的全称应写 Best Matching 25，而不是来源中的 Best Match 25", "BM25 不理解语义是教学简化，检索效果还受分析器、查询扩展和稀疏学习模型影响"]
+    },
+    {
+      "source_unit_ids": ["RU-2b3879ebbefc"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-05-001", "RAG-05-007", "RAG-08-001"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-RETRIEVAL"],
+      "note": "保留稠密检索从文本表示到相似度排序的端到端解释，并记录其精确标识符风险。",
+      "preserved_details": ["查询与文档被编码进兼容稠密向量空间", "余弦、内积或欧氏距离必须与训练和归一化一致", "稠密表示通常更擅长同义表达但可能弱化错误码、型号和罕见实体"],
+      "verification_flags": ["‘一个词都不相同仍能召回’和‘型号会被稀释’均是可能表现而非模型无条件性质"]
+    },
+    {
+      "source_unit_ids": ["RU-3753cc28e74e"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "对比表与前两单元部分重叠，但保留查询类型、索引结构、可解释性和成本等选型维度。",
+      "preserved_details": ["稠密检索依赖嵌入模型和向量索引，稀疏检索依赖词项统计和倒排索引", "两者在同义表达、精确标识、可解释性、训练依赖和计算成本上呈互补倾向", "最终选择需在同一业务测试集比较"],
+      "verification_flags": ["任何‘擅长/不擅长’结论都必须保留语料、分词、模型和查询分布条件"]
+    },
+    {
+      "source_unit_ids": ["RU-2c200d052e5f"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-007", "RAG-08-008", "RAG-10-014"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "note": "混合检索不是简单拼接列表，而是多路候选、去重、融合、候选预算和重排共同构成的链路。",
+      "preserved_details": ["稠密与 BM25 并行召回可覆盖互补失败模式", "RRF 只使用名次以避开不同分数量纲", "分数归一化加权是另一类可调融合方案", "融合效果需通过单路与多路消融验证"],
+      "verification_flags": ["来源示例代码使用从 0 开始的 enumerate 却直接代入 1/(k+rank)，实现时必须明确排名从 1 开始或调整公式", "‘几乎不增加延迟’和‘业界默认方案’过于绝对，并行开销、后端负载和融合质量均需测量"]
+    },
+    {
+      "source_unit_ids": ["RU-a72fecefe86f"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-003", "RAG-07-009", "RAG-07-011", "RAG-07-012"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "保留查询与知识表述之间在口语、指代、歧义、粒度和文体上的检索鸿沟，并把改写质量纳入独立评测。",
+      "preserved_details": ["对话历史可用于补全省略与指代", "口语转领域术语可能提升命中也可能改变意图", "查询过短、过长或过于具体都会影响不同检索器", "原始查询应作为漂移检测和回退依据"],
+      "verification_flags": ["向量模型能否直接处理表述差异取决于模型和数据，不能假定所有查询都需要大模型改写"]
+    },
+    {
+      "source_unit_ids": ["RU-2237f56079ed"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-003", "RAG-07-009", "RAG-07-011", "RAG-07-012", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留直接查询改写在多轮对话中的输入、输出、约束、失败模式及调用成本。",
+      "preserved_details": ["输入可包含原始问题、必要对话历史、领域词表和不可改变的实体约束", "输出应是可独立理解且面向检索的查询", "改写可能丢失限定条件、加入不存在信息或过度扩展", "可并行检索原问题与改写问题并融合"],
+      "verification_flags": ["使用哪种大模型或提示词模板必须基于领域测试集、时延和成本评估"]
+    },
+    {
+      "source_unit_ids": ["RU-314e120676b8"],
+      "decision": "retain",
+      "atom_ids": ["RAG-05-004", "RAG-07-005", "RAG-07-011", "RAG-07-012"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "保留 HyDE 先生成假设文档、再用其表示检索真实文档的机制及查询/文档文体对齐动机。",
+      "preserved_details": ["假设文本用于形成检索表示而不是作为最终事实答案", "可把原问题表示与一个或多个假设文档表示组合", "知识领域明确时可能改善问题体与文档体的分布差异", "生成方向错误会把检索带偏"],
+      "verification_flags": ["HyDE 并非总是优于直接查询；必须比较召回、漂移、生成成本和延迟", "假设文档包含的细节未经证据验证，不能直接进入最终答案"]
+    },
+    {
+      "source_unit_ids": ["RU-c314d90e4c19"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-007", "RAG-07-011", "RAG-07-012", "RAG-08-005"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "保留 Step-back Prompting 把具体问题抽象为背景问题、并与原问题证据组合的双路径结构。",
+      "preserved_details": ["抽象查询用于获取原理、定义或背景证据", "原始具体查询仍用于保留实体、条件和任务目标", "两路结果可融合后再重排", "只用抽象查询可能丢失关键限定并召回过宽内容"],
+      "verification_flags": ["是否适用于事实查找、计算或强约束问题需按查询路由评测，不能对所有查询启用"]
+    },
+    {
+      "source_unit_ids": ["RU-46b2b6104522"],
+      "decision": "retain",
+      "atom_ids": ["RAG-07-004", "RAG-07-011", "RAG-07-012", "RAG-08-005", "RAG-08-006"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留多查询扩展从不同角度生成检索查询、并行召回、去重与融合的完整工程流程。",
+      "preserved_details": ["扩展查询应覆盖同义词、领域术语、不同意图角度或粒度", "原始查询保留在检索集合中以降低漂移风险", "多查询结果按稳定文档或片段标识去重并融合", "查询数量增加会带来模型调用、检索负载、延迟和噪声"],
+      "verification_flags": ["固定扩展 3～5 个查询只是常见起点，需由收益曲线和预算决定"]
+    },
+    {
+      "source_unit_ids": ["RU-217d0b552f90"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-07-004", "RAG-08-001", "RAG-08-002", "RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-010"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING"],
+      "note": "保留多路召回的候选生成、融合和重排总览，同时区分检索后端通道与一个查询生成多个子查询的策略维度。",
+      "preserved_details": ["典型后端通道包含稠密检索和 BM25 稀疏检索", "Multi-Query 通常是查询扩展策略，可驱动一个或多个后端而非必然是独立第三种索引", "候选合并后需要去重、融合和可选重排", "同一片段可从多条路径命中并积累融合证据"],
+      "verification_flags": ["‘三路召回’只是该来源的教学组织，规范图谱必须分别建模查询变体、检索后端和融合路径"]
+    },
+    {
+      "source_unit_ids": ["RU-c70e14855fef"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004", "RAG-08-015"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "与稠密/稀疏对比部分重叠，但保留单通道失败到互补通道的工程定位路径。",
+      "preserved_details": ["精确型号、条款号和错误码漏召回时优先检查稀疏通道、分词和字段索引", "同义改写或无词面重合漏召回时检查嵌入模型和稠密通道", "应按失败查询类别比较单路与混合召回"],
+      "verification_flags": ["任何单路不足都只是特定查询分布下的倾向；不能把 BM25 或稠密检索描述为必然失败"]
+    },
+    {
+      "source_unit_ids": ["RU-a950814033c6"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-05-001", "RAG-05-007", "RAG-08-001", "RAG-08-008"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "与前述向量检索原理重叠，保留它作为多路架构中的稠密候选通道及其输入输出契约。",
+      "preserved_details": ["查询经兼容编码器得到稠密向量", "向量索引返回片段标识、相似度与元数据", "通道候选数通常大于最终上下文数", "精确实体字段可通过元数据过滤或稀疏通道补充"],
+      "verification_flags": ["示例相似度、Top-K 和模型均不构成推荐默认值"]
+    },
+    {
+      "source_unit_ids": ["RU-a463b63b67af"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-06-008", "RAG-08-002", "RAG-08-003", "RAG-08-008"],
+      "related_stage_ids": ["PS-DOCUMENT-PARSING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "与 BM25 原理重叠，保留它作为多路架构中的稀疏候选通道和中文文本分析实现要求。",
+      "preserved_details": ["文档与查询需经过一致的分词和标准化管线", "中文场景可使用 jieba 等分词器，但需维护领域词典、同义词和停用词策略", "BM25 返回自身相关度与名次，不能和余弦分数直接混加", "字段级索引可提升标题、编号和实体命中"],
+      "verification_flags": ["jieba 只是实现示例而非唯一或默认最佳方案；分析器选择必须在业务语料评测"]
+    },
+    {
+      "source_unit_ids": ["RU-97fc2004c7d8"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-07-004", "RAG-07-011", "RAG-08-005", "RAG-08-008"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "与上一题多查询方法重叠，但补充其在多路召回拓扑中的位置：它生成查询分支，再由稠密或稀疏后端执行。",
+      "preserved_details": ["一个用户问题可扩展成多个语义角度", "每个查询可并行进入同一稠密索引或不同检索后端", "结果需稳定去重并限制候选预算", "保留原始查询路径以防改写丢失约束"],
+      "verification_flags": ["来源声称召回率提升 10%～20% 未给出测试集和实验条件，只能保留为待核验案例数字"]
+    },
+    {
+      "source_unit_ids": ["RU-194764a008fa"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-006", "RAG-08-007", "RAG-08-008", "RAG-10-014"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION"],
+      "note": "保留 RRF 以名次而非原始分数融合多路候选的公式、优势、参数边界和替代方案。",
+      "preserved_details": ["同一文档的融合分数为各检索列表中 1/(k+r) 的贡献之和", "排名 r 必须明确从 1 开始", "平滑常数 k 控制头部与尾部名次差异", "RRF 避免不同通道分数标度不可比，但会丢失原始置信度信息", "归一化加权融合或学习排序可作为替代方案"],
+      "verification_flags": ["k=60 是常见经验值而非理论最优，必须调参与消融", "‘大多数场景最好’、‘标配且几乎零成本’没有条件边界，不纳入规范结论"]
+    },
+    {
+      "source_unit_ids": ["RU-230c4827a530"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-06-008", "RAG-07-004", "RAG-08-004", "RAG-08-006", "RAG-08-010", "RAG-10-002", "RAG-10-014", "RAG-11-008", "RAG-11-018", "RAG-13-004"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "所谓实战建议跨越检索通道、查询扩展、融合、重排、评测、延迟和成本；规范结论必须从问题症状与业务约束反推组合，而不是套固定套餐。",
+      "preserved_details": ["含精确术语与语义改写混合的知识库可先评估稠密加 BM25", "召回不足时按失败类别决定查询扩展、字段检索或模型调整", "融合后候选噪声高时再评估交叉编码器重排", "每增加一层都要测量召回、排序、答案质量、P95/P99 延迟和成本"],
+      "verification_flags": ["‘向量+BM25+RRF 是标准配置’与‘多查询必然提升’属于场景化经验，需以业务黄金集消融", "不能把公开文章的组合建议包装为学习者的实际项目经历"]
+    }
+  ]
+}
