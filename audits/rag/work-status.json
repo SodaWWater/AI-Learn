@@ -240,7 +240,7 @@
       "id": "WP-P2-003",
       "title": "人工审核原始来源单元并生成覆盖证明",
       "priority": 8,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P2-002"],
       "outputs": [
         "manual review decisions",
@@ -252,7 +252,7 @@
       "id": "WP-P2-004",
       "title": "完成原始来源双向覆盖验收",
       "priority": 9,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P2-003"],
       "outputs": ["100 percent original-source coverage report", "deduplication and exclusion audit"]
     },
@@ -338,8 +338,8 @@
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P2-003",
-      "instruction": "Do not perform new external searches. All 653 semantic source units now have explicit review decisions. Proceed to registered-source fact verification and canonical knowledge-base consolidation, preserving unique information and all source mappings."
+    "work_item_id": "WP-P2-004",
+    "instruction": "Do not perform new external searches. Audit the completed 653-unit source mappings for bidirectional coverage, explicit exclusion reasons, conservative deduplication, partial-overlap and cross-node preservation. Produce or update the human-readable coverage and deduplication audit, run normal and strict checks without fabricating results, then create a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
