@@ -1330,6 +1330,109 @@
       "stage_ids": ["PS-EMBEDDING", "PS-RERANKING", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["SaaS versus Private-deployment Data Boundary", "Prompt and Generation Retention", "Zero-data-retention Scope", "Training Opt-out and Enterprise-versus-Trial Scope"],
       "provenance_note": "仅用于记录 Cohere 当前企业产品声明；SaaS、私有部署、合作方托管、试用密钥、零数据保留和合同例外必须按实际部署逐项核验。"
+    },
+    {
+      "id": "langchain-contextual-compression-retriever-2026",
+      "type": "official_repository",
+      "url": "https://github.com/langchain-ai/langchain/blob/234255c1c7427b5ed6dc505abad41ddfa6c9ff8f/libs/langchain/langchain_classic/retrievers/contextual_compression.py",
+      "version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["ContextualCompressionRetriever Wrapper Contract", "Retriever-then-compressor Execution Order", "Synchronous and Asynchronous Paths", "Empty-retrieval Short Circuit"]
+    },
+    {
+      "id": "langchain-llm-chain-extractor-2026",
+      "type": "official_repository",
+      "url": "https://github.com/langchain-ai/langchain/blob/234255c1c7427b5ed6dc505abad41ddfa6c9ff8f/libs/langchain/langchain_classic/retrievers/document_compressors/chain_extract.py",
+      "version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["Query-dependent LLM Extraction", "Per-document Compression", "NO_OUTPUT Document Drop", "Original Metadata Copy with Rewritten Page Content"]
+    },
+    {
+      "id": "langchain-embeddings-filter-2026",
+      "type": "official_repository",
+      "url": "https://github.com/langchain-ai/langchain/blob/234255c1c7427b5ed6dc505abad41ddfa6c9ff8f/libs/langchain/langchain_classic/retrievers/document_compressors/embeddings_filter.py",
+      "version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION"],
+      "use_for": ["Embedding-based Document Filtering", "Top-k and Similarity-threshold Contract", "Query-similarity Score State", "Selection versus Content Extraction Boundary"]
+    },
+    {
+      "id": "anthropic-citations-docs-2026",
+      "type": "official_documentation",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/citations",
+      "version": "current Claude Platform documentation; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Document-native Citation Blocks", "PDF Page Text Character and Custom-block Locations", "Automatic versus Custom Citation Chunking", "Citation Streaming", "Citations and Structured-output Incompatibility"]
+    },
+    {
+      "id": "google-check-grounding-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cloud.google.com/generative-ai-app-builder/docs/check-grounding",
+      "version": "page updated 2026-08-26; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Answer-level and Claim-level Grounding Scores", "Sentence-as-claim Boundary", "UTF-8 Byte-offset Citation Span", "Fact-size and Fact-count Contract", "Citation-threshold Trade-off"]
+    },
+    {
+      "id": "conflictrag-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2605.17301",
+      "version": "v1, 2026-05-17",
+      "freshness": "research",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-ADVANCED-RAG"],
+      "use_for": ["Inter-document and Parametric-contextual Conflict", "Detect Classify Resolve Generate Pipeline", "Factual Temporal and Opinion Conflict Types", "Conflict-aware Answer Annotation and Evaluation"],
+      "provenance_note": "预印本和自建评测结果仅作为冲突处理研究路线；其数据、阈值、收益和指标权重不能直接推广到企业流量。"
+    },
+    {
+      "id": "qcare-rag-evaluation-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2608.11238",
+      "version": "v3, 2026-08-31; COLM 2026",
+      "freshness": "research",
+      "stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["Query-agnostic Reference-free RAG Evaluation", "Sub-query Coverage", "Atomic-claim Verifiability", "Completeness Conciseness and Verifiableness", "Coverage-aware Retriever Metrics"]
+    },
+    {
+      "id": "qcare-official-repository-2026",
+      "type": "official_repository",
+      "url": "https://github.com/DISL-Lab/Q-CaRE-COLM-26/blob/e8b48e12a28f308076ffeae122cd8c765717a6b7/README.md",
+      "version": "commit e8b48e12a28f308076ffeae122cd8c765717a6b7; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["Runnable Query and Claim Decomposition", "Alignment-judgment Trace", "C-Prec and C-nDCG Implementation", "800-query Eight-dataset Testbed", "Evaluator-backbone Configuration"]
+    },
+    {
+      "id": "enterprise-rag-benchmark-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2608.11584",
+      "version": "v1, 2026-08-12",
+      "freshness": "research",
+      "stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Non-ideal Enterprise Retrieval", "Retrieval Noise Knowledge Gaps and Factual Conflicts", "Multi-constraint Instruction Adherence", "Per-constraint versus Holistic Compliance"],
+      "provenance_note": "预印本声明将在发表后释放基准与框架；当前只登记论文中的任务设计和局限，不把未公开资产写成已可复现。"
+    },
+    {
+      "id": "nowcoder-agent-rag-question-bank-2-2026",
+      "type": "public_question_bank",
+      "url": "https://ac.nowcoder.com/discuss/1637104",
+      "version": "page reviewed 2026-09-03",
+      "freshness": "active",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Public RAG Question Wording", "Lost-in-the-middle Context Question", "Context-compression Question", "End-to-end Evaluation Question", "Deployment-challenge Question"],
+      "provenance_note": "作者自述基于多次面试整理个人题库，但没有逐题公司、轮次和时间；按公开题库登记，技术答案必须回到论文与官方文档核验。"
+    },
+    {
+      "id": "nowcoder-rag-evaluation-funnel-2026",
+      "type": "engineering_practice",
+      "url": "https://www.nowcoder.com/discuss/911636464167813120",
+      "version": "page published 2026-07-28; reviewed 2026-09-03",
+      "freshness": "active",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["RAG Funnel Failure Framing", "Trace-based Bad-case Diagnosis", "Node-level Metrics", "Golden-dataset Regression Workflow"],
+      "provenance_note": "公开工程讲解，不是公司面试原题或一手技术规范；只用于补充问题表达，技术结论由论文、官方文档和实验复核。"
     }
   ]
 }
