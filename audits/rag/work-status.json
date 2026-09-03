@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 437,
-    "pending_manual_semantic_units": 216,
+    "manually_reviewed_semantic_units": 462,
+    "pending_manual_semantic_units": 191,
     "current_source_id": "agent-guide",
-    "current_source_unit_id": "RU-a672aea4ec24",
+    "current_source_unit_id": "RU-c006253cf010",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 agent-guide units beginning at RU-a672aea4ec24 against the source body at commit d4fe53f4a9153123b159d0e6b632117a34721a92. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the next 20 to 30 agent-guide units beginning at RU-c006253cf010 against the source body at commit d4fe53f4a9153123b159d0e6b632117a34721a92. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
