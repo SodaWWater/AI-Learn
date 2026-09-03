@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-06",
+  "verified_at": "2026-09-04",
+  "scope": "Three pre-registered volatile official documentation URLs for multi-tenancy, security filtering and observability; no source discovery was performed.",
+  "source_count": 3,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "qdrant-multitenancy-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-011", "RAG-11-009", "RAG-11-012", "RAG-11-013"],
+      "verified_claims": ["Qdrant documents that tenant search results must be isolated in a shared deployment and describes separate collections, payload-filter partitioning and user-defined sharding as distinct approaches.", "The guide states that many collections add resource overhead and presents payload filtering as appropriate for many small, similarly sized tenants, while user-defined sharding trades overhead for stronger isolation for fewer larger tenants.", "It records limitations: global requests without a group filter can be slower, and payload-based partitioning does not by default isolate sparse-search IDF statistics."],
+      "boundary": "These are Qdrant deployment and query-statistics behaviors. They do not replace application identity verification, authorization design, isolation testing or capacity measurement."
+    },
+    {
+      "source_id": "azure-search-security-filter-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-012", "RAG-08-014", "RAG-11-012", "RAG-11-013"],
+      "verified_claims": ["Azure AI Search documents a security-filter pattern for solutions that cannot use its built-in ACL support, storing a group or user identity in indexed documents and querying with a search.in filter.", "The documentation explicitly states that this pattern uses a security principal as a string in a filter expression and does not perform authentication or authorization through that principal.", "It contrasts large disjunctions of equality expressions with search.in, noting maintenance and query-response drawbacks for the former."],
+      "boundary": "This is an Azure AI Search filter pattern, not a complete access-control system. Trusted principal resolution, filter construction, index synchronization and authorization tests remain application responsibilities."
+    },
+    {
+      "source_id": "langsmith-observability-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-007", "RAG-10-013", "RAG-10-014", "RAG-11-017"],
+      "verified_claims": ["LangChain documents LangSmith tracing as capturing agent execution from initial user input to final response, including tool calls, model interactions and decision points.", "Its observability guide presents traces as data for debugging, evaluating performance across inputs and monitoring production usage patterns.", "The documented workflow includes enabling tracing, selectively tracing runs, assigning a project and adding trace metadata."],
+      "boundary": "This is LangChain and LangSmith platform behavior and requires account, API-key and data-handling decisions. Capturing traces does not itself establish correctness, safety, privacy compliance or adequate evaluation coverage."
+    }
+  ]
+}
