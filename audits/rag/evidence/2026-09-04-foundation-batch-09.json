@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-09",
+  "verified_at": "2026-09-04",
+  "scope": "Two pre-registered volatile official documentation URLs for CDC delivery semantics and Cross-Encoder inference efficiency; no source discovery was performed.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "debezium-exactly-once-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-010", "RAG-11-002", "RAG-11-007", "RAG-11-010"],
+      "verified_claims": ["Debezium documents at-least-once delivery as its baseline guarantee: changes are not missed, but a record can be delivered more than once.", "The guide states that Debezium does not implement an internal deduplication layer for exactly-once semantics, while source connectors deployed in Kafka Connect can use Kafka Connect exactly-once support in supported scenarios.", "It presents exactly-once as a stricter requirement than at-least-once and therefore a deployment- and connector-dependent property."],
+      "boundary": "Exactly-once participation is conditional on Kafka Connect configuration and connector support; it is not an end-to-end guarantee for downstream indexing or answer generation. Consumers must remain idempotent and test duplicate, retry and recovery paths."
+    },
+    {
+      "source_id": "sentence-transformers-cross-encoder-efficiency-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-08-009", "RAG-08-010", "RAG-10-006", "RAG-11-008", "RAG-11-018"],
+      "verified_claims": ["Sentence Transformers documents float16 (fp16) inference for Cross-Encoder models as a GPU speed option with potentially minimal model-accuracy loss.", "The page presents inference-speed optimization as a choice among precision and runtime backends, alongside the library's PyTorch, ONNX and OpenVINO deployment paths.", "The Cross-Encoder efficiency guidance is intended for inference optimization after the two-stage retrieve-and-rerank design, not for replacing candidate-set or relevance evaluation."],
+      "boundary": "Precision and backend effects depend on model, hardware, batch size and workload. The documentation's speed and accuracy trade-off must be benchmarked locally before changing production reranking behavior."
+    }
+  ]
+}
