@@ -25,6 +25,7 @@
 - 四个来源的语义单元均已形成显式审核决定；去重后的标准知识库仍需后续规范化和事实核验；
 - `ai-agent-interview-guide` 已完成第四批 2 个单元，范围为 `RU-cadfaa658858` 至 `RU-ae8d6920b6a1`，该来源已完成；
 - `agent-guide` 已审核 409/409，来源审核完成；
-- 每个语义单元均已形成显式审核决定，后续进入已登记来源的事实核验、规范知识库整理和关系图构建阶段。
+- 每个语义单元均已形成显式审核决定；双向映射、重复、部分重叠、跨节点和排除原因见 [`source-coverage-audit.md`](source-coverage-audit.md)。
+- 后续进入已登记来源的事实核验、规范知识库整理和关系图构建阶段。
 
 权威机器状态见 [`manual-review-status.json`](manual-review-status.json)。

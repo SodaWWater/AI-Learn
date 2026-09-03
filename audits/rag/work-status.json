@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-03",
+  "updated_at": "2026-09-04",
   "project": "AI-Learn",
   "pilot_domain": "RAG",
   "authoritative_plan": "docs/PROJECT_PLAN.md",
-  "current_phase": "P2-original-source-semantic-review",
+  "current_phase": "P2-registered-external-evidence-verification",
   "overall_status": "in_progress",
   "baseline": {
     "registered_primary_sources": 4,
@@ -252,7 +252,7 @@
       "id": "WP-P2-004",
       "title": "完成原始来源双向覆盖验收",
       "priority": 9,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P2-003"],
       "outputs": ["100 percent original-source coverage report", "deduplication and exclusion audit"]
     },
@@ -260,7 +260,7 @@
       "id": "WP-P2-005",
       "title": "融合已登记外部证据并核验事实与时效",
       "priority": 10,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P2-004"],
       "outputs": ["external evidence mappings", "freshness and conflict records", "verified public question leads"]
     },
@@ -338,8 +338,8 @@
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P2-004",
-    "instruction": "Do not perform new external searches. Audit the completed 653-unit source mappings for bidirectional coverage, explicit exclusion reasons, conservative deduplication, partial-overlap and cross-node preservation. Produce or update the human-readable coverage and deduplication audit, run normal and strict checks without fabricating results, then create a checkpoint."
+    "work_item_id": "WP-P2-005",
+    "instruction": "Do not perform new external searches. Use only the 170 already registered external sources to verify release-sensitive technical facts, version claims, conflicts and the 26 public-question leads. Record evidence mappings and unresolved items before canonical knowledge-base consolidation."
   },
   "global_blockers": [],
   "handoff_notes": [
