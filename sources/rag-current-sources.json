@@ -627,7 +627,7 @@
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
       "version": "OWASP Top 10 for LLM Applications 2025",
       "freshness": "active",
-      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Prompt Injection", "Sensitive Information Disclosure", "Data and Model Poisoning", "Excessive Agency"]
     },
     {
@@ -1174,6 +1174,107 @@
       "freshness": "research",
       "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Cross-method Chunking Evaluation", "Computational-cost Comparison", "Use-case and Data-type Sensitivity", "Chunking Limitations"]
+    },
+    {
+      "id": "qdrant-embedding-model-migration-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/tutorials-operations/embedding-model-migration/",
+      "version": "current tutorial requiring Qdrant 1.18+ for named-vector option; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Zero-downtime Embedding Model Migration", "Blue-green Collections versus Named Vectors", "Dual-write Delete and Partial-update Boundary", "Rollback and Cutover Validation"]
+    },
+    {
+      "id": "qdrant-incremental-embedding-updates-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/tutorials-operations/incremental-embedding-updates/",
+      "version": "current tutorial; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Deterministic Point Identifier", "Content Fingerprint and Incremental Re-embedding", "Moved-content Vector Reuse", "Full-scan Scaling Boundary"]
+    },
+    {
+      "id": "azure-foundry-data-privacy-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "version": "page updated 2026-05-19; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-DATA-GOVERNANCE", "PS-QUERY-REWRITE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Embedding Input Data Processing", "Regional versus Global versus DataZone Processing", "Stateful Feature Storage Boundary", "Abuse-monitoring and Content-logging Boundary"],
+      "provenance_note": "仅说明该 Azure 服务当前文档中的处理和存储边界；其他模型提供商、部署类型、Preview 能力和法域必须逐项核验。"
+    },
+    {
+      "id": "qdrant-blue-green-deployment-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/tutorials-operations/blue-green-deployment/",
+      "version": "current tutorial; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Online Cluster Reconfiguration", "Streaming Migration and Snapshot Restore", "Pre-cutover Validation", "Endpoint Rollback and Double-running Cost"]
+    },
+    {
+      "id": "qdrant-ann-recall-docs-2026",
+      "type": "official_documentation",
+      "url": "https://qdrant.tech/documentation/tutorials-search-engineering/ann-recall/",
+      "version": "current tutorial; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Approximate versus Exact kNN Recall", "Exact Search Mode", "HNSW Search-time versus Build-time Parameters", "Continuous-integration Recall Regression"]
+    },
+    {
+      "id": "vibe-vector-index-benchmark-2026",
+      "type": "official_repository",
+      "url": "https://github.com/vector-index-bench/vibe/blob/10859e6056b16b60068e529c8362ed15c1457bf6/README.md",
+      "version": "commit 10859e6056b16b60068e529c8362ed15c1457bf6; DMLR 2026; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "use_for": ["Modern Embedding ANN Benchmark", "In-distribution and Out-of-distribution Workloads", "Pinned Algorithm Versions and Hardware", "Quantized CPU and GPU Evaluation"]
+    },
+    {
+      "id": "nova-rag-confidence-calibration-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2601.11004",
+      "version": "v3, 2026-06-11",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "use_for": ["RAG Verbal Confidence Calibration", "Retrieval-noise Uncertainty", "Expected Calibration Error and AUROC", "Gold Relevant Irrelevant and Counterfactual Passage Stratification"]
+    },
+    {
+      "id": "cluener2020-benchmark",
+      "type": "official_repository",
+      "url": "https://github.com/CLUEbenchmark/CLUENER2020/blob/2e8fccd1b8cde6b471fe440b9d766e920fb418ab/README.md",
+      "version": "commit 2e8fccd1b8cde6b471fe440b9d766e920fb418ab; reviewed 2026-09-03",
+      "freshness": "stable",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-EVALUATION"],
+      "use_for": ["Chinese Fine-grained Named Entity Recognition", "Address Organization and Position Labels", "Entity-span Evaluation", "Per-class F1 Stratification"],
+      "provenance_note": "该数据集来自新闻文本，只用于建立中文实体抽取基线与分层评测；不能代表业务查询、口语、多轮会话或授权条件的完整分布。"
+    },
+    {
+      "id": "cross-language-temporal-normalization-2025",
+      "type": "paper",
+      "url": "https://aclanthology.org/2025.cl-4.7/",
+      "version": "Computational Linguistics 51(4), December 2025",
+      "freshness": "research",
+      "stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-EVALUATION"],
+      "use_for": ["Temporal Expression Normalization", "Cross-language and Cross-domain Adaptation", "Value Intermediate Representation", "Two-phase Temporal Normalizer Training"]
+    },
+    {
+      "id": "langchain-multi-query-retriever-2026",
+      "type": "official_repository",
+      "url": "https://github.com/langchain-ai/langchain/blob/234255c1c7427b5ed6dc505abad41ddfa6c9ff8f/libs/langchain/langchain_classic/retrievers/multi_query.py",
+      "version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["MultiQueryRetriever Current Source", "Three-query Default Prompt", "Optional Original-query Branch", "Synchronous versus Asynchronous Retrieval and Unique Union"]
+    },
+    {
+      "id": "llamaindex-query-fusion-retriever-2026",
+      "type": "official_repository",
+      "url": "https://github.com/run-llama/llama_index/blob/949f2b83dbff276238fbdf0490cf06fe06a28189/llama-index-core/llama_index/core/retrievers/fusion_retriever.py",
+      "version": "commit 949f2b83dbff276238fbdf0490cf06fe06a28189; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["QueryFusionRetriever Current Source", "Original Query plus Generated Branches", "Reciprocal Rank Relative Score Distance-based and Simple Fusion", "Retriever-weight and Async Execution Contract"]
     }
   ]
 }
