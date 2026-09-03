@@ -654,7 +654,7 @@
       "url": "https://arxiv.org/abs/2601.07072",
       "version": "v1, 2026-01",
       "freshness": "research",
-      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Indirect Prompt Injection", "公开内容中的真实攻击载荷", "检索屏障", "文档与 Agent 安全边界"]
     },
     {
@@ -1275,6 +1275,61 @@
       "freshness": "volatile",
       "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["QueryFusionRetriever Current Source", "Original Query plus Generated Branches", "Reciprocal Rank Relative Score Distance-based and Simple Fusion", "Retriever-weight and Async Execution Contract"]
+    },
+    {
+      "id": "owasp-rag-security-cheat-sheet-2026",
+      "type": "official_documentation",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html",
+      "version": "current OWASP Cheat Sheet; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-QUERY-ROUTING", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["End-to-end RAG Attack Surface", "Per-chunk Access-control Metadata", "Retrieval-time Authorization and Fail-closed Behavior", "Poisoned-document Indirect-prompt-injection and Cache-leakage Tests", "Replayable Security Trace"]
+    },
+    {
+      "id": "mcp-authorization-security-2026",
+      "type": "official_documentation",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations",
+      "version": "MCP specification 2026-07-28; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-QUERY-ROUTING", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
+      "use_for": ["Token Audience Binding", "Resource Parameter and Server-side Audience Validation", "Token-passthrough Prohibition", "Separate Upstream-service Token", "Confused-deputy Prevention"]
+    },
+    {
+      "id": "azure-hybrid-query-docs-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-how-to-query",
+      "version": "stable API 2026-04-01 and preview API 2026-08-01-preview; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Hybrid Candidate-budget Parameters", "PreFilter PostFilter and StrictPostFilter", "Vector FilterOverride Security Boundary", "Semantic-ranker Candidate Supply", "Hybrid-query Tail-latency and Throttling"]
+    },
+    {
+      "id": "elasticsearch-rrf-retriever-docs-2026",
+      "type": "official_documentation",
+      "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/retrievers/rrf-retriever",
+      "version": "current reference; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING"],
+      "use_for": ["Weighted Child Retrievers", "Rank-constant and Rank-window Contract", "Candidate-window Quality Performance Trade-off", "Global Filter across Child Retrievers"]
+    },
+    {
+      "id": "cohere-rerank-api-v2-2026",
+      "type": "official_documentation",
+      "url": "https://docs.cohere.com/reference/rerank",
+      "version": "v2 API reference; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-RERANKING", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Raw Document-text Request Boundary", "Automatic Document Truncation", "Maximum Documents and Tokens per Document", "Priority and Overload Behavior", "429 503 and 504 Failure Handling"]
+    },
+    {
+      "id": "cohere-enterprise-data-commitments-2025",
+      "type": "official_documentation",
+      "url": "https://cohere.com/enterprise-data-commitments",
+      "version": "last updated 2025-12-05; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-EMBEDDING", "PS-RERANKING", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["SaaS versus Private-deployment Data Boundary", "Prompt and Generation Retention", "Zero-data-retention Scope", "Training Opt-out and Enterprise-versus-Trial Scope"],
+      "provenance_note": "仅用于记录 Cohere 当前企业产品声明；SaaS、私有部署、合作方托管、试用密钥、零数据保留和合同例外必须按实际部署逐项核验。"
     }
   ]
 }
