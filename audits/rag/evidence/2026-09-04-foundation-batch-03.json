@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-03",
+  "verified_at": "2026-09-04",
+  "scope": "Four pre-registered volatile official documentation URLs for query planning, routing and rewrite; no source discovery was performed.",
+  "source_count": 4,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "azure-agentic-retrieval-overview-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-006", "RAG-07-009", "RAG-07-010", "RAG-08-004", "RAG-08-010", "RAG-13-007"],
+      "verified_claims": ["Azure AI Search documents agentic retrieval query planning that can use a query and conversation history to create focused subqueries at low and medium retrieval-reasoning effort.", "The documented execution sends subqueries to knowledge sources in parallel and can use keyword, vector or hybrid search with semantic reranking.", "The documentation explicitly describes additional latency and token-based cost compared with a single-query pipeline."],
+      "boundary": "This is Azure AI Search product behavior with region, quota, pricing-tier and reasoning-effort constraints. It is not evidence that agentic retrieval is preferable for a simple query or every workload."
+    },
+    {
+      "source_id": "cohere-query-routing-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-002", "RAG-07-010", "RAG-07-011", "RAG-08-005"],
+      "verified_claims": ["Cohere's routing tutorial describes using Chat endpoint tool-use capabilities to route a query to the most relevant tool or data source according to the query's nature.", "Its example contrasts selecting one relevant developer-documentation tool with retrieving from every connected data source."],
+      "boundary": "The tutorial is an implementation pattern, not a proof that model-selected routing is accurate enough without route-quality evaluation, fallbacks and authorization controls."
+    },
+    {
+      "source_id": "azure-semantic-query-rewrite-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-011", "RAG-08-004", "RAG-08-015", "RAG-12-004"],
+      "verified_claims": ["Azure documents query rewriting as optional generative creation of alternative queries used together with the original query for retrieval.", "The page is marked Preview and states that rewrites can omit exact original terms, which can affect highly specific identifiers or product-code searches.", "Its example requires semantic ranking, a query language and a preview API version, and supports testing returned rewrites through a debug option that is not recommended for production performance."],
+      "boundary": "This Preview API has no service-level agreement and must not be presented as a generally available or vendor-neutral rewrite mechanism. Exact-identifier preservation needs its own regression tests."
+    },
+    {
+      "source_id": "cohere-parallel-query-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-004", "RAG-07-006", "RAG-07-009", "RAG-08-005", "RAG-08-013"],
+      "verified_claims": ["Cohere's tutorial describes query expansion that transforms a complex user query into a more suitable set of retrieval queries and runs them in parallel.", "The document covers query expansion across multiple data sources and in multi-turn conversations, where earlier messages are needed to interpret a later ambiguous request."],
+      "boundary": "The examples demonstrate an agentic RAG pattern. They do not establish general answer-quality gains or replace evaluation of decomposition errors, duplicate retrieval and latency."
+    }
+  ]
+}
