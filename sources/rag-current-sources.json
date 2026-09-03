@@ -1503,6 +1503,53 @@
       "stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE", "PS-ADVANCED-RAG"],
       "use_for": ["RAG Evaluation-set Construction Question", "Near-perfect Hit-rate Credibility Question", "Pretraining-contamination Question", "Private Held-out Dataset Question", "Tool Registration Permission and Scope Question"],
       "provenance_note": "发布者自述为 AI 应用开发实习生线上技术面试；只登记明确出现的问题和日期，技术答案回到论文、官方规范与自有实验核验。"
+    },
+    {
+      "id": "kafka-source-connector-api-4-3-1",
+      "type": "official_documentation",
+      "url": "https://kafka.apache.org/43/javadoc/org/apache/kafka/connect/source/SourceConnector.html",
+      "version": "Apache Kafka 4.3.1 API; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Configuration-conditioned Exactly-once Capability", "Connector-defined Transaction Boundaries", "Idempotent Offset Alteration and Reset", "Unsupported Capability Fail-closed Boundary"]
+    },
+    {
+      "id": "docling-document-model-2026",
+      "type": "official_documentation",
+      "url": "https://docling-project.github.io/docling/concepts/docling_document/",
+      "version": "Docling v2 documentation; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-CITATION-VERIFICATION"],
+      "use_for": ["Typed Document Intermediate Representation", "Body versus Furniture Separation", "Hierarchy and Reading Order", "Bounding-box and Provenance Fields", "Parent-child JSON Pointers"]
+    },
+    {
+      "id": "docling-pdf-backend-visible-text-2026",
+      "type": "official_repository",
+      "url": "https://github.com/docling-project/docling/blob/c09ddfabff27b1ba6217ab47e207cb646b4ba023/docling/backend/pdf_backend.py",
+      "version": "commit c09ddfabff27b1ba6217ab47e207cb646b4ba023; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Visible versus Invisible PDF Text", "Backend Capability Unknown versus Empty", "Absolute Page-number Loading", "Page Resource Unloading", "Shape and Bitmap Inspection Boundary"]
+    },
+    {
+      "id": "openlineage-object-model-1-53-0",
+      "type": "official_documentation",
+      "url": "https://openlineage.io/docs/spec/object-model/",
+      "version": "OpenLineage 1.53.0 object model; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-DATA-GOVERNANCE", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Job Run Dataset Lineage Model", "Runtime versus Design-time Events", "Source-code Location and Version Facet", "Dataset Lifecycle and Version Facets", "RAG Derived-asset Lineage Mapping"],
+      "provenance_note": "OpenLineage 提供通用 Job/Run/Dataset（作业/运行/数据集）对象和 Facet（切面）扩展机制；RAG 文档、Chunk（文本块）、Embedding（嵌入）和索引怎样映射属于本项目工程设计，不冒充标准内置语义。"
+    },
+    {
+      "id": "dense-x-retrieval-2024",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2312.06648",
+      "version": "v3, 2024-10-04",
+      "freshness": "foundational",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-EVALUATION"],
+      "use_for": ["Proposition as Retrieval Unit", "Atomic Concise Self-contained Factoid", "Retrieval-granularity Comparison", "Fine-grained Context under Fixed Compute Budget", "Proposition Generation Cost and Error Boundary"],
+      "provenance_note": "作为 Proposition Chunking（命题切分）的原始方法证据；论文实验条件不证明命题粒度在所有语言、领域、权限模型和总成本约束下普遍最优。"
     }
   ]
 }
