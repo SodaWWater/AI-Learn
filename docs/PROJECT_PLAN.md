@@ -45,7 +45,7 @@
 - 对登记来源进行全量盘点，而不是抽样整理；
 - 只合并语义、条件和结论均等价的信息；
 - 实现、补充、反例、版本差异、冲突和不同业务条件不得作为重复内容删除；
-- 针对每个流程节点继续检索公开面试题、工程资料、一手论文和官方文档；
+- 已按 18 个流程节点完成三轮外部检索；当前按用户决策暂停继续扩展，先完成原始资料人工语义审核；
 - 建立来源到知识、知识到来源的双向映射；
 - 建立问题到节点、节点到问题的多对多映射；
 - 用版本化覆盖矩阵（Coverage Matrix）说明“当前资料覆盖了什么”，不使用无法证明的“永久绝对完整”。
@@ -403,11 +403,13 @@
 来源发现（Source Discovery）
 → 来源登记与版本冻结（Source Registration and Version Pinning）
 → 来源单元提取（Source Unit Extraction）
+→ 原始资料人工语义审核（Manual Semantic Review）
 → 术语规范化（Terminology Normalization）
 → 知识、问题和实现拆解（Knowledge, Problem and Implementation Extraction）
 → 保守去重与冲突审计（Conservative Deduplication and Conflict Audit）
+→ 原始来源覆盖证明（Original-source Coverage Proof）
+→ 已登记外部证据核验与补充（Registered External Evidence Verification）
 → 知识图谱关系构建（Knowledge Graph Construction）
-→ 覆盖与补漏搜索（Coverage and Gap Search）
 → 学习视图生成（Learning View Generation）
 → 节点题生成（Stage Question Production）
 → 综合题生成（Cross-stage Problem Production）
@@ -449,7 +451,7 @@
 
 完成定义：所有后续 Agent 能只依赖仓库文件解释目标、约束、当前状态和下一任务。
 
-### Phase 2：来源扩充与题目全量盘点
+### Phase 2：来源扩充、原始资料语义审核与题目盘点
 
 状态：`in_progress`
 
@@ -461,8 +463,10 @@
 - 来源许可与发布策略；
 - 新来源单元；
 - 面试题来源到原始页面的回链。
+- 每个原始来源语义单元的人工判断；
+- 原始来源覆盖报告和保守去重证据。
 
-完成定义：每个检索增强生成流程（RAG Workflow）节点完成第一轮中英文公开资料搜索并登记结果。
+完成定义：三轮外部搜索和第四轮 4/18 历史检查点均已保存；653 个原始来源语义单元全部人工审核，每个单元都有显式去向，原始来源覆盖报告达到 100%。
 
 ### Phase 3：底层知识图谱构建
 
@@ -594,10 +598,12 @@
 1. [`AGENTS.md`](../AGENTS.md)；
 2. 本项目整体规划；
 3. [`audits/rag/work-status.json`](../audits/rag/work-status.json)；
-4. [`knowledge/rag/TERMINOLOGY.md`](../knowledge/rag/TERMINOLOGY.md)；
-5. [`knowledge/rag/CONTENT_STANDARD.md`](../knowledge/rag/CONTENT_STANDARD.md)；
-6. [`taxonomy/rag-graph-model.json`](../taxonomy/rag-graph-model.json)；
-7. 当前工作包涉及的来源、审计和模板文件。
+4. [`docs/LOCAL_AGENT_HANDOFF.md`](LOCAL_AGENT_HANDOFF.md)；
+5. [`audits/rag/manual-review-status.json`](../audits/rag/manual-review-status.json)；
+6. [`knowledge/rag/TERMINOLOGY.md`](../knowledge/rag/TERMINOLOGY.md)；
+7. [`knowledge/rag/CONTENT_STANDARD.md`](../knowledge/rag/CONTENT_STANDARD.md)；
+8. [`taxonomy/rag-graph-model.json`](../taxonomy/rag-graph-model.json)；
+9. 当前工作包涉及的来源、审计和模板文件。
 
 交接时必须记录：
 
@@ -666,7 +672,7 @@
 
 ## 18. 当前基线
 
-截至 2026-09-02：
+截至 2026-09-03：
 
 - 已登记来源：4 个首批来源；
 - 已盘点来源单元：695 个；
@@ -676,19 +682,24 @@
 - 严格验收清单仍有 16 项未完成；
 - `RAG-01` 至 `RAG-03` 的旧第一版正文和关系图需要按新标准重写；
 - 当前 13 个一级模块继续用于分类和覆盖审计，但不再作为唯一线性学习入口。
+- 18 个流程节点已完成三轮外部检索，登记 170 个外部来源和 26 条公开问题线索；
+- 用户已暂停继续外搜，第四轮已完成的 4/18 仅作为历史检查点；
+- 当前唯一主任务是审核剩余 522 个原始来源语义单元。
 
 ## 19. 紧接着执行的工作顺序
 
 1. 完成本规划、Agent 入口、术语表、图模型和工作状态；
 2. 更新模板和校验脚本，使新标准可以自动检查；
-3. 建立完整检索增强生成流程（RAG Workflow）的流程节点清单；
-4. 扩充面试题和技术来源，逐节点建立检索日志；
-5. 生成底层知识图谱（Knowledge Graph）的第一版；
-6. 生成完整流程前置内容和全局地铁图（Global Metro Map）；
-7. 从数据摄取（Data Ingestion）节点开始整理节点工程问题/面试题；
-8. 节点题完成后生成跨节点综合问题；
-9. 按新标准重写知识正文；
-10. 完成严格覆盖审计和当前版本发布。
+3. 已完成完整检索增强生成流程（RAG Workflow）的流程节点清单；
+4. 已完成三轮节点级外部检索并保存第四轮 4/18 历史检查点；
+5. 完成剩余 522 个原始来源语义单元的人工审核；
+6. 生成原始来源覆盖报告，确认每个单元均有显式去向；
+7. 用已登记的 170 个外部来源做事实、时效和冲突核验；
+8. 建立去重后的标准知识库并生成底层知识图谱（Knowledge Graph）的第一版；
+9. 生成完整流程前置内容、全局地铁图（Global Metro Map）和节点局部图；
+10. 从数据摄取（Data Ingestion）开始整理节点工程问题/面试题，再生成跨节点综合问题；
+11. 按新标准重写详细知识正文；
+12. 完成严格覆盖审计和当前版本发布。
 
 ## 20. 变更控制
 

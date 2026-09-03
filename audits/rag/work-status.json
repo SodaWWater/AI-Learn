@@ -4,7 +4,7 @@
   "project": "AI-Learn",
   "pilot_domain": "RAG",
   "authoritative_plan": "docs/PROJECT_PLAN.md",
-  "current_phase": "P2-source-and-question-expansion",
+  "current_phase": "P2-original-source-semantic-review",
   "overall_status": "in_progress",
   "baseline": {
     "registered_primary_sources": 4,
@@ -16,6 +16,7 @@
     "baseline_date": "2026-09-02"
   },
   "research_expansion": {
+    "status": "paused_by_user_after_three_complete_rounds",
     "current_sources": 170,
     "public_problem_leads": 26,
     "search_stages_total": 18,
@@ -24,7 +25,18 @@
     "search_stages_round_3_complete": 18,
     "search_stages_round_4_complete": 4,
     "coverage_saturated_stages": 0,
-    "latest_search_date": "2026-09-03"
+    "latest_search_date": "2026-09-03",
+    "fourth_round_checkpoint_policy": "preserve_completed_4_of_18_as_historical_evidence",
+    "resume_condition": "explicit_user_authorization_only"
+  },
+  "manual_review": {
+    "status": "in_progress",
+    "semantic_units": 653,
+    "manually_reviewed_semantic_units": 131,
+    "pending_manual_semantic_units": 522,
+    "current_source_id": "xiaolin-ai-learning",
+    "current_source_unit_id": "RU-472404dfeb98",
+    "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
     "legacy_first_drafts": [
@@ -81,14 +93,15 @@
     },
     {
       "id": "P2",
-      "name": "来源扩充与题目全量盘点",
+      "name": "来源扩充、原始资料语义审核与题目盘点",
       "status": "in_progress",
       "depends_on": ["P1"],
       "deliverables": [
         "expanded source registry",
         "problem and interview question inventory",
         "node-specific search logs",
-        "coverage saturation records"
+        "manual source-unit review decisions",
+        "original-source coverage report"
       ]
     },
     {
@@ -218,22 +231,35 @@
       "id": "WP-P2-002",
       "title": "扩充公开面试题与工程问题来源",
       "priority": 7,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P2-001"],
-      "outputs": ["expanded sources", "question inventory", "source mappings"]
+      "outputs": ["expanded sources", "question inventory", "source mappings"],
+      "completion_note": "Completed at the user-approved scope of three full rounds; fourth-round 4/18 is retained as a historical checkpoint."
+    },
+    {
+      "id": "WP-P2-003",
+      "title": "人工审核原始来源单元并生成覆盖证明",
+      "priority": 8,
+      "status": "in_progress",
+      "depends_on": ["WP-P2-002"],
+      "outputs": [
+        "manual review decisions",
+        "conservative deduplication evidence",
+        "original-source coverage report"
+      ]
     },
     {
       "id": "WP-P3-001",
       "title": "建立检索增强生成主干节点第一版",
-      "priority": 8,
+      "priority": 9,
       "status": "pending",
-      "depends_on": ["WP-P2-002"],
+      "depends_on": ["WP-P2-003"],
       "outputs": ["graph nodes", "graph edges", "coverage report"]
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P2-002",
-    "instruction": "Continue without waiting for user confirmation: execute the fourth-round independent gap-search protocol for the remaining 14 stages from Embedding through Advanced RAG; reset the no-new-type counter whenever any new type appears, and require two consecutive no-new-type rounds plus all prerequisites before coverage_saturated."
+    "work_item_id": "WP-P2-003",
+    "instruction": "Do not perform new external searches. Review the next 20 to 30 xiaolin-ai-learning source units beginning at RU-472404dfeb98 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -242,9 +268,10 @@
     "WP-P2-001 is complete: the 18-stage bilingual search matrix, search-log template, and coverage tracker are now authoritative for source expansion.",
     "The first, second and third independent search rounds are complete for all 18 RAG stages.",
     "All eighteen third-round stages produced new knowledge or problem types, so their consecutive no-new-type counts remain zero and no stage is coverage_saturated.",
-    "The authoritative next-round procedure is audits/rag/fourth-round-protocol.md; third-round completion is a checkpoint, not a claim of absolute completeness.",
-    "Fourth-round independent searches are complete for Data Ingestion, Document Parsing, Data Governance and Chunking; all four found new types and therefore retain a zero no-new-type count.",
-    "Continue stage work without pausing for user confirmation; use validated GitHub commits as the review and recovery checkpoints.",
+    "The user has paused further external searching after three complete rounds. Do not resume it without explicit authorization.",
+    "Fourth-round independent searches are complete for Data Ingestion, Document Parsing, Data Governance and Chunking; preserve these 4/18 results as historical evidence and do not continue the remaining stages.",
+    "The current authoritative task is WP-P2-003. Follow docs/LOCAL_AGENT_HANDOFF.md and audits/rag/manual-review-status.json.",
+    "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
 }

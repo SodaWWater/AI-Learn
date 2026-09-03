@@ -4,6 +4,9 @@
 
 适用工作项：`WP-P2-002`
 
+> 执行状态：`paused / historical protocol`
+> 用户已在三轮 18/18 完成后决定暂停继续向外搜索。数据摄取（Data Ingestion）、文档解析（Document Parsing）、数据治理（Data Governance）和文本切分（Chunking）的第四轮结果作为 4/18 历史检查点保留；不得继续其余 14 个节点，除非用户再次明确授权。当前任务以 [`docs/LOCAL_AGENT_HANDOFF.md`](../../docs/LOCAL_AGENT_HANDOFF.md) 和 [`manual-review-status.json`](manual-review-status.json) 为准。
+
 ## 1. 目标
 
 第四轮不是重复第三轮检索，而是用不同查询表达、不同来源入口和反例驱动方式验证每个节点是否仍存在未登记的知识、工程问题、解决方案、实现、评估、安全或公开面试题类型。

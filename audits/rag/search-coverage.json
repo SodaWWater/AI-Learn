@@ -3,8 +3,8 @@
   "updated_at": "2026-09-03",
   "matrix": "sources/rag-search-matrix.json",
   "log_template": "templates/source-search-log.md",
-  "status": "fourth_round_in_progress",
-  "completion_rule": "所有 18 个节点至少完成第一轮中英文检索和登记，才满足 Phase 2 第一轮完成定义；coverage_saturated 还需连续两轮独立补漏无新增类型。",
+  "status": "paused_after_three_complete_rounds_with_fourth_round_4_of_18_checkpoint",
+  "completion_rule": "用户已决定在三轮 18/18 后暂停继续外搜；第四轮已完成的 4/18 作为历史证据保留，剩余 14 个节点不再执行。当前不声明 coverage_saturated，只有用户明确恢复外搜后才重新应用连续两轮无新增规则。",
   "stages": [
     {"stage_id": "PS-DATA-INGESTION", "status": "round_complete", "completed_rounds": 4, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-data-ingestion-r1.md", "audits/rag/search-logs/2026-09-02-data-ingestion-r2.md", "audits/rag/search-logs/2026-09-03-data-ingestion-r3.md", "audits/rag/search-logs/2026-09-03-data-ingestion-r4.md"]},
     {"stage_id": "PS-DOCUMENT-PARSING", "status": "round_complete", "completed_rounds": 4, "consecutive_rounds_without_new_type": 0, "last_searched_at": "2026-09-03", "log_paths": ["audits/rag/search-logs/2026-09-02-document-parsing-r1.md", "audits/rag/search-logs/2026-09-02-document-parsing-r2.md", "audits/rag/search-logs/2026-09-03-document-parsing-r3.md", "audits/rag/search-logs/2026-09-03-document-parsing-r4.md"]},

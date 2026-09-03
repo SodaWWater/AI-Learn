@@ -90,7 +90,7 @@
     },
     {
       "source_unit_id": "RU-7a29f0bc8394",
-      "decision": "not_applicable",
+      "decision": "non_rag",
       "atom_ids": [],
       "note": "内容是单 Agent 与多 Agent 架构，不是 RAG 知识；纠正自动误分类。"
     },

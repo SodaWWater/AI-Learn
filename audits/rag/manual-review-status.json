@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-03",
+  "status": "in_progress",
+  "scope": "registered_original_sources",
+  "external_search": {
+    "status": "paused_by_user_after_three_complete_rounds",
+    "completed_full_rounds": 3,
+    "fourth_round_checkpoint": "4_of_18_preserved_as_historical_evidence",
+    "resume_condition": "only_after_explicit_user_authorization"
+  },
+  "counts": {
+    "all_source_units": 695,
+    "semantic_units": 653,
+    "preclassified_structural_resource_or_placeholder_units": 42,
+    "manually_reviewed_semantic_units": 131,
+    "pending_manual_semantic_units": 522,
+    "manual_semantic_coverage_percent": 20.06
+  },
+  "source_queue": [
+    {
+      "order": 1,
+      "source_id": "xiaolin-ai-learning",
+      "all_units": 127,
+      "semantic_units": 127,
+      "manually_reviewed_semantic_units": 17,
+      "pending_manual_semantic_units": 110,
+      "status": "in_progress",
+      "next_source_unit_id": "RU-472404dfeb98"
+    },
+    {
+      "order": 2,
+      "source_id": "ai-agent-interview-guide",
+      "all_units": 83,
+      "semantic_units": 80,
+      "manually_reviewed_semantic_units": 14,
+      "pending_manual_semantic_units": 66,
+      "status": "pending",
+      "next_source_unit_id": "RU-58be80727d76"
+    },
+    {
+      "order": 3,
+      "source_id": "agent-guide",
+      "all_units": 448,
+      "semantic_units": 409,
+      "manually_reviewed_semantic_units": 63,
+      "pending_manual_semantic_units": 346,
+      "status": "pending",
+      "next_source_unit_id": "RU-dd5a6a9f6619"
+    },
+    {
+      "order": 4,
+      "source_id": "user-rag-experience-pdf",
+      "all_units": 37,
+      "semantic_units": 37,
+      "manually_reviewed_semantic_units": 37,
+      "pending_manual_semantic_units": 0,
+      "status": "completed",
+      "next_source_unit_id": null
+    }
+  ],
+  "decision_types": [
+    "retain",
+    "exact_duplicate",
+    "partial_overlap",
+    "cross_node",
+    "non_rag"
+  ],
+  "batch_policy": {
+    "target_units_min": 20,
+    "target_units_max": 30,
+    "preserve_semantic_boundary": true,
+    "require_source_body_review": true,
+    "source_checkout_location": "outside_repository",
+    "source_version": "pinned_commit_from_sources_registry",
+    "checkpoint_after_each_batch": true
+  },
+  "current_cursor": {
+    "source_id": "xiaolin-ai-learning",
+    "source_unit_id": "RU-472404dfeb98"
+  },
+  "completion_gate": [
+    "pending_manual_semantic_units_equals_zero",
+    "every_semantic_source_unit_has_an_explicit_review_decision",
+    "every_excluded_unit_has_a_reason",
+    "all_exact_duplicates_point_to_canonical_knowledge",
+    "partial_overlaps_and_cross_node_relations_preserve_unique_information",
+    "original_source_coverage_report_is_complete",
+    "normal_repository_validation_passes"
+  ],
+  "next_action": "Review the next 20 to 30 xiaolin-ai-learning units beginning at RU-472404dfeb98; read the pinned source body and preserve complete semantic boundaries."
+}

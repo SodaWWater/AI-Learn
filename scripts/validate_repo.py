@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 
@@ -31,6 +32,9 @@ REQUIRED = [
     "taxonomy/rag-graph-model.json",
     "taxonomy/rag-terminology.json",
     "audits/rag/work-status.json",
+    "docs/LOCAL_AGENT_HANDOFF.md",
+    "audits/rag/manual-review-status.json",
+    "audits/rag/original-source-coverage.md",
     "sources/rag-search-matrix.json",
     "audits/rag/search-coverage.json",
     "interview/rag/public-scenarios.json",
@@ -41,6 +45,8 @@ REQUIRED = [
     "templates/knowledge-note.md",
     "templates/problem-question.md",
     "templates/source-search-log.md",
+    "templates/source-review-batch.json",
+    "scripts/review_queue.py",
 ]
 
 
@@ -85,6 +91,7 @@ def main() -> int:
     current_sources = load_json("sources/rag-current-sources.json", errors)
     search_matrix = load_json("sources/rag-search-matrix.json", errors)
     search_coverage = load_json("audits/rag/search-coverage.json", errors)
+    manual_review = load_json("audits/rag/manual-review-status.json", errors)
 
     sources = registry.get("sources", [])
     source_ids = [item.get("id", "") for item in sources]
@@ -187,6 +194,25 @@ def main() -> int:
                 errors.append(
                     f"工作项 {item.get('id')} 依赖未知工作项：{dependency}"
                 )
+
+    manual_counts = manual_review.get("counts", {})
+    if manual_counts.get("all_source_units") != 695:
+        errors.append("人工审核状态的来源单元总数必须为 695")
+    if manual_counts.get("semantic_units") != 653:
+        errors.append("人工审核状态的语义单元总数必须为 653")
+    reviewed_semantic = manual_counts.get("manually_reviewed_semantic_units", 0)
+    pending_semantic = manual_counts.get("pending_manual_semantic_units", 0)
+    if reviewed_semantic + pending_semantic != 653:
+        errors.append("人工审核状态的已审核与待审核数量之和必须为 653")
+    allowed_review_decisions = {
+        "retain", "exact_duplicate", "partial_overlap", "cross_node", "non_rag",
+    }
+    if set(manual_review.get("decision_types", [])) != allowed_review_decisions:
+        errors.append("人工审核状态的判断类型与项目规范不一致")
+    if manual_review.get("external_search", {}).get("status") != (
+        "paused_by_user_after_three_complete_rounds"
+    ):
+        errors.append("当前外部搜索必须保持用户决定的暂停状态")
 
     expected_stage_ids = [
         "PS-DATA-INGESTION",
@@ -444,6 +470,20 @@ def main() -> int:
             atom_refs = mapping.get("atom_ids", [])
             if decision == "map" and not atom_refs:
                 errors.append(f"人工 map 决策没有知识原子：{unit_refs[:3]}")
+            allowed_mapping_decisions = {
+                "map", "retain", "exact_duplicate", "partial_overlap",
+                "cross_node", "non_rag",
+            }
+            if decision not in allowed_mapping_decisions:
+                errors.append(f"人工审核判断类型无效：{decision}，来源单元 {unit_refs[:3]}")
+            if decision in {"retain", "partial_overlap", "cross_node"} and not atom_refs:
+                errors.append(f"人工 {decision} 决策没有知识原子：{unit_refs[:3]}")
+            if decision == "exact_duplicate" and not (
+                atom_refs or mapping.get("duplicate_of_atom_ids")
+            ):
+                errors.append(f"人工 exact_duplicate 决策没有规范知识指向：{unit_refs[:3]}")
+            if decision == "non_rag" and not mapping.get("note"):
+                errors.append(f"人工 non_rag 决策缺少排除原因：{unit_refs[:3]}")
             for atom_id in atom_refs:
                 if atom_id not in atom_ids:
                     errors.append(f"人工映射引用未知知识原子：{atom_id}")
@@ -497,6 +537,48 @@ def main() -> int:
         remaining = reviewable_ids - accepted_source_unit_ids
         if remaining:
             errors.append(f"严格 RAG 验收仍有 {len(remaining)} 个来源单元待人工复核")
+
+    if inventory_path.exists():
+        reviewable_units = [
+            unit
+            for unit in load_json("audits/rag/source-units.json", errors).get("units", [])
+            if unit.get("review_status") == "mapped"
+        ]
+        reviewable_ids = {unit.get("id") for unit in reviewable_units}
+        derived_reviewed = len(reviewable_ids & accepted_source_unit_ids)
+        derived_pending = len(reviewable_ids - accepted_source_unit_ids)
+        if manual_counts.get("manually_reviewed_semantic_units") != derived_reviewed:
+            errors.append("人工审核状态的已审核数量与审核批次不一致")
+        if manual_counts.get("pending_manual_semantic_units") != derived_pending:
+            errors.append("人工审核状态的待审核数量与审核批次不一致")
+        work_manual = work_status.get("manual_review", {})
+        if work_manual.get("semantic_units") != len(reviewable_units):
+            errors.append("工作状态的语义单元数量与来源盘点不一致")
+        if work_manual.get("manually_reviewed_semantic_units") != derived_reviewed:
+            errors.append("工作状态的已人工审核数量与审核批次不一致")
+        if work_manual.get("pending_manual_semantic_units") != derived_pending:
+            errors.append("工作状态的待人工审核数量与审核批次不一致")
+        derived_by_source = Counter(
+            unit.get("source_id")
+            for unit in reviewable_units
+            if unit.get("id") in accepted_source_unit_ids
+        )
+        semantic_by_source = Counter(unit.get("source_id") for unit in reviewable_units)
+        queue_by_source = {
+            item.get("source_id"): item
+            for item in manual_review.get("source_queue", [])
+        }
+        for source_id, semantic_count in semantic_by_source.items():
+            queue_item = queue_by_source.get(source_id, {})
+            reviewed_count = derived_by_source[source_id]
+            if queue_item.get("semantic_units") != semantic_count:
+                errors.append(f"人工审核队列 {source_id} 的语义单元数不一致")
+            if queue_item.get("manually_reviewed_semantic_units") != reviewed_count:
+                errors.append(f"人工审核队列 {source_id} 的已审核数量不一致")
+            if queue_item.get("pending_manual_semantic_units") != (
+                semantic_count - reviewed_count
+            ):
+                errors.append(f"人工审核队列 {source_id} 的待审核数量不一致")
 
     if args.strict_rag:
         acceptance = (ROOT / "audits/rag/acceptance.md").read_text(encoding="utf-8")

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "replace-with-batch-id",
+    "source_id": "replace-with-source-id",
+    "reviewed_at": "YYYY-MM-DD",
+    "source_commit": "replace-with-pinned-commit",
+    "first_source_unit_id": "RU-replace",
+    "last_source_unit_id": "RU-replace",
+    "source_body_reviewed": true
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "mappings": [
+    {
+      "source_unit_ids": [
+        "RU-replace"
+      ],
+      "decision": "retain",
+      "atom_ids": [],
+      "duplicate_of_atom_ids": [],
+      "related_stage_ids": [],
+      "related_backbone_ids": [],
+      "excluded_to_domain": null,
+      "note": "Replace with a concise evidence-backed decision and preserved distinctions."
+    }
+  ]
+}

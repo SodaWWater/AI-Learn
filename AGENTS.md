@@ -12,12 +12,16 @@
 
 1. [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)
 2. [`audits/rag/work-status.json`](audits/rag/work-status.json)
-3. [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)
-4. [`knowledge/rag/CONTENT_STANDARD.md`](knowledge/rag/CONTENT_STANDARD.md)
-5. [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)
-6. 当前任务涉及的来源登记、审计文件和模板
+3. [`docs/LOCAL_AGENT_HANDOFF.md`](docs/LOCAL_AGENT_HANDOFF.md)
+4. [`audits/rag/manual-review-status.json`](audits/rag/manual-review-status.json)
+5. [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)
+6. [`knowledge/rag/CONTENT_STANDARD.md`](knowledge/rag/CONTENT_STANDARD.md)
+7. [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)
+8. 当前任务涉及的来源登记、审计文件和模板
 
 不要只根据 `README.md`、旧章节或聊天摘要推断当前方向。
+
+当前用户决策优先级：暂停新的外部搜索。已完成的三轮全节点搜索和第四轮 4/18 检查点作为历史证据保留；除非用户再次明确授权，不得继续第四轮剩余搜索。当前唯一主任务是完成首批原始资料的人工语义审核、覆盖证明和保守去重。
 
 ## 3. 不可违反的内容规则
 
@@ -117,4 +121,3 @@ Agent 结束工作时提供：
 下一工作项：
 Git 状态：
 ```
-

@@ -8,7 +8,7 @@
 
 RAG 是第一套端到端试点，用来验证整个知识整理流程。
 
-项目目标、信息架构、阶段规划、验收标准和 Agent 交接方式见 [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)。其他 Agent 开始工作前必须先阅读 [`AGENTS.md`](AGENTS.md) 和机器可读状态 [`audits/rag/work-status.json`](audits/rag/work-status.json)。
+项目目标、信息架构、阶段规划和验收标准见 [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)。其他 Agent 开始工作前必须先阅读 [`AGENTS.md`](AGENTS.md)、机器可读状态 [`audits/rag/work-status.json`](audits/rag/work-status.json) 和 [`docs/LOCAL_AGENT_HANDOFF.md`](docs/LOCAL_AGENT_HANDOFF.md)。
 
 - [x] 建立仓库目录和公开发布边界
 - [x] 固定首批来源及 Commit
@@ -17,9 +17,11 @@ RAG 是第一套端到端试点，用来验证整个知识整理流程。
 - [x] 建立 RAG 一级知识分类和验收规则
 - [x] 完成 RAG 来源单元全量盘点（695 个来源单元）
 - [x] 建立 RAG 原子知识目录（187 个待审计原子）
+- [x] 完成 18 个流程节点的三轮外部检索（第四轮 4/18 作为历史检查点）
+- [ ] 完成 653 个语义单元的人工审核（已完成 131 个，剩余 522 个）
 - [ ] 完成 RAG 知识原子化、去重和冲突审计
 - [x] 完成新版项目规划、双语术语规范、图模型和协作基线
-- [ ] 扩充 RAG 公开面试题、工程问题和一手技术来源
+- [x] 按当前用户确认范围扩充 RAG 公开面试题、工程问题和一手技术来源
 - [ ] 建立底层有向知识图谱（Directed Knowledge Graph）
 - [ ] 重写 RAG 标准知识正文（旧 RAG-01 至 RAG-03 已标记为待重写草稿）
 - [ ] 生成完整流程、全局地铁图和多种局部学习视图
@@ -31,14 +33,14 @@ RAG 是第一套端到端试点，用来验证整个知识整理流程。
 flowchart TD
     A["外部来源（External Source）"] --> B["来源登记与版本冻结（Source Registration and Version Pinning）"]
     B --> C["来源单元提取（Source Unit Extraction）"]
-    C --> D["知识、问题与实现拆解（Knowledge, Problem and Implementation Extraction）"]
-    D --> E["保守去重与冲突审计（Conservative Deduplication and Conflict Audit）"]
-    E --> F["有向知识图谱（Directed Knowledge Graph）"]
-    F --> G["完整流程与多视图（Workflow and Multiple Views）"]
-    F --> H["节点问题与综合问题（Stage and Cross-stage Problems）"]
-    F --> I["标准知识章节（Knowledge Chapter）"]
-    C --> J["覆盖矩阵（Coverage Matrix）"]
-    J --> E
+    C --> D["人工语义审核（Manual Semantic Review）"]
+    D --> E["知识、问题与实现拆解（Knowledge, Problem and Implementation Extraction）"]
+    E --> F["保守去重与覆盖证明（Deduplication and Coverage Proof）"]
+    F --> K["已登记外部证据核验（Registered Evidence Verification）"]
+    K --> L["有向知识图谱（Directed Knowledge Graph）"]
+    L --> G["完整流程与多视图（Workflow and Multiple Views）"]
+    L --> H["节点问题与综合问题（Stage and Cross-stage Problems）"]
+    L --> I["标准知识章节（Knowledge Chapter）"]
 ```
 
 ## 目录
