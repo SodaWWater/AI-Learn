@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-11",
+  "verified_at": "2026-09-04",
+  "scope": "Five pre-registered official documentation URLs for GraphRAG, HNSW tuning, hard-negative data, metadata filtering and document intermediate representation; no source discovery was performed.",
+  "source_count": 5,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "microsoft-graphrag-docs",
+      "source_type": "official_documentation",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-12-001", "RAG-12-002", "RAG-12-003", "RAG-12-004", "RAG-12-009", "RAG-12-020"],
+      "verified_claims": ["The Microsoft GraphRAG documentation site exposes workflows for indexing, prompt tuning, Local Search, Global Search and DRIFT Search.", "Its overview positions graph indexing and query workflows for private datasets and notes that baseline RAG can struggle with questions requiring connections across entities.", "The site navigation distinguishes GraphRAG search modes and migration guidance as separate concerns."],
+      "boundary": "The site is a current public documentation portal without a pinned implementation revision in this record. Navigation and overview claims do not prove universal quality gains, production readiness or version-independent API behavior."
+    },
+    {
+      "source_id": "milvus-hnsw-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-005", "RAG-06-012", "RAG-06-015"],
+      "verified_claims": ["Milvus documents HNSW as a graph index for high-dimensional floating-point vectors with a high-accuracy and low-latency trade-off against memory use.", "The page defines M as the maximum connections per node, efConstruction as the construction candidate count and ef as the query-time neighbor evaluation count.", "It describes increasing construction or query parameters as accuracy/recall and build/query-speed trade-offs rather than universal optimum settings."],
+      "boundary": "The current Milvus documentation and version navigation are product-specific. Parameter effects depend on data distribution, hardware, distance metric and workload; values require local benchmark and recall regression."
+    },
+    {
+      "source_id": "sentence-transformers-hard-negative-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-003", "RAG-08-009", "RAG-10-006"],
+      "verified_claims": ["Sentence Transformers exposes current documentation for Hard Negative Mining as a data-construction and training utility.", "The surrounding training documentation connects hard-negative workflows with datasets, losses, evaluators and Cross-Encoder reranking components.", "The documentation context supports treating hard negatives as training/evaluation inputs that require attention to false negatives, not as a guaranteed online quality improvement."],
+      "boundary": "This is library documentation without a pinned commit in the registered URL. Negative-mining quality, false-negative rates and downstream retrieval gains require dataset-specific validation."
+    },
+    {
+      "source_id": "langchain-self-query-hana-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-003", "RAG-07-006", "RAG-08-014"],
+      "verified_claims": ["LangChain's JavaScript example documents a Self-query Retriever for SAP HANA Cloud Vector Engine.", "The example requires metadata fields in the vector table and translates natural-language filter requirements into a structured query for the vector store.", "The page presents attribute schema and structured query translation as integration-specific configuration rather than implicit universal metadata semantics."],
+      "boundary": "The example is bound to SAP HANA Cloud, the JavaScript integration and its sample schema. Translation correctness, authorization and supported operators must be tested in the selected vector store."
+    },
+    {
+      "source_id": "docling-document-model-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-004", "RAG-03-005", "RAG-03-006", "RAG-04-011", "RAG-09-010"],
+      "verified_claims": ["Docling v2 documents a typed DoclingDocument intermediate representation with hierarchical sections/groups and body elements.", "The model distinguishes body content from headers and footers (furniture), and exposes layout bounding boxes and provenance fields when available.", "The documented representation includes text, tables and pictures with typed/Pydantic structures, supporting downstream reading-order, layout and source-trace handling."],
+      "boundary": "These are Docling v2 API model capabilities. Bounding boxes, provenance and reading order can depend on parser and input quality; the representation does not guarantee correct extraction for every document."
+    }
+  ]
+}
