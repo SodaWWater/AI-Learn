@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-13",
+  "verified_at": "2026-09-04",
+  "scope": "Three pre-registered active or volatile official documentation/specification URLs for incremental embedding updates, blue-green deployment and provenance modeling; no source discovery was performed.",
+  "source_count": 3,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "qdrant-incremental-embedding-updates-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-011", "RAG-05-012", "RAG-06-003", "RAG-11-001", "RAG-11-002"],
+      "verified_claims": ["Qdrant documents deriving a content fingerprint such as SHA-256 and a deterministic point ID from a chunk's source position.", "Its incremental-update pattern leaves unchanged chunks untouched, re-embeds changed text, reuses vectors when content moves, adds new text and deletes text absent from the current source list.", "The tutorial explicitly notes that its simple implementation re-reads the whole collection and becomes costly at large scale because of full scans and request-size limits."],
+      "boundary": "This is a Qdrant tutorial pattern that assumes deterministic chunking and an inexpensive current-source enumeration. Hashing and ID design do not alone guarantee synchronization, and scale limits require workload-specific architecture."
+    },
+    {
+      "source_id": "qdrant-blue-green-deployment-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-11-004", "RAG-11-019", "RAG-11-010"],
+      "verified_claims": ["Qdrant documents blue-green cluster deployment with a validation period before switching application traffic to the green endpoint.", "The guide recommends retaining a snapshot as a rollback point and describes switching back to the blue endpoint or restoring from a snapshot if rollback is needed.", "It identifies the temporary cost of running two clusters and advises completing green-cluster testing before decommissioning blue."],
+      "boundary": "This is Qdrant operational guidance, not a universal zero-downtime or recovery guarantee. Snapshot validity, traffic cutover, data freshness and rollback timing require deployment-specific drills."
+    },
+    {
+      "source_id": "w3c-prov-o-2013",
+      "source_type": "official_documentation",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-03-011", "RAG-02-007", "RAG-11-017"],
+      "verified_claims": ["W3C PROV-O defines an ontology for representing provenance with core classes prov:Entity, prov:Activity and prov:Agent.", "The recommendation defines relationships including wasGeneratedBy, wasDerivedFrom, wasAttributedTo, used and wasAssociatedWith for tracing origin, derivation and activity context.", "W3C identifies PROV-O as a stable recommendation suitable for reference and citation, while separating the ontology from application-specific storage and exchange implementations."],
+      "boundary": "PROV-O is a provenance vocabulary, not an automatic lineage collector or RAG-specific schema. Implementations must define identifiers, retention, privacy and event completeness for their system."
+    }
+  ]
+}
