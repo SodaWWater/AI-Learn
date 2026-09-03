@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-07",
+  "verified_at": "2026-09-04",
+  "scope": "Three pre-registered volatile official documentation URLs for structured outputs, change data capture and replicated-store consistency; no source discovery was performed.",
+  "source_count": 3,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "openai-structured-outputs-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-09-014", "RAG-10-014", "RAG-11-010"],
+      "verified_claims": ["OpenAI documents Structured Outputs as making model text responses adhere to a supplied JSON Schema.", "The guide lists type-safety and programmatically detectable safety refusals as benefits and shows schema construction through the REST API and SDKs.", "The documentation distinguishes a refusal from a schema-conforming response, so callers can handle refusal explicitly instead of parsing it as ordinary output."],
+      "boundary": "This is OpenAI API behavior for supported models and endpoints. Schema adherence does not establish factual correctness, citation grounding or business validation; refusal and transport errors still need handling."
+    },
+    {
+      "source_id": "debezium-features-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-11-001", "RAG-11-002", "RAG-11-007", "RAG-11-010"],
+      "verified_claims": ["Debezium documents source connectors for Kafka Connect that ingest database changes using database-specific change-data-capture features.", "Its feature guide contrasts log-based CDC with polling and dual writes, describing capture of data changes and deletes with low delay and without requiring a Last Updated column.", "The guide documents optional initial snapshots when transaction logs needed for recovery are no longer available, plus connector-specific metadata and configuration capabilities."],
+      "boundary": "These are Debezium connector and database capability claims. Delivery semantics, ordering, snapshot correctness, connector support and downstream index idempotency require system-specific design and tests."
+    },
+    {
+      "source_id": "qdrant-consistency-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-11-002", "RAG-11-004", "RAG-11-010", "RAG-11-019"],
+      "verified_claims": ["Qdrant documents write ordering as an option for update and delete operations that routes operations through the shard leader and waits before responding.", "The guide documents write_consistency_factor as the number of replicas that must acknowledge a write, with configuration tied to the collection's replication factor.", "It presents write ordering and consistency factor as trade-offs involving concurrent-update consistency, read behavior and search performance."],
+      "boundary": "These are Qdrant replication and write-consistency controls, not a universal guarantee of end-to-end index consistency or disaster recovery. Failure modes, read consistency and recovery procedures must be tested for the deployment."
+    }
+  ]
+}
