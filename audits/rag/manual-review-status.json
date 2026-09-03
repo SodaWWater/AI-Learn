@@ -13,9 +13,9 @@
     "all_source_units": 695,
     "semantic_units": 653,
     "preclassified_structural_resource_or_placeholder_units": 42,
-    "manually_reviewed_semantic_units": 412,
-    "pending_manual_semantic_units": 241,
-    "manual_semantic_coverage_percent": 63.09
+    "manually_reviewed_semantic_units": 437,
+    "pending_manual_semantic_units": 216,
+    "manual_semantic_coverage_percent": 66.92
   },
   "source_queue": [
     {
@@ -43,10 +43,10 @@
       "source_id": "agent-guide",
       "all_units": 448,
       "semantic_units": 409,
-      "manually_reviewed_semantic_units": 168,
-      "pending_manual_semantic_units": 241,
+      "manually_reviewed_semantic_units": 193,
+      "pending_manual_semantic_units": 216,
       "status": "in_progress",
-      "next_source_unit_id": "RU-5e03296ee628"
+      "next_source_unit_id": "RU-a672aea4ec24"
     },
     {
       "order": 4,
@@ -77,7 +77,7 @@
   },
   "current_cursor": {
     "source_id": "agent-guide",
-    "source_unit_id": "RU-5e03296ee628"
+    "source_unit_id": "RU-a672aea4ec24"
   },
   "completion_gate": [
     "pending_manual_semantic_units_equals_zero",
@@ -88,5 +88,5 @@
     "original_source_coverage_report_is_complete",
     "normal_repository_validation_passes"
   ],
-  "next_action": "Review the next 20 to 30 agent-guide units beginning at RU-5e03296ee628; read the pinned source body at d4fe53f4a9153123b159d0e6b632117a34721a92 and preserve complete semantic boundaries."
+  "next_action": "Review the next 20 to 30 agent-guide units beginning at RU-a672aea4ec24; read the pinned source body at d4fe53f4a9153123b159d0e6b632117a34721a92 and preserve complete semantic boundaries."
 }
