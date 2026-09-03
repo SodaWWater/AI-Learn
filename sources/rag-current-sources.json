@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-09-02",
+  "reviewed_at": "2026-09-03",
   "sources": [
     {
       "id": "rag-original-2020",
@@ -880,7 +880,7 @@
       "url": "https://www.nowcoder.com/discuss/904058990026420224",
       "version": "page published 2026-07-07; reviewed 2026-09-02",
       "freshness": "active",
-      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DOCUMENT-PARSING", "PS-DATA-GOVERNANCE", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Enterprise RAG System Design Question", "Incremental Indexing", "Multi-tenant Isolation", "P99 Latency and Retrieval Evaluation"],
       "provenance_note": "发布者自述为企业 SaaS 公司第三轮面试；公司身份、指标和实现数据未经企业官方确认，只登记题目条件，技术结论另用官方文档和论文核验。"
     },
@@ -1055,6 +1055,125 @@
       "freshness": "active",
       "stage_ids": ["PS-ADVANCED-RAG", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
       "use_for": ["Deep Research Capability Boundary", "Web Research Risk", "Citation-bearing Research Output", "Safety Evaluation"]
+    },
+    {
+      "id": "debezium-incremental-snapshots-2021",
+      "type": "official_engineering_report",
+      "url": "https://debezium.io/blog/2021/10/07/incremental-snapshots/",
+      "version": "published 2021-10-07; reviewed 2026-09-03",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Watermark-based Incremental Snapshot", "Concurrent Snapshot and Streaming Reconciliation", "Restart Resume Offset", "At-least-once Consumer Boundary"]
+    },
+    {
+      "id": "debezium-exactly-once-docs-2026",
+      "type": "official_documentation",
+      "url": "https://debezium.io/documentation/reference/stable/configuration/eos.html",
+      "version": "Debezium 3.6 documentation; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["At-least-once Default Guarantee", "Kafka Connect Exactly-once Participation", "Connector Support Matrix", "End-to-end Guarantee Boundary"]
+    },
+    {
+      "id": "confluent-schema-evolution-docs-2026",
+      "type": "official_documentation",
+      "url": "https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html",
+      "version": "current platform documentation; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Schema Compatibility Modes", "Transitive Compatibility", "Producer and Consumer Upgrade Order", "Incompatible-schema Migration"]
+    },
+    {
+      "id": "debezium-outbox-event-router-docs-2026",
+      "type": "official_documentation",
+      "url": "https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html",
+      "version": "Debezium 3.6 documentation; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Transactional Outbox Implementation", "Outbox Event Router SMT", "Aggregate Event Routing", "Payload and Schema Contract"]
+    },
+    {
+      "id": "omnidocbench-2025",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2412.07626",
+      "version": "v2, 2025-03-25; CVPR 2025",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EVALUATION"],
+      "use_for": ["Diverse PDF Parsing Benchmark", "End-to-end and Element-level Evaluation", "Reading-order Evaluation", "Document-type and Attribute Stratification"]
+    },
+    {
+      "id": "mpdocbench-parse-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2605.22100",
+      "version": "v1, 2026-05-28",
+      "freshness": "research",
+      "stage_ids": ["PS-DOCUMENT-PARSING", "PS-CHUNKING", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "use_for": ["Multi-page Document Parsing", "Cross-page Text and Table Merging", "Heading Hierarchy Recovery", "Chinese and English Document Evaluation"]
+    },
+    {
+      "id": "w3c-prov-o-2013",
+      "type": "official_documentation",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "version": "W3C Recommendation 2013-04-30; reviewed 2026-09-03",
+      "freshness": "stable",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-CITATION-VERIFICATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Entity Activity Agent Provenance Model", "Derivation and Revision Edges", "Invalidation Events", "Interoperable Lineage Exchange"]
+    },
+    {
+      "id": "eu-gdpr-official-2016",
+      "type": "official_documentation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+      "version": "Regulation (EU) 2016/679 consolidated official text; reviewed 2026-09-03",
+      "freshness": "active",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Storage Limitation", "Accountability", "Right to Erasure and Exceptions", "Recipient Notification Boundary"],
+      "provenance_note": "用于界定欧盟场景的原始法规文本，不构成法律意见；其他法域必须独立核验。"
+    },
+    {
+      "id": "azure-foundry-deployment-types-2026",
+      "type": "official_documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types",
+      "version": "page updated 2026-08-06; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-GOVERNANCE", "PS-QUERY-ROUTING", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Global versus Data-zone versus Regional Processing", "Data-residency Deployment Choice", "Residency and Latency Trade-off", "Deployment-policy Enforcement"]
+    },
+    {
+      "id": "spdx-license-expressions-3-1-rc1",
+      "type": "official_documentation",
+      "url": "https://spdx.github.io/spdx-spec/v3.1-RC1/annexes/spdx-license-expressions/",
+      "version": "SPDX Specification 3.1-RC1; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Machine-readable License Expression", "AND OR WITH Semantics", "NONE and NOASSERTION States", "Source-license Metadata Contract"],
+      "provenance_note": "RC 规范只用于许可证表达格式；不能替代对文档内容权利、使用范围和法域的法律判断。"
+    },
+    {
+      "id": "llamaindex-sentence-window-docs-2026",
+      "type": "official_documentation",
+      "url": "https://developers.llamaindex.ai/python/framework-api-reference/packs/sentence_window_retriever/",
+      "version": "current API reference; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-CHUNKING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY"],
+      "use_for": ["Sentence-window Indexing", "Window Metadata", "Metadata Replacement Postprocessor", "Small-unit Retrieval and Expanded-context Synthesis"]
+    },
+    {
+      "id": "langchain-parent-document-retriever-2026",
+      "type": "official_repository",
+      "url": "https://github.com/langchain-ai/langchain/blob/234255c1c7427b5ed6dc505abad41ddfa6c9ff8f/libs/langchain/langchain_classic/retrievers/parent_document_retriever.py",
+      "version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+      "freshness": "volatile",
+      "stage_ids": ["PS-CHUNKING", "PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-STORAGE-INDEXING"],
+      "use_for": ["Child-chunk Retrieval and Parent Return", "Parent Child ID Contract", "Vector Store plus Document Store", "Indexing Granularity versus Context Granularity"]
+    },
+    {
+      "id": "chunking-methods-cost-evaluation-2026",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2606.00881",
+      "version": "v1, 2026-05-30",
+      "freshness": "research",
+      "stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "use_for": ["Cross-method Chunking Evaluation", "Computational-cost Comparison", "Use-case and Data-type Sensitivity", "Chunking Limitations"]
     }
   ]
 }
