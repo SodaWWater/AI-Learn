@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 357,
-    "pending_manual_semantic_units": 296,
+    "manually_reviewed_semantic_units": 387,
+    "pending_manual_semantic_units": 266,
     "current_source_id": "agent-guide",
-    "current_source_unit_id": "RU-ec19d511ed71",
+    "current_source_unit_id": "RU-4284011fa511",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 agent-guide source units beginning at RU-ec19d511ed71 against the source body at commit d4fe53f4a9153123b159d0e6b632117a34721a92. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+      "instruction": "Do not perform new external searches. Review the next 20 to 30 agent-guide source units beginning at RU-4284011fa511 against the source body at commit d4fe53f4a9153123b159d0e6b632117a34721a92. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -361,6 +361,7 @@
     "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
     "agent-guide batch 01 reviewed 25 semantic units from RU-dd5a6a9f6619 through RU-182795f71d81 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 5, exact_duplicate 1, partial_overlap 12, cross_node 7, non_rag 0. The next unit is RU-900078e46212.",
     "agent-guide batch 02 reviewed 25 semantic units from RU-900078e46212 through RU-8ea20a2a0c89 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 4, exact_duplicate 0, partial_overlap 7, cross_node 13, non_rag 1. The next unit is RU-ec19d511ed71.",
+    "agent-guide batch 03 reviewed 30 semantic units from RU-f9832b400d2d through RU-b6f2eb9b8682 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 5, exact_duplicate 0, partial_overlap 19, cross_node 6, non_rag 0. The next unit is RU-4284011fa511.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]
 }
