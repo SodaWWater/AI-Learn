@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-05",
+  "verified_at": "2026-09-04",
+  "scope": "Two pre-registered volatile official documentation URLs for two-stage retrieval and reranking; no source discovery was performed.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "sentence-transformers-retrieve-rerank-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-005", "RAG-08-008", "RAG-08-009", "RAG-08-010", "RAG-10-006"],
+      "verified_claims": ["Sentence Transformers documents a retrieve-and-rerank pipeline in which a Bi-Encoder or lexical search first produces a candidate set and a Cross-Encoder then scores candidate relevance for the query.", "The guide states that the retriever must remain efficient for very large collections, while the Cross-Encoder receives the query and a possible document together and returns a relevance score.", "It frames Cross-Encoder reranking as a second stage for improving final results when the efficient retriever can return irrelevant candidates."],
+      "boundary": "The pipeline and score semantics are Sentence Transformers documentation, not a promise of quality gain. Candidate depth, model choice, latency and truncation effects require workload-specific evaluation."
+    },
+    {
+      "source_id": "cohere-rerank-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-005", "RAG-08-008", "RAG-08-009", "RAG-08-010", "RAG-10-006"],
+      "verified_claims": ["Cohere documents reranking as a semantic second-stage operation that can follow lexical, semantic or other first-stage search systems.", "Its current tutorial shows the Rerank call accepting a query, a list of documents, a model and top_n to select the top reranked documents.", "The tutorial includes lexical or semantic search results, semi-structured data, tabular data and multilingual reranking as distinct implementation examples."],
+      "boundary": "The endpoint arguments and tutorial examples are Cohere product behavior. Relevance-score calibration, ranking gains, input limits, cost and latency must be measured for the chosen model and corpus."
+    }
+  ]
+}
