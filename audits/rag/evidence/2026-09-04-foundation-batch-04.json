@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-04",
+  "verified_at": "2026-09-04",
+  "scope": "Four pre-registered volatile official documentation URLs for hybrid retrieval, rank fusion and routing; no source discovery was performed.",
+  "source_count": 4,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "azure-hybrid-search-overview-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-009", "RAG-06-010", "RAG-08-004", "RAG-08-006", "RAG-08-010", "RAG-08-016"],
+      "verified_claims": ["Azure documents hybrid search as one request containing full-text and vector queries that run in parallel and are merged with Reciprocal Rank Fusion (RRF).", "The guide distinguishes the exact-match value of full-text search from the conceptual-similarity value of vector search.", "Its examples document filters, vector-filter modes and optional semantic ranking as configuration-sensitive parts of hybrid retrieval."],
+      "boundary": "This is Azure AI Search API behavior. Candidate counts, filter mode and semantic-ranking configuration need workload-specific recall, latency and authorization evaluation."
+    },
+    {
+      "source_id": "azure-hybrid-rrf-ranking-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-08-006", "RAG-08-007", "RAG-08-008", "RAG-08-010"],
+      "verified_claims": ["Azure documents RRF as combining multiple independently ranked result sets into one unified result set when two or more queries run in parallel.", "The guide describes reciprocal-rank scoring followed by summation, and distinguishes its rank constant from nearest-neighbor k.", "It separately documents the score ranges and ordering roles for hybrid RRF scores and semantic-reranker scores."],
+      "boundary": "The Azure implementation's scoring fields and fixed constants are product behavior. RRF must not be treated as a calibrated probability or as interchangeable with semantic-reranker scores."
+    },
+    {
+      "source_id": "elasticsearch-retrievers-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-010", "RAG-08-004", "RAG-08-006", "RAG-08-007", "RAG-08-011", "RAG-08-014"],
+      "verified_claims": ["Elasticsearch documents a retriever tree in which compound retrievers can combine child retrievers.", "The current reference describes kNN, RRF and linear retrievers, with linear retrieval combining scores and RRF producing fused top documents.", "The documentation notes that min_score with compound retrievers is applied after compound scoring and warns that an unnormalized linear combination can bias lexical matches."],
+      "boundary": "Retriever-tree semantics, normalizers and filtering order are Elasticsearch-specific API behavior. Their quality implications require local evaluation and must not be generalized as universal ranking rules."
+    },
+    {
+      "source_id": "llamaindex-router-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-002", "RAG-07-010", "RAG-08-005", "RAG-12-003", "RAG-12-004"],
+      "verified_claims": ["LlamaIndex documents routers as modules that receive a user query and metadata-defined choices, returning one or more selected choices.", "The guide documents using routers as selector modules, query engines or retrievers, including single and multi-selection through LLM or Pydantic selectors.", "It labels retrieval-augmented routing for very large choice sets as a beta feature."],
+      "boundary": "Router selection is model- and metadata-dependent. The Beta label and framework-specific APIs mean this record is not a general reliability claim or production-readiness approval."
+    }
+  ]
+}
