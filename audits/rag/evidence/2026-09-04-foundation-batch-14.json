@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-14",
+  "verified_at": "2026-09-04",
+  "scope": "Eight pre-registered paper or official engineering-report URLs for RAG foundations, long-context limits, agentic retrieval, contextual retrieval, embedding evaluation and representation compression; no source discovery was performed.",
+  "source_count": 8,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "rag-original-2020",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-01-001", "RAG-01-008", "RAG-02-005", "RAG-09-006"],
+      "verified_claims": ["The paper defines RAG models that combine pretrained seq2seq parametric memory with a Wikipedia dense-vector non-parametric memory accessed by a neural retriever.", "It compares conditioning on the same retrieved passages across a sequence with using different passages per token.", "In its knowledge-intensive NLP experiments, including open-domain QA, the reported systems outperform specified parametric and retrieve-and-extract baselines and generate more specific, diverse and factual language than the parametric-only baseline."],
+      "boundary": "Results are tied to the paper's Wikipedia index, models, tasks and baselines; they do not establish universal production gains or elimination of hallucinations."
+    },
+    {
+      "source_id": "realm-2020",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-01-008", "RAG-01-009", "RAG-02-009", "RAG-12-019"],
+      "verified_claims": ["REALM augments language-model pretraining, fine-tuning and inference with a latent knowledge retriever that retrieves and attends over documents from a large corpus.", "The paper describes unsupervised retriever pretraining from masked-language-model signals with gradients through the retrieval step over a large document collection.", "Its Open-QA experiments report 4-16 percentage-point gains over prior methods on three benchmarks and motivate modular, interpretable external knowledge storage."],
+      "boundary": "This is a research system centered on Wikipedia/Open-QA and pretraining-time retrieval; the reported gains and historical 'first' claim do not generalize automatically to enterprise RAG."
+    },
+    {
+      "source_id": "lost-in-the-middle-2023",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": ["RAG-01-006", "RAG-09-002", "RAG-09-003", "RAG-09-004", "RAG-10-001"],
+      "verified_claims": ["The study evaluates long-context information use in multi-document question answering and key-value retrieval.", "Changing the position of relevant information can significantly change model performance; performance is often highest near the beginning or end and lower when relevant information is in the middle.", "The effect is observed even for models explicitly designed for long contexts, and the paper proposes evaluation protocols for long-context models."],
+      "boundary": "The position effect is empirical evidence for the tested models, tasks and context constructions, not a fixed universal curve or a complete mitigation recipe."
+    },
+    {
+      "source_id": "agentic-rag-survey-2025",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": ["RAG-10-014", "RAG-12-004", "RAG-12-018", "RAG-12-019"],
+      "verified_claims": ["The survey describes Agentic RAG as embedding autonomous agents into RAG pipelines to dynamically manage retrieval and iteratively refine context and workflows.", "It organizes design patterns such as reflection, planning, tool use and multi-agent collaboration and proposes dimensions including agent cardinality, control structure, autonomy and knowledge representation.", "The survey identifies evaluation, coordination, memory, efficiency and governance as open challenges."],
+      "boundary": "This is a survey and taxonomy, not a single controlled algorithm or causal performance result; concrete quality, cost and safety claims require the cited primary studies. The registered v4 corresponds to an arXiv revision dated 2026-04-01."
+    },
+    {
+      "source_id": "lara-rag-long-context-2025",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": ["RAG-01-006", "RAG-01-009", "RAG-10-001", "RAG-12-005", "RAG-12-018"],
+      "verified_claims": ["LaRA benchmarks RAG against long-context language models using 2,326 test cases, four practical QA task types and three kinds of naturally long texts.", "The benchmark evaluates seven open-source and four proprietary LLMs.", "Its findings make the preferred RAG or long-context choice conditional on model scale, long-context ability, context length, task type and retrieved-chunk characteristics rather than a universal silver bullet."],
+      "boundary": "The conclusions are bounded by the benchmark's models, tasks, texts and retrieval settings; they do not prescribe a fixed route for every production workload."
+    },
+    {
+      "source_id": "anthropic-contextual-retrieval",
+      "source_type": "official_engineering_report",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": ["RAG-01-006", "RAG-04-010", "RAG-08-002", "RAG-08-010", "RAG-09-015"],
+      "verified_claims": ["Anthropic's Contextual Retrieval method combines Contextual Embeddings and Contextual BM25 to add document context to chunks before retrieval.", "The report's evaluation states that contextual embeddings reduced top-20 retrieval failure from 5.7% to 3.7%, the combination to 2.9%, and the combination with reranking reduced reported failures by 67%.", "The article suggests that a knowledge base below about 200,000 tokens may sometimes be placed directly in a prompt instead of using RAG."],
+      "boundary": "These percentages and the 200,000-token suggestion are Anthropic's engineering evaluation and experience under specific data, models, metrics and costs; they are not universal guarantees or hard thresholds."
+    },
+    {
+      "source_id": "mteb-2023",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-05-005", "RAG-05-010", "RAG-10-001", "RAG-10-014"],
+      "verified_claims": ["MTEB evaluates text embeddings across eight task categories, 58 datasets and 112 languages, including a benchmark of 33 models.", "The paper reports that no single embedding method dominates all tasks and that performance on a small set of semantic-textual-similarity datasets cannot represent clustering, retrieval or reranking broadly.", "It supports evaluating embeddings across task-relevant and business-relevant datasets instead of treating a single leaderboard as a universal selector."],
+      "boundary": "The benchmark is a historical snapshot of its task, data and model collection; current production selection still requires local-domain evaluation."
+    },
+    {
+      "source_id": "matryoshka-representation-learning-2024",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-05-006", "RAG-05-009", "RAG-06-007", "RAG-10-014"],
+      "verified_claims": ["Matryoshka Representation Learning encodes information at multiple granularities in one embedding so downstream systems can adapt representation size to compute constraints.", "The paper describes coarse-to-fine representations and reports minimal training-pipeline changes with no additional inference/deployment cost in its setting.", "Its ImageNet experiments report up to 14x smaller embeddings and up to 14x retrieval speedups under the reported conditions, while extending experiments across vision, vision-language and language modalities."],
+      "boundary": "The numerical gains come from the paper's datasets, models, dimensions and index settings; they do not promise fixed RAG gains or zero migration/indexing cost for every system."
+    }
+  ]
+}
