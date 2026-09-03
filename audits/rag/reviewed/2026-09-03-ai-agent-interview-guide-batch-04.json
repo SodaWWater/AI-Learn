@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "2026-09-03-ai-agent-interview-guide-batch-04",
+    "source_id": "ai-agent-interview-guide",
+    "reviewed_at": "2026-09-03",
+    "source_commit": "9a987322f2d82ddabe4c1aabc7b4795749fa90a2",
+    "first_source_unit_id": "RU-cadfaa658858",
+    "last_source_unit_id": "RU-ae8d6920b6a1",
+    "source_body_reviewed": true,
+    "unit_count": 2
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "decision_counts": {"retain": 2, "exact_duplicate": 0, "partial_overlap": 0, "cross_node": 0, "non_rag": 0},
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-cadfaa658858"],
+      "decision": "retain",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-004", "RAG-08-005", "RAG-08-006", "RAG-08-007", "RAG-08-009", "RAG-08-010"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-RERANKING"],
+      "note": "Python MultiRetriever 提供可执行的异步向量、BM25 和混合检索链路，含模式回退、并行分支容错和 RRF 结果复制。",
+      "preserved_details": ["Milvus 与 embedding 调用放入 asyncio.to_thread", "BM25 使用可配置 k1=1.5、b=0.75 和平滑 IDF", "混合检索用 gather(return_exceptions=True) 并允许单路结果继续", "RRF 默认 k=60，输出副本并写入 rrf 元数据"],
+      "verification_flags": ["L2 distance 的展示分数未做真正反转，需避免误读为统一相关度"]
+    },
+    {
+      "source_unit_ids": ["RU-ae8d6920b6a1"],
+      "decision": "retain",
+      "atom_ids": ["RAG-04-002", "RAG-04-003", "RAG-04-006", "RAG-04-012", "RAG-04-015"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-EVALUATION"],
+      "note": "Python DocumentChunker 支持固定、递归和段落三种策略，使用 tiktoken 计数并对重叠、递归深度和回退行为设定边界。",
+      "preserved_details": ["chunk_size 最小 32，overlap 被限制在 0 到 size-1", "默认 cl100k_base，编码不可用时回退字符计数", "递归分隔符顺序为段落、换行、句号、空格", "深度超过 24 或无可用分隔符时回退固定窗口"],
+      "verification_flags": ["token 计数与字符固定切分是不同口径，参数需按模型和语料评估"]
+    }
+  ]
+}

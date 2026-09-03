@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 305,
-    "pending_manual_semantic_units": 348,
-    "current_source_id": "ai-agent-interview-guide",
-    "current_source_unit_id": "RU-cadfaa658858",
+    "manually_reviewed_semantic_units": 307,
+    "pending_manual_semantic_units": 346,
+    "current_source_id": "agent-guide",
+    "current_source_unit_id": "RU-dd5a6a9f6619",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the remaining 2 ai-agent-interview-guide source units beginning at RU-cadfaa658858 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the remaining 346 agent-guide source units beginning at RU-dd5a6a9f6619 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
