@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-12",
+  "verified_at": "2026-09-04",
+  "scope": "Two pre-registered active official PDF sources for LLM application security and generative-AI risk governance; no source discovery was performed.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "owasp-llm-top10-2025",
+      "source_type": "official_documentation",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-11-015", "RAG-11-016", "RAG-09-008", "RAG-09-011"],
+      "verified_claims": ["OWASP Top 10 for LLM Applications v2.0 lists Prompt Injection, Sensitive Information Disclosure, Data and Model Poisoning and Excessive Agency as distinct risk categories.", "Its Prompt Injection section distinguishes direct user-input injection from indirect injection through external sources such as websites or files.", "The document states that RAG and fine-tuning do not fully mitigate prompt-injection vulnerabilities and describes impacts including unauthorized function access and sensitive-information disclosure."],
+      "boundary": "The OWASP document is a risk taxonomy and mitigation guidance, not a proof that any control prevents attacks. Threat coverage, authorization, data isolation and red-team results remain application-specific."
+    },
+    {
+      "source_id": "nist-genai-profile-2024",
+      "source_type": "official_documentation",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-10-001", "RAG-10-014", "RAG-11-014", "RAG-11-017"],
+      "verified_claims": ["NIST AI 600-1 describes generative-AI risk-management actions across Govern, Map, Measure and Manage functions.", "The profile discusses pre-deployment testing, post-deployment monitoring, incident response, recovery and change management as lifecycle activities.", "Its content-provenance discussion identifies metadata such as creator, creation time, modifications and sources, while noting that provenance mechanisms have limitations and require documentation."],
+      "boundary": "NIST AI 600-1 is voluntary risk-management guidance, not a certification or fixed implementation recipe. Organizations must adapt controls, metrics, legal obligations and incident processes to their use case and jurisdiction."
+    }
+  ]
+}
