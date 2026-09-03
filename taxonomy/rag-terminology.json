@@ -3,7 +3,7 @@
   "updated_at": "2026-09-02",
   "source": "knowledge/rag/TERMINOLOGY.md",
   "rule": "Every occurrence of a professional technical term uses its canonical bilingual display form.",
-  "term_count": 145,
+  "term_count": 146,
   "terms": [
     {
       "id": "TERM-RAG-001",
@@ -385,6 +385,15 @@
     },
     {
       "id": "TERM-RAG-043",
+      "display": "假设问题索引（Hypothetical Question Indexing）",
+      "label_zh": "假设问题索引",
+      "label_en": "Hypothetical Question Indexing",
+      "alias": "Hypothetical Questions",
+      "section": "文本切分与表示",
+      "note": "为文档片段生成可能问题并以问题表示辅助召回；区别于查询侧多查询扩展"
+    },
+    {
+      "id": "TERM-RAG-044",
       "display": "词元（Token）",
       "label_zh": "词元",
       "label_en": "Token",
@@ -393,7 +402,7 @@
       "note": "不使用“标记”替代模型词元"
     },
     {
-      "id": "TERM-RAG-044",
+      "id": "TERM-RAG-045",
       "display": "上下文窗口（Context Window）",
       "label_zh": "上下文窗口",
       "label_en": "Context Window",
@@ -402,7 +411,7 @@
       "note": "模型可接受输入范围"
     },
     {
-      "id": "TERM-RAG-045",
+      "id": "TERM-RAG-046",
       "display": "向量嵌入（Embedding）",
       "label_zh": "向量嵌入",
       "label_en": "Embedding",
@@ -411,7 +420,7 @@
       "note": "表示模型或向量结果按语境说明"
     },
     {
-      "id": "TERM-RAG-046",
+      "id": "TERM-RAG-047",
       "display": "嵌入模型（Embedding Model）",
       "label_zh": "嵌入模型",
       "label_en": "Embedding Model",
@@ -420,7 +429,7 @@
       "note": "生成向量表示的模型"
     },
     {
-      "id": "TERM-RAG-047",
+      "id": "TERM-RAG-048",
       "display": "指令感知嵌入（Instruction-aware Embedding）",
       "label_zh": "指令感知嵌入",
       "label_en": "Instruction-aware Embedding",
@@ -429,7 +438,7 @@
       "note": "根据任务或检索指令条件化向量表示"
     },
     {
-      "id": "TERM-RAG-048",
+      "id": "TERM-RAG-049",
       "display": "多模态嵌入（Multimodal Embedding）",
       "label_zh": "多模态嵌入",
       "label_en": "Multimodal Embedding",
@@ -438,7 +447,7 @@
       "note": "在共享或可比较空间编码多种模态"
     },
     {
-      "id": "TERM-RAG-049",
+      "id": "TERM-RAG-050",
       "display": "对比学习（Contrastive Learning）",
       "label_zh": "对比学习",
       "label_en": "Contrastive Learning",
@@ -447,7 +456,7 @@
       "note": "Embedding 常见训练范式"
     },
     {
-      "id": "TERM-RAG-050",
+      "id": "TERM-RAG-051",
       "display": "向量归一化（Vector Normalization）",
       "label_zh": "向量归一化",
       "label_en": "Vector Normalization",
@@ -456,7 +465,7 @@
       "note": "与数据规范化区分"
     },
     {
-      "id": "TERM-RAG-051",
+      "id": "TERM-RAG-052",
       "display": "余弦相似度（Cosine Similarity）",
       "label_zh": "余弦相似度",
       "label_en": "Cosine Similarity",
@@ -465,7 +474,7 @@
       "note": "向量相似度度量"
     },
     {
-      "id": "TERM-RAG-052",
+      "id": "TERM-RAG-053",
       "display": "内积（Inner Product）",
       "label_zh": "内积",
       "label_en": "Inner Product",
@@ -474,7 +483,7 @@
       "note": "向量相似度度量"
     },
     {
-      "id": "TERM-RAG-053",
+      "id": "TERM-RAG-054",
       "display": "欧氏距离（Euclidean Distance）",
       "label_zh": "欧氏距离",
       "label_en": "Euclidean Distance",
@@ -483,7 +492,7 @@
       "note": "距离越小通常越相近"
     },
     {
-      "id": "TERM-RAG-054",
+      "id": "TERM-RAG-055",
       "display": "向量数据库（Vector Database）",
       "label_zh": "向量数据库",
       "label_en": "Vector Database",
@@ -492,7 +501,7 @@
       "note": "不等同于近似最近邻检索"
     },
     {
-      "id": "TERM-RAG-055",
+      "id": "TERM-RAG-056",
       "display": "向量存储（Vector Storage）",
       "label_zh": "向量存储",
       "label_en": "Vector Storage",
@@ -501,7 +510,7 @@
       "note": "向量数据库的一项能力"
     },
     {
-      "id": "TERM-RAG-056",
+      "id": "TERM-RAG-057",
       "display": "数据模式（Data Schema）",
       "label_zh": "数据模式",
       "label_en": "Data Schema",
@@ -510,7 +519,7 @@
       "note": "主键、正文、向量和元数据"
     },
     {
-      "id": "TERM-RAG-057",
+      "id": "TERM-RAG-058",
       "display": "向量索引（Vector Index）",
       "label_zh": "向量索引",
       "label_en": "Vector Index",
@@ -519,7 +528,7 @@
       "note": "用于近邻查询"
     },
     {
-      "id": "TERM-RAG-058",
+      "id": "TERM-RAG-059",
       "display": "倒排索引（Inverted Index）",
       "label_zh": "倒排索引",
       "label_en": "Inverted Index",
@@ -528,7 +537,7 @@
       "note": "关键词和稀疏检索基础"
     },
     {
-      "id": "TERM-RAG-059",
+      "id": "TERM-RAG-060",
       "display": "精确最近邻检索（Exact Nearest Neighbor Search）",
       "label_zh": "精确最近邻检索",
       "label_en": "Exact Nearest Neighbor Search",
@@ -537,7 +546,7 @@
       "note": "全量精确比较"
     },
     {
-      "id": "TERM-RAG-060",
+      "id": "TERM-RAG-061",
       "display": "近似最近邻检索（Approximate Nearest Neighbor Search，ANN）",
       "label_zh": "近似最近邻检索",
       "label_en": "Approximate Nearest Neighbor Search，ANN",
@@ -546,7 +555,7 @@
       "note": "向量数据库的一项检索能力"
     },
     {
-      "id": "TERM-RAG-061",
+      "id": "TERM-RAG-062",
       "display": "分层可导航小世界图（Hierarchical Navigable Small World，HNSW）",
       "label_zh": "分层可导航小世界图",
       "label_en": "Hierarchical Navigable Small World，HNSW",
@@ -555,7 +564,7 @@
       "note": "图结构近似最近邻索引"
     },
     {
-      "id": "TERM-RAG-062",
+      "id": "TERM-RAG-063",
       "display": "倒排文件索引（Inverted File Index，IVF）",
       "label_zh": "倒排文件索引",
       "label_en": "Inverted File Index，IVF",
@@ -564,7 +573,7 @@
       "note": "向量空间聚类分桶"
     },
     {
-      "id": "TERM-RAG-063",
+      "id": "TERM-RAG-064",
       "display": "乘积量化（Product Quantization，PQ）",
       "label_zh": "乘积量化",
       "label_en": "Product Quantization，PQ",
@@ -573,7 +582,7 @@
       "note": "向量压缩方法"
     },
     {
-      "id": "TERM-RAG-064",
+      "id": "TERM-RAG-065",
       "display": "元数据过滤（Metadata Filtering）",
       "label_zh": "元数据过滤",
       "label_en": "Metadata Filtering",
@@ -582,7 +591,7 @@
       "note": "精确条件过滤"
     },
     {
-      "id": "TERM-RAG-065",
+      "id": "TERM-RAG-066",
       "display": "索引构建（Index Construction）",
       "label_zh": "索引构建",
       "label_en": "Index Construction",
@@ -591,7 +600,7 @@
       "note": "与数据摄取阶段关联"
     },
     {
-      "id": "TERM-RAG-066",
+      "id": "TERM-RAG-067",
       "display": "索引发布（Index Release）",
       "label_zh": "索引发布",
       "label_en": "Index Release",
@@ -600,7 +609,7 @@
       "note": "候选版本切换为在线版本"
     },
     {
-      "id": "TERM-RAG-067",
+      "id": "TERM-RAG-068",
       "display": "索引合并（Index Compaction）",
       "label_zh": "索引合并",
       "label_en": "Index Compaction",
@@ -609,7 +618,7 @@
       "note": "合并段和回收删除空间"
     },
     {
-      "id": "TERM-RAG-068",
+      "id": "TERM-RAG-069",
       "display": "分区（Partitioning）",
       "label_zh": "分区",
       "label_en": "Partitioning",
@@ -618,7 +627,7 @@
       "note": "逻辑或物理数据划分"
     },
     {
-      "id": "TERM-RAG-069",
+      "id": "TERM-RAG-070",
       "display": "分片（Sharding）",
       "label_zh": "分片",
       "label_en": "Sharding",
@@ -627,7 +636,7 @@
       "note": "水平扩展数据"
     },
     {
-      "id": "TERM-RAG-070",
+      "id": "TERM-RAG-071",
       "display": "副本（Replication）",
       "label_zh": "副本",
       "label_en": "Replication",
@@ -636,7 +645,7 @@
       "note": "高可用和读扩展"
     },
     {
-      "id": "TERM-RAG-071",
+      "id": "TERM-RAG-072",
       "display": "多租户（Multi-tenancy）",
       "label_zh": "多租户",
       "label_en": "Multi-tenancy",
@@ -645,7 +654,7 @@
       "note": "租户数据和资源隔离"
     },
     {
-      "id": "TERM-RAG-072",
+      "id": "TERM-RAG-073",
       "display": "用户问题（User Query）",
       "label_zh": "用户问题",
       "label_en": "User Query",
@@ -654,7 +663,7 @@
       "note": "用户原始输入"
     },
     {
-      "id": "TERM-RAG-073",
+      "id": "TERM-RAG-074",
       "display": "查询理解（Query Understanding）",
       "label_zh": "查询理解",
       "label_en": "Query Understanding",
@@ -663,7 +672,7 @@
       "note": "意图、实体、时间和路由"
     },
     {
-      "id": "TERM-RAG-074",
+      "id": "TERM-RAG-075",
       "display": "查询改写（Query Rewrite）",
       "label_zh": "查询改写",
       "label_en": "Query Rewrite",
@@ -672,7 +681,7 @@
       "note": "生成更适合检索的查询"
     },
     {
-      "id": "TERM-RAG-075",
+      "id": "TERM-RAG-076",
       "display": "多查询扩展（Multi-Query Expansion）",
       "label_zh": "多查询扩展",
       "label_en": "Multi-Query Expansion",
@@ -681,7 +690,7 @@
       "note": "生成多个检索表达"
     },
     {
-      "id": "TERM-RAG-076",
+      "id": "TERM-RAG-077",
       "display": "假设文档嵌入（Hypothetical Document Embeddings，HyDE）",
       "label_zh": "假设文档嵌入",
       "label_en": "Hypothetical Document Embeddings，HyDE",
@@ -690,7 +699,7 @@
       "note": "先生成假设文档再嵌入"
     },
     {
-      "id": "TERM-RAG-077",
+      "id": "TERM-RAG-078",
       "display": "查询分解（Query Decomposition）",
       "label_zh": "查询分解",
       "label_en": "Query Decomposition",
@@ -699,7 +708,7 @@
       "note": "将复杂问题拆成子问题"
     },
     {
-      "id": "TERM-RAG-078",
+      "id": "TERM-RAG-079",
       "display": "退步提示（Step-back Prompting）",
       "label_zh": "退步提示",
       "label_en": "Step-back Prompting",
@@ -708,7 +717,7 @@
       "note": "先提出更抽象问题"
     },
     {
-      "id": "TERM-RAG-079",
+      "id": "TERM-RAG-080",
       "display": "查询路由（Query Routing）",
       "label_zh": "查询路由",
       "label_en": "Query Routing",
@@ -717,7 +726,7 @@
       "note": "选择知识源、方法或工具"
     },
     {
-      "id": "TERM-RAG-080",
+      "id": "TERM-RAG-081",
       "display": "检索（Retrieval）",
       "label_zh": "检索",
       "label_en": "Retrieval",
@@ -726,7 +735,7 @@
       "note": "泛指候选查找过程"
     },
     {
-      "id": "TERM-RAG-081",
+      "id": "TERM-RAG-082",
       "display": "检索器（Retriever）",
       "label_zh": "检索器",
       "label_en": "Retriever",
@@ -735,7 +744,7 @@
       "note": "执行检索的组件"
     },
     {
-      "id": "TERM-RAG-082",
+      "id": "TERM-RAG-083",
       "display": "稠密检索（Dense Retrieval）",
       "label_zh": "稠密检索",
       "label_en": "Dense Retrieval",
@@ -744,7 +753,7 @@
       "note": "基于稠密向量"
     },
     {
-      "id": "TERM-RAG-083",
+      "id": "TERM-RAG-084",
       "display": "稀疏检索（Sparse Retrieval）",
       "label_zh": "稀疏检索",
       "label_en": "Sparse Retrieval",
@@ -753,7 +762,7 @@
       "note": "基于词项或稀疏表示"
     },
     {
-      "id": "TERM-RAG-084",
+      "id": "TERM-RAG-085",
       "display": "最佳匹配算法（Best Matching 25，BM25）",
       "label_zh": "最佳匹配算法",
       "label_en": "Best Matching 25，BM25",
@@ -762,7 +771,7 @@
       "note": "常用稀疏排序函数"
     },
     {
-      "id": "TERM-RAG-085",
+      "id": "TERM-RAG-086",
       "display": "混合检索（Hybrid Search）",
       "label_zh": "混合检索",
       "label_en": "Hybrid Search",
@@ -771,7 +780,7 @@
       "note": "组合稠密和稀疏检索"
     },
     {
-      "id": "TERM-RAG-086",
+      "id": "TERM-RAG-087",
       "display": "多路召回（Multi-channel Retrieval）",
       "label_zh": "多路召回",
       "label_en": "Multi-channel Retrieval",
@@ -780,7 +789,7 @@
       "note": "多种通道并行产生候选"
     },
     {
-      "id": "TERM-RAG-087",
+      "id": "TERM-RAG-088",
       "display": "结果融合（Result Fusion）",
       "label_zh": "结果融合",
       "label_en": "Result Fusion",
@@ -789,7 +798,7 @@
       "note": "合并不同通道结果"
     },
     {
-      "id": "TERM-RAG-088",
+      "id": "TERM-RAG-089",
       "display": "倒数排名融合（Reciprocal Rank Fusion，RRF）",
       "label_zh": "倒数排名融合",
       "label_en": "Reciprocal Rank Fusion，RRF",
@@ -798,7 +807,7 @@
       "note": "基于名次的融合方法"
     },
     {
-      "id": "TERM-RAG-089",
+      "id": "TERM-RAG-090",
       "display": "召回候选（Retrieval Candidate）",
       "label_zh": "召回候选",
       "label_en": "Retrieval Candidate",
@@ -807,7 +816,7 @@
       "note": "尚未完成重排和上下文选择"
     },
     {
-      "id": "TERM-RAG-090",
+      "id": "TERM-RAG-091",
       "display": "重排（Reranking）",
       "label_zh": "重排",
       "label_en": "Reranking",
@@ -816,7 +825,7 @@
       "note": "对候选进行更精细排序"
     },
     {
-      "id": "TERM-RAG-091",
+      "id": "TERM-RAG-092",
       "display": "重排模型（Reranker）",
       "label_zh": "重排模型",
       "label_en": "Reranker",
@@ -825,7 +834,7 @@
       "note": "执行重排的模型或组件"
     },
     {
-      "id": "TERM-RAG-092",
+      "id": "TERM-RAG-093",
       "display": "双编码器（Bi-encoder）",
       "label_zh": "双编码器",
       "label_en": "Bi-encoder",
@@ -834,7 +843,7 @@
       "note": "查询和文档分别编码"
     },
     {
-      "id": "TERM-RAG-093",
+      "id": "TERM-RAG-094",
       "display": "交叉编码器（Cross-encoder）",
       "label_zh": "交叉编码器",
       "label_en": "Cross-encoder",
@@ -843,7 +852,7 @@
       "note": "查询和文档联合编码"
     },
     {
-      "id": "TERM-RAG-094",
+      "id": "TERM-RAG-095",
       "display": "最大边际相关性（Maximal Marginal Relevance，MMR）",
       "label_zh": "最大边际相关性",
       "label_en": "Maximal Marginal Relevance，MMR",
@@ -852,7 +861,7 @@
       "note": "平衡相关性和多样性"
     },
     {
-      "id": "TERM-RAG-095",
+      "id": "TERM-RAG-096",
       "display": "前 K 个结果（Top-K Results）",
       "label_zh": "前 K 个结果",
       "label_en": "Top-K Results",
@@ -861,7 +870,7 @@
       "note": "需要明确所在阶段"
     },
     {
-      "id": "TERM-RAG-096",
+      "id": "TERM-RAG-097",
       "display": "上下文组装（Context Assembly）",
       "label_zh": "上下文组装",
       "label_en": "Context Assembly",
@@ -870,7 +879,7 @@
       "note": "选择、排序和格式化入模内容"
     },
     {
-      "id": "TERM-RAG-097",
+      "id": "TERM-RAG-098",
       "display": "上下文压缩（Contextual Compression）",
       "label_zh": "上下文压缩",
       "label_en": "Contextual Compression",
@@ -879,7 +888,7 @@
       "note": "压缩检索内容"
     },
     {
-      "id": "TERM-RAG-098",
+      "id": "TERM-RAG-099",
       "display": "中间信息丢失（Lost in the Middle）",
       "label_zh": "中间信息丢失",
       "label_en": "Lost in the Middle",
@@ -888,7 +897,7 @@
       "note": "长上下文位置效应"
     },
     {
-      "id": "TERM-RAG-099",
+      "id": "TERM-RAG-100",
       "display": "提示词（Prompt）",
       "label_zh": "提示词",
       "label_en": "Prompt",
@@ -897,7 +906,7 @@
       "note": "国内常用“提示词”"
     },
     {
-      "id": "TERM-RAG-100",
+      "id": "TERM-RAG-101",
       "display": "系统提示词（System Prompt）",
       "label_zh": "系统提示词",
       "label_en": "System Prompt",
@@ -906,7 +915,7 @@
       "note": "高优先级指令"
     },
     {
-      "id": "TERM-RAG-101",
+      "id": "TERM-RAG-102",
       "display": "基于检索证据的生成（Grounded Generation）",
       "label_zh": "基于检索证据的生成",
       "label_en": "Grounded Generation",
@@ -915,7 +924,7 @@
       "note": "不译成生硬的“接地生成”"
     },
     {
-      "id": "TERM-RAG-102",
+      "id": "TERM-RAG-103",
       "display": "事实依据性（Groundedness）",
       "label_zh": "事实依据性",
       "label_en": "Groundedness",
@@ -924,7 +933,7 @@
       "note": "输出是否有证据支持"
     },
     {
-      "id": "TERM-RAG-103",
+      "id": "TERM-RAG-104",
       "display": "忠实度（Faithfulness）",
       "label_zh": "忠实度",
       "label_en": "Faithfulness",
@@ -933,7 +942,7 @@
       "note": "输出是否忠于上下文"
     },
     {
-      "id": "TERM-RAG-104",
+      "id": "TERM-RAG-105",
       "display": "引用（Citation）",
       "label_zh": "引用",
       "label_en": "Citation",
@@ -942,7 +951,7 @@
       "note": "答案与来源映射"
     },
     {
-      "id": "TERM-RAG-105",
+      "id": "TERM-RAG-106",
       "display": "拒答（Abstention）",
       "label_zh": "拒答",
       "label_en": "Abstention",
@@ -951,7 +960,7 @@
       "note": "证据不足时不回答"
     },
     {
-      "id": "TERM-RAG-106",
+      "id": "TERM-RAG-107",
       "display": "结构化输出（Structured Output）",
       "label_zh": "结构化输出",
       "label_en": "Structured Output",
@@ -960,7 +969,7 @@
       "note": "按数据模式输出"
     },
     {
-      "id": "TERM-RAG-107",
+      "id": "TERM-RAG-108",
       "display": "提示词缓存（Prompt Caching）",
       "label_zh": "提示词缓存",
       "label_en": "Prompt Caching",
@@ -969,7 +978,7 @@
       "note": "缓存可复用前缀"
     },
     {
-      "id": "TERM-RAG-108",
+      "id": "TERM-RAG-109",
       "display": "黄金数据集（Golden Dataset）",
       "label_zh": "黄金数据集",
       "label_en": "Golden Dataset",
@@ -978,7 +987,7 @@
       "note": "标注问题、答案和证据"
     },
     {
-      "id": "TERM-RAG-109",
+      "id": "TERM-RAG-110",
       "display": "准确率（Precision）",
       "label_zh": "准确率",
       "label_en": "Precision",
@@ -987,7 +996,7 @@
       "note": "相关结果占返回结果比例"
     },
     {
-      "id": "TERM-RAG-110",
+      "id": "TERM-RAG-111",
       "display": "召回率（Recall）",
       "label_zh": "召回率",
       "label_en": "Recall",
@@ -996,7 +1005,7 @@
       "note": "找到目标证据的能力"
     },
     {
-      "id": "TERM-RAG-111",
+      "id": "TERM-RAG-112",
       "display": "命中率（Hit Rate）",
       "label_zh": "命中率",
       "label_en": "Hit Rate",
@@ -1005,7 +1014,7 @@
       "note": "Top-K 是否包含目标"
     },
     {
-      "id": "TERM-RAG-112",
+      "id": "TERM-RAG-113",
       "display": "平均倒数排名（Mean Reciprocal Rank，MRR）",
       "label_zh": "平均倒数排名",
       "label_en": "Mean Reciprocal Rank，MRR",
@@ -1014,7 +1023,7 @@
       "note": "首个正确结果的位置"
     },
     {
-      "id": "TERM-RAG-113",
+      "id": "TERM-RAG-114",
       "display": "归一化折损累计增益（Normalized Discounted Cumulative Gain，nDCG）",
       "label_zh": "归一化折损累计增益",
       "label_en": "Normalized Discounted Cumulative Gain，nDCG",
@@ -1023,7 +1032,7 @@
       "note": "有等级相关性的排序质量"
     },
     {
-      "id": "TERM-RAG-114",
+      "id": "TERM-RAG-115",
       "display": "答案正确性（Answer Correctness）",
       "label_zh": "答案正确性",
       "label_en": "Answer Correctness",
@@ -1032,7 +1041,7 @@
       "note": "答案与参考事实一致性"
     },
     {
-      "id": "TERM-RAG-115",
+      "id": "TERM-RAG-116",
       "display": "引用准确率（Citation Accuracy）",
       "label_zh": "引用准确率",
       "label_en": "Citation Accuracy",
@@ -1041,7 +1050,7 @@
       "note": "引用是否真正支持断言"
     },
     {
-      "id": "TERM-RAG-116",
+      "id": "TERM-RAG-117",
       "display": "大语言模型裁判（LLM-as-a-Judge）",
       "label_zh": "大语言模型裁判",
       "label_en": "LLM-as-a-Judge",
@@ -1050,7 +1059,7 @@
       "note": "使用模型评分"
     },
     {
-      "id": "TERM-RAG-117",
+      "id": "TERM-RAG-118",
       "display": "消融实验（Ablation Study）",
       "label_zh": "消融实验",
       "label_en": "Ablation Study",
@@ -1059,7 +1068,7 @@
       "note": "移除模块判断贡献"
     },
     {
-      "id": "TERM-RAG-118",
+      "id": "TERM-RAG-119",
       "display": "回归测试（Regression Test）",
       "label_zh": "回归测试",
       "label_en": "Regression Test",
@@ -1068,7 +1077,7 @@
       "note": "防止更新破坏历史表现"
     },
     {
-      "id": "TERM-RAG-119",
+      "id": "TERM-RAG-120",
       "display": "增量更新（Incremental Update）",
       "label_zh": "增量更新",
       "label_en": "Incremental Update",
@@ -1077,7 +1086,7 @@
       "note": "只处理变化数据"
     },
     {
-      "id": "TERM-RAG-120",
+      "id": "TERM-RAG-121",
       "display": "幂等性（Idempotency）",
       "label_zh": "幂等性",
       "label_en": "Idempotency",
@@ -1086,7 +1095,7 @@
       "note": "重复执行结果一致"
     },
     {
-      "id": "TERM-RAG-121",
+      "id": "TERM-RAG-122",
       "display": "灰度发布（Canary Release）",
       "label_zh": "灰度发布",
       "label_en": "Canary Release",
@@ -1095,7 +1104,7 @@
       "note": "不使用 Gray Release"
     },
     {
-      "id": "TERM-RAG-122",
+      "id": "TERM-RAG-123",
       "display": "双写（Dual Write）",
       "label_zh": "双写",
       "label_en": "Dual Write",
@@ -1104,7 +1113,7 @@
       "note": "新旧版本并行写入"
     },
     {
-      "id": "TERM-RAG-123",
+      "id": "TERM-RAG-124",
       "display": "原子切换（Atomic Switch）",
       "label_zh": "原子切换",
       "label_en": "Atomic Switch",
@@ -1113,7 +1122,7 @@
       "note": "在线版本一次切换"
     },
     {
-      "id": "TERM-RAG-124",
+      "id": "TERM-RAG-125",
       "display": "缓存（Caching）",
       "label_zh": "缓存",
       "label_en": "Caching",
@@ -1122,7 +1131,7 @@
       "note": "检索、重排或答案缓存"
     },
     {
-      "id": "TERM-RAG-125",
+      "id": "TERM-RAG-126",
       "display": "限流（Rate Limiting）",
       "label_zh": "限流",
       "label_en": "Rate Limiting",
@@ -1131,7 +1140,7 @@
       "note": "控制请求速率"
     },
     {
-      "id": "TERM-RAG-126",
+      "id": "TERM-RAG-127",
       "display": "背压（Backpressure）",
       "label_zh": "背压",
       "label_en": "Backpressure",
@@ -1140,7 +1149,7 @@
       "note": "下游过载时抑制上游"
     },
     {
-      "id": "TERM-RAG-127",
+      "id": "TERM-RAG-128",
       "display": "熔断（Circuit Breaking）",
       "label_zh": "熔断",
       "label_en": "Circuit Breaking",
@@ -1149,7 +1158,7 @@
       "note": "故障时停止调用"
     },
     {
-      "id": "TERM-RAG-128",
+      "id": "TERM-RAG-129",
       "display": "可观测性（Observability）",
       "label_zh": "可观测性",
       "label_en": "Observability",
@@ -1158,7 +1167,7 @@
       "note": "指标、日志和追踪"
     },
     {
-      "id": "TERM-RAG-129",
+      "id": "TERM-RAG-130",
       "display": "分布式追踪（Distributed Tracing）",
       "label_zh": "分布式追踪",
       "label_en": "Distributed Tracing",
@@ -1167,7 +1176,7 @@
       "note": "串联调用链"
     },
     {
-      "id": "TERM-RAG-130",
+      "id": "TERM-RAG-131",
       "display": "间接提示注入（Indirect Prompt Injection）",
       "label_zh": "间接提示注入",
       "label_en": "Indirect Prompt Injection",
@@ -1176,7 +1185,7 @@
       "note": "恶意指令来自检索文档"
     },
     {
-      "id": "TERM-RAG-131",
+      "id": "TERM-RAG-132",
       "display": "数据投毒（Data Poisoning）",
       "label_zh": "数据投毒",
       "label_en": "Data Poisoning",
@@ -1185,7 +1194,7 @@
       "note": "恶意内容污染知识库"
     },
     {
-      "id": "TERM-RAG-132",
+      "id": "TERM-RAG-133",
       "display": "灾难恢复（Disaster Recovery）",
       "label_zh": "灾难恢复",
       "label_en": "Disaster Recovery",
@@ -1194,7 +1203,7 @@
       "note": "备份、恢复和重建"
     },
     {
-      "id": "TERM-RAG-133",
+      "id": "TERM-RAG-134",
       "display": "基础检索增强生成（Naive RAG）",
       "label_zh": "基础检索增强生成",
       "label_en": "Naive RAG",
@@ -1203,7 +1212,7 @@
       "note": "基线流程"
     },
     {
-      "id": "TERM-RAG-134",
+      "id": "TERM-RAG-135",
       "display": "高级检索增强生成（Advanced RAG）",
       "label_zh": "高级检索增强生成",
       "label_en": "Advanced RAG",
@@ -1212,7 +1221,7 @@
       "note": "查询、检索和生成优化"
     },
     {
-      "id": "TERM-RAG-135",
+      "id": "TERM-RAG-136",
       "display": "模块化检索增强生成（Modular RAG）",
       "label_zh": "模块化检索增强生成",
       "label_en": "Modular RAG",
@@ -1221,7 +1230,7 @@
       "note": "组件化和路由组合"
     },
     {
-      "id": "TERM-RAG-136",
+      "id": "TERM-RAG-137",
       "display": "智能体检索增强生成（Agentic RAG）",
       "label_zh": "智能体检索增强生成",
       "label_en": "Agentic RAG",
@@ -1230,7 +1239,7 @@
       "note": "动态决策闭环"
     },
     {
-      "id": "TERM-RAG-137",
+      "id": "TERM-RAG-138",
       "display": "自适应检索（Adaptive Retrieval）",
       "label_zh": "自适应检索",
       "label_en": "Adaptive Retrieval",
@@ -1239,7 +1248,7 @@
       "note": "动态决定是否和如何检索"
     },
     {
-      "id": "TERM-RAG-138",
+      "id": "TERM-RAG-139",
       "display": "自反思检索增强生成（Self-RAG）",
       "label_zh": "自反思检索增强生成",
       "label_en": "Self-RAG",
@@ -1248,7 +1257,7 @@
       "note": "检索与反思控制"
     },
     {
-      "id": "TERM-RAG-139",
+      "id": "TERM-RAG-140",
       "display": "纠错检索增强生成（Corrective RAG，CRAG）",
       "label_zh": "纠错检索增强生成",
       "label_en": "Corrective RAG，CRAG",
@@ -1257,7 +1266,7 @@
       "note": "检索质量评估和纠错"
     },
     {
-      "id": "TERM-RAG-140",
+      "id": "TERM-RAG-141",
       "display": "图检索增强生成（GraphRAG）",
       "label_zh": "图检索增强生成",
       "label_en": "GraphRAG",
@@ -1266,7 +1275,7 @@
       "note": "图结构和社区摘要检索"
     },
     {
-      "id": "TERM-RAG-141",
+      "id": "TERM-RAG-142",
       "display": "多模态检索增强生成（Multimodal RAG）",
       "label_zh": "多模态检索增强生成",
       "label_en": "Multimodal RAG",
@@ -1275,7 +1284,7 @@
       "note": "文本、图像、表格等共同检索"
     },
     {
-      "id": "TERM-RAG-142",
+      "id": "TERM-RAG-143",
       "display": "深度研究（Deep Research）",
       "label_zh": "深度研究",
       "label_en": "Deep Research",
@@ -1284,7 +1293,7 @@
       "note": "多步搜索、验证和综合"
     },
     {
-      "id": "TERM-RAG-143",
+      "id": "TERM-RAG-144",
       "display": "智能体（Agent）",
       "label_zh": "智能体",
       "label_en": "Agent",
@@ -1293,7 +1302,7 @@
       "note": "具备状态、工具和动态决策"
     },
     {
-      "id": "TERM-RAG-144",
+      "id": "TERM-RAG-145",
       "display": "工具调用（Tool Calling）",
       "label_zh": "工具调用",
       "label_en": "Tool Calling",
@@ -1302,7 +1311,7 @@
       "note": "调用外部能力"
     },
     {
-      "id": "TERM-RAG-145",
+      "id": "TERM-RAG-146",
       "display": "提示工程（Prompt Engineering）",
       "label_zh": "提示工程",
       "label_en": "Prompt Engineering",

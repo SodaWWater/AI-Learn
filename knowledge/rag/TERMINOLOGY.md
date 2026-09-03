@@ -89,6 +89,7 @@
 | 命题化切分（Proposition-based Chunking） | 命题切分 | 拆成原子事实 |
 | 上下文化切分（Contextual Chunking） | Contextual Chunking | 为片段补充局部上下文 |
 | 延迟切分（Late Chunking） | Late Chunking | 先对长文编码，再按片段边界池化词元表示 |
+| 假设问题索引（Hypothetical Question Indexing） | Hypothetical Questions | 为文档片段生成可能问题并以问题表示辅助召回；区别于查询侧多查询扩展 |
 | 词元（Token） | Token | 不使用“标记”替代模型词元 |
 | 上下文窗口（Context Window） | Context Window | 模型可接受输入范围 |
 | 向量嵌入（Embedding） | Embedding | 表示模型或向量结果按语境说明 |

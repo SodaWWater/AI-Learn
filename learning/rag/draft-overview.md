@@ -8,7 +8,7 @@ mindmap
     RAG_01["RAG-01 基础与边界 · 10 点"]
     RAG_02["RAG-02 系统架构与生命周期 · 10 点"]
     RAG_03["RAG-03 文档解析与数据治理 · 15 点"]
-    RAG_04["RAG-04 Chunking · 16 点"]
+    RAG_04["RAG-04 Chunking · 17 点"]
     RAG_05["RAG-05 Embedding · 16 点"]
     RAG_06["RAG-06 存储与索引 · 15 点"]
     RAG_07["RAG-07 Query 理解 · 12 点"]

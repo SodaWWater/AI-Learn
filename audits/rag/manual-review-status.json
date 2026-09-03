@@ -13,9 +13,9 @@
     "all_source_units": 695,
     "semantic_units": 653,
     "preclassified_structural_resource_or_placeholder_units": 42,
-    "manually_reviewed_semantic_units": 217,
-    "pending_manual_semantic_units": 436,
-    "manual_semantic_coverage_percent": 33.23
+    "manually_reviewed_semantic_units": 241,
+    "pending_manual_semantic_units": 412,
+    "manual_semantic_coverage_percent": 36.91
   },
   "source_queue": [
     {
@@ -23,10 +23,10 @@
       "source_id": "xiaolin-ai-learning",
       "all_units": 127,
       "semantic_units": 127,
-      "manually_reviewed_semantic_units": 103,
-      "pending_manual_semantic_units": 24,
-      "status": "in_progress",
-      "next_source_unit_id": "RU-6b17b2d8cca7"
+      "manually_reviewed_semantic_units": 127,
+      "pending_manual_semantic_units": 0,
+      "status": "completed",
+      "next_source_unit_id": null
     },
     {
       "order": 2,
@@ -35,7 +35,7 @@
       "semantic_units": 80,
       "manually_reviewed_semantic_units": 14,
       "pending_manual_semantic_units": 66,
-      "status": "pending",
+      "status": "in_progress",
       "next_source_unit_id": "RU-58be80727d76"
     },
     {
@@ -76,8 +76,8 @@
     "checkpoint_after_each_batch": true
   },
   "current_cursor": {
-    "source_id": "xiaolin-ai-learning",
-    "source_unit_id": "RU-6b17b2d8cca7"
+    "source_id": "ai-agent-interview-guide",
+    "source_unit_id": "RU-58be80727d76"
   },
   "completion_gate": [
     "pending_manual_semantic_units_equals_zero",
@@ -88,5 +88,5 @@
     "original_source_coverage_report_is_complete",
     "normal_repository_validation_passes"
   ],
-  "next_action": "Review the remaining 24 xiaolin-ai-learning units beginning at RU-6b17b2d8cca7; read the pinned source body and complete this source without crossing into the next source."
+  "next_action": "Review the next 20 to 30 ai-agent-interview-guide units beginning at RU-58be80727d76; read the pinned source body and preserve complete semantic boundaries."
 }

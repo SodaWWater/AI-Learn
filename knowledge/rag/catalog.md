@@ -1,6 +1,6 @@
 # RAG 原子知识目录
 
-当前版本共 **190** 个原子知识点，状态为 `inventory_draft`。
+当前版本共 **191** 个原子知识点，状态为 `inventory_draft`。
 
 > 原子目录用于防止去重时丢失不同角度的信息；它不是已完成的标准答案。
 
@@ -66,6 +66,7 @@
 - `RAG-04-014` Chunk ID、Parent ID 和版本设计
 - `RAG-04-015` Chunking 策略的离线评估和消融实验
 - `RAG-04-016` 延迟切分（Late Chunking）的先编码后池化与全文上下文保留
+- `RAG-04-017` 假设问题索引（Hypothetical Question Indexing）与文档侧问题增强
 
 ## RAG-05 Embedding
 

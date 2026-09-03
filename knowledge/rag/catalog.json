@@ -79,7 +79,8 @@
         {"id": "RAG-04-013", "title": "Overlap 的收益、冗余和存储代价"},
         {"id": "RAG-04-014", "title": "Chunk ID、Parent ID 和版本设计"},
         {"id": "RAG-04-015", "title": "Chunking 策略的离线评估和消融实验"},
-        {"id": "RAG-04-016", "title": "延迟切分（Late Chunking）的先编码后池化与全文上下文保留"}
+        {"id": "RAG-04-016", "title": "延迟切分（Late Chunking）的先编码后池化与全文上下文保留"},
+        {"id": "RAG-04-017", "title": "假设问题索引（Hypothetical Question Indexing）与文档侧问题增强"}
       ]
     },
     {

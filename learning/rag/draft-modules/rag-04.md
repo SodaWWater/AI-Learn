@@ -21,6 +21,7 @@ mindmap
     RAG_04_014["RAG-04-014 Chunk ID、Parent ID 和版本设计"]
     RAG_04_015["RAG-04-015 Chunking 策略的离线评估和消融实验"]
     RAG_04_016["RAG-04-016 延迟切分（Late Chunking）的先编码后池化与全文上下文保留"]
+    RAG_04_017["RAG-04-017 假设问题索引（Hypothetical Question Indexing）与文档侧问题增强"]
 ```
 
-共 **16** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。
+共 **17** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。

@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "2026-09-03-xiaolin-batch-04",
+    "source_id": "xiaolin-ai-learning",
+    "reviewed_at": "2026-09-03",
+    "source_commit": "7c363bb44d06f4ae2f05c2374d05760e1eef0ff1",
+    "first_source_unit_id": "RU-6b17b2d8cca7",
+    "last_source_unit_id": "RU-2a33ed3b9bbd",
+    "source_body_reviewed": true,
+    "unit_count": 24
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "decision_counts": {
+    "retain": 4,
+    "exact_duplicate": 16,
+    "partial_overlap": 1,
+    "cross_node": 3,
+    "non_rag": 0
+  },
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-6b17b2d8cca7"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-014", "RAG-05-012", "RAG-11-001", "RAG-11-002", "RAG-11-004", "RAG-11-019"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "文档到多个片段和向量的一对多派生关系使更新跨越检测、切分、嵌入、删除、写入和发布，不能类比单行 UPDATE。",
+      "preserved_details": ["新增文档执行完整摄取与索引链路", "修改可能改变片段数量、边界和表示", "删除必须清理全部派生片段以避免僵尸证据", "整文档先删后增是简单可靠的基线", "稳定边界、内容寻址或结构化差分允许安全局部更新"],
+      "verification_flags": ["‘修改永远先删全部片段’和‘局部更新不可行’过于绝对，应按切分稳定性、标识、事务能力和变更范围选择", "非原子先删后增会形成服务空窗或部分失败，生产环境需要版本化、幂等和回滚"]
+    },
+    {
+      "source_unit_ids": ["RU-d90c3ede5760"],
+      "decision": "retain",
+      "atom_ids": ["RAG-03-009", "RAG-11-001", "RAG-11-002", "RAG-11-017"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-DATA-GOVERNANCE", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留内容哈希与修改时间组合检测变化的增量摄取机制。",
+      "preserved_details": ["保存稳定文档 ID、规范化内容哈希、源版本和派生片段列表", "先比较可信版本标记或修改时间，再按需计算哈希", "哈希不同生成更新事件", "SHA-256 适合内容身份，MD5 不承担安全完整性保证"],
+      "verification_flags": ["哈希计算不是无条件零成本，远程大文件仍涉及读取和传输", "规范化、元数据变更和理论碰撞会影响‘任何变化都不漏’的结论", "源时间戳可能缺失、粒度不足或不可信"]
+    },
+    {
+      "source_unit_ids": ["RU-b1dea90ce6cb"],
+      "decision": "retain",
+      "atom_ids": ["RAG-03-011", "RAG-04-014", "RAG-11-001", "RAG-11-002", "RAG-11-014"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留稳定文档标识、片段标识与版本关系对更新、删除、追踪和合规的基础作用。",
+      "preserved_details": ["片段保存 source_doc_id、chunk_id、版本、位置锚点和内容哈希", "文档到片段关系可由映射表或可过滤元数据维护", "删除和重摄取按文档与版本选择目标", "引用标识能回连源文档"],
+      "verification_flags": ["向量数据库未必支持高效前缀扫描，ID 前缀不是通用批量删除机制", "把 v3 写入永久文档 ID 可能破坏跨版本身份，身份与版本通常应分字段"]
+    },
+    {
+      "source_unit_ids": ["RU-369c77c98206"],
+      "decision": "retain",
+      "atom_ids": ["RAG-11-001", "RAG-11-002", "RAG-11-007", "RAG-11-009", "RAG-11-010", "RAG-11-017"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留定时轮询与事件驱动两种变化感知模式及其延迟、依赖和运维权衡。",
+      "preserved_details": ["低频来源可定期列举文档并比较版本或哈希", "Webhook、消息队列或变更数据捕获可推送源事件", "事件处理需要去重、排序、幂等、重试、死信和背压", "轮询需要游标、分页、增量水位和扫描预算", "事件为主加周期对账可弥补丢失事件"],
+      "verification_flags": ["具体内容管理系统的 Webhook 能力和交付保证属于版本信息", "事件驱动不保证几秒生效，后续还有解析、嵌入、发布和缓存刷新", "消息队列不是所有生产环境的无条件首选"]
+    },
+    {
+      "source_unit_ids": ["RU-a17b4fd40117"],
+      "decision": "retain",
+      "atom_ids": ["RAG-04-015", "RAG-05-012", "RAG-11-004", "RAG-11-018", "RAG-11-019"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留全量重建在小规模知识库、嵌入空间不兼容或切分策略重大变更时的适用性和成本边界。",
+      "preserved_details": ["全量重建简化旧片段对应与漏删问题", "更换不兼容嵌入模型通常要求全量重算向量", "重大切分或 Schema 变化可能要求新索引", "成本包括解析、嵌入、存储和验证", "独立版本构建可避免在线不可用"],
+      "verification_flags": ["全量重建不必然造成停机，蓝绿索引、别名或版本过滤可让旧版继续服务", "是否优于增量迁移需按数据量、窗口、成本和回滚要求判断"]
+    },
+    {
+      "source_unit_ids": ["RU-c4418d28fac0"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-015", "RAG-05-012", "RAG-10-002", "RAG-10-014", "RAG-11-002", "RAG-11-004", "RAG-11-017", "RAG-11-019"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-CHUNKING", "PS-EMBEDDING", "PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "保留知识索引蓝绿发布：并行构建新版本、影子或离线验证、原子切换、观察与回滚。",
+      "preserved_details": ["旧版服务时写入独立新版本", "冻结问题集比较新旧质量", "影子流量验证真实查询", "通过索引别名、路由或版本过滤切换", "保留旧版至观察窗口结束", "清理前确认引用、缓存和异步任务不再依赖"],
+      "verification_flags": ["同一集合 old/new 标签可能产生混写与过滤遗漏，物理隔离索引也是候选", "高风险场景还需人工审批和审计轨迹", "‘事件驱动+哈希+先删后增’不是统一生产默认方案"]
+    },
+    {
+      "source_unit_ids": ["RU-f7d37515f2d6"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-04-001", "RAG-04-015", "RAG-04-017", "RAG-05-010", "RAG-07-003", "RAG-08-004", "RAG-08-015", "RAG-10-014", "RAG-13-008"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-EMBEDDING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "把失败现象连接到切分、查询表述、文档侧问题增强和混合检索；新增文档侧假设问题索引原子，避免与查询侧多查询合并。",
+      "preserved_details": ["跨片段漏召回时检查切分与上下文回溯", "口语与正式文档不匹配时评估查询改写", "为片段离线生成潜在用户问题并以问题表示辅助召回", "假设问题索引发生在文档侧，Multi-Query 发生在查询侧", "型号、缩写和专名用 BM25 或字段检索补足", "按失败类别做消融"],
+      "verification_flags": ["检索不是系统唯一瓶颈", "文档侧生成问题会增加索引、重复与生成错误，需限制数量并校验", "混合检索不保证总是优于单路"]
+    },
+    {
+      "source_unit_ids": ["RU-2a88dec92827"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-004", "RAG-10-007", "RAG-10-008", "RAG-10-010", "RAG-10-012", "RAG-10-014"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "note": "与上一批评估章节重叠，保留人工标准不一致、端到端反馈慢和跨节点归因困难的落地视角。",
+      "preserved_details": ["检索层以问题到证据标注计算 Hit@K", "端到端检查忠实度、相关性和上下文覆盖", "人工评分需要准则与一致性测量", "组件指标与 trace 联合定位", "生产质量需要持续迭代"],
+      "verification_flags": ["Ragas 指标定义随版本变化", "三个自动指标不足以覆盖正确性、引用、安全、延迟、成本和业务成功", "Demo 两天、生产几周或几个月只是经验描述"]
+    },
+    {
+      "source_unit_ids": ["RU-7aab0332e4e9"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-04-001", "RAG-04-012", "RAG-04-015"],
+      "duplicate_of_atom_ids": ["RAG-04-001", "RAG-04-012", "RAG-04-015"],
+      "related_stage_ids": ["PS-CHUNKING"],
+      "note": "清单仅重复 rag-04 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-6efa53d923fe"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-04-006", "RAG-04-007", "RAG-04-008"],
+      "duplicate_of_atom_ids": ["RAG-04-006", "RAG-04-007", "RAG-04-008"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-CONTEXT-ASSEMBLY"],
+      "note": "清单仅重复 rag-05 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-e2d85243290c"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-05-005", "RAG-05-006", "RAG-05-010"],
+      "duplicate_of_atom_ids": ["RAG-05-005", "RAG-05-006", "RAG-05-010"],
+      "related_stage_ids": ["PS-EMBEDDING", "PS-EVALUATION"],
+      "note": "清单仅重复 rag-06 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-60a329f78f8c"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-05-002", "RAG-05-003", "RAG-05-015", "RAG-05-016"],
+      "duplicate_of_atom_ids": ["RAG-05-002", "RAG-05-003", "RAG-05-015", "RAG-05-016"],
+      "related_stage_ids": ["PS-EMBEDDING"],
+      "note": "清单仅重复 rag-07 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-ba738ef6c967"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-06-001", "RAG-06-002", "RAG-06-005", "RAG-06-011"],
+      "duplicate_of_atom_ids": ["RAG-06-001", "RAG-06-002", "RAG-06-005", "RAG-06-011"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL"],
+      "note": "清单仅重复 rag-08 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-7c8e4b65238f"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-06-012", "RAG-06-014", "RAG-11-008"],
+      "duplicate_of_atom_ids": ["RAG-06-012", "RAG-06-014", "RAG-11-008"],
+      "related_stage_ids": ["PS-STORAGE-INDEXING", "PS-RETRIEVAL", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "清单仅重复 rag-09 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-34d4c2e1a2e4"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004"],
+      "duplicate_of_atom_ids": ["RAG-08-001", "RAG-08-002", "RAG-08-003", "RAG-08-004"],
+      "related_stage_ids": ["PS-RETRIEVAL"],
+      "note": "清单仅重复 rag-11 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-0243acfc4ef3"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-007", "RAG-07-009"],
+      "duplicate_of_atom_ids": ["RAG-07-003", "RAG-07-004", "RAG-07-005", "RAG-07-007", "RAG-07-009"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL"],
+      "note": "清单仅重复 rag-12 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-b456a00b73e1"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-08-004", "RAG-08-005", "RAG-08-006"],
+      "duplicate_of_atom_ids": ["RAG-08-004", "RAG-08-005", "RAG-08-006"],
+      "related_stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING"],
+      "note": "清单仅重复 rag-13 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-aeb958270600"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-04-007", "RAG-07-003", "RAG-08-005", "RAG-08-010"],
+      "duplicate_of_atom_ids": ["RAG-04-007", "RAG-07-003", "RAG-08-005", "RAG-08-010"],
+      "related_stage_ids": ["PS-CHUNKING", "PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RERANKING"],
+      "note": "清单仅重复 rag-14 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-10ec443f4c3c"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-12-001", "RAG-12-002", "RAG-12-003", "RAG-12-004", "RAG-12-006", "RAG-12-007", "RAG-12-009"],
+      "duplicate_of_atom_ids": ["RAG-12-001", "RAG-12-002", "RAG-12-003", "RAG-12-004", "RAG-12-006", "RAG-12-007", "RAG-12-009"],
+      "related_stage_ids": ["PS-ADVANCED-RAG"],
+      "note": "清单仅重复 rag-15 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-2d7d616528b9"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-08-013", "RAG-12-009", "RAG-12-010"],
+      "duplicate_of_atom_ids": ["RAG-08-013", "RAG-12-009", "RAG-12-010"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ADVANCED-RAG"],
+      "note": "清单仅重复 rag-16 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-5a9020d7486f"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-08-015", "RAG-09-007", "RAG-09-008", "RAG-09-009", "RAG-09-010"],
+      "duplicate_of_atom_ids": ["RAG-08-015", "RAG-09-007", "RAG-09-008", "RAG-09-009", "RAG-09-010"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION"],
+      "note": "清单仅重复 rag-17 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-5c521c8caacb"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-10-001", "RAG-10-004", "RAG-10-005", "RAG-10-008", "RAG-10-010", "RAG-10-013"],
+      "duplicate_of_atom_ids": ["RAG-10-001", "RAG-10-004", "RAG-10-005", "RAG-10-008", "RAG-10-010", "RAG-10-013"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "清单仅重复 rag-18 同名问题、URL 和内容哈希；正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-6f65400d6342"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-11-001", "RAG-11-002", "RAG-11-004", "RAG-11-019"],
+      "duplicate_of_atom_ids": ["RAG-11-001", "RAG-11-002", "RAG-11-004", "RAG-11-019"],
+      "related_stage_ids": ["PS-DATA-INGESTION", "PS-STORAGE-INDEXING", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "清单仅重复 rag-19 同名问题、URL 和内容哈希；本批正文已审核。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-2a33ed3b9bbd"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-03-013", "RAG-08-015", "RAG-10-014", "RAG-13-008"],
+      "duplicate_of_atom_ids": ["RAG-03-013", "RAG-08-015", "RAG-10-014", "RAG-13-008"],
+      "related_stage_ids": ["PS-DOCUMENT-PARSING", "PS-RETRIEVAL", "PS-EVALUATION"],
+      "note": "清单仅重复 rag-20 同名问题、URL 和内容哈希；正文已由此前第一难及本批第二、第三难覆盖。",
+      "preserved_details": ["保留公开问题目录与固定内容哈希"], "verification_flags": []
+    }
+  ]
+}
