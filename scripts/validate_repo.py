@@ -323,6 +323,55 @@ def main() -> int:
     if expansion.get("coverage_saturated_stages") != saturated_count:
         errors.append("工作状态中的覆盖饱和节点数与覆盖记录不一致")
 
+    evidence_status_path = ROOT / "audits/rag/evidence-verification-status.json"
+    if evidence_status_path.exists():
+        evidence_status = load_json(
+            "audits/rag/evidence-verification-status.json", errors
+        )
+        if evidence_status.get("work_item_id") != "WP-P2-005":
+            errors.append("外部证据核验状态引用了错误的工作项")
+        registered_sources = evidence_status.get("registered_sources")
+        verified_sources = evidence_status.get("verified_sources")
+        pending_sources = evidence_status.get("pending_sources")
+        if registered_sources != len(current_source_items):
+            errors.append("外部证据核验的登记来源数与来源登记不一致")
+        if verified_sources + pending_sources != registered_sources:
+            errors.append("外部证据核验的已核验与待核验数量不守恒")
+
+        evidence_source_ids: list[str] = []
+        completed_batches = evidence_status.get("completed_batches", [])
+        if not isinstance(completed_batches, list):
+            errors.append("外部证据核验的 completed_batches 必须是数组")
+            completed_batches = []
+        for batch_rel_path in completed_batches:
+            batch_path = Path(str(batch_rel_path))
+            if batch_path.is_absolute() or ".." in batch_path.parts:
+                errors.append(f"外部证据批次路径不安全：{batch_rel_path}")
+                continue
+            full_batch_path = ROOT / batch_path
+            if not full_batch_path.is_file():
+                errors.append(f"外部证据核验引用了不存在的批次：{batch_rel_path}")
+                continue
+            batch = load_json(str(batch_path), errors)
+            records = batch.get("records", [])
+            if batch.get("source_count") != len(records):
+                errors.append(f"外部证据批次 {batch_path.name} 的 source_count 不一致")
+            for record in records:
+                source_id = record.get("source_id")
+                evidence_source_ids.append(source_id)
+                if source_id not in current_source_ids:
+                    errors.append(f"外部证据引用未知来源：{source_id}")
+                atom_refs = record.get("atom_ids", [])
+                if not atom_refs:
+                    errors.append(f"外部证据没有关联知识原子：{source_id}")
+                for atom_id in atom_refs:
+                    if atom_id not in atom_ids:
+                        errors.append(f"外部证据引用未知知识原子：{atom_id}")
+        if repeated := duplicates(evidence_source_ids):
+            errors.append(f"外部证据批次的来源重复：{repeated[:10]}")
+        if verified_sources != len(evidence_source_ids):
+            errors.append("外部证据核验的已核验数量与批次记录不一致")
+
     search_log_template = (ROOT / "templates/source-search-log.md").read_text(
         encoding="utf-8"
     )

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-01",
+  "verified_at": "2026-09-04",
+  "scope": "Ten pre-registered official documentation or repository URLs; no source discovery was performed.",
+  "source_count": 10,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "nvidia-rag-blueprint",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified_resource_entry",
+      "atom_ids": ["RAG-02-001", "RAG-02-002", "RAG-13-007"],
+      "verified_claims": ["The registered URL serves NVIDIA RAG Blueprint documentation."],
+      "boundary": "This batch verifies the documentation entry is current and reachable; blueprint-specific component behavior must be tied to its own versioned documentation before publication."
+    },
+    {
+      "source_id": "azure-ai-search-rag-overview-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-001", "RAG-02-002", "RAG-06-009", "RAG-12-004"],
+      "verified_claims": ["Azure AI Search documents separate agentic retrieval with LLM-assisted query planning and multi-source access from classic RAG using hybrid search and semantic ranking.", "Its agentic-retrieval guidance describes knowledge sources that generate chunking and vectorization pipelines."],
+      "boundary": "The document describes Azure AI Search product patterns, not a vendor-neutral guarantee that either pattern is best for every system."
+    },
+    {
+      "source_id": "azure-indexer-change-delete-detection-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-008", "RAG-02-010", "RAG-06-014"],
+      "verified_claims": ["Azure Blob indexers use built-in timestamps to detect new and changed content.", "The documentation states that object deletions are not tracked automatically and recommends a soft-delete strategy to avoid orphaned search documents."],
+      "boundary": "This is Azure Blob indexer behavior; other ingestion systems require their own deletion-propagation design."
+    },
+    {
+      "source_id": "azure-document-access-control-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-012", "RAG-06-010", "RAG-11-004"],
+      "verified_claims": ["Azure documents document-level security filtering using identity or group metadata.", "The POSIX-like ACL and RBAC-scope approach is documented as preview, so availability and API behavior are release-sensitive."],
+      "boundary": "Security filtering is not a substitute for a complete authorization design, and preview features must not be presented as generally available."
+    },
+    {
+      "source_id": "unstructured-partitioning-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-003", "RAG-03-004", "RAG-03-006", "RAG-03-013"],
+      "verified_claims": ["Unstructured documents rule-based and model-based partitioning trade-offs in speed, cost and transformation quality.", "The current guide describes VLM, High Res and Auto strategies; Auto is recommended there for runtime quality and cost optimization."],
+      "boundary": "The recommendation is product-specific and must be tested against the document mix, quality target and budget of the target system."
+    },
+    {
+      "source_id": "unstructured-chunking-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-04-004", "RAG-04-006", "RAG-04-010", "RAG-04-011"],
+      "verified_claims": ["The current documentation exposes basic, title, page and similarity chunking strategies.", "It separately documents table handling, overlap settings and contextual chunking."],
+      "boundary": "Available strategies and parameters are interfaces, not evidence that a particular strategy improves retrieval for every corpus."
+    },
+    {
+      "source_id": "unstructured-pii-redaction-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-012", "RAG-03-014", "RAG-11-004"],
+      "verified_claims": ["The PII-redaction documentation exposes workflow placement, detection metadata and a configurable confidence threshold.", "It distinguishes redaction mode from anonymization settings."],
+      "boundary": "PII detection confidence is not a compliance guarantee; false positives, false negatives and audit requirements remain system-specific."
+    },
+    {
+      "source_id": "langchain-text-splitters-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-04-002", "RAG-04-003", "RAG-04-012"],
+      "verified_claims": ["LangChain documents several document-splitting strategies and presents RecursiveCharacterTextSplitter as a common starting point for balancing context preservation and chunk-size management."],
+      "boundary": "The stated default is framework guidance, not a universal RAG configuration recommendation."
+    },
+    {
+      "source_id": "liteparse-official-repository-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-003", "RAG-03-004", "RAG-03-006", "RAG-03-013"],
+      "verified_claims": ["The registered repository describes LiteParse as an open-source PDF parser with spatial text parsing and bounding boxes.", "Its README lists Markdown, JSON and text outputs, table-oriented structured Markdown, OCR options and multiple language bindings."],
+      "boundary": "Repository capabilities and performance must be treated as version-specific; this record does not certify production suitability."
+    },
+    {
+      "source_id": "cohere-embedding-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-004", "RAG-05-006", "RAG-05-009", "RAG-05-016"],
+      "verified_claims": ["Cohere documents search_document for passages to be searched and search_query for query embedding examples.", "The current example uses output_dimension and embedding_types parameters with Embed v4.0."],
+      "boundary": "Input types, model availability and vector-output options are API-version-specific and must be checked again when implementation begins."
+    }
+  ]
+}

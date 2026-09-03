@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-04",
+  "work_item_id": "WP-P2-005",
+  "scope": "only sources/rag-current-sources.json; no new external search",
+  "registered_sources": 170,
+  "verified_sources": 10,
+  "pending_sources": 160,
+  "freshness_inventory": {
+    "foundational": 1,
+    "stable": 25,
+    "research": 49,
+    "active": 22,
+    "volatile": 73
+  },
+  "completed_batches": [
+    "audits/rag/evidence/2026-09-04-foundation-batch-01.json"
+  ],
+  "next_priority": "Continue with the remaining volatile official documentation and official repositories. Verify claim boundaries from each registered URL before treating a source as evidence for formal knowledge."
+}
