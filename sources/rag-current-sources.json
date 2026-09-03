@@ -167,7 +167,7 @@
       "id": "parsebench-2026",
       "type": "paper",
       "url": "https://arxiv.org/abs/2604.08538",
-      "version": "v2; reviewed 2026-09-02",
+      "version": "v3, 2026-04-13; reviewed 2026-09-04",
       "freshness": "research",
       "stage_ids": ["PS-DOCUMENT-PARSING", "PS-EVALUATION"],
       "use_for": ["文档解析基准", "复杂文档任务覆盖", "解析器能力与 Agent 下游使用的连接"]
@@ -869,7 +869,7 @@
       "id": "rag-fusion-2024",
       "type": "paper",
       "url": "https://arxiv.org/abs/2402.03367",
-      "version": "v1, 2024-01-31",
+      "version": "v2, 2024-02-21; reviewed 2026-09-04",
       "freshness": "research",
       "stage_ids": ["PS-QUERY-REWRITE", "PS-RETRIEVAL", "PS-RESULT-FUSION", "PS-EVALUATION"],
       "use_for": ["Multi-query Generation plus RRF", "Original-query Preservation", "Off-topic Expansion Failure", "Latency and Relevance Evaluation"]

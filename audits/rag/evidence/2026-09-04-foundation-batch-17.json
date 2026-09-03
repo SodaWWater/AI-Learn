@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-17",
+  "verified_at": "2026-09-04",
+  "scope": "Two pre-registered sources for intent-routing evaluation and lexical retrieval foundations; no source discovery was performed.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "nowcoder-xunlei-ai-intent-routing-2026",
+      "source_type": "first_person_interview",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-07-002", "RAG-07-010", "RAG-07-011", "RAG-13-007"],
+      "verified_claims": [
+        "The interview prompt asks how to establish that rule-based intent routing covers online traffic; the page warns that dozens of examples cannot establish full coverage when compound intents, ellipsis, ambiguity and new business types occur.",
+        "The page's proposed practice is shadow-running rule and model routes, retaining the old path for serving, clustering disagreements for human diagnosis, and tracking hit, rejection, misrouting and long-tail rates.",
+        "It describes a confidence-gated route from high-confidence rules to a classifier and then a planner for low-confidence cases."
+      ],
+      "boundary": "This is a user-authored interview post and整理答案, not an official company design or peer-reviewed measurement. Use it only as a scenario/question signal; quantitative or normative claims require independent technical evidence."
+    },
+    {
+      "source_id": "bm25-foundations-2009",
+      "source_type": "paper",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-08-002", "RAG-08-003", "RAG-08-007", "RAG-10-005"],
+      "verified_claims": [
+        "The survey presents the Probabilistic Relevance Framework and Probability Ranking Principle, including the Binary Independence Model.",
+        "It derives BM25 and BM25F and explains term-frequency saturation and document-length normalization in lexical ranking.",
+        "It discusses parameter optimization and common historical heuristic ranges, while emphasizing dependence on collection and task."
+      ],
+      "boundary": "This is a 2009 lexical-retrieval survey. Parameter ranges are historical heuristics, not universal defaults, and the paper does not establish modern ANN or hybrid-search production performance."
+    }
+  ]
+}
