@@ -2,7 +2,7 @@
   "schema_version":1,
   "batch":{"id":"2026-09-03-ai-agent-interview-guide-batch-02","source_id":"ai-agent-interview-guide","reviewed_at":"2026-09-03","source_commit":"9a987322f2d82ddabe4c1aabc7b4795749fa90a2","first_source_unit_id":"RU-cd7cb291ab7d","last_source_unit_id":"RU-7191ffad5f24","source_body_reviewed":true,"unit_count":30},
   "rule":"Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
-  "decision_counts":{"retain":19,"exact_duplicate":0,"partial_overlap":8,"cross_node":3,"non_rag":0},
+  "decision_counts":{"retain":22,"exact_duplicate":0,"partial_overlap":5,"cross_node":3,"non_rag":0},
   "mappings":[
     {"source_unit_ids":["RU-cd7cb291ab7d"],"decision":"retain","atom_ids":["RAG-07-003","RAG-07-004","RAG-07-009","RAG-07-011"],"related_stage_ids":["PS-QUERY-UNDERSTANDING","PS-QUERY-REWRITE","PS-RETRIEVAL","PS-RESULT-FUSION"],"note":"查询改写对齐口语与文档术语，并保留原查询、多路融合和实体漂移风险。","preserved_details":["同义扩展、拆问句和主语补全","原句与改写句并行检索","高敏场景优先人工词表与模板"],"verification_flags":[]},
     {"source_unit_ids":["RU-e35582a9ad97"],"decision":"retain","atom_ids":["RAG-07-005","RAG-08-010","RAG-09-010"],"related_stage_ids":["PS-QUERY-REWRITE","PS-RETRIEVAL","PS-RERANKING","PS-CITATION-VERIFICATION"],"note":"HyDE 通过假想答案文档的向量表示改善查询与文档表述差距，同时有引入错误主题的风险。","preserved_details":["先生成假想文档再嵌入检索","适合查询与文档风格差异明显的场景","需重排与引用校验"],"verification_flags":[]},
