@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "2026-09-03-agent-guide-batch-01",
+    "source_id": "agent-guide",
+    "reviewed_at": "2026-09-03",
+    "source_commit": "d4fe53f4a9153123b159d0e6b632117a34721a92",
+    "first_source_unit_id": "RU-dd5a6a9f6619",
+    "last_source_unit_id": "RU-182795f71d81",
+    "source_body_reviewed": true,
+    "unit_count": 25
+  },
+  "rule": "Only mark exact_duplicate when meaning, conditions, and conclusion are all equivalent. Preserve all distinct implementation, boundary, counterexample, version, problem, and evaluation information.",
+  "decision_counts": {
+    "retain": 5,
+    "exact_duplicate": 1,
+    "partial_overlap": 12,
+    "cross_node": 7,
+    "non_rag": 0
+  },
+  "mappings": [
+    {
+      "source_unit_ids": ["RU-dd5a6a9f6619"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-10-001", "RAG-10-004", "RAG-10-007", "RAG-10-008", "RAG-10-009", "RAG-10-013", "RAG-11-008", "RAG-11-018", "RAG-13-012"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "评估体系从组件、轨迹和端到端三层展开，同时覆盖任务完成、工具轨迹、证据事实性、成本性能与安全治理，属于跨节点评估总览。",
+      "preserved_details": ["区分 Component Eval、Trajectory Eval 与 End-to-End Eval", "保留任务、工具、证据、成本和安全指标组", "强调仅看端到端成功率无法定位模型、工具、检索、上下文或安全拦截的失败来源"],
+      "verification_flags": ["指标命名和阈值未由本来源证明", "Agent 评估与 RAG 评估的边界需在后续图谱映射中保留"]
+    },
+    {
+      "source_unit_ids": ["RU-939fc3ee5c92"],
+      "decision": "retain",
+      "atom_ids": ["RAG-02-007", "RAG-09-007", "RAG-10-014", "RAG-11-017"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "Trace 保存运行、工具、证据、成本和评分字段，是可追溯评估与失败归因的独立实施要求。",
+      "preserved_details": ["保存 run_id、case_id 和每步工具参数", "记录工具返回摘要、截图或文档证据路径", "记录 token、成本、耗时、最终答案和评分"],
+      "verification_flags": ["截图、文档路径和敏感参数的留存策略需按合规要求设计"]
+    },
+    {
+      "source_unit_ids": ["RU-0af3737b3efa"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-002", "RAG-10-003", "RAG-10-012", "RAG-10-014"],
+      "related_stage_ids": ["PS-DATA-GOVERNANCE", "PS-EVALUATION"],
+      "note": "最小评测集给出正常、边界、工具失败和安全拒绝的分层构成，并要求扩展回归测试。",
+      "preserved_details": ["20 条起步集按 10/5/3/2 分层", "上线或写入简历前扩展到 50 条以上", "加入回归测试覆盖历史行为"],
+      "verification_flags": ["20 和 50 不是通用充分样本量，应按任务风险和统计置信度调整"]
+    },
+    {
+      "source_unit_ids": ["RU-db7c6d9897bb"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-003", "RAG-10-011", "RAG-10-012", "RAG-10-014"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "评测陷阱清单保留 happy path 偏差、数据泄漏、裁判复用、无 trace、成本遗漏和安全拒绝误判等独立风险。",
+      "preserved_details": ["区分只测正常路径与覆盖边界", "指出 eval case 与 prompt 泄漏及同模型生成裁判偏差", "强调没有 trace 无法定位失败", "安全拒绝不能简单判作失败"],
+      "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-9c3d62ecf0e6"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-010", "RAG-10-011", "RAG-13-006", "RAG-13-012"],
+      "related_stage_ids": ["PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "工具推荐与自动评测和 Agent 评测环境原子部分重叠，但保留 Promptfoo、DeepEval、Inspect、RAGAS 和 BrowserGym 的来源线索与用途区分。",
+      "preserved_details": ["Promptfoo 面向提示、RAG、Agent 回归与红队", "DeepEval 提供 pytest 风格评测", "Inspect 偏模型能力与安全评测", "RAGAS 偏 RAG 评测，BrowserGym 偏 Web Agent 环境"],
+      "verification_flags": ["工具名称、API、许可证、版本和当前能力需后续官方核验", "本单元只证明工具线索，不证明指标正确性"]
+    },
+    {
+      "source_unit_ids": ["RU-33c098896b0b"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-004", "RAG-10-007", "RAG-10-009", "RAG-10-013", "RAG-13-009", "RAG-13-010"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "简历表达示例与已有评估指标和项目叙事原子部分重叠，但保留其覆盖 eval case、trace、引用、恢复、成本和高风险拦截的组合视角。",
+      "preserved_details": ["示例规模为 50 条 eval case", "记录 tool call、observation、token、latency 和 artifacts", "按任务成功率、引用准确率、恢复率、平均成本和高风险动作拦截率回归"],
+      "verification_flags": ["简历示例不是通用验收阈值，也不应包装成真实项目事实"]
+    },
+    {
+      "source_unit_ids": ["RU-92487d4cc3d4"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-004", "RAG-10-007", "RAG-10-008", "RAG-10-009", "RAG-10-013"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "核心指标表与既有评估原子部分重叠，保留从任务完成、工具轨迹、证据事实性到成本安全的完整分组。",
+      "preserved_details": ["task_success_rate 与 partial_success_rate 区分完整和部分完成", "constraint_satisfaction 覆盖预算、时间、格式和安全", "citation_precision、evidence_recall、hallucination_rate 和 abstention_quality 分工不同"],
+      "verification_flags": ["指标定义需固定标注协议，不能只按字段名计算"]
+    },
+    {
+      "source_unit_ids": ["RU-c1d0c1113276"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-007", "RAG-10-013"],
+      "related_stage_ids": ["PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "note": "任务完成指标与答案正确性、业务成功原子部分重叠，但保留部分成功、约束满足和用户接受率的多维结果定义。",
+      "preserved_details": ["task_success_rate 只表示最终完成与否", "partial_success_rate 保留部分目标完成", "user_acceptance_rate 引入人工接受结果"],
+      "verification_flags": ["用户接受率受任务类型、标注者和交互设计影响"]
+    },
+    {
+      "source_unit_ids": ["RU-2a412765adc5"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-02-006", "RAG-02-010", "RAG-10-001", "RAG-10-014", "RAG-11-008", "RAG-11-017"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "工具选择、参数、失败率、步数、重复动作和恢复率同时连接控制流、错误流、评估和可观测性。",
+      "preserved_details": ["tool_call_accuracy 与 tool_error_rate 分开", "avg_steps 和 repeated_action_rate 描述轨迹效率", "recovery_rate 衡量出错后能否继续完成任务"],
+      "verification_flags": ["工具错误需区分参数错误、服务错误、权限错误和业务拒绝"]
+    },
+    {
+      "source_unit_ids": ["RU-dadf79b95352"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-006", "RAG-09-007", "RAG-09-008", "RAG-09-010", "RAG-10-008", "RAG-10-009"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-CITATION-VERIFICATION", "PS-EVALUATION"],
+      "note": "证据与事实性指标和 grounded generation、引用、拒答原子部分重叠，但保留证据支持、必要证据召回、幻觉和拒答质量的并列关系。",
+      "preserved_details": ["citation_precision 判断引用是否支持结论", "evidence_recall 判断是否找到必要证据", "hallucination_rate 统计无证据断言", "abstention_quality 评价证据不足时的拒答"],
+      "verification_flags": ["precision/recall 的标注单位需明确为断言、文档或答案片段"]
+    },
+    {
+      "source_unit_ids": ["RU-c18faee2713a"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-10-013", "RAG-11-006", "RAG-11-008", "RAG-11-018"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-ANSWER-GENERATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "成本与性能指标贯穿检索、生成和生产治理，需与质量和缓存策略联合分析。",
+      "preserved_details": ["同时记录 latency p50/p95、token_cost、tool_cost 和 cache_hit_rate", "保留延迟分位数与平均值不同的含义", "成本指标覆盖模型 token、外部工具和缓存收益"],
+      "verification_flags": ["成本单位、汇率、批处理和缓存命中口径需固定"]
+    },
+    {
+      "source_unit_ids": ["RU-256a5fd65f80"],
+      "decision": "exact_duplicate",
+      "atom_ids": ["RAG-10-001"],
+      "duplicate_of_atom_ids": ["RAG-10-001"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "三层评估标题与本章入口表达完全相同，正文层级已由 RU-dd5a6a9f6619 保留；本单元仅保留独立来源定位。",
+      "preserved_details": ["保留 Component、Trajectory、End-to-End 三层标题定位"],
+      "verification_flags": []
+    },
+    {
+      "source_unit_ids": ["RU-263c1711a49f"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-10-013", "RAG-11-013", "RAG-11-015", "RAG-11-016"],
+      "related_stage_ids": ["PS-DATA-GOVERNANCE", "PS-CITATION-VERIFICATION", "PS-EVALUATION", "PS-PRODUCTION-GOVERNANCE"],
+      "note": "安全与治理指标连接拒绝、权限、提示注入、秘密泄漏和人工升级多个生产边界。",
+      "preserved_details": ["unsafe_action_block_rate 衡量高风险动作拦截", "secret_leak_rate 与 policy_violation_rate 分开", "human_escalation_rate 记录需要人工确认的比例"],
+      "verification_flags": ["安全指标必须结合攻击集、权限模型和人工审核策略定义"]
+    },
+    {
+      "source_unit_ids": ["RU-94b91de44019"],
+      "decision": "retain",
+      "atom_ids": ["RAG-10-002", "RAG-10-003", "RAG-10-012"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "Eval Case 结构定义类别、任务、期望行为、禁止行为和评分权重，保留为可执行测试用例模式。",
+      "preserved_details": ["expected_behavior 与 forbidden_behavior 同时存在", "评分可拆分 task_success、evidence 和 format", "示例包含访问官方文档、提取命令和给出来源 URL"],
+      "verification_flags": ["示例权重和任务只是模板示例，不是通用标准"]
+    },
+    {
+      "source_unit_ids": ["RU-f8ceef5b8d7d"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-10-011", "RAG-10-012", "RAG-10-014"],
+      "related_stage_ids": ["PS-EVALUATION"],
+      "note": "评分方式与人工、规则、LLM 裁判和混合评估原子部分重叠，但保留稳定性、可解释性、校准成本和实现复杂度的比较。",
+      "preserved_details": ["Exact match 便宜稳定但只适合确定答案", "Rule-based scorer 可解释但维护成本高", "LLM-as-judge 灵活但需要校准", "Human review 质量高但成本高", "Hybrid 平衡覆盖与稳定但实现复杂"],
+      "verification_flags": ["LLM 裁判不能替代关键指标的规则或人工抽检"]
+    },
+    {
+      "source_unit_ids": ["RU-b6b308f93695"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-01-008", "RAG-09-001", "RAG-09-002", "RAG-09-005", "RAG-09-015", "RAG-12-013"],
+      "related_stage_ids": ["PS-QUERY-UNDERSTANDING", "PS-QUERY-REWRITE", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "上下文工程总览把指令、记忆、检索信息、工具和结构化输出统一为动态上下文系统，跨越 RAG、记忆和 Agent 编排。",
+      "preserved_details": ["区分提示词工程与上下文工程的作用范围", "列出短期记忆、长期记忆、RAG、工具和结构化输出", "强调上下文是模型生成前看到的全部信息"],
+      "verification_flags": ["‘上下文工程是 Agent 开发本质’属于作者观点，不作为已验证技术结论", "外部图片和二手行业断言不纳入发布正文"]
+    },
+    {
+      "source_unit_ids": ["RU-bd0418f9d8dd"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-001", "RAG-09-002", "RAG-09-006", "RAG-09-014", "RAG-12-013"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "上下文工程价值示例与上下文组装、证据生成和智能体编排原子部分重叠，但保留日历、邮件、联系人和工具联合提供上下文的应用场景。",
+      "preserved_details": ["贫乏上下文只能按字面回复", "丰富上下文可结合日程、历史邮件、联系人和 send_invite/send_email 工具", "价值主张包括降低失败率、一致性、复杂特性和验证自修正"],
+      "verification_flags": ["‘大多数 Agent 失败不是模型问题’是经验性概括，不能作为普遍比例"]
+    },
+    {
+      "source_unit_ids": ["RU-ffb948b59b32"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-001", "RAG-09-002", "RAG-09-006", "RAG-09-014"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION"],
+      "note": "上下文贫乏与丰富的对比示例和提示、证据、工具、结构化输出原子部分重叠，保留其动态拼装的具体交互示例。",
+      "preserved_details": ["对比只给用户消息与同时提供日历、邮件、联系人和工具定义", "强调格式化信息和工具能力共同影响任务完成", "保留 send_invite 与 send_email 作为工具调用示例"],
+      "verification_flags": ["示例中的人物、日程和效果是说明性内容，不是实测结果"]
+    },
+    {
+      "source_unit_ids": ["RU-e33e86926d7d"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-001", "RAG-09-002", "RAG-09-005", "RAG-09-006", "RAG-12-013"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "上下文工程价值总结与上下文预算、压缩、基于证据生成和 Agent 自修正原子部分重叠，但保留验证循环和多步骤任务的组合边界。",
+      "preserved_details": ["完整上下文支持项目规范和复杂多步骤任务", "验证循环用于自动发现和修正错误", "信息选择不只是增加提示词长度"],
+      "verification_flags": ["自我修正不保证正确，必须有独立验证信号"]
+    },
+    {
+      "source_unit_ids": ["RU-45cd8f859cbe"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-09-002", "RAG-09-004", "RAG-09-005", "RAG-09-015", "RAG-12-013"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "长上下文问题与解决方案同时涉及上下文预算、Lost in the Middle、压缩、检索、卸载和子智能体隔离，属于跨节点问题总览。",
+      "preserved_details": ["上下文过长可能稀释关键信息并增加冲突与重复", "列出 Offload、Retrieve、Reduce 和 Isolate 四类方法", "把 SubAgent 作为任务隔离和上下文控制手段"],
+      "verification_flags": ["‘超过训练时常见长度’与性能退化关系需引用原始实验，不由本章节单独证明", "章节中的 Reduce 与项目术语 Compress 需在后续术语审计中统一"]
+    },
+    {
+      "source_unit_ids": ["RU-e4f3ca465aa8"],
+      "decision": "retain",
+      "atom_ids": ["RAG-09-004", "RAG-09-005", "RAG-09-015"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION"],
+      "note": "Context-Rot 章节记录长上下文中的注意力稀释、冲突、持续偏航和重复文本行动瘫痪等失败表现。",
+      "preserved_details": ["关键信息随上下文增长被稀释", "错误内容可能使后续生成持续偏离", "模糊和冲突信息导致行为不可预测", "大量重复文本可能造成行动停滞"],
+      "verification_flags": ["Context-Rot 不是本仓库当前统一术语，需在术语审计中决定保留英文还是映射到 Lost in the Middle/上下文退化", "本单元未提供可复现实验数据"]
+    },
+    {
+      "source_unit_ids": ["RU-d0c38925508b"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-004", "RAG-09-005", "RAG-09-009", "RAG-13-008"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-EVALUATION"],
+      "note": "Context-Rot 的问题表现与上下文退化、幻觉和排障原子部分重叠，但保留持续带偏、信息冲突和重复输入导致行动停滞的症状分类。",
+      "preserved_details": ["幻觉后持续带偏", "模糊信息冲突导致不可预测", "注意力分散和重复文本分别作为独立症状"],
+      "verification_flags": ["症状之间可能共因，不能直接当作互斥类别"]
+    },
+    {
+      "source_unit_ids": ["RU-070ce1aff0ec"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-002", "RAG-09-004", "RAG-09-005"],
+      "related_stage_ids": ["PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION"],
+      "note": "长上下文影响因素与上下文预算和退化原子部分重叠，但保留长度、模型能力、信息密度和自然语言歧义四个因素维度。",
+      "preserved_details": ["上下文长度超过训练常见长度可能增加风险", "信息密度不均匀会影响注意力分配", "自然语言歧义会放大上下文冲突"],
+      "verification_flags": ["影响因素未量化，需实验设计和模型版本固定后验证"]
+    },
+    {
+      "source_unit_ids": ["RU-2b793834b5ba"],
+      "decision": "partial_overlap",
+      "atom_ids": ["RAG-09-002", "RAG-09-004", "RAG-09-005", "RAG-12-013"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "长上下文解决方案与检索、证据压缩、上下文预算和 Agent 隔离原子部分重叠，保留 Offload/Retrieve/Reduce/Isolate 四种操作边界。",
+      "preserved_details": ["Offload 通过外部存储和指针减少直接注入", "Retrieve 动态选取相关信息", "Reduce 压缩和裁剪冗余", "Isolate 通过子智能体分治子任务"],
+      "verification_flags": ["Reduce 与 Compress 术语需统一", "子智能体隔离会引入状态同步和额外调用成本"]
+    },
+    {
+      "source_unit_ids": ["RU-182795f71d81"],
+      "decision": "cross_node",
+      "atom_ids": ["RAG-09-002", "RAG-09-005", "RAG-09-015", "RAG-12-013"],
+      "related_stage_ids": ["PS-RETRIEVAL", "PS-CONTEXT-ASSEMBLY", "PS-ANSWER-GENERATION", "PS-ADVANCED-RAG"],
+      "note": "LangChain 四类上下文管理方法将外部卸载、动态检索、压缩和隔离组合为可复用的上下文控制框架，跨越 RAG 和 Agent 编排。",
+      "preserved_details": ["Offload 只返回外部存储的轻量指针", "Retrieve 对上下文做动态选择", "Compress 减少冗余输入", "Isolate 通过分治降低单次上下文负担"],
+      "verification_flags": ["‘LangChain 提出’的归属和具体 API 需官方版本核验", "章节配图和网络图片不纳入本批发布证据"]
+    }
+  ]
+}
