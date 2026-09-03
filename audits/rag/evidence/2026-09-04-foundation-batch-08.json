@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-08",
+  "verified_at": "2026-09-04",
+  "scope": "Two pre-registered volatile official documentation URLs for CDC pipeline architecture and embedding quantization; no source discovery was performed.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "debezium-architecture-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-02-008", "RAG-02-010", "RAG-11-001", "RAG-11-002", "RAG-11-007"],
+      "verified_claims": ["Debezium documents multiple deployment forms for its source connectors, including Kafka Connect, Debezium Server and an embeddable Debezium Engine.", "The Debezium Server architecture streams serialized change events from a source database to messaging infrastructures such as Kinesis, Pub/Sub or Pulsar.", "The architecture guide distinguishes connector-based change capture from the transport and application embedding choices downstream of the source connector."],
+      "boundary": "The documented deployment options do not guarantee event ordering, delivery semantics, index idempotency or end-to-end recovery. Those properties depend on the connector, transport, sink and application design."
+    },
+    {
+      "source_id": "sentence-transformers-embedding-quantization-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-006", "RAG-05-009", "RAG-05-010", "RAG-06-007", "RAG-08-008"],
+      "verified_claims": ["Sentence Transformers documents binary and scalar int8 embedding quantization as ways to reduce representation size for retrieval.", "Its scalar-quantization guide maps float32 values to discrete int8 levels using a calibration dataset whose min/max ranges define buckets.", "The binary-quantization guide describes retrieving an expanded candidate set and optionally rescoring with float32 query embeddings; the examples present memory, disk and speed trade-offs rather than a universal quality guarantee."],
+      "boundary": "Quantization behavior and example trade-offs are library documentation. Calibration distribution, rescore multiplier, model, index and hardware determine actual recall, latency and storage results and require local regression evaluation."
+    }
+  ]
+}
