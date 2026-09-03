@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-03",
-  "status": "in_progress",
+  "updated_at": "2026-09-04",
+  "status": "completed",
   "scope": "registered_original_sources",
   "external_search": {
     "status": "paused_by_user_after_three_complete_rounds",
@@ -13,9 +13,9 @@
     "all_source_units": 695,
     "semantic_units": 653,
     "preclassified_structural_resource_or_placeholder_units": 42,
-    "manually_reviewed_semantic_units": 637,
-    "pending_manual_semantic_units": 16,
-    "manual_semantic_coverage_percent": 97.55
+    "manually_reviewed_semantic_units": 653,
+    "pending_manual_semantic_units": 0,
+    "manual_semantic_coverage_percent": 100.0
   },
   "source_queue": [
     {
@@ -43,10 +43,10 @@
       "source_id": "agent-guide",
       "all_units": 448,
       "semantic_units": 409,
-      "manually_reviewed_semantic_units": 393,
-      "pending_manual_semantic_units": 16,
-      "status": "in_progress",
-      "next_source_unit_id": "RU-e1fa8d819664"
+      "manually_reviewed_semantic_units": 409,
+      "pending_manual_semantic_units": 0,
+      "status": "completed",
+      "next_source_unit_id": null
     },
     {
       "order": 4,
@@ -76,8 +76,8 @@
     "checkpoint_after_each_batch": true
   },
   "current_cursor": {
-    "source_id": "agent-guide",
-    "source_unit_id": "RU-e1fa8d819664"
+    "source_id": null,
+    "source_unit_id": null
   },
   "completion_gate": [
     "pending_manual_semantic_units_equals_zero",
@@ -88,5 +88,5 @@
     "original_source_coverage_report_is_complete",
     "normal_repository_validation_passes"
   ],
-  "next_action": "Review the next 16 agent-guide units beginning at RU-e1fa8d819664; read the pinned source body at d4fe53f4a9153123b159d0e6b632117a34721a92 and preserve complete semantic boundaries."
+  "next_action": "Begin registered external-source fact verification and canonical knowledge-base consolidation; do not resume external search without explicit user authorization."
 }
