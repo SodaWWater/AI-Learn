@@ -12,6 +12,14 @@
 2. [关系图集](02-relationship-maps.md)：再观察分支、汇合、依赖、失败传播和跨主干重叠。
 3. [18 节点概要学习卡](03-stage-cards.md)：最后按完整链路定位每个节点的输入、输出与工程位置。
 
+## 已有深读章节
+
+完成骨架三步后，可以按系统运行顺序阅读以下已完成的第一版正文。它们是学习草稿，不代表全部来源已完成审核；阅读时应把结论理解为可根据后续来源证据修订的工程框架。
+
+1. [基础、价值与能力边界](../../../knowledge/rag/chapters/rag-01-foundations.md)：理解检索增强生成（Retrieval-Augmented Generation，RAG）解决什么问题、何时不适合使用，以及它与微调（Fine-tuning）和长上下文（Long Context）的关系。
+2. [系统架构与生命周期](../../../knowledge/rag/chapters/rag-02-architecture-lifecycle.md)：理解离线构建、在线检索、生成、评估和发布如何组成可追踪生命周期。
+3. [文档解析与数据治理](../../../knowledge/rag/chapters/rag-03-document-parsing-governance.md)：理解文档质量、权限、元数据和版本边界如何决定后续检索质量。
+
 ## 非目标
 
 - 不替代 `knowledge/rag/chapters/` 中将来按正式标准重写的知识章节（Knowledge Chapter）；
