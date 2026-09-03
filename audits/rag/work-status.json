@@ -32,10 +32,10 @@
   "manual_review": {
     "status": "in_progress",
     "semantic_units": 653,
-    "manually_reviewed_semantic_units": 131,
-    "pending_manual_semantic_units": 522,
+    "manually_reviewed_semantic_units": 161,
+    "pending_manual_semantic_units": 492,
     "current_source_id": "xiaolin-ai-learning",
-    "current_source_unit_id": "RU-472404dfeb98",
+    "current_source_unit_id": "RU-2a918774067b",
     "authority": "audits/rag/manual-review-status.json"
   },
   "content_status": {
@@ -339,7 +339,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P2-003",
-    "instruction": "Do not perform new external searches. Review the next 20 to 30 xiaolin-ai-learning source units beginning at RU-472404dfeb98 against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
+    "instruction": "Do not perform new external searches. Review the next 20 to 30 xiaolin-ai-learning source units beginning at RU-2a918774067b against the source body at the pinned commit. Record retain, exact_duplicate, partial_overlap, cross_node, or non_rag decisions; update the manual review status and original-source coverage report; validate and commit a checkpoint."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -351,6 +351,7 @@
     "The user has paused further external searching after three complete rounds. Do not resume it without explicit authorization.",
     "Fourth-round independent searches are complete for Data Ingestion, Document Parsing, Data Governance and Chunking; preserve these 4/18 results as historical evidence and do not continue the remaining stages.",
     "The current authoritative task is WP-P2-003. Follow docs/LOCAL_AGENT_HANDOFF.md and audits/rag/manual-review-status.json.",
+    "The first xiaolin-ai-learning manual semantic batch is complete: 30 units from RU-472404dfeb98 through RU-b8136aeda954; three missing canonical atoms were added and version-sensitive claims were flagged for Phase C verification.",
     "Review in 20 to 30 unit semantic batches and use validated Git commits as review and recovery checkpoints.",
     "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
   ]

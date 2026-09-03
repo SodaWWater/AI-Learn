@@ -19,6 +19,8 @@ mindmap
     RAG_05_012["RAG-05-012 Embedding 模型升级与向量重建"]
     RAG_05_013["RAG-05-013 领域检索器微调、适配器与 Embedding 变换"]
     RAG_05_014["RAG-05-014 检索器与生成器偏好对齐及 LLM 监督信号"]
+    RAG_05_015["RAG-05-015 指令感知嵌入（Instruction-aware Embedding）与任务条件编码"]
+    RAG_05_016["RAG-05-016 多模态嵌入（Multimodal Embedding）与跨模态检索"]
 ```
 
-共 **14** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。
+共 **16** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。

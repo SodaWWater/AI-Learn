@@ -78,7 +78,8 @@
         {"id": "RAG-04-012", "title": "Chunk Size 的选择与过大、过小问题"},
         {"id": "RAG-04-013", "title": "Overlap 的收益、冗余和存储代价"},
         {"id": "RAG-04-014", "title": "Chunk ID、Parent ID 和版本设计"},
-        {"id": "RAG-04-015", "title": "Chunking 策略的离线评估和消融实验"}
+        {"id": "RAG-04-015", "title": "Chunking 策略的离线评估和消融实验"},
+        {"id": "RAG-04-016", "title": "延迟切分（Late Chunking）的先编码后池化与全文上下文保留"}
       ]
     },
     {
@@ -98,7 +99,9 @@
         {"id": "RAG-05-011", "title": "批量 Embedding、缓存与吞吐优化"},
         {"id": "RAG-05-012", "title": "Embedding 模型升级与向量重建"},
         {"id": "RAG-05-013", "title": "领域检索器微调、适配器与 Embedding 变换"},
-        {"id": "RAG-05-014", "title": "检索器与生成器偏好对齐及 LLM 监督信号"}
+        {"id": "RAG-05-014", "title": "检索器与生成器偏好对齐及 LLM 监督信号"},
+        {"id": "RAG-05-015", "title": "指令感知嵌入（Instruction-aware Embedding）与任务条件编码"},
+        {"id": "RAG-05-016", "title": "多模态嵌入（Multimodal Embedding）与跨模态检索"}
       ]
     },
     {

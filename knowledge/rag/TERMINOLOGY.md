@@ -88,10 +88,13 @@
 | 句子窗口检索（Sentence Window Retrieval） | Sentence Window | 命中句子并扩展窗口 |
 | 命题化切分（Proposition-based Chunking） | 命题切分 | 拆成原子事实 |
 | 上下文化切分（Contextual Chunking） | Contextual Chunking | 为片段补充局部上下文 |
+| 延迟切分（Late Chunking） | Late Chunking | 先对长文编码，再按片段边界池化词元表示 |
 | 词元（Token） | Token | 不使用“标记”替代模型词元 |
 | 上下文窗口（Context Window） | Context Window | 模型可接受输入范围 |
 | 向量嵌入（Embedding） | Embedding | 表示模型或向量结果按语境说明 |
 | 嵌入模型（Embedding Model） | Embedding Model | 生成向量表示的模型 |
+| 指令感知嵌入（Instruction-aware Embedding） | Instruction-aware Embedding | 根据任务或检索指令条件化向量表示 |
+| 多模态嵌入（Multimodal Embedding） | Multimodal Embedding | 在共享或可比较空间编码多种模态 |
 | 对比学习（Contrastive Learning） |  | Embedding 常见训练范式 |
 | 向量归一化（Vector Normalization） | Normalization | 与数据规范化区分 |
 | 余弦相似度（Cosine Similarity） | Cosine | 向量相似度度量 |
@@ -222,4 +225,3 @@
 - 存在翻译争议时，记录候选表达、国内使用证据和最终决定。
 - 产品、框架和模型名称使用官方拼写，不纳入普通术语翻译。
 - 术语表后续应生成机器可读版本，用于自动检查裸露术语和不一致翻译。
-

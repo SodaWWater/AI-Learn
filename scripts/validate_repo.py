@@ -452,7 +452,33 @@ def main() -> int:
         accepted_mappings = []
         for path in accepted_files:
             payload = load_json(str(path.relative_to(ROOT)), errors)
-            accepted_mappings.extend(payload.get("mappings", []))
+            file_mappings = payload.get("mappings", [])
+            batch_meta = payload.get("batch")
+            if isinstance(batch_meta, dict) and batch_meta.get("unit_count") is not None:
+                actual_unit_count = sum(
+                    len(mapping.get("source_unit_ids", [mapping.get("source_unit_id")]))
+                    for mapping in file_mappings
+                )
+                if batch_meta.get("unit_count") != actual_unit_count:
+                    errors.append(
+                        f"审核批次 {path.name} 的 unit_count 与实际来源单元数不一致"
+                    )
+                declared_counts = payload.get("decision_counts", {})
+                if declared_counts:
+                    actual_counts: Counter[str] = Counter()
+                    for mapping in file_mappings:
+                        actual_counts[mapping.get("decision")] += len(
+                            mapping.get("source_unit_ids", [mapping.get("source_unit_id")])
+                        )
+                    normalized_actual_counts = {
+                        key: actual_counts[key] for key in declared_counts
+                    }
+                    undeclared_nonzero = set(actual_counts) - set(declared_counts)
+                    if normalized_actual_counts != declared_counts or undeclared_nonzero:
+                        errors.append(f"审核批次 {path.name} 的 decision_counts 不一致")
+                if not batch_meta.get("source_body_reviewed"):
+                    errors.append(f"审核批次 {path.name} 未确认阅读来源正文")
+            accepted_mappings.extend(file_mappings)
         accepted_ids: list[str] = []
         for item in accepted_mappings:
             if "source_unit_ids" in item:
@@ -552,6 +578,9 @@ def main() -> int:
             errors.append("人工审核状态的已审核数量与审核批次不一致")
         if manual_counts.get("pending_manual_semantic_units") != derived_pending:
             errors.append("人工审核状态的待审核数量与审核批次不一致")
+        expected_percent = round(derived_reviewed / len(reviewable_units) * 100, 2)
+        if manual_counts.get("manual_semantic_coverage_percent") != expected_percent:
+            errors.append("人工审核状态的覆盖百分比与审核批次不一致")
         work_manual = work_status.get("manual_review", {})
         if work_manual.get("semantic_units") != len(reviewable_units):
             errors.append("工作状态的语义单元数量与来源盘点不一致")

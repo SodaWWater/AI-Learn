@@ -20,6 +20,7 @@ mindmap
     RAG_04_013["RAG-04-013 Overlap 的收益、冗余和存储代价"]
     RAG_04_014["RAG-04-014 Chunk ID、Parent ID 和版本设计"]
     RAG_04_015["RAG-04-015 Chunking 策略的离线评估和消融实验"]
+    RAG_04_016["RAG-04-016 延迟切分（Late Chunking）的先编码后池化与全文上下文保留"]
 ```
 
-共 **15** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。
+共 **16** 个原子知识点。来源映射和事实核验状态以 `audits/rag/` 为准。
