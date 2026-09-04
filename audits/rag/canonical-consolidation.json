@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "work_item_id": "WP-P3-001",
+  "generated_at": "2026-09-04",
+  "status": "completed_inventory_draft",
+  "inputs": [
+    "knowledge/rag/catalog.json",
+    "audits/rag/accepted-mappings.json",
+    "audits/rag/reviewed/*.json",
+    "audits/rag/evidence/*.json",
+    "sources/registry.json",
+    "sources/rag-current-sources.json",
+    "interview/rag/public-scenarios.json"
+  ],
+  "counts": {
+    "nodes_backbone": 5,
+    "nodes_capability": 8,
+    "nodes_evaluation": 3,
+    "nodes_implementation": 6,
+    "nodes_problem_question": 26,
+    "nodes_pipeline_stage": 18,
+    "nodes_knowledge": 191,
+    "nodes_solution": 6,
+    "nodes_source": 174,
+    "edges_branches_to": 2,
+    "edges_contains": 296,
+    "edges_evaluated_by": 11,
+    "edges_implemented_by": 8,
+    "edges_implements": 99,
+    "edges_next_stage": 17,
+    "edges_overlaps_with": 12,
+    "edges_problem_at": 197,
+    "edges_solved_by": 23,
+    "edges_supported_by": 1265,
+    "catalog_atoms": 191,
+    "atoms_with_source_refs": 189,
+    "registered_sources": 174,
+    "waived_sources_excluded_from_evidence": 1,
+    "public_problem_scenarios": 26
+  },
+  "deduplication_rule": "Only exact semantic, condition, and conclusion equivalence may be removed; implementation, constraints, counterexamples, conflicts, versions, and business conditions remain represented through source links, tags, and separate candidate nodes.",
+  "limitations": [
+    "Knowledge labels are catalog labels; final four-part chapters are intentionally not generated.",
+    "Candidate solution, implementation, and evaluation nodes are inventory-level and remain source_mapped until WP-P3-002/P3-003 audits.",
+    "The waived EUR-Lex source is retained only as a non-evidentiary source record and does not support any node."
+  ],
+  "next_work_item": "WP-P4-002"
+}

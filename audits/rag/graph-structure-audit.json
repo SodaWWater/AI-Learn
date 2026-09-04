@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "work_item_id": "WP-P3-002",
+  "generated_at": "2026-09-04",
+  "audited_graph": "knowledge/rag/graph.json",
+  "audited_graph_generated_at": "2026-09-04",
+  "model": "taxonomy/rag-graph-model.json",
+  "overall_status": "passed_with_warnings",
+  "status": "passed_with_warnings",
+  "scope": "Directed Knowledge Graph structural audit: fields, identifiers, controlled relations, endpoints, source references, graph invariants, duplicates, and waived non-evidentiary evidence.",
+  "waived_source_ids": [
+    "eu-gdpr-official-2016"
+  ],
+  "counts": {
+    "nodes_total": 437,
+    "edges_total": 1930,
+    "nodes_backbone": 5,
+    "nodes_capability": 8,
+    "nodes_evaluation": 3,
+    "nodes_implementation": 6,
+    "nodes_knowledge": 191,
+    "nodes_pipeline_stage": 18,
+    "nodes_problem_question": 26,
+    "nodes_solution": 6,
+    "nodes_source": 174,
+    "edges_branches_to": 2,
+    "edges_contains": 296,
+    "edges_evaluated_by": 11,
+    "edges_implemented_by": 8,
+    "edges_implements": 99,
+    "edges_next_stage": 17,
+    "edges_overlaps_with": 12,
+    "edges_problem_at": 197,
+    "edges_solved_by": 23,
+    "edges_supported_by": 1265,
+    "errors_total": 0,
+    "warnings_total": 2,
+    "isolated_non_source_nodes": 0,
+    "inventory_nodes_without_source_refs": 2,
+    "edge_types": {
+      "branches_to": 2,
+      "contains": 296,
+      "evaluated_by": 11,
+      "implemented_by": 8,
+      "implements": 99,
+      "next_stage": 17,
+      "overlaps_with": 12,
+      "problem_at": 197,
+      "solved_by": 23,
+      "supported_by": 1265
+    }
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "inventory_node_without_source_refs",
+      "entity_type": "node",
+      "entity_id": "RAG-07-001",
+      "message": "Inventory node has no source reference; it must be resolved or explicitly excluded before formal publication."
+    },
+    {
+      "code": "inventory_node_without_source_refs",
+      "entity_type": "node",
+      "entity_id": "RAG-13-011",
+      "message": "Inventory node has no source reference; it must be resolved or explicitly excluded before formal publication."
+    }
+  ],
+  "notes": [
+    "The report is deterministic for an unchanged graph: generated_at is inherited from the graph rather than the current clock.",
+    "Inventory-level nodes without source references are warnings for WP-P3-003 unless their declared status is source_mapped or reviewed.",
+    "The user-approved EUR-Lex waiver is checked as non-evidentiary and must not appear in node or edge source_refs."
+  ]
+}

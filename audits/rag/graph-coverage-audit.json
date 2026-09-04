@@ -1,0 +1,3133 @@
+{
+  "catalog_alignment": {
+    "catalog_atoms_missing_from_graph": [],
+    "catalog_knowledge_atoms": 191,
+    "graph_knowledge_nodes": 191,
+    "graph_knowledge_nodes_missing_from_catalog": []
+  },
+  "conflict_and_version_audit": {
+    "evidence_conflict_topic_records": [
+      {
+        "atom_ids": [
+          "RAG-09-013",
+          "RAG-10-012"
+        ],
+        "boundary": "Preprint experiments, thresholds, trust weighting and reported gains are not production guarantees and the registry/page version difference must remain explicit.",
+        "evidence_file": "2026-09-04-foundation-batch-24.json",
+        "source_id": "conflictrag-2026",
+        "source_version": "v1, 2026-05-17",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-10-012",
+          "RAG-10-014"
+        ],
+        "boundary": "This preprint's benchmark and framework were not yet released as reproducible assets; reported figures are not a production SLA.",
+        "evidence_file": "2026-09-04-foundation-batch-24.json",
+        "source_id": "enterprise-rag-benchmark-2026",
+        "source_version": "v1, 2026-08-12",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-10-012"
+        ],
+        "boundary": "Research benchmarks and model/training settings do not establish production calibration or universal gains.",
+        "evidence_file": "2026-09-04-foundation-batch-24.json",
+        "source_id": "nova-rag-confidence-calibration-2026",
+        "source_version": "v3, 2026-06-11",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-013",
+          "RAG-08-015",
+          "RAG-09-013",
+          "RAG-11-005"
+        ],
+        "boundary": "It proves public question coverage only; the page is not a company interview record and its answers or recommendations are not technical evidence.",
+        "evidence_file": "2026-09-04-foundation-batch-29.json",
+        "source_id": "nowcoder-rag-ten-questions-2025",
+        "source_version": "page published 2025-07-15; reviewed 2026-09-02",
+        "status": "verified"
+      }
+    ],
+    "evidence_version_boundary_records": [
+      {
+        "atom_ids": [
+          "RAG-10-014",
+          "RAG-12-004",
+          "RAG-12-018",
+          "RAG-12-019"
+        ],
+        "boundary": "This is a survey and taxonomy, not a single controlled algorithm or causal performance result; concrete quality, cost and safety claims require the cited primary studies. The registered v4 corresponds to an arXiv revision dated 2026-04-01.",
+        "evidence_file": "2026-09-04-foundation-batch-14.json",
+        "source_id": "agentic-rag-survey-2025",
+        "source_version": "v4",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-007",
+          "RAG-09-014",
+          "RAG-09-015",
+          "RAG-10-009"
+        ],
+        "boundary": "These are current product/API behaviors, not a guarantee that cited material semantically entails an answer. API version, content format, granularity and cost require product testing.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "anthropic-citations-docs-2026",
+        "source_version": "current Claude Platform documentation; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-03-012",
+          "RAG-06-010",
+          "RAG-11-004"
+        ],
+        "boundary": "Security filtering is not a substitute for a complete authorization design, and preview features must not be presented as generally available.",
+        "evidence_file": "2026-09-04-foundation-batch-01.json",
+        "source_id": "azure-document-access-control-2026",
+        "source_version": "page updated 2026-08-12; includes 2026-08-01-preview; reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-03-012",
+          "RAG-05-011",
+          "RAG-11-012",
+          "RAG-11-014"
+        ],
+        "boundary": "The statements apply only to the page's defined Azure-sold models and deployment/features; preview, provider, contractual and jurisdictional conditions require separate confirmation.",
+        "evidence_file": "2026-09-04-foundation-batch-26.json",
+        "source_id": "azure-foundry-data-privacy-2026",
+        "source_version": "page updated 2026-05-19; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-004",
+          "RAG-08-008",
+          "RAG-08-014",
+          "RAG-08-016",
+          "RAG-11-013"
+        ],
+        "boundary": "These are Azure AI Search API semantics, including Preview behavior. Filter mode, candidate budget, security trimming and tail latency require workload-specific authorization and recall regression tests.",
+        "evidence_file": "2026-09-04-foundation-batch-10.json",
+        "source_id": "azure-hybrid-query-docs-2026",
+        "source_version": "stable API 2026-04-01 and preview API 2026-08-01-preview; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-06-009",
+          "RAG-06-010",
+          "RAG-08-004",
+          "RAG-08-006",
+          "RAG-08-010",
+          "RAG-08-016"
+        ],
+        "boundary": "This is Azure AI Search API behavior. Candidate counts, filter mode and semantic-ranking configuration need workload-specific recall, latency and authorization evaluation.",
+        "evidence_file": "2026-09-04-foundation-batch-04.json",
+        "source_id": "azure-hybrid-search-overview-2026",
+        "source_version": "page updated 2026-08-31; API example 2026-04-01; reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-07-003",
+          "RAG-07-004",
+          "RAG-07-011",
+          "RAG-08-004",
+          "RAG-08-015",
+          "RAG-12-004"
+        ],
+        "boundary": "This Preview API has no service-level agreement and must not be presented as a generally available or vendor-neutral rewrite mechanism. Exact-identifier preservation needs its own regression tests.",
+        "evidence_file": "2026-09-04-foundation-batch-03.json",
+        "source_id": "azure-semantic-query-rewrite-2026",
+        "source_version": "page updated 2026-07-02; API 2026-08-01-preview; reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-005",
+          "RAG-05-016",
+          "RAG-08-001",
+          "RAG-08-002",
+          "RAG-08-009"
+        ],
+        "boundary": "These are paper-reported model capabilities and experiments, not a universal multilingual or long-document guarantee. Model revision, language, tokenization and deployment memory must be evaluated for the target corpus.",
+        "evidence_file": "2026-09-04-foundation-batch-15.json",
+        "source_id": "bge-m3-paper-2025",
+        "source_version": "v5, 2025-12-12",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-004",
+          "RAG-05-006",
+          "RAG-05-009",
+          "RAG-05-016"
+        ],
+        "boundary": "Input types, model availability and vector-output options are API-version-specific and must be checked again when implementation begins.",
+        "evidence_file": "2026-09-04-foundation-batch-01.json",
+        "source_id": "cohere-embedding-docs-2026",
+        "source_version": "v1 API docs reviewed 2026-09-02; Embed v4.0 examples",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-009",
+          "RAG-08-010",
+          "RAG-08-016",
+          "RAG-10-004"
+        ],
+        "boundary": "Truncation can remove evidence and API limits, model behavior and errors affect production use. Score thresholds require task-specific calibration.",
+        "evidence_file": "2026-09-04-foundation-batch-18.json",
+        "source_id": "cohere-rerank-api-v2-2026",
+        "source_version": "v2 API reference; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-013",
+          "RAG-10-012"
+        ],
+        "boundary": "Preprint experiments, thresholds, trust weighting and reported gains are not production guarantees and the registry/page version difference must remain explicit.",
+        "evidence_file": "2026-09-04-foundation-batch-24.json",
+        "source_id": "conflictrag-2026",
+        "source_version": "v1, 2026-05-17",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-008",
+          "RAG-11-001",
+          "RAG-11-002"
+        ],
+        "boundary": "These semantics apply to Confluent Schema Registry and its supported formats; format-specific rules and policy configuration remain relevant.",
+        "evidence_file": "2026-09-04-foundation-batch-25.json",
+        "source_id": "confluent-schema-evolution-docs-2026",
+        "source_version": "current platform documentation; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-03-004",
+          "RAG-03-005",
+          "RAG-03-006",
+          "RAG-04-011",
+          "RAG-09-010"
+        ],
+        "boundary": "These are Docling v2 API model capabilities. Bounding boxes, provenance and reading order can depend on parser and input quality; the representation does not guarantee correct extraction for every document.",
+        "evidence_file": "2026-09-04-foundation-batch-11.json",
+        "source_id": "docling-document-model-2026",
+        "source_version": "Docling v2 documentation; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-03-002",
+          "RAG-03-007",
+          "RAG-03-014",
+          "RAG-03-015"
+        ],
+        "boundary": "These are source-level behaviors at the pinned commit; parser accuracy, supported formats and output quality require validation against the deployed Docling version and target documents.",
+        "evidence_file": "2026-09-04-foundation-batch-29.json",
+        "source_id": "docling-pdf-backend-visible-text-2026",
+        "source_version": "commit c09ddfabff27b1ba6217ab47e207cb646b4ba023; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-07-010",
+          "RAG-08-004",
+          "RAG-08-006",
+          "RAG-08-007",
+          "RAG-08-011",
+          "RAG-08-014"
+        ],
+        "boundary": "Retriever-tree semantics, normalizers and filtering order are Elasticsearch-specific API behavior. Their quality implications require local evaluation and must not be generalized as universal ranking rules.",
+        "evidence_file": "2026-09-04-foundation-batch-04.json",
+        "source_id": "elasticsearch-retrievers-docs-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-06-001",
+          "RAG-06-002",
+          "RAG-06-005",
+          "RAG-06-006",
+          "RAG-06-007",
+          "RAG-06-011"
+        ],
+        "boundary": "Repository capability labels do not establish a production configuration or benchmark outcome. Algorithm, recall and hardware choices require task-specific evaluation.",
+        "evidence_file": "2026-09-04-foundation-batch-02.json",
+        "source_id": "faiss-official-repository-2026",
+        "source_version": "718002f7cf269f3f3752dde04a4cc3f8eabb0050; 2026-09-01",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-006",
+          "RAG-09-007",
+          "RAG-09-010",
+          "RAG-10-008",
+          "RAG-10-009"
+        ],
+        "boundary": "The score reflects grounding against the supplied facts, not real-world correctness or a portable production threshold. Missing facts and byte-versus-character rendering require explicit test coverage.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "google-check-grounding-docs-2026",
+        "source_version": "page updated 2026-08-26; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-010",
+          "RAG-11-002",
+          "RAG-11-010"
+        ],
+        "boundary": "This is an API contract conditional on connector implementation and worker configuration, not an end-to-end exactly-once promise for all sources or consumers.",
+        "evidence_file": "2026-09-04-foundation-batch-26.json",
+        "source_id": "kafka-source-connector-api-4-3-1",
+        "source_version": "Apache Kafka 4.3.1 API; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-005",
+          "RAG-11-007",
+          "RAG-11-017"
+        ],
+        "boundary": "This is code behavior at one LangChain commit. It does not guarantee faithful compression, lower hallucination, fixed cost or identical behavior in other releases and custom components.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "langchain-contextual-compression-retriever-2026",
+        "source_version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-008",
+          "RAG-08-014",
+          "RAG-09-005",
+          "RAG-10-006",
+          "RAG-10-014"
+        ],
+        "boundary": "Similarity scales and thresholds depend on the embedding model and similarity function; these implementation defaults are not calibrated relevance or complete-evidence guarantees.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "langchain-embeddings-filter-2026",
+        "source_version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-005",
+          "RAG-09-007",
+          "RAG-09-010",
+          "RAG-10-014",
+          "RAG-11-007"
+        ],
+        "boundary": "LLM extraction can omit or rewrite evidence. Retained metadata does not prove output text remains faithfully attributable, and parser and async details are version-dependent.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "langchain-llm-chain-extractor-2026",
+        "source_version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-07-004",
+          "RAG-08-005",
+          "RAG-08-016",
+          "RAG-11-007"
+        ],
+        "boundary": "These are implementation details at the pinned commit and depend on the surrounding LangChain version and retriever configuration; they are not guarantees for other releases or custom subclasses.",
+        "evidence_file": "2026-09-04-foundation-batch-29.json",
+        "source_id": "langchain-multi-query-retriever-2026",
+        "source_version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-04-001",
+          "RAG-04-007",
+          "RAG-06-003",
+          "RAG-08-001",
+          "RAG-09-005"
+        ],
+        "boundary": "This is the LangChain Classic implementation contract, not a universal vector/document-store protocol; chunk sizes, consistency, deletion propagation and ACL metadata require deployment-specific validation.",
+        "evidence_file": "2026-09-04-foundation-batch-20.json",
+        "source_id": "langchain-parent-document-retriever-2026",
+        "source_version": "commit 234255c1c7427b5ed6dc505abad41ddfa6c9ff8f; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-007",
+          "RAG-10-013",
+          "RAG-10-014",
+          "RAG-11-017"
+        ],
+        "boundary": "This is LangChain and LangSmith platform behavior and requires account, API-key and data-handling decisions. Capturing traces does not itself establish correctness, safety, privacy compliance or adequate evaluation coverage.",
+        "evidence_file": "2026-09-04-foundation-batch-06.json",
+        "source_id": "langsmith-observability-docs-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-03-003",
+          "RAG-03-004",
+          "RAG-03-006",
+          "RAG-03-013"
+        ],
+        "boundary": "Repository capabilities and performance must be treated as version-specific; this record does not certify production suitability.",
+        "evidence_file": "2026-09-04-foundation-batch-01.json",
+        "source_id": "liteparse-official-repository-2026",
+        "source_version": "b2e76ec5b0c1cb4eb11d67296e916792f4fb5858; v2.14.3; 2026-09-01",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-07-004",
+          "RAG-08-006",
+          "RAG-08-007",
+          "RAG-08-016"
+        ],
+        "boundary": "These statements describe the pinned LlamaIndex implementation and its defaults; actual behavior changes with constructor options, version and retriever outputs.",
+        "evidence_file": "2026-09-04-foundation-batch-29.json",
+        "source_id": "llamaindex-query-fusion-retriever-2026",
+        "source_version": "commit 949f2b83dbff276238fbdf0490cf06fe06a28189; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-11-012",
+          "RAG-11-013",
+          "RAG-11-015",
+          "RAG-11-016",
+          "RAG-12-004"
+        ],
+        "boundary": "These are MCP OAuth authorization requirements, not a general authentication design for every RAG retriever or non-MCP tool chain.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "mcp-authorization-security-2026",
+        "source_version": "MCP specification 2026-07-28; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-12-001",
+          "RAG-12-002",
+          "RAG-12-003",
+          "RAG-12-004",
+          "RAG-12-009",
+          "RAG-12-020"
+        ],
+        "boundary": "The site is a current public documentation portal without a pinned implementation revision in this record. Navigation and overview claims do not prove universal quality gains, production readiness or version-independent API behavior.",
+        "evidence_file": "2026-09-04-foundation-batch-11.json",
+        "source_id": "microsoft-graphrag-docs",
+        "source_version": "reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-010",
+          "RAG-11-019"
+        ],
+        "boundary": "The fetched page currently labels itself v3.0.x while the registry entry was reviewed against the unversioned page in 2026-09-02; command compatibility, storage settings and recovery validation must be checked against the deployed Milvus version.",
+        "evidence_file": "2026-09-04-foundation-batch-28.json",
+        "source_id": "milvus-backup-docs-2026",
+        "source_version": "Milvus docs reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-06-005",
+          "RAG-06-012",
+          "RAG-06-015"
+        ],
+        "boundary": "The current Milvus documentation and version navigation are product-specific. Parameter effects depend on data distribution, hardware, distance metric and workload; values require local benchmark and recall regression.",
+        "evidence_file": "2026-09-04-foundation-batch-11.json",
+        "source_id": "milvus-hnsw-docs-2026",
+        "source_version": "Milvus 3.0.x docs reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-009",
+          "RAG-07-010",
+          "RAG-12-003"
+        ],
+        "boundary": "This framework paper does not establish a concrete API, performance result or production readiness for every module.",
+        "evidence_file": "2026-09-04-foundation-batch-23.json",
+        "source_id": "modular-rag-2024",
+        "source_version": "v1, 2024-07-30",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-10-014",
+          "RAG-11-010",
+          "RAG-11-015",
+          "RAG-11-017",
+          "RAG-11-019"
+        ],
+        "boundary": "This is an AWS operational presentation hosted by NIST, not a NIST normative standard; it does not establish universal incident-response controls or timing guarantees.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "nist-ai-incident-response-2026",
+        "source_version": "NIST guidance published 2026; reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-001",
+          "RAG-02-002",
+          "RAG-13-007"
+        ],
+        "boundary": "This batch verifies the documentation entry is current and reachable; blueprint-specific component behavior must be tied to its own versioned documentation before publication.",
+        "evidence_file": "2026-09-04-foundation-batch-01.json",
+        "source_id": "nvidia-rag-blueprint",
+        "source_version": "latest reviewed 2026-09-02",
+        "status": "verified_resource_entry"
+      },
+      {
+        "atom_ids": [
+          "RAG-07-002",
+          "RAG-07-011",
+          "RAG-07-012",
+          "RAG-10-013"
+        ],
+        "boundary": "Near-OOD is not arbitrary domain shift. Internal datasets, model versions and prompts limit reproducibility; the abstract does not establish a universal rejection threshold or production error rate.",
+        "evidence_file": "2026-09-04-foundation-batch-18.json",
+        "source_id": "ood-intent-detection-emnlp-2025",
+        "source_version": "Findings of EMNLP 2025",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-014",
+          "RAG-10-014",
+          "RAG-11-010"
+        ],
+        "boundary": "This is OpenAI API behavior for supported models and endpoints. Schema adherence does not establish factual correctness, citation grounding or business validation; refusal and transport errors still need handling.",
+        "evidence_file": "2026-09-04-foundation-batch-07.json",
+        "source_id": "openai-structured-outputs-docs-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-02-007",
+          "RAG-03-011",
+          "RAG-11-017"
+        ],
+        "boundary": "This is a generic lineage object and event model. Mapping RAG documents, chunks, embeddings and indexes is project-specific design, not built-in automatic collection.",
+        "evidence_file": "2026-09-04-foundation-batch-26.json",
+        "source_id": "openlineage-object-model-1-53-0",
+        "source_version": "OpenLineage 1.53.0 object model; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-008",
+          "RAG-10-014",
+          "RAG-11-014",
+          "RAG-11-017"
+        ],
+        "boundary": "The GenAI semantic conventions are explicitly in Development at the pinned commit. They are not default telemetry collection or a stable retention policy, and implementations must pin and migrate schemas deliberately.",
+        "evidence_file": "2026-09-04-foundation-batch-19.json",
+        "source_id": "opentelemetry-genai-semconv-2026",
+        "source_version": "commit fee465db333bdd6a7d2faa320edab5cf3101a4f4; GenAI conventions Development status; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-06-005",
+          "RAG-06-006",
+          "RAG-06-010",
+          "RAG-06-012",
+          "RAG-06-015"
+        ],
+        "boundary": "This is pgvector behavior at the pinned commit. Relative performance, memory use and filtering behavior must be measured with the chosen PostgreSQL version, data distribution and workload.",
+        "evidence_file": "2026-09-04-foundation-batch-02.json",
+        "source_id": "pgvector-official-repository-2026",
+        "source_version": "e48241b4dcc045b18902914f668d03d1d399dfbe; 2026-08-20",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-09-010",
+          "RAG-10-007",
+          "RAG-10-009",
+          "RAG-10-014"
+        ],
+        "boundary": "These statements describe the repository's implementation and testbed at the pinned commit; they do not prove that its evaluator, prompts, or 800-query distribution generalize to another RAG system or production traffic.",
+        "evidence_file": "2026-09-04-foundation-batch-27.json",
+        "source_id": "qcare-official-repository-2026",
+        "source_version": "commit e8b48e12a28f308076ffeae122cd8c765717a6b7; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-012",
+          "RAG-06-012",
+          "RAG-11-004",
+          "RAG-11-006"
+        ],
+        "boundary": "This is a Qdrant migration procedure, not a universal zero-downtime guarantee. Cutover validation, update ordering, rollback and resource capacity require deployment-specific tests.",
+        "evidence_file": "2026-09-04-foundation-batch-10.json",
+        "source_id": "qdrant-embedding-model-migration-2026",
+        "source_version": "current tutorial requiring Qdrant 1.18+ for named-vector option; reviewed 2026-09-03",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-08-009",
+          "RAG-08-010",
+          "RAG-10-006"
+        ],
+        "boundary": "This supports the documented API and training practice only; it does not prove business-task model effectiveness and page behavior can change by version.",
+        "evidence_file": "2026-09-04-foundation-batch-25.json",
+        "source_id": "sentence-transformers-cross-encoder-training-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-003",
+          "RAG-08-009",
+          "RAG-10-006"
+        ],
+        "boundary": "This is library documentation without a pinned commit in the registered URL. Negative-mining quality, false-negative rates and downstream retrieval gains require dataset-specific validation.",
+        "evidence_file": "2026-09-04-foundation-batch-11.json",
+        "source_id": "sentence-transformers-hard-negative-docs-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-004",
+          "RAG-05-008",
+          "RAG-06-002",
+          "RAG-06-012"
+        ],
+        "boundary": "The one-million-entry guidance, API names and performance recommendations are library-version guidance, not a capacity guarantee for every model, hardware or index configuration.",
+        "evidence_file": "2026-09-04-foundation-batch-02.json",
+        "source_id": "sentence-transformers-semantic-search-2026",
+        "source_version": "page reviewed 2026-09-02",
+        "status": "verified"
+      },
+      {
+        "atom_ids": [
+          "RAG-05-010",
+          "RAG-06-002",
+          "RAG-06-012",
+          "RAG-10-004"
+        ],
+        "boundary": "The README and its benchmark results apply to the pinned commit, datasets, algorithms and hardware described there; they do not establish universal index rankings or production performance.",
+        "evidence_file": "2026-09-04-foundation-batch-29.json",
+        "source_id": "vibe-vector-index-benchmark-2026",
+        "source_version": "commit 10859e6056b16b60068e529c8362ed15c1457bf6; DMLR 2026; reviewed 2026-09-03",
+        "status": "verified"
+      }
+    ],
+    "explicit_graph_conflicts": [],
+    "explicit_graph_supersedes": [],
+    "interpretation": "Evidence records may describe conflicting retrieved content or version-dependent behavior. They are not source-to-source conclusion conflicts unless the graph has an explicit conflicts_with edge."
+  },
+  "cross_backbone_audit": {
+    "boundary": "Cross-backbone inventory is limited to registered verified evidence and does not assert equivalence, universal quality, or product-neutral behavior.",
+    "cross_backbone_edge_count": 14,
+    "edge_type_counts": {
+      "branches_to": 2,
+      "overlaps_with": 12
+    },
+    "edges": [
+      {
+        "from": "PS-QUERY-ROUTING",
+        "id": "BRANCHES-TO-PS-QUERY-ROUTING-BB-AGENT",
+        "source_refs": [
+          "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026"
+        ],
+        "to": "BB-AGENT",
+        "type": "branches_to"
+      },
+      {
+        "from": "PS-RETRIEVAL",
+        "id": "BRANCHES-TO-PS-RETRIEVAL-BB-KNOWLEDGE-GRAPH",
+        "source_refs": [
+          "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+          "SRC-MICROSOFT-GRAPHRAG-DOCS"
+        ],
+        "to": "BB-KNOWLEDGE-GRAPH",
+        "type": "branches_to"
+      },
+      {
+        "from": "BB-AGENT",
+        "id": "OVERLAPS-WITH-BB-AGENT-PS-ADVANCED-RAG",
+        "source_refs": [
+          "SRC-AGENTIC-RAG-SURVEY-2025",
+          "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026"
+        ],
+        "to": "PS-ADVANCED-RAG",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "BB-KNOWLEDGE-GRAPH",
+        "id": "OVERLAPS-WITH-BB-KNOWLEDGE-GRAPH-PS-RETRIEVAL",
+        "source_refs": [
+          "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+          "SRC-MICROSOFT-GRAPHRAG-DOCS"
+        ],
+        "to": "PS-RETRIEVAL",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "BB-PROMPT-ENGINEERING",
+        "id": "OVERLAPS-WITH-BB-PROMPT-ENGINEERING-PS-QUERY-REWRITE",
+        "source_refs": [
+          "SRC-STEP-BACK-PROMPTING-2024"
+        ],
+        "to": "PS-QUERY-REWRITE",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "BB-VECTOR-DATABASE",
+        "id": "OVERLAPS-WITH-BB-VECTOR-DATABASE-PS-STORAGE-INDEXING",
+        "source_refs": [
+          "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+          "SRC-QDRANT-INDEXING-DOCS-2026"
+        ],
+        "to": "PS-STORAGE-INDEXING",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-AGENTIC-PLANNING",
+        "id": "OVERLAPS-WITH-CAP-AGENTIC-PLANNING-PS-QUERY-ROUTING",
+        "source_refs": [
+          "SRC-AGENTIC-RAG-SURVEY-2025",
+          "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026"
+        ],
+        "to": "PS-QUERY-ROUTING",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-GRAPH-INDEXING",
+        "id": "OVERLAPS-WITH-CAP-GRAPH-INDEXING-PS-STORAGE-INDEXING",
+        "source_refs": [
+          "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+          "SRC-MICROSOFT-GRAPHRAG-DOCS"
+        ],
+        "to": "PS-STORAGE-INDEXING",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-GRAPH-RETRIEVAL",
+        "id": "OVERLAPS-WITH-CAP-GRAPH-RETRIEVAL-PS-RETRIEVAL",
+        "source_refs": [
+          "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+          "SRC-MICROSOFT-GRAPHRAG-DOCS"
+        ],
+        "to": "PS-RETRIEVAL",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-METADATA-FILTERING",
+        "id": "OVERLAPS-WITH-CAP-METADATA-FILTERING-PS-RETRIEVAL",
+        "source_refs": [
+          "SRC-AZURE-DOCUMENT-ACCESS-CONTROL-2026",
+          "SRC-QDRANT-INDEXING-DOCS-2026"
+        ],
+        "to": "PS-RETRIEVAL",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-PROMPT-ABSTRACTION",
+        "id": "OVERLAPS-WITH-CAP-PROMPT-ABSTRACTION-PS-QUERY-REWRITE",
+        "source_refs": [
+          "SRC-STEP-BACK-PROMPTING-2024"
+        ],
+        "to": "PS-QUERY-REWRITE",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-PROMPT-CONTEXT-ASSEMBLY",
+        "id": "OVERLAPS-WITH-CAP-PROMPT-CONTEXT-ASSEMBLY-PS-CONTEXT-ASSEMBLY",
+        "source_refs": [
+          "SRC-USER-RAG-EXPERIENCE-PDF"
+        ],
+        "to": "PS-CONTEXT-ASSEMBLY",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-TOOL-USE",
+        "id": "OVERLAPS-WITH-CAP-TOOL-USE-PS-QUERY-ROUTING",
+        "source_refs": [
+          "SRC-AGENTIC-RAG-SURVEY-2025"
+        ],
+        "to": "PS-QUERY-ROUTING",
+        "type": "overlaps_with"
+      },
+      {
+        "from": "CAP-VECTOR-INDEX",
+        "id": "OVERLAPS-WITH-CAP-VECTOR-INDEX-PS-STORAGE-INDEXING",
+        "source_refs": [
+          "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+          "SRC-QDRANT-INDEXING-DOCS-2026"
+        ],
+        "to": "PS-STORAGE-INDEXING",
+        "type": "overlaps_with"
+      }
+    ],
+    "entities_with_source_refs": [
+      "BB-AGENT",
+      "BB-KNOWLEDGE-GRAPH",
+      "BB-PROMPT-ENGINEERING",
+      "BB-VECTOR-DATABASE",
+      "CAP-AGENTIC-PLANNING",
+      "CAP-GRAPH-INDEXING",
+      "CAP-GRAPH-RETRIEVAL",
+      "CAP-METADATA-FILTERING",
+      "CAP-PROMPT-ABSTRACTION",
+      "CAP-PROMPT-CONTEXT-ASSEMBLY",
+      "CAP-TOOL-USE",
+      "CAP-VECTOR-INDEX"
+    ],
+    "expected_backbone_ids": [
+      "BB-AGENT",
+      "BB-KNOWLEDGE-GRAPH",
+      "BB-PROMPT-ENGINEERING",
+      "BB-VECTOR-DATABASE"
+    ],
+    "expected_capability_ids": [
+      "CAP-AGENTIC-PLANNING",
+      "CAP-GRAPH-INDEXING",
+      "CAP-GRAPH-RETRIEVAL",
+      "CAP-METADATA-FILTERING",
+      "CAP-PROMPT-ABSTRACTION",
+      "CAP-PROMPT-CONTEXT-ASSEMBLY",
+      "CAP-TOOL-USE",
+      "CAP-VECTOR-INDEX"
+    ],
+    "missing_backbone_ids": [],
+    "missing_capability_ids": [],
+    "present_backbone_ids": [
+      "BB-AGENT",
+      "BB-KNOWLEDGE-GRAPH",
+      "BB-PROMPT-ENGINEERING",
+      "BB-VECTOR-DATABASE"
+    ],
+    "present_capability_ids": [
+      "CAP-AGENTIC-PLANNING",
+      "CAP-GRAPH-INDEXING",
+      "CAP-GRAPH-RETRIEVAL",
+      "CAP-METADATA-FILTERING",
+      "CAP-PROMPT-ABSTRACTION",
+      "CAP-PROMPT-CONTEXT-ASSEMBLY",
+      "CAP-TOOL-USE",
+      "CAP-VECTOR-INDEX"
+    ],
+    "status": "gap"
+  },
+  "generated_at": "2026-09-04",
+  "input_summary": {
+    "evidence_files": 29,
+    "graph_source_nodes": 174,
+    "manual_mapping_summary": {
+      "decision_counts": {
+        "cross_node": 94,
+        "exact_duplicate": 18,
+        "map": 89,
+        "non_rag": 12,
+        "partial_overlap": 222,
+        "retain": 177
+      },
+      "mapped_catalog_atoms": 189,
+      "mapped_source_units": 653,
+      "mapping_records": 612
+    },
+    "public_scenarios": 26,
+    "registered_source_ids": 174,
+    "reviewed_mapping_files": 24
+  },
+  "inputs": {
+    "catalog": "knowledge/rag/catalog.json",
+    "evidence": "audits/rag/evidence/*.json",
+    "graph": "knowledge/rag/graph.json",
+    "manual_mappings": [
+      "audits/rag/accepted-mappings.json",
+      "audits/rag/reviewed/*.json"
+    ],
+    "public_scenarios": "interview/rag/public-scenarios.json",
+    "source_registries": [
+      "sources/registry.json",
+      "sources/rag-current-sources.json"
+    ]
+  },
+  "isolated_nodes": [
+    {
+      "id": "SRC-EU-GDPR-OFFICIAL-2016",
+      "status": "source_mapped",
+      "type": "source"
+    }
+  ],
+  "knowledge_not_referenced_by_problem": [
+    {
+      "id": "RAG-01-001",
+      "label_zh": "RAG 的定义、核心组件与工作目标",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-002",
+      "label_zh": "知识截止、知识空白与知识更新问题",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-003",
+      "label_zh": "企业私域知识接入与可审计性",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-004",
+      "label_zh": "RAG 对幻觉的缓解能力与边界",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-005",
+      "label_zh": "RAG 与微调的区别、组合和选型",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-006",
+      "label_zh": "RAG 与长上下文的区别、组合和选型",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-LOST-IN-THE-MIDDLE-2023"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-007",
+      "label_zh": "RAG 与传统搜索系统的区别和联系",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-008",
+      "label_zh": "RAG 与模型记忆、上下文工程的关系",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-REALM-2020"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-009",
+      "label_zh": "适合使用 RAG 的任务与业务条件",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-REALM-2020",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-01-010",
+      "label_zh": "不适合使用 RAG 或收益有限的场景",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-001",
+      "label_zh": "离线知识库构建全流程",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-NVIDIA-RAG-BLUEPRINT",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-002",
+      "label_zh": "在线问答全流程",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-NVIDIA-RAG-BLUEPRINT",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-003",
+      "label_zh": "召回、过滤、生成三段式链路",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-004",
+      "label_zh": "解析器、切分器、嵌入器、索引和检索器的边界",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-005",
+      "label_zh": "Retriever、Reranker 与 Generator 的边界",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-006",
+      "label_zh": "RAG 数据流、控制流和错误流",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-007",
+      "label_zh": "来源、文档、Chunk 与答案的可追溯链路",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LANGSMITH-OBSERVABILITY-DOCS-2026",
+        "SRC-OPENLINEAGE-OBJECT-MODEL-1-53-0",
+        "SRC-W3C-PROV-O-2013",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-009",
+      "label_zh": "模块化接口与组件可替换性",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-MODULAR-RAG-2024",
+        "SRC-REALM-2020"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-02-010",
+      "label_zh": "任务状态、幂等与失败恢复边界",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AZURE-INDEXER-CHANGE-DELETE-DETECTION-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-KAFKA-SOURCE-CONNECTOR-API-4-3-1",
+        "SRC-MILVUS-BACKUP-DOCS-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-001",
+      "label_zh": "PDF、Word、HTML、Markdown 等来源类型",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-002",
+      "label_zh": "文本型 PDF 的解析问题",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-005",
+      "label_zh": "页眉、页脚、脚注和目录噪声处理",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-007",
+      "label_zh": "图片、图表、流程图和 Caption 处理",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-008",
+      "label_zh": "公式、代码与特殊内容解析",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-009",
+      "label_zh": "文本清洗、编码和格式标准化",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-010",
+      "label_zh": "文档级、段落级和近似重复检测",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-011",
+      "label_zh": "文档元数据、来源和时间字段设计",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-OPENLINEAGE-OBJECT-MODEL-1-53-0",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-SPDX-LICENSE-EXPRESSIONS-3-1-RC1",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-W3C-PROV-O-2013",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-013",
+      "label_zh": "解析工具与 Pipeline 方案选型",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LITEPARSE-OFFICIAL-REPOSITORY-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-UNSTRUCTURED-PARTITIONING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-03-015",
+      "label_zh": "多模态文档的元素关联与阅读顺序",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-UNIDOC-BENCH-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-001",
+      "label_zh": "Chunking 的目标与检索、生成双重约束",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-CHUNKING-METHODS-COST-EVALUATION-2026",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-006",
+      "label_zh": "滑动窗口与 Chunk Overlap",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LLAMAINDEX-SENTENCE-WINDOW-DOCS-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-008",
+      "label_zh": "Sentence Window Retrieval",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-009",
+      "label_zh": "命题化切分与原子事实",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-010",
+      "label_zh": "Contextual Chunking 与上下文补充",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-016",
+      "label_zh": "延迟切分（Late Chunking）的先编码后池化与全文上下文保留",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-04-017",
+      "label_zh": "假设问题索引（Hypothetical Question Indexing）与文档侧问题增强",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-001",
+      "label_zh": "Embedding 的语义空间与检索作用",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-002",
+      "label_zh": "Word2Vec、BERT、SBERT 与现代 Embedding 演进",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-003",
+      "label_zh": "对比学习、正负样本和训练目标",
+      "source_refs": [
+        "SRC-DENSE-PASSAGE-RETRIEVAL-2020",
+        "SRC-SENTENCE-TRANSFORMERS-HARD-NEGATIVE-DOCS-2026",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-007",
+      "label_zh": "Cosine、Inner Product 与 L2 距离",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-013",
+      "label_zh": "领域检索器微调、适配器与 Embedding 变换",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-014",
+      "label_zh": "检索器与生成器偏好对齐及 LLM 监督信号",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-015",
+      "label_zh": "指令感知嵌入（Instruction-aware Embedding）与任务条件编码",
+      "source_refs": [
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-05-016",
+      "label_zh": "多模态嵌入（Multimodal Embedding）与跨模态检索",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-COHERE-EMBEDDING-DOCS-2026",
+        "SRC-COLBERT-2020",
+        "SRC-COLPALI-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-06-004",
+      "label_zh": "Document ID、Chunk ID 与 Parent ID",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-06-007",
+      "label_zh": "PQ、量化和压缩索引",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLBERT-2020",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-MATRYOSHKA-REPRESENTATION-LEARNING-2024",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-06-008",
+      "label_zh": "倒排索引、稀疏向量和全文索引",
+      "source_refs": [
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-06-009",
+      "label_zh": "向量索引与关键词索引的共存",
+      "source_refs": [
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-06-011",
+      "label_zh": "FAISS、Milvus、Qdrant、Chroma、Pinecone 与 pgvector 选型",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-QDRANT-INDEXING-DOCS-2026",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-08-012",
+      "label_zh": "时间衰减、新鲜度和热度信号",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-09-001",
+      "label_zh": "System Prompt、问题、证据和输出约束的组装",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-09-010",
+      "label_zh": "生成后事实核查与证据对齐",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-QCARE-OFFICIAL-REPOSITORY-2026",
+        "SRC-SELF-RAG-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-09-014",
+      "label_zh": "结构化输出与答案 Schema",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-OPENAI-STRUCTURED-OUTPUTS-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-09-015",
+      "label_zh": "长上下文与 Prompt Caching 的边界",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-09-016",
+      "label_zh": "面向检索证据输入的生成器适配与微调",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-10-010",
+      "label_zh": "RAGAS 等自动评测框架",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-001",
+      "label_zh": "文档变更检测、哈希和事件来源",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CONFLUENT-SCHEMA-EVOLUTION-DOCS-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-DEBEZIUM-OUTBOX-EVENT-ROUTER-DOCS-2026",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-006",
+      "label_zh": "Embedding、检索、Rerank 和答案缓存",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-QDRANT-EMBEDDING-MODEL-MIGRATION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-009",
+      "label_zh": "高并发、限流、背压和资源隔离",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-010",
+      "label_zh": "超时、重试、熔断和故障转移",
+      "source_refs": [
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-KAFKA-SOURCE-CONNECTOR-API-4-3-1",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-OPENAI-STRUCTURED-OUTPUTS-DOCS-2026",
+        "SRC-QDRANT-BLUE-GREEN-DEPLOYMENT-2026",
+        "SRC-QDRANT-CONSISTENCY-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-011",
+      "label_zh": "检索和生成降级策略",
+      "source_refs": [
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-014",
+      "label_zh": "PII、数据保留和删除合规",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-AZURE-FOUNDRY-DATA-PRIVACY-2026",
+        "SRC-AZURE-FOUNDRY-DEPLOYMENT-TYPES-2026",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-NIST-GENAI-PROFILE-2024",
+        "SRC-NIST-PRIVACY-FRAMEWORK-2020",
+        "SRC-OPENTELEMETRY-GENAI-SEMCONV-2026",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-SPDX-LICENSE-EXPRESSIONS-3-1-RC1",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-11-018",
+      "label_zh": "Token、模型、存储和检索成本优化",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-CHUNKING-METHODS-COST-EVALUATION-2026",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-RANKGPT-2024",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-001",
+      "label_zh": "Naive RAG 的流程和局限",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-002",
+      "label_zh": "Advanced RAG 的查询、检索和生成优化",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-003",
+      "label_zh": "Modular RAG 的组件化和路由",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-MODULAR-RAG-2024",
+        "SRC-RAGROUTER-BENCH-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-008",
+      "label_zh": "Multi-Step 与 Iterative Retrieval",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-TRACER-2026",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-IRCOT-2023",
+        "SRC-ITERATIVE-RAG-DIAGNOSTIC-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-012",
+      "label_zh": "视觉文档检索与 Late Interaction",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-UNIDOC-BENCH-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-013",
+      "label_zh": "Agentic Search 与传统搜索、传统 RAG",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-014",
+      "label_zh": "Deep Research 的任务分解和搜索规划",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-015",
+      "label_zh": "Deep Research 的多源交叉验证",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-016",
+      "label_zh": "信息饱和、搜索预算和停止条件",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-017",
+      "label_zh": "长研究任务的中间证据和上下文组织",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ATBENCH-AGENT-TRAJECTORY-SAFETY-2026",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-12-019",
+      "label_zh": "RAG 范式的概念与分类维度",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-SURVEY-2025",
+        "SRC-REALM-2020",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-002",
+      "label_zh": "RAG 完整流程口述",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-003",
+      "label_zh": "从零设计企业 RAG 系统",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-ENTERPRISE-RAG-SYSTEM-INTERVIEW-2026"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-004",
+      "label_zh": "Chunk、Embedding、向量库和 Reranker 选型表达",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-005",
+      "label_zh": "检索优化方案和实验依据",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-006",
+      "label_zh": "RAG 框架、平台和开源项目选型",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENT-INTERVIEW-HUB-INDEX",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-008",
+      "label_zh": "无召回、噪声、幻觉和高延迟排障",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-010",
+      "label_zh": "RAG 项目 STAR 叙事",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ],
+      "status": "source_mapped"
+    },
+    {
+      "id": "RAG-13-011",
+      "label_zh": "不同岗位的 RAG 回答深度",
+      "source_refs": [],
+      "status": "inventory_draft"
+    },
+    {
+      "id": "RAG-13-012",
+      "label_zh": "原始面试题、追问与标准知识双向映射",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENT-INTERVIEW-HUB-INDEX",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG"
+      ],
+      "status": "source_mapped"
+    }
+  ],
+  "limitations": [
+    "This report does not infer a missing relationship, unreferenced knowledge node, or common topic as a technical conflict.",
+    "Evidence conflict-topic records describe source content about conflict handling; they do not establish a conflict between registered sources.",
+    "Inventory_draft and source_mapped nodes are not final knowledge chapters or final canonical claims."
+  ],
+  "missing_supported_by_for_non_source_nodes": [
+    {
+      "id": "BB-RAG",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "backbone"
+    },
+    {
+      "id": "PS-ADVANCED-RAG",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-ANSWER-GENERATION",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-CHUNKING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-CITATION-VERIFICATION",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-CONTEXT-ASSEMBLY",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-DATA-GOVERNANCE",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-DATA-INGESTION",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-DOCUMENT-PARSING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-EMBEDDING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-EVALUATION",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-PRODUCTION-GOVERNANCE",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-QUERY-REWRITE",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-QUERY-ROUTING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-QUERY-UNDERSTANDING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-RERANKING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-RESULT-FUSION",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-RETRIEVAL",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "PS-STORAGE-INDEXING",
+      "source_refs": [
+        "SRC-RAG-ORIGINAL-2020"
+      ],
+      "status": "source_mapped",
+      "type": "pipeline_stage"
+    },
+    {
+      "id": "RAG-07-001",
+      "source_refs": [],
+      "status": "inventory_draft",
+      "type": "knowledge"
+    },
+    {
+      "id": "RAG-13-011",
+      "source_refs": [],
+      "status": "inventory_draft",
+      "type": "knowledge"
+    }
+  ],
+  "next_actions": [
+    "Add supported_by edges only where an existing registered, non-waived source explicitly supports the node boundary.",
+    "Classify isolated and problem-unreferenced nodes as intentional inventory, future mapping work, or candidates for removal only after semantic review.",
+    "Model a conflicts_with or supersedes edge only when a specific source-to-source conflict or version replacement is explicitly recorded."
+  ],
+  "node_type_coverage": [
+    {
+      "node_type": "backbone",
+      "total": 5,
+      "with_any_graph_connection": 5,
+      "with_node_source_refs": 5,
+      "with_supported_by": 4
+    },
+    {
+      "node_type": "capability",
+      "total": 8,
+      "with_any_graph_connection": 8,
+      "with_node_source_refs": 8,
+      "with_supported_by": 8
+    },
+    {
+      "node_type": "evaluation",
+      "total": 3,
+      "with_any_graph_connection": 3,
+      "with_node_source_refs": 3,
+      "with_supported_by": 3
+    },
+    {
+      "node_type": "implementation",
+      "total": 6,
+      "with_any_graph_connection": 6,
+      "with_node_source_refs": 6,
+      "with_supported_by": 6
+    },
+    {
+      "node_type": "knowledge",
+      "total": 191,
+      "with_any_graph_connection": 191,
+      "with_node_source_refs": 189,
+      "with_supported_by": 189
+    },
+    {
+      "node_type": "pipeline_stage",
+      "total": 18,
+      "with_any_graph_connection": 18,
+      "with_node_source_refs": 18,
+      "with_supported_by": 0
+    },
+    {
+      "node_type": "problem_question",
+      "total": 26,
+      "with_any_graph_connection": 26,
+      "with_node_source_refs": 26,
+      "with_supported_by": 26
+    },
+    {
+      "node_type": "solution",
+      "total": 6,
+      "with_any_graph_connection": 6,
+      "with_node_source_refs": 6,
+      "with_supported_by": 6
+    },
+    {
+      "node_type": "source",
+      "total": 174,
+      "with_any_graph_connection": 173,
+      "with_node_source_refs": 0,
+      "with_supported_by": 0
+    }
+  ],
+  "problem_mapping_mismatches": [],
+  "reverse_problem_mapping": [
+    {
+      "knowledge_id": "RAG-01-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-003",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-004",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-005",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-006",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-007",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-01-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-003",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-004",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-005",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-006",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-007",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-008",
+      "problem_ids": [
+        "PQ-RAG-0008",
+        "PQ-RAG-0009"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-02-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-02-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-003",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0008",
+        "PQ-RAG-0011",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-03-004",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0011"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-03-005",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-006",
+      "problem_ids": [
+        "PQ-RAG-0011"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-03-007",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-011",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-012",
+      "problem_ids": [
+        "PQ-RAG-0008"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-03-013",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-03-014",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0011"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-03-015",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-002",
+      "problem_ids": [
+        "PQ-RAG-0007",
+        "PQ-RAG-0010"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-003",
+      "problem_ids": [
+        "PQ-RAG-0007"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-004",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0007"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-005",
+      "problem_ids": [
+        "PQ-RAG-0007",
+        "PQ-RAG-0010"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-006",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-007",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0007",
+        "PQ-RAG-0010",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-011",
+      "problem_ids": [
+        "PQ-RAG-0011"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-012",
+      "problem_ids": [
+        "PQ-RAG-0003",
+        "PQ-RAG-0007",
+        "PQ-RAG-0010"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-013",
+      "problem_ids": [
+        "PQ-RAG-0003",
+        "PQ-RAG-0007",
+        "PQ-RAG-0010"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-014",
+      "problem_ids": [
+        "PQ-RAG-0002"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-015",
+      "problem_ids": [
+        "PQ-RAG-0003"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-04-016",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-04-017",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-003",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-004",
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-005",
+      "problem_ids": [
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-006",
+      "problem_ids": [
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-007",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-008",
+      "problem_ids": [
+        "PQ-RAG-0004"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-009",
+      "problem_ids": [
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-010",
+      "problem_ids": [
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-011",
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0012"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-012",
+      "problem_ids": [
+        "PQ-RAG-0012",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-05-013",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-014",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-015",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-05-016",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-001",
+      "problem_ids": [
+        "PQ-RAG-0013"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-002",
+      "problem_ids": [
+        "PQ-RAG-0013"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-003",
+      "problem_ids": [
+        "PQ-RAG-0004"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-004",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-005",
+      "problem_ids": [
+        "PQ-RAG-0013"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-006",
+      "problem_ids": [
+        "PQ-RAG-0013"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-007",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-010",
+      "problem_ids": [
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-011",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-06-012",
+      "problem_ids": [
+        "PQ-RAG-0003",
+        "PQ-RAG-0012",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-013",
+      "problem_ids": [
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-014",
+      "problem_ids": [
+        "PQ-RAG-0008",
+        "PQ-RAG-0009",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-06-015",
+      "problem_ids": [
+        "PQ-RAG-0004"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-001",
+      "problem_ids": [
+        "PQ-RAG-0014"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-002",
+      "problem_ids": [
+        "PQ-RAG-0014",
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-003",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-004",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-005",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-006",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-007",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-008",
+      "problem_ids": [
+        "PQ-RAG-0014"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-009",
+      "problem_ids": [
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-010",
+      "problem_ids": [
+        "PQ-RAG-0014",
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-011",
+      "problem_ids": [
+        "PQ-RAG-0014",
+        "PQ-RAG-0015"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-07-012",
+      "problem_ids": [
+        "PQ-RAG-0014",
+        "PQ-RAG-0015",
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-001",
+      "problem_ids": [
+        "PQ-RAG-0017"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-002",
+      "problem_ids": [
+        "PQ-RAG-0017"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-003",
+      "problem_ids": [
+        "PQ-RAG-0017"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-004",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0017",
+        "PQ-RAG-0018"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-005",
+      "problem_ids": [
+        "PQ-RAG-0017",
+        "PQ-RAG-0018"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-006",
+      "problem_ids": [
+        "PQ-RAG-0018"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-007",
+      "problem_ids": [
+        "PQ-RAG-0018"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-008",
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0017",
+        "PQ-RAG-0018",
+        "PQ-RAG-0019",
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-009",
+      "problem_ids": [
+        "PQ-RAG-0019"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-010",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0019"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-011",
+      "problem_ids": [
+        "PQ-RAG-0015",
+        "PQ-RAG-0018",
+        "PQ-RAG-0019"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-012",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-08-013",
+      "problem_ids": [
+        "PQ-RAG-0005",
+        "PQ-RAG-0016",
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-014",
+      "problem_ids": [
+        "PQ-RAG-0017",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-015",
+      "problem_ids": [
+        "PQ-RAG-0017",
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-08-016",
+      "problem_ids": [
+        "PQ-RAG-0019"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-09-002",
+      "problem_ids": [
+        "PQ-RAG-0020"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-003",
+      "problem_ids": [
+        "PQ-RAG-0020"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-004",
+      "problem_ids": [
+        "PQ-RAG-0020"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-005",
+      "problem_ids": [
+        "PQ-RAG-0020"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-006",
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-007",
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-008",
+      "problem_ids": [
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-009",
+      "problem_ids": [
+        "PQ-RAG-0023"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-09-011",
+      "problem_ids": [
+        "PQ-RAG-0020",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-012",
+      "problem_ids": [
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-013",
+      "problem_ids": [
+        "PQ-RAG-0020",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-09-014",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-09-015",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-09-016",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-10-001",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0008",
+        "PQ-RAG-0021",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-002",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0019",
+        "PQ-RAG-0021",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-003",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0006",
+        "PQ-RAG-0019",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-004",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0006",
+        "PQ-RAG-0019",
+        "PQ-RAG-0021",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-005",
+      "problem_ids": [
+        "PQ-RAG-0021"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-006",
+      "problem_ids": [
+        "PQ-RAG-0006"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-007",
+      "problem_ids": [
+        "PQ-RAG-0021"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-008",
+      "problem_ids": [
+        "PQ-RAG-0006",
+        "PQ-RAG-0021",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-009",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0003",
+        "PQ-RAG-0007",
+        "PQ-RAG-0010",
+        "PQ-RAG-0014",
+        "PQ-RAG-0018",
+        "PQ-RAG-0021",
+        "PQ-RAG-0024"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-10-011",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0014",
+        "PQ-RAG-0021",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-012",
+      "problem_ids": [
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-013",
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0006",
+        "PQ-RAG-0021"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-10-014",
+      "problem_ids": [
+        "PQ-RAG-0020",
+        "PQ-RAG-0021",
+        "PQ-RAG-0023",
+        "PQ-RAG-0025"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-002",
+      "problem_ids": [
+        "PQ-RAG-0008",
+        "PQ-RAG-0009",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-003",
+      "problem_ids": [
+        "PQ-RAG-0009"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-004",
+      "problem_ids": [
+        "PQ-RAG-0009",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-005",
+      "problem_ids": [
+        "PQ-RAG-0002"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-006",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-007",
+      "problem_ids": [
+        "PQ-RAG-0005"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-008",
+      "problem_ids": [
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-009",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-011",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-012",
+      "problem_ids": [
+        "PQ-RAG-0022",
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-013",
+      "problem_ids": [
+        "PQ-RAG-0008",
+        "PQ-RAG-0022",
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-014",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-015",
+      "problem_ids": [
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-016",
+      "problem_ids": [
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-017",
+      "problem_ids": [
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-11-018",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-11-019",
+      "problem_ids": [
+        "PQ-RAG-0022"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-001",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-003",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-004",
+      "problem_ids": [
+        "PQ-RAG-0016",
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-005",
+      "problem_ids": [
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-006",
+      "problem_ids": [
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-007",
+      "problem_ids": [
+        "PQ-RAG-0016"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-009",
+      "problem_ids": [
+        "PQ-RAG-0005"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-010",
+      "problem_ids": [
+        "PQ-RAG-0005"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-011",
+      "problem_ids": [
+        "PQ-RAG-0011"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-012",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-013",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-014",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-015",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-016",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-017",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-018",
+      "problem_ids": [
+        "PQ-RAG-0026"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-12-019",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-12-020",
+      "problem_ids": [
+        "PQ-RAG-0005"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-13-002",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-003",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-004",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-005",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-006",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-007",
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0005"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-13-008",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-009",
+      "problem_ids": [
+        "PQ-RAG-0006"
+      ]
+    },
+    {
+      "knowledge_id": "RAG-13-010",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-011",
+      "problem_ids": []
+    },
+    {
+      "knowledge_id": "RAG-13-012",
+      "problem_ids": []
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Coverage, isolation, source traceability, reverse problem mappings, and explicit conflict/version evidence for the inventory-level RAG graph; no external search.",
+  "source_refs_without_graph_source_node": [],
+  "source_registry_alignment": {
+    "graph_source_nodes_not_in_registered_sources": [],
+    "registered_sources_missing_graph_source_node": []
+  },
+  "status": "completed_inventory_audit",
+  "waived_source_audit": {
+    "allowed_representation": "The waived source may remain as a source node tagged waived_unavailable and non_evidentiary, but may not support a non-source node or edge.",
+    "violations": [],
+    "waived_source_ids": [
+      "eu-gdpr-official-2016"
+    ],
+    "waived_source_node_ids": [
+      "SRC-EU-GDPR-OFFICIAL-2016"
+    ]
+  },
+  "work_item_id": "WP-P3-003"
+}

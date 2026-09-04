@@ -70,6 +70,265 @@ def duplicates(values: list[str]) -> list[str]:
     return sorted(repeated)
 
 
+def graph_source_node_id(source_id: str) -> str:
+    """Return the graph node identifier used for a registered source."""
+    normalized = re.sub(r"[^A-Za-z0-9]+", "-", source_id).strip("-").upper()
+    return f"SRC-{normalized}"
+
+
+def validate_rag_graph(
+    graph: object,
+    graph_model: dict,
+    catalog_atom_ids: set[str],
+    waived_source_ids: set[str],
+    errors: list[str],
+) -> None:
+    """Validate the P3 graph inventory without requiring final publication status."""
+    if not isinstance(graph, dict):
+        errors.append("RAG 图谱根对象必须是对象")
+        return
+
+    for field in ("schema_version", "domain", "status", "nodes", "edges"):
+        if field not in graph:
+            errors.append(f"RAG 图谱缺少必要字段：{field}")
+    if graph.get("domain") != "RAG":
+        errors.append("RAG 图谱 domain 必须为 RAG")
+    if not isinstance(graph.get("status"), str) or not graph.get("status"):
+        errors.append("RAG 图谱 status 必须是非空字符串")
+    # inventory_draft is an intentional P3 state and therefore remains valid here.
+    nodes = graph.get("nodes")
+    edges = graph.get("edges")
+    if not isinstance(nodes, list):
+        errors.append("RAG 图谱 nodes 必须是数组")
+        return
+    if not isinstance(edges, list):
+        errors.append("RAG 图谱 edges 必须是数组")
+        return
+
+    node_types = {
+        item.get("id") for item in graph_model.get("node_types", []) if isinstance(item, dict)
+    }
+    edge_types = {
+        item.get("id") for item in graph_model.get("edge_types", []) if isinstance(item, dict)
+    }
+    node_patterns = graph_model.get("node_id_patterns", {})
+    node_statuses = set(graph_model.get("review_statuses", []))
+    edge_statuses = node_statuses
+    required_node_fields = graph_model.get("required_node_fields", [])
+    required_edge_fields = graph_model.get("required_edge_fields", [])
+    undirected_types = {
+        item.get("id")
+        for item in graph_model.get("edge_types", [])
+        if isinstance(item, dict) and item.get("directed") is False
+    }
+    provenance_types = {
+        item.get("id")
+        for item in graph_model.get("problem_provenance_types", [])
+        if isinstance(item, dict)
+    }
+
+    node_ids: list[str] = []
+    node_by_id: dict[str, dict] = {}
+    for index, node in enumerate(nodes):
+        label = f"RAG 图谱节点[{index}]"
+        if not isinstance(node, dict):
+            errors.append(f"{label} 必须是对象")
+            continue
+        for field in required_node_fields:
+            if field not in node:
+                errors.append(f"{label} 缺少必要字段：{field}")
+        node_id = node.get("id")
+        node_type = node.get("type")
+        if not isinstance(node_id, str) or not node_id:
+            errors.append(f"{label} 的 id 必须是非空字符串")
+            continue
+        node_ids.append(node_id)
+        node_by_id[node_id] = node
+        if node_type not in node_types:
+            errors.append(f"RAG 图谱节点使用了未登记类型：{node_id} -> {node_type}")
+        pattern = node_patterns.get(node_type)
+        if not isinstance(pattern, str) or not re.fullmatch(pattern, node_id):
+            errors.append(f"RAG 图谱节点 ID 与类型模式不匹配：{node_id} ({node_type})")
+        for field in ("label_zh", "label_en"):
+            if not isinstance(node.get(field), str) or not node[field].strip():
+                errors.append(f"RAG 图谱节点缺少非空 {field}：{node_id}")
+        if node.get("status") not in node_statuses:
+            errors.append(f"RAG 图谱节点状态无效：{node_id} -> {node.get('status')}")
+        if node.get("reviewed_at") is not None and (
+            not isinstance(node.get("reviewed_at"), str) or not node["reviewed_at"].strip()
+        ):
+            errors.append(f"RAG 图谱节点 reviewed_at 必须为日期字符串或 null：{node_id}")
+        if not isinstance(node.get("source_refs"), list):
+            errors.append(f"RAG 图谱节点 source_refs 必须是数组：{node_id}")
+        elif any(not isinstance(ref, str) or not ref for ref in node["source_refs"]):
+            errors.append(f"RAG 图谱节点 source_refs 包含无效值：{node_id}")
+        elif duplicates(node["source_refs"]):
+            errors.append(f"RAG 图谱节点 source_refs 重复：{node_id}")
+        if node_type == "source" and node.get("source_refs"):
+            errors.append(f"来源节点不得再引用 source_refs：{node_id}")
+
+    if repeated := duplicates(node_ids):
+        errors.append(f"RAG 图谱节点 ID 重复：{repeated[:10]}")
+
+    graph_knowledge_ids = {
+        node_id for node_id, node in node_by_id.items() if node.get("type") == "knowledge"
+    }
+    if graph_knowledge_ids != catalog_atom_ids:
+        missing = sorted(catalog_atom_ids - graph_knowledge_ids)
+        unknown = sorted(graph_knowledge_ids - catalog_atom_ids)
+        if missing:
+            errors.append(f"RAG 图谱遗漏 catalog 知识原子：{missing[:10]}")
+        if unknown:
+            errors.append(f"RAG 图谱含有 catalog 未登记知识原子：{unknown[:10]}")
+
+    source_node_ids = {
+        node_id for node_id, node in node_by_id.items() if node.get("type") == "source"
+    }
+    for node_id, node in node_by_id.items():
+        for ref in node.get("source_refs", []):
+            if ref not in source_node_ids:
+                errors.append(f"RAG 图谱节点引用未知或非来源证据：{node_id} -> {ref}")
+
+    edge_ids: list[str] = []
+    edge_keys: list[tuple[str, str, str]] = []
+    supported_by_from: set[str] = set()
+    problem_links: set[str] = set()
+    solution_links: set[str] = set()
+    implementation_links: set[str] = set()
+    for index, edge in enumerate(edges):
+        label = f"RAG 图谱关系[{index}]"
+        if not isinstance(edge, dict):
+            errors.append(f"{label} 必须是对象")
+            continue
+        for field in required_edge_fields:
+            if field not in edge:
+                errors.append(f"{label} 缺少必要字段：{field}")
+        edge_id = edge.get("id")
+        edge_type = edge.get("type")
+        source = edge.get("from")
+        target = edge.get("to")
+        if not isinstance(edge_id, str) or not edge_id:
+            errors.append(f"{label} 的 id 必须是非空字符串")
+        else:
+            edge_ids.append(edge_id)
+        if edge_type not in edge_types:
+            errors.append(f"RAG 图谱关系使用了未登记类型：{edge_id} -> {edge_type}")
+        if not isinstance(source, str) or source not in node_by_id:
+            errors.append(f"RAG 图谱关系起点不存在：{edge_id} -> {source}")
+        if not isinstance(target, str) or target not in node_by_id:
+            errors.append(f"RAG 图谱关系终点不存在：{edge_id} -> {target}")
+        if isinstance(edge_type, str) and isinstance(source, str) and isinstance(target, str):
+            edge_keys.append((edge_type, source, target))
+            if edge_type in undirected_types and source >= target:
+                errors.append(f"RAG 图谱无向关系未按稳定端点顺序归一化：{edge_id}")
+        if not isinstance(edge.get("explanation"), str) or not edge["explanation"].strip():
+            errors.append(f"RAG 图谱关系缺少非空 explanation：{edge_id}")
+        if edge.get("review_status") not in edge_statuses:
+            errors.append(f"RAG 图谱关系审核状态无效：{edge_id} -> {edge.get('review_status')}")
+        if not isinstance(edge.get("source_refs"), list):
+            errors.append(f"RAG 图谱关系 source_refs 必须是数组：{edge_id}")
+            refs: list[str] = []
+        else:
+            refs = edge["source_refs"]
+            if any(not isinstance(ref, str) or not ref for ref in refs):
+                errors.append(f"RAG 图谱关系 source_refs 包含无效值：{edge_id}")
+            elif duplicates(refs):
+                errors.append(f"RAG 图谱关系 source_refs 重复：{edge_id}")
+            for ref in refs:
+                if ref not in source_node_ids:
+                    errors.append(f"RAG 图谱关系引用未知或非来源证据：{edge_id} -> {ref}")
+        if edge_type == "supported_by" and source in node_by_id and target in node_by_id:
+            if node_by_id[source].get("type") == "source" or node_by_id[target].get("type") != "source":
+                errors.append(f"supported_by 必须从非来源节点指向来源节点：{edge_id}")
+            if target not in refs:
+                errors.append(f"supported_by 必须在 source_refs 中包含其来源终点：{edge_id}")
+            supported_by_from.add(source)
+        if edge_type == "problem_at" and source in node_by_id and target in node_by_id:
+            if node_by_id[source].get("type") != "problem_question":
+                errors.append(f"problem_at 必须从 problem_question 发出：{edge_id}")
+            else:
+                problem_links.add(source)
+        if edge_type == "solved_by" and source in node_by_id and target in node_by_id:
+            source_type = node_by_id[source].get("type")
+            target_type = node_by_id[target].get("type")
+            if {source_type, target_type} != {"problem_question", "solution"}:
+                errors.append(f"solved_by 必须连接 problem_question 与 solution：{edge_id}")
+            else:
+                solution_links.add(source if source_type == "solution" else target)
+        if edge_type in {"implements", "implemented_by"} and source in node_by_id and target in node_by_id:
+            source_type = node_by_id[source].get("type")
+            target_type = node_by_id[target].get("type")
+            if source_type == "implementation" and target_type in {"knowledge", "solution"}:
+                implementation_links.add(source)
+            elif target_type == "implementation" and source_type in {"knowledge", "solution"}:
+                implementation_links.add(target)
+            else:
+                errors.append(
+                    f"{edge_type} 中 implementation 必须连接 knowledge 或 solution：{edge_id}"
+                )
+
+    if repeated := duplicates(edge_ids):
+        errors.append(f"RAG 图谱关系 ID 重复：{repeated[:10]}")
+    if repeated := duplicates(edge_keys):
+        errors.append(f"RAG 图谱关系语义键重复：{repeated[:10]}")
+
+    for node_id, node in node_by_id.items():
+        node_type = node.get("type")
+        if node_type != "source" and node.get("status") == "reviewed" and node_id not in supported_by_from:
+            errors.append(f"已审核非来源节点缺少 supported_by 来源关系：{node_id}")
+        if node_type == "problem_question":
+            provenance = node.get("provenance_type")
+            if provenance not in provenance_types:
+                errors.append(f"问题节点使用了未登记 provenance_type：{node_id} -> {provenance}")
+            if provenance != "engineering_case" and (
+                not isinstance(node.get("source_locator"), str) or not node["source_locator"].strip()
+            ):
+                errors.append(f"非工程问题节点缺少 source_locator：{node_id}")
+            if node_id not in problem_links:
+                errors.append(f"问题节点缺少 problem_at 关系：{node_id}")
+        if node_type == "solution" and node_id not in solution_links:
+            errors.append(f"方案节点未通过 solved_by 连接问题节点：{node_id}")
+        if node_type == "implementation" and node_id not in implementation_links:
+            errors.append(f"实现节点未连接 knowledge 或 solution：{node_id}")
+
+    graph_waived = graph.get("waived_sources", [])
+    if (
+        not isinstance(graph_waived, list)
+        or any(not isinstance(source_id, str) or not source_id for source_id in graph_waived)
+        or set(graph_waived) != waived_source_ids
+    ):
+        errors.append("RAG 图谱 waived_sources 必须与外部证据豁免来源一致")
+    waived_node_ids = {
+        graph_source_node_id(source_id)
+        for source_id in waived_source_ids
+        if isinstance(source_id, str) and source_id
+    }
+    for waived_node_id in waived_node_ids:
+        waived_node = node_by_id.get(waived_node_id)
+        if not waived_node or waived_node.get("type") != "source":
+            errors.append(f"RAG 图谱缺少豁免来源节点：{waived_node_id}")
+            continue
+        tags = waived_node.get("tags", [])
+        if not isinstance(tags, list) or "waived_unavailable" not in tags or "non_evidentiary" not in tags:
+            errors.append(f"豁免来源节点缺少 non_evidentiary 使用边界：{waived_node_id}")
+    for node_id, node in node_by_id.items():
+        node_refs = node.get("source_refs", [])
+        if isinstance(node_refs, list) and set(
+            ref for ref in node_refs if isinstance(ref, str)
+        ) & waived_node_ids:
+            errors.append(f"RAG 图谱节点不得将豁免来源作为证据：{node_id}")
+    for edge in edges:
+        if not isinstance(edge, dict):
+            continue
+        edge_refs = edge.get("source_refs", [])
+        if isinstance(edge_refs, list) and set(
+            ref for ref in edge_refs if isinstance(ref, str)
+        ) & waived_node_ids:
+            errors.append(f"RAG 图谱关系不得将豁免来源作为证据：{edge.get('id')}")
+        if edge.get("type") == "supported_by" and edge.get("to") in waived_node_ids:
+            errors.append(f"RAG 图谱不得用豁免来源建立 supported_by：{edge.get('id')}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--strict-rag", action="store_true")
@@ -323,6 +582,7 @@ def main() -> int:
     if expansion.get("coverage_saturated_stages") != saturated_count:
         errors.append("工作状态中的覆盖饱和节点数与覆盖记录不一致")
 
+    waived_source_id_set: set[str] = set()
     evidence_status_path = ROOT / "audits/rag/evidence-verification-status.json"
     if evidence_status_path.exists():
         evidence_status = load_json(
@@ -363,6 +623,7 @@ def main() -> int:
                     errors.append(f"外部证据豁免缺少必要字段 {field}：{source_id}")
         if repeated := duplicates(waived_source_ids):
             errors.append(f"外部证据豁免来源重复：{repeated[:10]}")
+        waived_source_id_set = set(waived_source_ids)
 
         evidence_source_ids: list[str] = []
         completed_batches = evidence_status.get("completed_batches", [])
@@ -632,6 +893,16 @@ def main() -> int:
         for atom_id in scenario.get("atom_ids", []):
             if atom_id not in atom_ids:
                 errors.append(f"公开场景题引用未知知识原子：{atom_id}")
+
+    graph_path = ROOT / "knowledge/rag/graph.json"
+    if graph_path.exists():
+        validate_rag_graph(
+            load_json("knowledge/rag/graph.json", errors),
+            graph_model,
+            set(atom_ids),
+            waived_source_id_set,
+            errors,
+        )
 
     if args.strict_rag and inventory_path.exists():
         reviewable_ids = {
