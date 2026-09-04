@@ -317,7 +317,7 @@
       "status": "in_progress",
       "depends_on": ["WP-P4-002"],
       "outputs": ["18 stage problem sets", "problem-to-node mappings", "source-verified public questions"],
-      "completion_note": "Started graph-backed stage problem production. The first fixed-order batch covers Data Ingestion, Document Parsing, Data Governance and Chunking. Document Parsing has 4 mapped questions, Data Governance has 4, Chunking has 6; Data Ingestion has 0 graph-backed mappings and is recorded as a coverage gap. Candidate inventory/index pages are not formal answer chapters."
+      "completion_note": "Started graph-backed stage problem production. The first fixed-order batch covers Data Ingestion, Document Parsing, Data Governance and Chunking. Document Parsing has 4 mapped questions, Data Governance has 4, Chunking has 6; Data Ingestion has 0 graph-backed mappings and is recorded as a coverage gap. Candidate inventory/index pages are not formal answer chapters. Embedding and Storage and Indexing were then generated from existing graph mappings (4 and 4 mapped questions respectively). Query Understanding, Query Rewrite and Query Routing were generated next: Query Understanding has 3 mapped questions; Query Rewrite and Query Routing have no current contains atoms and remain explicit structural coverage gaps."
     },
     {
       "id": "WP-P6-001",
@@ -346,7 +346,7 @@
   ],
   "next_action": {
     "work_item_id": "WP-P5-001",
-    "instruction": "Continue the fixed 18-stage graph-backed problem production with Embedding and Storage and Indexing. Use existing problem_question nodes, source locators and controlled graph mappings only; preserve engineering-case provenance and do not create unsupported interview claims or formal knowledge chapters."
+    "instruction": "Continue the fixed 18-stage graph-backed problem production with Retrieval, Result Fusion and Reranking. Use existing problem_question nodes, source locators and controlled graph mappings only; preserve engineering-case provenance and do not create unsupported interview claims or formal knowledge chapters."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -374,5 +374,6 @@
     "WP-P4-001 accepted on 2026-09-04: learning/rag/rag-workflow.md is a graph-first workflow prerequisite candidate covering four RAG backbones and all 18 pipeline-stage IDs; it does not constitute formal knowledge chapters."
     ,"WP-P4-002 accepted on 2026-09-04: learning/rag/graph-views.md is a deterministic graph-first projection generated from the current 437-node/1,930-edge graph. It covers all required P4 view types; cross-backbone output now reflects five registered backbones and 12 controlled overlaps."
     ,"WP-P5-001 started on 2026-09-04: interview/rag/stage-problem-index.md remains the all-stage graph projection; interview/rag/p5-001-foundation-stage-problems.md is the first four-stage inventory increment; interview/rag/stages/document-parsing.md, data-governance.md and chunking.md provide candidate problem pages. Data Ingestion has no current graph-backed problem mapping and remains an explicit coverage gap. Validation and diff checks passed; next batch is Embedding and Storage and Indexing."
+    ,"WP-P5-001 query-stage batch accepted on 2026-09-04: scripts/generate_rag_query_stage_pages.py generated query-understanding.md (12 atoms/3 mapped questions), query-rewrite.md (0 atoms/0 questions; structural gap) and query-routing.md (0 atoms/0 questions; structural gap). All content remains graph-backed inventory-only; no external search or unsupported mappings were added. Next batch is Retrieval, Result Fusion and Reranking."
   ]
 }
