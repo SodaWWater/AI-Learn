@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-28",
+  "verified_at": "2026-09-04",
+  "scope": "Two verified pre-registered Milvus documentation URLs. Exact registered URLs were readable; no alternate URLs were used.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "milvus-clustering-compaction-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-06-010", "RAG-06-014", "RAG-06-012"],
+      "verified_claims": [
+        "The Milvus guide describes clustering compaction as redistributing entities into segments according to clustering-key ranges and generating or updating a global PartitionStats mapping.",
+        "For a search carrying a clustering-key value, the documented PartitionStats mapping can be used to prune irrelevant segments, with the stated goal of improving search performance and reducing cost in large collections."
+      ],
+      "boundary": "The claims describe Milvus 2.6.x clustering-compaction behavior and its documented benchmark context; they do not establish universal gains for other databases, data distributions, or query workloads."
+    },
+    {
+      "source_id": "milvus-backup-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-11-019", "RAG-02-010"],
+      "verified_claims": [
+        "The registered Milvus backup page documents the Milvus Backup CLI and shows a create command for making a named backup.",
+        "The page states that backup or restore normally does not stop the running Milvus instance and describes locating backup files in the configured object-storage bucket."
+      ],
+      "boundary": "The fetched page currently labels itself v3.0.x while the registry entry was reviewed against the unversioned page in 2026-09-02; command compatibility, storage settings and recovery validation must be checked against the deployed Milvus version."
+    }
+  ]
+}
