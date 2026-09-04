@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-24",
+  "verified_at": "2026-09-04",
+  "scope": "Ten verified pre-registered paper sources. Exact registered URLs were readable; no new external sources.",
+  "source_count": 10,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "nova-rag-confidence-calibration-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-10-012"
+      ],
+      "verified_claims": [
+        "NOVA reports that retrieval noise worsens LLM confidence calibration and conflicting or irrelevant evidence increases overconfidence on four benchmarks.",
+        "The paper reports ECE improvements from NOVA Rules and approximately 2K HotpotQA supervised examples in its stated settings."
+      ],
+      "boundary": "Research benchmarks and model/training settings do not establish production calibration or universal gains."
+    },
+    {
+      "source_id": "cross-language-temporal-normalization-2025",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-07-008"
+      ],
+      "verified_claims": [
+        "The paper uses multilingual PTLM fill-mask with a Value Intermediate Representation for temporal-expression normalization.",
+        "It reports a two-stage English biomedical pretraining and cross-language/domain adaptation setup outperforming prior systems in its experiments."
+      ],
+      "boundary": "The languages, domains, corpora and model settings are specific; results do not guarantee performance for arbitrary Chinese business data."
+    },
+    {
+      "source_id": "conflictrag-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-09-013",
+        "RAG-10-012"
+      ],
+      "verified_claims": [
+        "ConflictRAG detects, classifies and resolves inter-source conflicts before generation using a two-stage detector with selective LLM use.",
+        "The registered URL currently presents v2 while the registry records v1; reported metrics are from the paper's three benchmark experiments."
+      ],
+      "boundary": "Preprint experiments, thresholds, trust weighting and reported gains are not production guarantees and the registry/page version difference must remain explicit."
+    },
+    {
+      "source_id": "qcare-rag-evaluation-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-10-007",
+        "RAG-10-009",
+        "RAG-10-014"
+      ],
+      "verified_claims": [
+        "Q-CaRE provides query-agnostic reference-free RAG evaluation by decomposing queries into subqueries and answers into atomic claims.",
+        "It defines coverage-aware C-Prec and C-nDCG metrics plus completeness, conciseness and verifiableness measures, evaluated on eight human-annotated datasets."
+      ],
+      "boundary": "Decomposers, alignment judges, datasets and models are paper conditions; this does not replace target-domain human calibration."
+    },
+    {
+      "source_id": "enterprise-rag-benchmark-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-10-012",
+        "RAG-10-014"
+      ],
+      "verified_claims": [
+        "The benchmark contains 983 expert-validated samples across six domains and combines retrieval noise, knowledge gaps, factual conflicts and complex instruction constraints.",
+        "Its reported experiments show a gap between single-constraint and full multi-constraint adherence under the stated 13-model evaluation."
+      ],
+      "boundary": "This preprint's benchmark and framework were not yet released as reproducible assets; reported figures are not a production SLA."
+    },
+    {
+      "source_id": "atbench-agent-trajectory-safety-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-12-017"
+      ],
+      "verified_claims": [
+        "ATBench evaluates agent safety at trajectory level using risk-source, failure-mode and real-world-harm dimensions with heterogeneous tools and delayed long-context triggers.",
+        "The benchmark combines rule/LLM filtering with full human audit and supports intermediate-action diagnosis in its stated 1,000-trajectory setting."
+      ],
+      "boundary": "The preprint benchmark distribution and model rankings do not directly generalize to enterprise agents."
+    },
+    {
+      "source_id": "openrag-soc-indirect-injection-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-11-015",
+        "RAG-11-016"
+      ],
+      "verified_claims": [
+        "OpenRAG-Soc evaluates indirect prompt injection in social-web RAG across ingestion, retrieval and generation, including HTML/Markdown cleaning, Unicode normalization and attribution-gated answering.",
+        "It reports attack success, sparse/dense rank shift, utility and latency under its stated corpus and system configurations."
+      ],
+      "boundary": "The social-web corpus and attack distribution are specific; defenses require retesting on the target collector, parser and models."
+    },
+    {
+      "source_id": "unidoc-bench-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-03-015",
+        "RAG-12-012"
+      ],
+      "verified_claims": [
+        "UniDoc-Bench evaluates document-centric multimodal RAG on real cross-domain PDFs by linking text, table and figure evidence.",
+        "Its unified candidate-pool protocol compares text-only, image-only, text-image fusion and joint retrieval paradigms in the reported experiments."
+      ],
+      "boundary": "Dataset, language, parser and model conditions require remeasurement; reported fusion results are not universally optimal."
+    },
+    {
+      "source_id": "mm-mepa-multimodal-rag-poisoning-2026",
+      "source_type": "paper",
+      "freshness": "research",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-11-016",
+        "RAG-12-011"
+      ],
+      "verified_claims": [
+        "The paper shows that modifying only image-text metadata can manipulate multimodal retrieval and induce generation despite unchanged visual content.",
+        "Its experiments cover four retrievers and two generators and report defenses that often fail against metadata-only poisoning in the tested setting."
+      ],
+      "boundary": "Attack rates and defense outcomes are specific to the preprint's attack, retrievers, generators and benchmark."
+    },
+    {
+      "source_id": "dense-x-retrieval-2024",
+      "source_type": "paper",
+      "freshness": "foundational",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-04-005",
+        "RAG-05-010"
+      ],
+      "verified_claims": [
+        "Dense X Retrieval defines a proposition as a single, concise, self-contained natural-language fact unit and compares document, passage, sentence and proposition retrieval granularity.",
+        "Its experiments report finer-grained proposition retrieval gains under the stated tasks and fixed compute budget."
+      ],
+      "boundary": "The data, language, models and budget are paper conditions; propositions are not universally optimal and must preserve source spans."
+    }
+  ]
+}

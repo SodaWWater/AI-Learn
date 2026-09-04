@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-25",
+  "verified_at": "2026-09-04",
+  "scope": "Seven verified pre-registered documentation sources. Three inaccessible registered URLs remain pending; no new external sources.",
+  "source_count": 7,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "nist-privacy-framework-2020",
+      "source_type": "official_documentation",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-11-014",
+        "RAG-03-012"
+      ],
+      "verified_claims": [
+        "NIST Privacy Framework 1.0 is a voluntary, risk- and outcome-based, technology/sector/law/jurisdiction-agnostic tool.",
+        "It comprises Core, Profiles and Implementation Tiers for communicating privacy outcomes and priorities."
+      ],
+      "boundary": "It is not legally binding and does not replace jurisdiction-specific law or legal advice."
+    },
+    {
+      "source_id": "aws-genai-data-lifecycle-guidance-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-02-001",
+        "RAG-02-008",
+        "RAG-11-014",
+        "RAG-11-018"
+      ],
+      "verified_claims": [
+        "The AWS guidance describes GenAI data lifecycle stages including preparation, integration with retrieval/fine-tuning workflows, feedback collection and ongoing updates.",
+        "It describes RAG as adding external-knowledge ingestion and filtering pipelines around an LLM and recommends encryption, fine-grained access control and TLS/SSL in its guidance."
+      ],
+      "boundary": "AWS guidance is not a cross-cloud mandatory standard; controls must be adapted to the actual system and jurisdiction."
+    },
+    {
+      "source_id": "sentence-transformers-cross-encoder-training-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-08-009",
+        "RAG-08-010",
+        "RAG-10-006"
+      ],
+      "verified_claims": [
+        "Sentence Transformers CrossEncoder applies a pretrained Transformer with a score/label head; reranking commonly uses one label while multiclass tasks configure the class count.",
+        "CrossEncoderTrainer accepts Dataset or DatasetDict and the documentation highlights negative-example quality and hard-negative mining as training considerations."
+      ],
+      "boundary": "This supports the documented API and training practice only; it does not prove business-task model effectiveness and page behavior can change by version."
+    },
+    {
+      "source_id": "confluent-schema-evolution-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-02-008",
+        "RAG-11-001",
+        "RAG-11-002"
+      ],
+      "verified_claims": [
+        "Confluent Schema Registry compares schema versions under configurable compatibility modes; BACKWARD is the default and TRANSITIVE checks all historical versions.",
+        "BACKWARD, FORWARD and FULL define the documented consumer/producer compatibility directions, subject to schema format rules."
+      ],
+      "boundary": "These semantics apply to Confluent Schema Registry and its supported formats; format-specific rules and policy configuration remain relevant."
+    },
+    {
+      "source_id": "debezium-outbox-event-router-docs-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-02-008",
+        "RAG-11-001",
+        "RAG-11-002"
+      ],
+      "verified_claims": [
+        "The Debezium Outbox Event Router defaults to id, aggregatetype, aggregateid, type and payload fields; aggregatetype routes the topic, aggregateid is the Kafka key and id is placed in a header.",
+        "The documented SMT expects INSERT outbox records, filters DELETE and makes UPDATE handling configurable; payload format is configurable."
+      ],
+      "boundary": "This is specific to the Debezium Outbox Event Router SMT and its configuration; MongoDB connectors require their documented alternative."
+    },
+    {
+      "source_id": "azure-foundry-deployment-types-2026",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-07-010",
+        "RAG-11-014",
+        "RAG-11-008"
+      ],
+      "verified_claims": [
+        "Microsoft Foundry deployment types distinguish Global Standard, Data Zone Standard and Standard geography processing scopes, while Provisioned provides guaranteed throughput and lower latency variance in the documented comparison.",
+        "Standard is best-effort and Developer has no SLA or data-residency guarantee in the page's stated terms; model support varies by deployment type."
+      ],
+      "boundary": "These are Microsoft Foundry SKU semantics, not general cloud or legal guarantees; model and region availability require separate checks."
+    },
+    {
+      "source_id": "spdx-license-expressions-3-1-rc1",
+      "source_type": "official_documentation",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": [
+        "RAG-03-011",
+        "RAG-11-014"
+      ],
+      "verified_claims": [
+        "SPDX License Expressions represent single or compound license identifiers; OR expresses alternatives, AND expresses combined applicability and WITH expresses an exception.",
+        "The normative grammar supports license-id, LicenseRef, NONE and NOASSERTION, with operator precedence WITH over AND over OR and restrictions on combining NONE/NOASSERTION with WITH."
+      ],
+      "boundary": "The RC1 annex defines machine-readable expression syntax, not the legal rights, jurisdiction or compliance outcome of a license."
+    }
+  ]
+}
