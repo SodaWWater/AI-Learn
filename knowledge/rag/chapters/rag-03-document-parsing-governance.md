@@ -1,9 +1,10 @@
 ---
 id: RAG-03
 title: 文档解析与数据治理
-status: first_complete_draft
-reviewed_at: 2026-09-02
+status: formal_candidate
+reviewed_at: 2026-09-04
 freshness_class: active
+chapter_path: knowledge/rag/chapters/rag-03-document-parsing-governance.md
 atoms:
   - RAG-03-001
   - RAG-03-002
@@ -20,17 +21,26 @@ atoms:
   - RAG-03-013
   - RAG-03-014
   - RAG-03-015
+related_problem_ids:
+  - PQ-RAG-0002
+  - PQ-RAG-0008
+  - PQ-RAG-0011
+  - PQ-RAG-0022
 ---
 
 # 文档解析与数据治理
 
-## 本章概要
+## 一、知识点概要
 
 文档解析的目标不是“尽可能多地抽出字符”，而是把异构来源恢复为可追踪、可检索、可重新组合的结构化元素，同时保留标题层级、阅读顺序、表格关系、图片说明、页码、权限和版本。数据治理进一步决定哪些内容允许入库、怎样去重、何时过期以及怎样删除。
 
 解析错误具有上游放大效应：多栏顺序错乱会产生语义混杂的 Chunk；表头丢失会让单元格失去含义；页眉重复会占据召回；权限字段缺失可能造成越权。Embedding、Reranker 和 Prompt 很难可靠修复这些问题，所以解析质量必须在入库前独立评估。
 
 关系图见 [`RAG-03 文档解析与数据治理`](../../../learning/rag/maps/rag-03.md)。
+
+## 二、技术原理
+
+本章以下 RAG-03-001 至 RAG-03-015 小节按输入、结构恢复、治理、质量门禁和多模态关联展开技术原理。每个小节保留成立条件、数据结构、失败边界和可追溯定位，不把解析成功等同于可检索质量合格。
 
 ## 1. 统一文档模型与来源路由（RAG-03-001）
 
@@ -213,6 +223,18 @@ Chunking 时可沿这些关系选择上下文：检索到 Caption 时回取图�
 | RAG-03-012 | `governed_by` | RAG-11-012 至 RAG-11-016 | 多租户、ACL、PII 和攻击防护贯穿生命周期 |
 | RAG-03-014 | `evaluated_by` | RAG-10-001、RAG-10-014 | 解析需分层指标、消融和回归 |
 | RAG-03-015 | `enables` | RAG-12-011、RAG-12-012 | 多模态 RAG 依赖元素关联和视觉定位 |
+
+## 三、实际开发位置和使用方式
+
+文档解析（Document Parsing）和数据治理（Data Governance）位于离线知识构建（Offline Knowledge Construction）最前端：数据摄取（Data Ingestion）产生来源对象后，本章的解析、清洗、权限和元数据结果进入文本切分（Chunking）、向量嵌入（Embedding）和存储与索引（Storage and Indexing）。在线检索（Retrieval）与引用（Citation）通过 `document_id`、`chunk_id`、页码或区域定位回链到这里的中间产物。
+
+生产实现应把解析器、治理器和质量门禁作为可重放阶段，固定处理器版本与配置哈希；低置信 OCR、表格结构缺失、ACL 缺失和删除未传播的文档进入隔离或人工复核，而不是继续发布到在线索引。
+
+## 四、具体技术或框架实现
+
+自研实现可采用 `ParsedDocument`/`DocumentElement` 中间模式，保存原始文本、规范化文本、元素坐标、层级、权限、有效时间、内容哈希和解析器版本，再由质量门禁输出可发布状态。框架实现可将 PyMuPDF/pdfplumber 用于文本型 PDF，OCR 服务用于扫描件，Unstructured 或 Apache Tika 用于异构格式适配；具体组件和接口必须按代表性文档集回归验证，不能仅按格式支持列表选型。
+
+实现版本、许可证、部署位置和审核日期应登记在来源与版本记录中；本章不固化未经当前测试的产品优劣结论。
 
 ## 19. 来源、冲突与版本说明
 

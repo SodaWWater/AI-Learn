@@ -71,9 +71,9 @@ flowchart TD
 
 | 模块 | 关系图 | 标准学习正文 | 状态 |
 |---|---|---|---|
-| RAG-01 基础与边界 | [查看](maps/rag-01.md) | [查看](../../knowledge/rag/chapters/rag-01-foundations.md) | 第一版完成，待全来源审计后定稿 |
-| RAG-02 系统架构与生命周期 | [查看](maps/rag-02.md) | [查看](../../knowledge/rag/chapters/rag-02-architecture-lifecycle.md) | 第一版完成，待全来源审计后定稿 |
-| RAG-03 文档解析与数据治理 | [查看](maps/rag-03.md) | [查看](../../knowledge/rag/chapters/rag-03-document-parsing-governance.md) | 第一版完成，来源批次已人工复核 |
+| RAG-01 基础与边界 | [查看](maps/rag-01.md) | [查看](../../knowledge/rag/chapters/rag-01-foundations.md) | 正式候选，待严格验收 |
+| RAG-02 系统架构与生命周期 | [查看](maps/rag-02.md) | [查看](../../knowledge/rag/chapters/rag-02-architecture-lifecycle.md) | 正式候选，待严格验收 |
+| RAG-03 文档解析与数据治理 | [查看](maps/rag-03.md) | [查看](../../knowledge/rag/chapters/rag-03-document-parsing-governance.md) | 正式候选，待严格验收 |
 | RAG-04 Chunking | 待生成 | 待生成 | 来源复核中 |
 | RAG-05 Embedding | 待生成 | 待生成 | 来源复核中 |
 | RAG-06 存储与索引 | 待生成 | 待生成 | 来源复核中 |

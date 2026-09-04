@@ -1,10 +1,10 @@
 # RAG 标准知识库
 
-当前状态：`restructuring`。来源盘点已经完成，来源单元正在逐条人工复核。`RAG-01` 至 `RAG-03` 的第一版正文早于最新双语、图优先和问题驱动标准，现统一标记为待重写草稿，不视为正式正文。
+当前状态：`formal_candidate / strict_acceptance_pending`。653 个语义来源单元已完成逐条人工复核；`RAG-01` 至 `RAG-03` 已按四段式标准重构为正式候选，仍需通过全库严格验收后才能发布为正式版本。
 
 详细原子知识目录见 [`catalog.md`](catalog.md)，机器可读版本见 [`catalog.json`](catalog.json)。当前目录用于防止不同角度的细节在去重时被错误删除；其中条目尚未全部完成来源映射和事实核验。
 
-待重写草稿：
+正式候选章节（待严格验收）：
 
 - [`RAG-01` 基础、价值与能力边界](chapters/rag-01-foundations.md)
 - [`RAG-02` 系统架构与生命周期](chapters/rag-02-architecture-lifecycle.md)

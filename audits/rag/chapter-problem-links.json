@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04",
+  "chapters": [
+    {
+      "chapter_id": "RAG-01",
+      "chapter_path": "knowledge/rag/chapters/rag-01-foundations.md",
+      "atom_ids": [
+        "RAG-01-001",
+        "RAG-01-002",
+        "RAG-01-003",
+        "RAG-01-004",
+        "RAG-01-005",
+        "RAG-01-006",
+        "RAG-01-007",
+        "RAG-01-008",
+        "RAG-01-009",
+        "RAG-01-010"
+      ],
+      "atom_count": 10,
+      "pipeline_stage_ids": [
+        "BB-RAG"
+      ],
+      "problem_ids": [],
+      "problem_count": 0,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-02",
+      "chapter_path": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
+      "atom_ids": [
+        "RAG-02-001",
+        "RAG-02-002",
+        "RAG-02-003",
+        "RAG-02-004",
+        "RAG-02-005",
+        "RAG-02-006",
+        "RAG-02-007",
+        "RAG-02-008",
+        "RAG-02-009",
+        "RAG-02-010"
+      ],
+      "atom_count": 10,
+      "pipeline_stage_ids": [
+        "BB-RAG"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0008",
+        "PQ-RAG-0009"
+      ],
+      "problem_count": 2,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-03",
+      "chapter_path": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
+      "atom_ids": [
+        "RAG-03-001",
+        "RAG-03-002",
+        "RAG-03-003",
+        "RAG-03-004",
+        "RAG-03-005",
+        "RAG-03-006",
+        "RAG-03-007",
+        "RAG-03-008",
+        "RAG-03-009",
+        "RAG-03-010",
+        "RAG-03-011",
+        "RAG-03-012",
+        "RAG-03-013",
+        "RAG-03-014",
+        "RAG-03-015"
+      ],
+      "atom_count": 15,
+      "pipeline_stage_ids": [
+        "PS-DATA-GOVERNANCE",
+        "PS-DOCUMENT-PARSING"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0008",
+        "PQ-RAG-0011",
+        "PQ-RAG-0022"
+      ],
+      "problem_count": 4,
+      "link_status": "graph_backed"
+    }
+  ]
+}

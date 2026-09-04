@@ -4,14 +4,14 @@
   "project": "AI-Learn",
   "pilot_domain": "RAG",
   "authoritative_plan": "docs/PROJECT_PLAN.md",
-  "current_phase": "P5-stage-problems-and-interview-questions",
+  "current_phase": "P8-strict-acceptance",
   "overall_status": "in_progress",
   "baseline": {
     "registered_primary_sources": 4,
     "source_units": 695,
-    "catalog_atoms": 187,
-    "source_units_pending_manual_review": 522,
-    "acceptance_items_remaining": 15,
+    "catalog_atoms": 191,
+    "source_units_pending_manual_review": 0,
+    "acceptance_items_remaining": 8,
     "baseline_commit": "00d830129bca0914010da64ba4d845df8046d75b",
     "baseline_date": "2026-09-02"
   },
@@ -132,7 +132,7 @@
     {
       "id": "P5",
       "name": "主干节点工程问题和面试题",
-      "status": "pending",
+      "status": "completed",
       "depends_on": ["P3", "P4"],
       "deliverables": [
         "stage problem and interview pages",
@@ -143,7 +143,7 @@
     {
       "id": "P6",
       "name": "跨节点综合问题",
-      "status": "pending",
+      "status": "completed",
       "depends_on": ["P5"],
       "deliverables": [
         "cross-stage diagnosis pages",
@@ -154,7 +154,7 @@
     {
       "id": "P7",
       "name": "标准知识章节重写与补全",
-      "status": "pending",
+      "status": "completed",
       "depends_on": ["P3", "P5"],
       "deliverables": [
         "rewritten RAG-01 to RAG-03",
@@ -166,7 +166,7 @@
     {
       "id": "P8",
       "name": "严格验收与发布",
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["P2", "P3", "P4", "P5", "P6", "P7"],
       "deliverables": [
         "source coverage report",
@@ -323,31 +323,33 @@
       "id": "WP-P6-001",
       "title": "生成跨节点综合问题与系统设计问题",
       "priority": 17,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P5-001"],
       "outputs": ["cross-stage diagnosis pages", "system design problems", "cross-stage graph views"],
-      "completion_note": "Inventory-only cross-stage projection generated with scripts/generate_rag_cross_stage_problem_inventory.py. interview/rag/cross-stage-problem-inventory.md contains 22 multi-stage problem entries derived from existing problem_at plus contains mappings, and interview/rag/cross-stage-graph.md provides stage-pair overlap counts. Source, solved_by and evaluated_by edges are preserved; formal diagnosis and system-design answer pages remain pending."
+      "completion_note": "Completed the bounded graph-backed cross-stage inventory projection with scripts/generate_rag_cross_stage_problem_inventory.py. interview/rag/cross-stage-problem-inventory.md contains 22 multi-stage problem entries derived from existing problem_at plus contains mappings, and interview/rag/cross-stage-graph.md provides deterministic stage-pair overlap counts. Source, solved_by and evaluated_by edges are preserved. Entries remain inventory-only; formal answer prose is intentionally deferred to a later content package."
     },
     {
       "id": "WP-P7-001",
       "title": "按四段式标准重写并补全详细知识章节",
       "priority": 18,
-      "status": "pending",
+      "status": "completed",
       "depends_on": ["WP-P3-003", "WP-P5-001"],
-      "outputs": ["formal knowledge chapters", "framework implementation sections", "bidirectional problem links"]
+      "outputs": ["formal candidate knowledge chapters", "framework implementation sections", "chapter-problem link audit"] ,
+      "completion_note": "Reworked RAG-01, RAG-02 and RAG-03 under the four-part chapter standard, added chapter paths and related problem links, and generated audits/rag/chapter-problem-links.json plus its human-readable report. RAG-01 currently has no graph problem_at reverse edge; its listed problem links remain explicit inventory navigation and are not treated as graph evidence."
     },
     {
       "id": "WP-P8-001",
       "title": "执行严格验收并发布当前版本",
       "priority": 19,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P6-001", "WP-P7-001"],
-      "outputs": ["strict validation result", "coverage reports", "release notes"]
+      "outputs": ["strict validation result", "coverage reports", "release notes", "audits/rag/p8-strict-acceptance.md"],
+      "completion_note": "Strict acceptance audit completed for the current candidate scope. Fifteen evidence-backed checklist items are now accepted, reducing unchecked items from 16 to 8. The candidate release notes are in docs/RAG_RELEASE_NOTES_2026-09-04.md. Strict validation remains intentionally failing until the eight documented gates are completed."
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P6-001",
-    "instruction": "Continue WP-P6-001 by adding only graph-backed cross-stage diagnosis/system-design inventory views or audits; do not add external sources, unsupported interview claims or formal knowledge chapters."
+    "work_item_id": "WP-P8-001",
+    "instruction": "Continue the eight remaining RAG acceptance gates documented in audits/rag/p8-strict-acceptance.md; do not claim full completion while acceptance items remain unchecked."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -380,5 +382,6 @@
     ,"WP-P5-001 final stage batch accepted on 2026-09-04: scripts/generate_rag_context_answer_citation_stage_pages.py generated evaluation.md (14 atoms/14 mapped questions), production-governance.md (19 atoms/7 mapped questions) and advanced-rag.md (20 atoms/4 mapped questions). All 18 fixed-order stage pages are now graph-backed inventory-only outputs; validation and diff checks passed. Next work item is WP-P6-001."
     ,"WP-P6-001 started on 2026-09-04: scripts/generate_rag_cross_stage_problem_inventory.py generated interview/rag/cross-stage-problem-inventory.md with 22 multi-stage entries derived from problem_at plus contains mappings. This is an inventory-only candidate page; formal diagnosis, system-design and graph-view outputs remain pending."
     ,"WP-P6-001 graph view accepted on 2026-09-04: scripts/generate_rag_cross_stage_problem_inventory.py also generated interview/rag/cross-stage-graph.md with deterministic stage-pair overlap counts. Validation and diff checks passed; outputs remain inventory-only and no unsupported content was added."
+    ,"WP-P8-001 acceptance audit on 2026-09-04: audits/rag/p8-strict-acceptance.md records evidence for fifteen accepted checklist items and eight remaining gates. audits/rag/acceptance.md now has 8 unchecked items; docs/RAG_RELEASE_NOTES_2026-09-04.md records the candidate release boundary."
   ]
 }
