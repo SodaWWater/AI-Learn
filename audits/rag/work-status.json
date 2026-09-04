@@ -314,18 +314,19 @@
       "id": "WP-P5-001",
       "title": "按主干顺序生成节点工程问题和公开面试题",
       "priority": 16,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P4-002"],
       "outputs": ["18 stage problem sets", "problem-to-node mappings", "source-verified public questions"],
-      "completion_note": "Started graph-backed stage problem production. The first fixed-order batch covers Data Ingestion, Document Parsing, Data Governance and Chunking. Document Parsing has 4 mapped questions, Data Governance has 4, Chunking has 6; Data Ingestion has 0 graph-backed mappings and is recorded as a coverage gap. Candidate inventory/index pages are not formal answer chapters. Embedding and Storage and Indexing were then generated from existing graph mappings (4 and 4 mapped questions respectively). Query Understanding, Query Rewrite and Query Routing were generated next: Query Understanding has 3 mapped questions; Query Rewrite and Query Routing have no current contains atoms and remain explicit structural coverage gaps."
+      "completion_note": "Completed the fixed-order graph-backed stage problem inventory for all 18 pipeline stages. Foundation, embedding/storage, query, retrieval/fusion/reranking, context/answer/citation, evaluation, production-governance and advanced-RAG pages are inventory-only projections from knowledge/rag/graph.json. Explicit gaps remain for Data Ingestion, Query Rewrite and Query Routing where the graph has no contains atoms. No external search, unsupported mappings or formal chapters were added."
     },
     {
       "id": "WP-P6-001",
       "title": "生成跨节点综合问题与系统设计问题",
       "priority": 17,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P5-001"],
-      "outputs": ["cross-stage diagnosis pages", "system design problems", "cross-stage graph views"]
+      "outputs": ["cross-stage diagnosis pages", "system design problems", "cross-stage graph views"],
+      "completion_note": "Inventory-only cross-stage projection generated with scripts/generate_rag_cross_stage_problem_inventory.py. interview/rag/cross-stage-problem-inventory.md contains 22 multi-stage problem entries derived from existing problem_at plus contains mappings, and interview/rag/cross-stage-graph.md provides stage-pair overlap counts. Source, solved_by and evaluated_by edges are preserved; formal diagnosis and system-design answer pages remain pending."
     },
     {
       "id": "WP-P7-001",
@@ -345,8 +346,8 @@
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P5-001",
-    "instruction": "Continue the fixed 18-stage graph-backed problem production with Retrieval, Result Fusion and Reranking. Use existing problem_question nodes, source locators and controlled graph mappings only; preserve engineering-case provenance and do not create unsupported interview claims or formal knowledge chapters."
+    "work_item_id": "WP-P6-001",
+    "instruction": "Continue WP-P6-001 by adding only graph-backed cross-stage diagnosis/system-design inventory views or audits; do not add external sources, unsupported interview claims or formal knowledge chapters."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -374,6 +375,10 @@
     "WP-P4-001 accepted on 2026-09-04: learning/rag/rag-workflow.md is a graph-first workflow prerequisite candidate covering four RAG backbones and all 18 pipeline-stage IDs; it does not constitute formal knowledge chapters."
     ,"WP-P4-002 accepted on 2026-09-04: learning/rag/graph-views.md is a deterministic graph-first projection generated from the current 437-node/1,930-edge graph. It covers all required P4 view types; cross-backbone output now reflects five registered backbones and 12 controlled overlaps."
     ,"WP-P5-001 started on 2026-09-04: interview/rag/stage-problem-index.md remains the all-stage graph projection; interview/rag/p5-001-foundation-stage-problems.md is the first four-stage inventory increment; interview/rag/stages/document-parsing.md, data-governance.md and chunking.md provide candidate problem pages. Data Ingestion has no current graph-backed problem mapping and remains an explicit coverage gap. Validation and diff checks passed; next batch is Embedding and Storage and Indexing."
-    ,"WP-P5-001 query-stage batch accepted on 2026-09-04: scripts/generate_rag_query_stage_pages.py generated query-understanding.md (12 atoms/3 mapped questions), query-rewrite.md (0 atoms/0 questions; structural gap) and query-routing.md (0 atoms/0 questions; structural gap). All content remains graph-backed inventory-only; no external search or unsupported mappings were added. Next batch is Retrieval, Result Fusion and Reranking."
+    ,"WP-P5-001 query-stage batch accepted on 2026-09-04: scripts/generate_rag_query_stage_pages.py generated query-understanding.md (12 atoms/3 mapped questions), query-rewrite.md (0 atoms/0 questions; structural gap) and query-routing.md (0 atoms/0 questions; structural gap). All content remains graph-backed inventory-only; no external search or unsupported mappings were added."
+    ,"WP-P5-001 context/answer/citation batch accepted on 2026-09-04: scripts/generate_rag_context_answer_citation_stage_pages.py generated context-assembly.md, answer-generation.md and citation-verification.md (16 atoms and 5 mapped questions each). Validation and git diff checks passed; next batch is Evaluation, Production Governance and Advanced RAG."
+    ,"WP-P5-001 final stage batch accepted on 2026-09-04: scripts/generate_rag_context_answer_citation_stage_pages.py generated evaluation.md (14 atoms/14 mapped questions), production-governance.md (19 atoms/7 mapped questions) and advanced-rag.md (20 atoms/4 mapped questions). All 18 fixed-order stage pages are now graph-backed inventory-only outputs; validation and diff checks passed. Next work item is WP-P6-001."
+    ,"WP-P6-001 started on 2026-09-04: scripts/generate_rag_cross_stage_problem_inventory.py generated interview/rag/cross-stage-problem-inventory.md with 22 multi-stage entries derived from problem_at plus contains mappings. This is an inventory-only candidate page; formal diagnosis, system-design and graph-view outputs remain pending."
+    ,"WP-P6-001 graph view accepted on 2026-09-04: scripts/generate_rag_cross_stage_problem_inventory.py also generated interview/rag/cross-stage-graph.md with deterministic stage-pair overlap counts. Validation and diff checks passed; outputs remain inventory-only and no unsupported content was added."
   ]
 }
