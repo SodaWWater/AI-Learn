@@ -5,7 +5,16 @@
   "scope": "only sources/rag-current-sources.json; no new external search",
   "registered_sources": 170,
   "verified_sources": 169,
-  "pending_sources": 1,
+  "pending_sources": 0,
+  "waived_sources": [
+    {
+      "source_id": "eu-gdpr-official-2016",
+      "status": "waived_unavailable",
+      "reason": "The exact registered EUR-Lex URL consistently returned AWS WAF challenge responses (202 empty body or 403) on 2026-09-04.",
+      "user_authorization": "User explicitly authorized removing this inaccessible external source as a progress blocker.",
+      "use_boundary": "Not verified and must not be used as primary evidence for legal or technical claims."
+    }
+  ],
   "freshness_inventory": {
     "foundational": 1,
     "stable": 25,
@@ -44,5 +53,5 @@
     "audits/rag/evidence/2026-09-04-foundation-batch-28.json",
     "audits/rag/evidence/2026-09-04-foundation-batch-29.json"
   ],
-  "next_priority": "Continue with the remaining volatile official documentation and official repositories. Verify claim boundaries from each registered URL before treating a source as evidence for formal knowledge."
+  "next_priority": "WP-P2-005 is complete: 169 registered sources were verified and one inaccessible EUR-Lex source has a user-approved, non-evidentiary waiver. Continue with canonical knowledge-node consolidation; do not perform new external search."
 }

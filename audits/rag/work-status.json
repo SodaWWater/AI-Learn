@@ -4,7 +4,7 @@
   "project": "AI-Learn",
   "pilot_domain": "RAG",
   "authoritative_plan": "docs/PROJECT_PLAN.md",
-  "current_phase": "P2-registered-external-evidence-verification",
+  "current_phase": "P3-canonical-knowledge-graph",
   "overall_status": "in_progress",
   "baseline": {
     "registered_primary_sources": 4,
@@ -94,7 +94,7 @@
     {
       "id": "P2",
       "name": "来源扩充、原始资料语义审核与题目盘点",
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["P1"],
       "deliverables": [
         "expanded source registry",
@@ -107,7 +107,7 @@
     {
       "id": "P3",
       "name": "底层知识图谱构建",
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["P2"],
       "deliverables": [
         "RAG graph nodes",
@@ -260,15 +260,16 @@
       "id": "WP-P2-005",
       "title": "融合已登记外部证据并核验事实与时效",
       "priority": 10,
-      "status": "in_progress",
+      "status": "completed",
       "depends_on": ["WP-P2-004"],
-      "outputs": ["external evidence mappings", "freshness and conflict records", "verified public question leads"]
+      "outputs": ["external evidence mappings", "freshness and conflict records", "verified public question leads"],
+      "completion_note": "Completed with 169 verified registered sources and one user-approved unavailable-source waiver. The waived EUR-Lex URL remains non-evidentiary and must not support legal or technical claims."
     },
     {
       "id": "WP-P3-001",
       "title": "建立去重后的标准知识节点",
       "priority": 11,
-      "status": "pending",
+      "status": "in_progress",
       "depends_on": ["WP-P2-005"],
       "outputs": ["canonical knowledge nodes", "solution and implementation nodes", "problem and evaluation nodes"]
     },
@@ -338,8 +339,8 @@
     }
   ],
   "next_action": {
-    "work_item_id": "WP-P2-005",
-    "instruction": "Do not perform new external searches. Use only the 170 already registered external sources to verify release-sensitive technical facts, version claims, conflicts and the 26 public-question leads. Record evidence mappings and unresolved items before canonical knowledge-base consolidation."
+    "work_item_id": "WP-P3-001",
+    "instruction": "Build canonical knowledge, solution, implementation, evaluation and problem nodes from the accepted mappings and verified evidence. Only filter fully equivalent information; preserve distinct constraints, counterexamples, conflicts, versions and business conditions. Do not perform new external searches or write final learning chapters yet."
   },
   "global_blockers": [],
   "handoff_notes": [
@@ -362,6 +363,7 @@
     "agent-guide batch 01 reviewed 25 semantic units from RU-dd5a6a9f6619 through RU-182795f71d81 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 5, exact_duplicate 1, partial_overlap 12, cross_node 7, non_rag 0. The next unit is RU-900078e46212.",
     "agent-guide batch 02 reviewed 25 semantic units from RU-900078e46212 through RU-8ea20a2a0c89 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 4, exact_duplicate 0, partial_overlap 7, cross_node 13, non_rag 1. The next unit is RU-ec19d511ed71.",
     "agent-guide batch 03 reviewed 30 semantic units from RU-f9832b400d2d through RU-b6f2eb9b8682 at pinned commit d4fe53f4a9153123b159d0e6b632117a34721a92; decisions: retain 5, exact_duplicate 0, partial_overlap 19, cross_node 6, non_rag 0. The next unit is RU-4284011fa511.",
-    "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence."
+    "Every professional technical term in user-facing learning content must use the canonical bilingual form on every occurrence.",
+    "WP-P2-005 closed with 169 verified registered sources and one user-approved unavailable-source waiver: eu-gdpr-official-2016 returned AWS WAF challenge responses from its exact registered URL on 2026-09-04. It is not verified and must not be used as primary evidence for legal or technical claims."
   ]
 }

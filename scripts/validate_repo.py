@@ -333,10 +333,36 @@ def main() -> int:
         registered_sources = evidence_status.get("registered_sources")
         verified_sources = evidence_status.get("verified_sources")
         pending_sources = evidence_status.get("pending_sources")
+        waived_sources = evidence_status.get("waived_sources", [])
         if registered_sources != len(current_source_items):
             errors.append("外部证据核验的登记来源数与来源登记不一致")
-        if verified_sources + pending_sources != registered_sources:
-            errors.append("外部证据核验的已核验与待核验数量不守恒")
+        if not isinstance(waived_sources, list):
+            errors.append("外部证据核验的 waived_sources 必须是数组")
+            waived_sources = []
+        if verified_sources + pending_sources + len(waived_sources) != registered_sources:
+            errors.append("外部证据核验的已核验、待核验与豁免数量不守恒")
+
+        waived_source_ids: list[str] = []
+        required_waiver_fields = [
+            "source_id",
+            "status",
+            "reason",
+            "user_authorization",
+            "use_boundary",
+        ]
+        for waiver in waived_sources:
+            if not isinstance(waiver, dict):
+                errors.append("外部证据核验的豁免记录必须是对象")
+                continue
+            source_id = waiver.get("source_id")
+            waived_source_ids.append(source_id)
+            if source_id not in current_source_ids:
+                errors.append(f"外部证据豁免引用未知来源：{source_id}")
+            for field in required_waiver_fields:
+                if not isinstance(waiver.get(field), str) or not waiver[field].strip():
+                    errors.append(f"外部证据豁免缺少必要字段 {field}：{source_id}")
+        if repeated := duplicates(waived_source_ids):
+            errors.append(f"外部证据豁免来源重复：{repeated[:10]}")
 
         evidence_source_ids: list[str] = []
         completed_batches = evidence_status.get("completed_batches", [])
@@ -369,6 +395,9 @@ def main() -> int:
                         errors.append(f"外部证据引用未知知识原子：{atom_id}")
         if repeated := duplicates(evidence_source_ids):
             errors.append(f"外部证据批次的来源重复：{repeated[:10]}")
+        waived_and_verified = sorted(set(waived_source_ids) & set(evidence_source_ids))
+        if waived_and_verified:
+            errors.append(f"外部证据来源同时被核验和豁免：{waived_and_verified[:10]}")
         if verified_sources != len(evidence_source_ids):
             errors.append("外部证据核验的已核验数量与批次记录不一致")
 
