@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-29",
+  "verified_at": "2026-09-04",
+  "scope": "Nine verified pre-registered URLs (public question pages and pinned official repositories). Exact registered URLs were fetched; no alternate URLs or new search were used. The registered EU GDPR URL returned an empty 202 response and remains pending.",
+  "source_count": 9,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "nowcoder-enterprise-rag-system-interview-2026",
+      "source_type": "first_person_interview",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-13-003", "RAG-11-002", "RAG-11-012", "RAG-08-016"],
+      "verified_claims": [
+        "The registered public page contains a first-person enterprise RAG system-design interview account and explicitly discusses multi-tenant isolation, incremental updates, retrieval quality and latency constraints.",
+        "The page also presents document-parsing and chunking follow-up questions as part of the account."
+      ],
+      "boundary": "This verifies only that the public account contains these question conditions. The poster's company identity, metrics, implementation details and any suggested answers are not independently confirmed and are not technical evidence."
+    },
+    {
+      "source_id": "nowcoder-rag-ten-questions-2025",
+      "source_type": "public_question_bank",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-08-015", "RAG-08-013", "RAG-09-013", "RAG-11-005"],
+      "verified_claims": [
+        "The registered public page is a RAG question list covering retrieval bias, multi-document conflict, iterative retrieval and freshness-related questions."
+      ],
+      "boundary": "It proves public question coverage only; the page is not a company interview record and its answers or recommendations are not technical evidence."
+    },
+    {
+      "source_id": "vibe-vector-index-benchmark-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-05-010", "RAG-06-002", "RAG-06-012", "RAG-10-004"],
+      "verified_claims": [
+        "The pinned repository README describes a vector-index benchmark with fixed algorithm versions, hardware, precision types and both in-distribution and out-of-distribution query workloads.",
+        "The benchmark framing supports comparing modern embedding/index configurations under explicitly recorded dataset and system conditions."
+      ],
+      "boundary": "The README and its benchmark results apply to the pinned commit, datasets, algorithms and hardware described there; they do not establish universal index rankings or production performance."
+    },
+    {
+      "source_id": "langchain-multi-query-retriever-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-004", "RAG-08-005", "RAG-08-016", "RAG-11-007"],
+      "verified_claims": [
+        "The pinned LangChain source implements MultiQueryRetriever with a default prompt that generates three alternative queries.",
+        "The pinned implementation exposes synchronous and asynchronous retrieval paths and combines results by unique union; the original query is optional rather than automatically included by the default branch."
+      ],
+      "boundary": "These are implementation details at the pinned commit and depend on the surrounding LangChain version and retriever configuration; they are not guarantees for other releases or custom subclasses."
+    },
+    {
+      "source_id": "llamaindex-query-fusion-retriever-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-07-004", "RAG-08-006", "RAG-08-007", "RAG-08-016"],
+      "verified_claims": [
+        "The pinned QueryFusionRetriever source includes the original query plus generated query branches and defaults to a total of four queries.",
+        "The source implements simple, relative-score and reciprocal-rank fusion variants, with synchronous/asynchronous execution paths and duplicate-node score handling."
+      ],
+      "boundary": "These statements describe the pinned LlamaIndex implementation and its defaults; actual behavior changes with constructor options, version and retriever outputs."
+    },
+    {
+      "source_id": "nowcoder-agent-rag-question-bank-2-2026",
+      "source_type": "public_question_bank",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-09-004", "RAG-09-005", "RAG-10-001", "RAG-13-008"],
+      "verified_claims": [
+        "The registered public question-bank page contains question wording about lost-in-the-middle context, context compression, end-to-end RAG evaluation and deployment challenges."
+      ],
+      "boundary": "The page is a public personal question bank without per-question company, round or date provenance; it supports question discovery only and does not prove the technical answers."
+    },
+    {
+      "source_id": "nowcoder-rag-evaluation-funnel-2026",
+      "source_type": "engineering_practice",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-10-001", "RAG-10-002", "RAG-10-014", "RAG-11-017"],
+      "verified_claims": [
+        "The registered public engineering page frames RAG diagnosis as a stage-by-stage funnel and discusses traces, bad-case analysis, node-level metrics and golden-dataset regression."
+      ],
+      "boundary": "This verifies public problem framing and workflow vocabulary only. It is not a company specification or primary evidence for the effectiveness of any particular metric or process."
+    },
+    {
+      "source_id": "nowcoder-ai-app-intern-rag-eval-2026",
+      "source_type": "first_person_interview",
+      "freshness": "active",
+      "status": "verified",
+      "atom_ids": ["RAG-10-002", "RAG-10-011", "RAG-11-015", "RAG-12-004"],
+      "verified_claims": [
+        "The registered first-person interview page contains questions about RAG evaluation-set construction, unusually high hit-rate credibility, pretraining contamination, private held-out data, and tool registration permissions and scope."
+      ],
+      "boundary": "Only the appearance of these questions and the poster's stated interview context are verified; no company-specific process, metric or answer is treated as fact."
+    },
+    {
+      "source_id": "docling-pdf-backend-visible-text-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-03-002", "RAG-03-007", "RAG-03-014", "RAG-03-015"],
+      "verified_claims": [
+        "The pinned Docling PDF backend source distinguishes visible text, invisible text, empty extraction results and unknown capability states.",
+        "The source exposes page, shape and bitmap-related inspection/loading boundaries, including page-resource unloading behavior."
+      ],
+      "boundary": "These are source-level behaviors at the pinned commit; parser accuracy, supported formats and output quality require validation against the deployed Docling version and target documents."
+    }
+  ]
+}
