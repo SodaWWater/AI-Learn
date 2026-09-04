@@ -57,10 +57,11 @@ def bilingual_problem_label(value: str) -> str:
 
 def render(graph: dict[str, Any]) -> str:
     nodes = {node["id"]: node for node in graph["nodes"]}
+    source_nodes = {node["id"]: node for node in graph["nodes"] if node["type"] == "source"}
     edges = graph["edges"]
     stage_atoms: dict[str, set[str]] = defaultdict(set)
     for edge in edges:
-        if edge["type"] == "contains" and edge["from"] in STAGES:
+        if edge["type"] == "contains" and edge["from"] in ALL_STAGE_IDS:
             stage_atoms[edge["from"]].add(edge["to"])
 
     problems = [node for node in nodes.values() if node["type"] == "problem_question"]
@@ -145,6 +146,11 @@ def render(graph: dict[str, Any]) -> str:
         for problem in stage_problems:
             pid = problem["id"]
             source_refs = ", ".join(f"`{ref}`" for ref in sorted(problem.get("source_refs", []))) or "无（工程问题或待补来源）"
+            source_details = "; ".join(
+                f"`{ref}`: {source_nodes[ref].get('source_locator', '未登记定位')}；审核日期 {source_nodes[ref].get('reviewed_at', '未登记')}"
+                for ref in sorted(problem.get("source_refs", []))
+                if ref in source_nodes
+            ) or "无（工程问题或待补来源）"
             atom_ids = mapped_atoms[(pid, stage_id)]
             related_stages = ", ".join(
                 f"{label(nodes[sid])} [`{sid}`]"
@@ -160,6 +166,7 @@ def render(graph: dict[str, Any]) -> str:
                     f"| 来源类型（Provenance Type） | `{problem.get('provenance_type', '未声明')}` |",
                     f"| 原始定位（Source Locator） | {problem.get('source_locator') or '未声明'} |",
                     f"| 来源引用（Source References） | {source_refs} |",
+                    f"| 来源定位与审核（Locator and Review） | {source_details} |",
                     f"| 当前节点关联原子（Stage Knowledge Atoms） | {', '.join(f'`{atom_id}`' for atom_id in atom_ids)} |",
                 f"| 本问题全部流程节点（All Mapped Stages） | {related_stages} |",
                     "",
