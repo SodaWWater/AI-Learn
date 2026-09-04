@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "batch_id": "2026-09-04-foundation-batch-27",
+  "verified_at": "2026-09-04",
+  "scope": "Two verified pre-registered official repositories. Exact registered URLs were readable; no new external sources.",
+  "source_count": 2,
+  "all_urls_reachable": true,
+  "records": [
+    {
+      "source_id": "cluener2020-benchmark",
+      "source_type": "official_repository",
+      "freshness": "stable",
+      "status": "verified",
+      "atom_ids": ["RAG-07-008", "RAG-10-004", "RAG-10-012"],
+      "verified_claims": [
+        "The repository identifies CLUENER2020 as a fine-grained named-entity recognition dataset for Chinese text.",
+        "Its README defines entity categories and annotation rules and provides dataset files and an evaluation script, supporting entity-span and category-stratified evaluation."
+      ],
+      "boundary": "The repository describes a news-text benchmark and its annotation/evaluation setup; it does not establish that the label distribution represents production queries, dialogue, or any specific business domain."
+    },
+    {
+      "source_id": "qcare-official-repository-2026",
+      "source_type": "official_repository",
+      "freshness": "volatile",
+      "status": "verified",
+      "atom_ids": ["RAG-09-010", "RAG-10-007", "RAG-10-009", "RAG-10-014"],
+      "verified_claims": [
+        "The repository documents an evaluation pipeline with an editable prompt configuration and a local open-weight backbone that does not require API keys.",
+        "Its README describes a testbed containing 800 queries with retrieved chunks and RAG answers, and provides code and data locations for running the stated evaluation workflow."
+      ],
+      "boundary": "These statements describe the repository's implementation and testbed at the pinned commit; they do not prove that its evaluator, prompts, or 800-query distribution generalize to another RAG system or production traffic."
+    }
+  ]
+}
