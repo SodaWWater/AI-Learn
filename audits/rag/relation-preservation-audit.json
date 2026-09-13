@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04",
+  "status": "passed_with_boundaries",
+  "graph_edge_counts": {
+    "branches_to": 2,
+    "contains": 296,
+    "evaluated_by": 11,
+    "implemented_by": 8,
+    "implements": 99,
+    "next_stage": 17,
+    "overlaps_with": 12,
+    "problem_at": 197,
+    "solved_by": 23,
+    "supported_by": 1265
+  },
+  "checks": {
+    "knowledge_nodes": 191,
+    "knowledge_nodes_with_contains_edge": 191,
+    "implements_edges": 99,
+    "implements_edges_with_valid_endpoints": 99
+  },
+  "legacy_relations": [
+    "extends",
+    "contains",
+    "implements",
+    "compares"
+  ]
+}

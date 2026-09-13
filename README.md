@@ -16,16 +16,18 @@ RAG 是第一套端到端试点，用来验证整个知识整理流程。
 - [x] 建立标准知识文档模板
 - [x] 建立 RAG 一级知识分类和验收规则
 - [x] 完成 RAG 来源单元全量盘点（695 个来源单元）
-- [x] 建立 RAG 原子知识目录（当前 191 个待审计原子，审核中可保守新增）
+- [x] 建立 RAG 原子知识目录（191 个目录原子；189 个进入有来源正式集合，2 个保留为库存占位）
 - [x] 完成 18 个流程节点的三轮外部检索（第四轮 4/18 作为历史检查点）
-- [ ] 完成 653 个语义单元的人工审核（已完成 241 个，剩余 412 个；`xiaolin-ai-learning` 已完成 127/127）
-- [ ] 完成 RAG 知识原子化、去重和冲突审计
+- [x] 完成 653 个语义单元的人工审核（695 个来源单元均有明确去向）
+- [x] 完成 RAG 知识原子化、去重和冲突审计
 - [x] 完成新版项目规划、双语术语规范、图模型和协作基线
 - [x] 按当前用户确认范围扩充 RAG 公开面试题、工程问题和一手技术来源
-- [ ] 建立底层有向知识图谱（Directed Knowledge Graph）
-- [ ] 重写 RAG 标准知识正文（旧 RAG-01 至 RAG-03 已标记为待重写草稿）
-- [ ] 生成完整流程、全局地铁图和多种局部学习视图
-- [ ] 生成 RAG 面试题、追问和项目场景
+- [x] 建立底层有向知识图谱（Directed Knowledge Graph）
+- [x] 重写并补齐 RAG 标准知识正文（RAG-01 至 RAG-13）
+- [x] 生成完整流程、全局地铁图和多种局部学习视图
+- [x] 生成 RAG 面试题、追问和项目场景
+
+当前 RAG 发布边界为“范围受限正式版”：189 个有来源知识原子进入正式集合，`RAG-07-001` 与 `RAG-13-011` 保留为明确排除的 `inventory_draft` 库存占位。动态产品/API 内容仍按审核日期维护，不宣称互联网永久完整。
 
 ## 知识生产流程
 
@@ -56,6 +58,7 @@ flowchart TD
 | `templates/` | 标准知识文档与来源审计模板 |
 | `scripts/` | 来源盘点、索引生成和仓库校验脚本 |
 | `docs/` | 项目整体规划、协作和交接说明 |
+| `learning/hermes-vault/` | 独立 Hermes 源码学习 Vault（Obsidian 可直接打开） |
 
 ## 首批来源
 
@@ -68,6 +71,8 @@ flowchart TD
 RAG 当前盘点见 [`audits/rag/source-units.md`](audits/rag/source-units.md)，原子知识目录见 [`knowledge/rag/catalog.md`](knowledge/rag/catalog.md)。
 
 当前统一术语见 [`knowledge/rag/TERMINOLOGY.md`](knowledge/rag/TERMINOLOGY.md)，知识图谱受控模型见 [`taxonomy/rag-graph-model.json`](taxonomy/rag-graph-model.json)。
+
+Hermes 独立学习入口见 [`learning/hermes-vault/README.md`](learning/hermes-vault/README.md)；该 Vault 的外部参考课程目录已由其内部 `.gitignore` 排除，不进入正式提交。
 
 ## 内容边界
 

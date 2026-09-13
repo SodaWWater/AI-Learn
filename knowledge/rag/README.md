@@ -1,16 +1,28 @@
 # RAG 标准知识库
 
-当前状态：`formal_candidate / strict_acceptance_pending`。653 个语义来源单元已完成逐条人工复核；`RAG-01` 至 `RAG-03` 已按四段式标准重构为正式候选，仍需通过全库严格验收后才能发布为正式版本。
+当前状态：`formal_release_bounded`。653 个语义来源单元已完成逐条人工复核；13 个模块章节和子图已通过严格验收。正式发布集合包含 189 个有来源知识原子；`RAG-07-001` 与 `RAG-13-011` 为无来源 `inventory_draft` 库存占位，不构成正式结论。
 
-详细原子知识目录见 [`catalog.md`](catalog.md)，机器可读版本见 [`catalog.json`](catalog.json)。当前目录用于防止不同角度的细节在去重时被错误删除；其中条目尚未全部完成来源映射和事实核验。
+详细原子知识目录见 [`catalog.md`](catalog.md)，机器可读版本见 [`catalog.json`](catalog.json)。当前目录用于防止不同角度的细节在去重时被错误删除；正式集合的来源、语义边界和排除项见 [`../../audits/rag/atom-audit.md`](../../audits/rag/atom-audit.md)。
 
-正式候选章节（待严格验收）：
+正式章节（当前登记范围）：
 
 - [`RAG-01` 基础、价值与能力边界](chapters/rag-01-foundations.md)
 - [`RAG-02` 系统架构与生命周期](chapters/rag-02-architecture-lifecycle.md)
 - [`RAG-03` 文档解析与数据治理](chapters/rag-03-document-parsing-governance.md)
+- [`RAG-04` Chunking](chapters/rag-04-chunking.md)
+- [`RAG-05` Embedding](chapters/rag-05-embedding.md)
+- [`RAG-06` 存储与索引](chapters/rag-06-storage-indexing.md)
+- [`RAG-07` Query 理解](chapters/rag-07-query-understanding.md)
+- [`RAG-08` 检索、融合与重排](chapters/rag-08-retrieval-fusion-reranking.md)
+- [`RAG-09` 上下文与生成](chapters/rag-09-context-generation.md)
+- [`RAG-10` 评估](chapters/rag-10-evaluation.md)
+- [`RAG-11` 生产工程与治理](chapters/rag-11-production-governance.md)
+- [`RAG-12` 高级范式](chapters/rag-12-advanced-paradigms.md)
+- [`RAG-13` 项目与面试应用](chapters/rag-13-project-interview.md)
 
 学习总览和多图导航见 [`learning/rag/overview.md`](../../learning/rag/overview.md)。
+
+面向学习者的开始顺序和完成标准见 [`learning/rag/START_HERE.md`](../../learning/rag/START_HERE.md)。
 
 正式内容必须遵守 [`CONTENT_STANDARD.md`](CONTENT_STANDARD.md) 和 [`TERMINOLOGY.md`](TERMINOLOGY.md)。整体执行顺序见 [`docs/PROJECT_PLAN.md`](../../docs/PROJECT_PLAN.md)。
 

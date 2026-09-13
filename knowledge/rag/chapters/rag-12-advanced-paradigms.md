@@ -1,7 +1,7 @@
 ---
 id: RAG-12
 title: 高级检索增强生成范式
-status: formal_candidate
+status: formal_bounded
 reviewed_at: 2026-09-04
 freshness_class: mixed
 chapter_path: knowledge/rag/chapters/rag-12-advanced-paradigms.md
@@ -11,7 +11,7 @@ related_problem_ids: [PQ-RAG-0005, PQ-RAG-0011, PQ-RAG-0016, PQ-RAG-0026]
 
 # 高级检索增强生成范式
 
-> 本章状态：`formal_candidate`（正式候选，待全库严格验收）。高级范式是对基线检索增强生成（Retrieval-Augmented Generation，RAG）链路的重组或控制策略；其适用性必须由业务评估和安全约束证明。
+> 本章状态：`formal_bounded`（范围受限正式，已通过当前登记范围严格验收）。高级范式是对基线检索增强生成（Retrieval-Augmented Generation，RAG）链路的重组或控制策略；其适用性必须由业务评估和安全约束证明。
 
 ## 一、知识点概要
 

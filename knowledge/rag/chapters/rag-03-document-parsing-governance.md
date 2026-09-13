@@ -1,7 +1,7 @@
 ---
 id: RAG-03
 title: 文档解析与数据治理
-status: formal_candidate
+status: formal_bounded
 reviewed_at: 2026-09-04
 freshness_class: active
 chapter_path: knowledge/rag/chapters/rag-03-document-parsing-governance.md
@@ -235,6 +235,10 @@ Chunking 时可沿这些关系选择上下文：检索到 Caption 时回取图�
 自研实现可采用 `ParsedDocument`/`DocumentElement` 中间模式，保存原始文本、规范化文本、元素坐标、层级、权限、有效时间、内容哈希和解析器版本，再由质量门禁输出可发布状态。框架实现可将 PyMuPDF/pdfplumber 用于文本型 PDF，OCR 服务用于扫描件，Unstructured 或 Apache Tika 用于异构格式适配；具体组件和接口必须按代表性文档集回归验证，不能仅按格式支持列表选型。
 
 实现版本、许可证、部署位置和审核日期应登记在来源与版本记录中；本章不固化未经当前测试的产品优劣结论。
+
+### 完整性检查：对比、关系、错误与评估
+
+解析器选择比较格式覆盖、版面保真、结构化输出、部署约束和回退成本；解析结果沿 `source → document → element → chunk → citation` 关系链流转。常见错误包括 OCR 漏字、阅读顺序错乱、表格行列丢失、重复噪声和 ACL 缺失；用可见/不可见文本、跨页表格、坐标锚点和权限回放评估并决定是否发布。
 
 ## 19. 来源、冲突与版本说明
 

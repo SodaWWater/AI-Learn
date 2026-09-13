@@ -1,0 +1,1875 @@
+{
+  "acceptance_decision": "formal_release_allowed_for_189_source_backed_atoms; 2 inventory placeholders excluded",
+  "chapter_completeness": [
+    {
+      "atom_cited": 10,
+      "atom_expected": 10,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-01",
+      "path": "knowledge/rag/chapters/rag-01-foundations.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 10,
+      "atom_expected": 10,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-02",
+      "path": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 15,
+      "atom_expected": 15,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-03",
+      "path": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 17,
+      "atom_expected": 17,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-04",
+      "path": "knowledge/rag/chapters/rag-04-chunking.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-05",
+      "path": "knowledge/rag/chapters/rag-05-embedding.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 15,
+      "atom_expected": 15,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-06",
+      "path": "knowledge/rag/chapters/rag-06-storage-indexing.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 12,
+      "atom_expected": 12,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-07",
+      "path": "knowledge/rag/chapters/rag-07-query-understanding.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-08",
+      "path": "knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-09",
+      "path": "knowledge/rag/chapters/rag-09-context-generation.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 14,
+      "atom_expected": 14,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-10",
+      "path": "knowledge/rag/chapters/rag-10-evaluation.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 19,
+      "atom_expected": 19,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-11",
+      "path": "knowledge/rag/chapters/rag-11-production-governance.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 20,
+      "atom_expected": 20,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-12",
+      "path": "knowledge/rag/chapters/rag-12-advanced-paradigms.md",
+      "relation_present": true,
+      "required_sections_present": true
+    },
+    {
+      "atom_cited": 11,
+      "atom_expected": 11,
+      "comparison_present": true,
+      "error_present": true,
+      "evaluation_present": true,
+      "missing_atom_ids": [],
+      "module_id": "RAG-13",
+      "path": "knowledge/rag/chapters/rag-13-project-interview.md",
+      "relation_present": true,
+      "required_sections_present": true
+    }
+  ],
+  "dynamic_version_audit": {
+    "active_or_volatile_sources": 95,
+    "active_or_volatile_sources_with_review_date": 94,
+    "all_reviewed": true,
+    "boundary": "Framework and product behavior remains version-sensitive and requires periodic re-review; waived non-evidentiary records are excluded from the review-required denominator.",
+    "review_date": "2026-09-04",
+    "review_exemptions": [
+      {
+        "reason": "waived_unavailable_non_evidentiary",
+        "source_id": "SRC-EU-GDPR-OFFICIAL-2016"
+      }
+    ],
+    "review_required_sources": 94
+  },
+  "first_party_and_classic_source_audit": {
+    "boundary": "This closes the registered-source gap audit only; it does not claim permanent Internet completeness.",
+    "classic_or_first_party_evidence_present": true,
+    "evidence_inputs": [
+      "sources/rag-current-sources.json",
+      "audits/rag/evidence-verification-status.json",
+      "audits/rag/evidence/*.json"
+    ],
+    "registered_source_nodes": 174,
+    "source_nodes_with_verification_records": 169
+  },
+  "formal_knowledge_set": {
+    "excluded_inventory_atoms": [
+      "RAG-07-001",
+      "RAG-13-011"
+    ],
+    "formal_atoms": 189,
+    "formal_atoms_with_sources": 189,
+    "graph_knowledge_atoms": 191,
+    "source_less_formal_atoms": []
+  },
+  "generated_at": "2026-09-04",
+  "relation_preservation_audit": {
+    "boundary": "extends and compares are legacy source-audit relation labels, not graph edge types; their source-log records remain preserved. contains and implements are retained as controlled graph edges.",
+    "graph_controlled_relations": [
+      "branches_to",
+      "contains",
+      "evaluated_by",
+      "implemented_by",
+      "implements",
+      "next_stage",
+      "overlaps_with",
+      "problem_at",
+      "solved_by",
+      "supported_by"
+    ],
+    "graph_edge_counts": {
+      "branches_to": 2,
+      "contains": 296,
+      "evaluated_by": 11,
+      "implemented_by": 8,
+      "implements": 99,
+      "next_stage": 17,
+      "overlaps_with": 12,
+      "problem_at": 197,
+      "solved_by": 23,
+      "supported_by": 1265
+    },
+    "source_log_relation_records": {
+      "compares": 0,
+      "contains": 0,
+      "extends": 0,
+      "implements": 0
+    }
+  },
+  "schema_version": 1,
+  "scope": "Strict acceptance evidence for the 13-module bounded formal RAG release; no new external search.",
+  "single_conclusion_audit": {
+    "excluded_atoms": 2,
+    "method": "Canonical graph label and chapter atom list were checked one-by-one; no label was split or silently merged. Conditions, implementations, comparisons and conflicts remain separate evidence or edges.",
+    "records": [
+      {
+        "atom_id": "RAG-01-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-01-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-01-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-01-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-01-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-01-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-01-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-01-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-01-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-01-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-01",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-02-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-02-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-02-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-02-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-02-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-02-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-02-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-02-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-02-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-02-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-02",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-03-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-03-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-03-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-03-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-03-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-03-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-03-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-03-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-03-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-03-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-03-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-03-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-03-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-03-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-03-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-03",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-04-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-04-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-04-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-04-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-04-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-04-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-04-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-04-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-04-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-04-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-04-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-04-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-04-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-04-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-04-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-04-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-04-017",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-04",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-05-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-05-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-05-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-05-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-05-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-05-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-05-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-05-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-05-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-05-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-05-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-05-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-05-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-05-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-05-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-05-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-05",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-06-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-06-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-06-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-06-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-06-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-06-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-06-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-06-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-06-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-06-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-06-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-06-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 12
+      },
+      {
+        "atom_id": "RAG-06-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-06-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-06-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-06",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-07-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "excluded_inventory_no_source",
+        "source_count": 0
+      },
+      {
+        "atom_id": "RAG-07-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-07-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-07-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-07-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-07-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-07-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-07-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-07-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-07-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 12
+      },
+      {
+        "atom_id": "RAG-07-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-07-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-07",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-08-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 16
+      },
+      {
+        "atom_id": "RAG-08-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-08-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-08-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 13
+      },
+      {
+        "atom_id": "RAG-08-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-08-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-08-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-08-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 12
+      },
+      {
+        "atom_id": "RAG-08-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 18
+      },
+      {
+        "atom_id": "RAG-08-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 19
+      },
+      {
+        "atom_id": "RAG-08-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-08-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-08-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 12
+      },
+      {
+        "atom_id": "RAG-08-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-08-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-08-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-08",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-09-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-09-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-09-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-09-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-09-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 12
+      },
+      {
+        "atom_id": "RAG-09-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-09-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-09-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-09-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-09-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-09-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-09-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-09-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-09-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-09-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-09-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-09",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-10-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 20
+      },
+      {
+        "atom_id": "RAG-10-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-10-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-10-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 13
+      },
+      {
+        "atom_id": "RAG-10-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-10-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-10-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-10-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-10-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-10-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-10-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-10-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-10-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-10-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-10",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 33
+      },
+      {
+        "atom_id": "RAG-11-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-11-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 13
+      },
+      {
+        "atom_id": "RAG-11-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-11-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-11-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-11-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-11-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-11-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-11-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-11-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-11-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-11-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-11-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-11-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-11-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 10
+      },
+      {
+        "atom_id": "RAG-11-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-11-017",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 13
+      },
+      {
+        "atom_id": "RAG-11-018",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 9
+      },
+      {
+        "atom_id": "RAG-11-019",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-11",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-001",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-12-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-12-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 11
+      },
+      {
+        "atom_id": "RAG-12-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-12-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-12-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-12-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      },
+      {
+        "atom_id": "RAG-12-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-12-013",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-12-014",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-12-015",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-12-016",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 2
+      },
+      {
+        "atom_id": "RAG-12-017",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-12-018",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 6
+      },
+      {
+        "atom_id": "RAG-12-019",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-12-020",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-12",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-13-002",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-13-003",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 3
+      },
+      {
+        "atom_id": "RAG-13-004",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-13-005",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-13-006",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-13-007",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 8
+      },
+      {
+        "atom_id": "RAG-13-008",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 5
+      },
+      {
+        "atom_id": "RAG-13-009",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 4
+      },
+      {
+        "atom_id": "RAG-13-010",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 1
+      },
+      {
+        "atom_id": "RAG-13-011",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "excluded_inventory_no_source",
+        "source_count": 0
+      },
+      {
+        "atom_id": "RAG-13-012",
+        "basis": "one graph label maps to one bounded atom; compound conditions remain in related atoms and edges",
+        "chapter_path": null,
+        "module_id": "RAG-13",
+        "single_conclusion_status": "reviewed_single_conclusion",
+        "source_count": 7
+      }
+    ],
+    "reviewed_atoms": 189
+  },
+  "status": "completed_with_explicit_inventory_exclusions",
+  "subgraph_atom_coverage": [
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 10,
+      "atom_expected": 10,
+      "missing_atom_ids": [],
+      "module_id": "RAG-01",
+      "path": "learning/rag/maps/rag-01.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 10,
+      "atom_expected": 10,
+      "missing_atom_ids": [],
+      "module_id": "RAG-02",
+      "path": "learning/rag/maps/rag-02.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 15,
+      "atom_expected": 15,
+      "missing_atom_ids": [],
+      "module_id": "RAG-03",
+      "path": "learning/rag/maps/rag-03.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 17,
+      "atom_expected": 17,
+      "missing_atom_ids": [],
+      "module_id": "RAG-04",
+      "path": "learning/rag/maps/rag-04.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "missing_atom_ids": [],
+      "module_id": "RAG-05",
+      "path": "learning/rag/maps/rag-05.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 15,
+      "atom_expected": 15,
+      "missing_atom_ids": [],
+      "module_id": "RAG-06",
+      "path": "learning/rag/maps/rag-06.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 12,
+      "atom_expected": 12,
+      "missing_atom_ids": [],
+      "module_id": "RAG-07",
+      "path": "learning/rag/maps/rag-07.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "missing_atom_ids": [],
+      "module_id": "RAG-08",
+      "path": "learning/rag/maps/rag-08.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 16,
+      "atom_expected": 16,
+      "missing_atom_ids": [],
+      "module_id": "RAG-09",
+      "path": "learning/rag/maps/rag-09.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 14,
+      "atom_expected": 14,
+      "missing_atom_ids": [],
+      "module_id": "RAG-10",
+      "path": "learning/rag/maps/rag-10.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 19,
+      "atom_expected": 19,
+      "missing_atom_ids": [],
+      "module_id": "RAG-11",
+      "path": "learning/rag/maps/rag-11.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 20,
+      "atom_expected": 20,
+      "missing_atom_ids": [],
+      "module_id": "RAG-12",
+      "path": "learning/rag/maps/rag-12.md"
+    },
+    {
+      "adds_unregistered_atom_ids": [],
+      "atom_cited": 11,
+      "atom_expected": 11,
+      "missing_atom_ids": [],
+      "module_id": "RAG-13",
+      "path": "learning/rag/maps/rag-13.md"
+    }
+  ],
+  "work_item_id": "WP-P8-001"
+}

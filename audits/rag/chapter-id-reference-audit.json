@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04",
+  "status": "formal_bounded_reference_audit",
+  "modules": [
+    {
+      "module_id": "RAG-01",
+      "chapter_path": "knowledge/rag/chapters/rag-01-foundations.md",
+      "map_path": "learning/rag/maps/rag-01.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-02",
+      "chapter_path": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
+      "map_path": "learning/rag/maps/rag-02.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-03",
+      "chapter_path": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
+      "map_path": "learning/rag/maps/rag-03.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-04",
+      "chapter_path": "knowledge/rag/chapters/rag-04-chunking.md",
+      "map_path": "learning/rag/maps/rag-04.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-05",
+      "chapter_path": "knowledge/rag/chapters/rag-05-embedding.md",
+      "map_path": "learning/rag/maps/rag-05.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-06",
+      "chapter_path": "knowledge/rag/chapters/rag-06-storage-indexing.md",
+      "map_path": "learning/rag/maps/rag-06.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-07",
+      "chapter_path": "knowledge/rag/chapters/rag-07-query-understanding.md",
+      "map_path": "learning/rag/maps/rag-07.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-08",
+      "chapter_path": "knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md",
+      "map_path": "learning/rag/maps/rag-08.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-09",
+      "chapter_path": "knowledge/rag/chapters/rag-09-context-generation.md",
+      "map_path": "learning/rag/maps/rag-09.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-10",
+      "chapter_path": "knowledge/rag/chapters/rag-10-evaluation.md",
+      "map_path": "learning/rag/maps/rag-10.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-11",
+      "chapter_path": "knowledge/rag/chapters/rag-11-production-governance.md",
+      "map_path": "learning/rag/maps/rag-11.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-12",
+      "chapter_path": "knowledge/rag/chapters/rag-12-advanced-paradigms.md",
+      "map_path": "learning/rag/maps/rag-12.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    },
+    {
+      "module_id": "RAG-13",
+      "chapter_path": "knowledge/rag/chapters/rag-13-project-interview.md",
+      "map_path": "learning/rag/maps/rag-13.md",
+      "missing_from_chapter": [],
+      "missing_from_map": [],
+      "unknown_chapter_ids": [],
+      "unknown_map_ids": [],
+      "status": "passed"
+    }
+  ]
+}

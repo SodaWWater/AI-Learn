@@ -1,6 +1,6 @@
 # 完整检索增强生成（Retrieval-Augmented Generation，RAG）流程
 
-> 状态：`candidate / WP-P4-001 / graph-first`
+> 状态：`accepted_bounded / WP-P4-001 / graph-first`
 >
 > 图谱基线：[`knowledge/rag/graph.json`](../../knowledge/rag/graph.json)
 >
@@ -111,7 +111,7 @@
 
 ## 当前范围与未决项
 
-- 本候选产物只使用现有有向知识图谱（Directed Knowledge Graph）、术语表（Terminology Glossary）和项目路线图（Project Roadmap）；没有新增外部来源（External Source）。
+- 本前置学习产物只使用现有有向知识图谱（Directed Knowledge Graph）、术语表（Terminology Glossary）和项目路线图（Project Roadmap）；没有新增外部来源（External Source）。
 - `RAG-07-001` 与 `RAG-13-011` 仍是没有来源引用的库存草稿知识节点（Inventory-draft Knowledge Node）。本页不把它们作为正式知识结论，也不视为已解决。
 - 用户批准的不可访问 EUR-Lex 来源例外保持非证据性（Non-evidentiary）；本页不以其支持技术或法律结论。
 - 图谱中尚未把评估反馈（Evaluation and Feedback）的每一个操作活动拆为独立流程节点（Pipeline Stage）。后续全局图（Global Metro Map）、主干图（Backbone Map）、重叠图（Overlap Map）、执行路径图（Execution Path Map）和局部图（Local Node Map）必须继续以当前图谱为唯一节点和关系来源。

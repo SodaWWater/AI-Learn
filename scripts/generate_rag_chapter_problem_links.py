@@ -12,6 +12,16 @@ CHAPTERS = {
     "RAG-01": "knowledge/rag/chapters/rag-01-foundations.md",
     "RAG-02": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
     "RAG-03": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
+    "RAG-04": "knowledge/rag/chapters/rag-04-chunking.md",
+    "RAG-05": "knowledge/rag/chapters/rag-05-embedding.md",
+    "RAG-06": "knowledge/rag/chapters/rag-06-storage-indexing.md",
+    "RAG-07": "knowledge/rag/chapters/rag-07-query-understanding.md",
+    "RAG-08": "knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md",
+    "RAG-09": "knowledge/rag/chapters/rag-09-context-generation.md",
+    "RAG-10": "knowledge/rag/chapters/rag-10-evaluation.md",
+    "RAG-11": "knowledge/rag/chapters/rag-11-production-governance.md",
+    "RAG-12": "knowledge/rag/chapters/rag-12-advanced-paradigms.md",
+    "RAG-13": "knowledge/rag/chapters/rag-13-project-interview.md",
 }
 
 

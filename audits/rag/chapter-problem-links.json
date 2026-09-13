@@ -84,6 +84,369 @@
       ],
       "problem_count": 4,
       "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-04",
+      "chapter_path": "knowledge/rag/chapters/rag-04-chunking.md",
+      "atom_ids": [
+        "RAG-04-001",
+        "RAG-04-002",
+        "RAG-04-003",
+        "RAG-04-004",
+        "RAG-04-005",
+        "RAG-04-006",
+        "RAG-04-007",
+        "RAG-04-008",
+        "RAG-04-009",
+        "RAG-04-010",
+        "RAG-04-011",
+        "RAG-04-012",
+        "RAG-04-013",
+        "RAG-04-014",
+        "RAG-04-015",
+        "RAG-04-016",
+        "RAG-04-017"
+      ],
+      "atom_count": 17,
+      "pipeline_stage_ids": [
+        "PS-CHUNKING"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0003",
+        "PQ-RAG-0007",
+        "PQ-RAG-0010",
+        "PQ-RAG-0011",
+        "PQ-RAG-0022"
+      ],
+      "problem_count": 6,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-05",
+      "chapter_path": "knowledge/rag/chapters/rag-05-embedding.md",
+      "atom_ids": [
+        "RAG-05-001",
+        "RAG-05-002",
+        "RAG-05-003",
+        "RAG-05-004",
+        "RAG-05-005",
+        "RAG-05-006",
+        "RAG-05-007",
+        "RAG-05-008",
+        "RAG-05-009",
+        "RAG-05-010",
+        "RAG-05-011",
+        "RAG-05-012",
+        "RAG-05-013",
+        "RAG-05-014",
+        "RAG-05-015",
+        "RAG-05-016"
+      ],
+      "atom_count": 16,
+      "pipeline_stage_ids": [
+        "PS-EMBEDDING"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0012",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ],
+      "problem_count": 4,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-06",
+      "chapter_path": "knowledge/rag/chapters/rag-06-storage-indexing.md",
+      "atom_ids": [
+        "RAG-06-001",
+        "RAG-06-002",
+        "RAG-06-003",
+        "RAG-06-004",
+        "RAG-06-005",
+        "RAG-06-006",
+        "RAG-06-007",
+        "RAG-06-008",
+        "RAG-06-009",
+        "RAG-06-010",
+        "RAG-06-011",
+        "RAG-06-012",
+        "RAG-06-013",
+        "RAG-06-014",
+        "RAG-06-015"
+      ],
+      "atom_count": 15,
+      "pipeline_stage_ids": [
+        "PS-STORAGE-INDEXING"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0003",
+        "PQ-RAG-0004",
+        "PQ-RAG-0008",
+        "PQ-RAG-0009",
+        "PQ-RAG-0012",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022"
+      ],
+      "problem_count": 7,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-07",
+      "chapter_path": "knowledge/rag/chapters/rag-07-query-understanding.md",
+      "atom_ids": [
+        "RAG-07-001",
+        "RAG-07-002",
+        "RAG-07-003",
+        "RAG-07-004",
+        "RAG-07-005",
+        "RAG-07-006",
+        "RAG-07-007",
+        "RAG-07-008",
+        "RAG-07-009",
+        "RAG-07-010",
+        "RAG-07-011",
+        "RAG-07-012"
+      ],
+      "atom_count": 12,
+      "pipeline_stage_ids": [
+        "PS-QUERY-UNDERSTANDING"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0014",
+        "PQ-RAG-0015",
+        "PQ-RAG-0016"
+      ],
+      "problem_count": 3,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-08",
+      "chapter_path": "knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md",
+      "atom_ids": [
+        "RAG-08-001",
+        "RAG-08-002",
+        "RAG-08-003",
+        "RAG-08-004",
+        "RAG-08-005",
+        "RAG-08-006",
+        "RAG-08-007",
+        "RAG-08-008",
+        "RAG-08-009",
+        "RAG-08-010",
+        "RAG-08-011",
+        "RAG-08-012",
+        "RAG-08-013",
+        "RAG-08-014",
+        "RAG-08-015",
+        "RAG-08-016"
+      ],
+      "atom_count": 16,
+      "pipeline_stage_ids": [
+        "PS-RERANKING",
+        "PS-RESULT-FUSION",
+        "PS-RETRIEVAL"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0004",
+        "PQ-RAG-0005",
+        "PQ-RAG-0015",
+        "PQ-RAG-0016",
+        "PQ-RAG-0017",
+        "PQ-RAG-0018",
+        "PQ-RAG-0019",
+        "PQ-RAG-0023",
+        "PQ-RAG-0024"
+      ],
+      "problem_count": 10,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-09",
+      "chapter_path": "knowledge/rag/chapters/rag-09-context-generation.md",
+      "atom_ids": [
+        "RAG-09-001",
+        "RAG-09-002",
+        "RAG-09-003",
+        "RAG-09-004",
+        "RAG-09-005",
+        "RAG-09-006",
+        "RAG-09-007",
+        "RAG-09-008",
+        "RAG-09-009",
+        "RAG-09-010",
+        "RAG-09-011",
+        "RAG-09-012",
+        "RAG-09-013",
+        "RAG-09-014",
+        "RAG-09-015",
+        "RAG-09-016"
+      ],
+      "atom_count": 16,
+      "pipeline_stage_ids": [
+        "PS-ANSWER-GENERATION",
+        "PS-CITATION-VERIFICATION",
+        "PS-CONTEXT-ASSEMBLY"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0004",
+        "PQ-RAG-0020",
+        "PQ-RAG-0023",
+        "PQ-RAG-0024"
+      ],
+      "problem_count": 5,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-10",
+      "chapter_path": "knowledge/rag/chapters/rag-10-evaluation.md",
+      "atom_ids": [
+        "RAG-10-001",
+        "RAG-10-002",
+        "RAG-10-003",
+        "RAG-10-004",
+        "RAG-10-005",
+        "RAG-10-006",
+        "RAG-10-007",
+        "RAG-10-008",
+        "RAG-10-009",
+        "RAG-10-010",
+        "RAG-10-011",
+        "RAG-10-012",
+        "RAG-10-013",
+        "RAG-10-014"
+      ],
+      "atom_count": 14,
+      "pipeline_stage_ids": [
+        "PS-EVALUATION"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0001",
+        "PQ-RAG-0003",
+        "PQ-RAG-0006",
+        "PQ-RAG-0007",
+        "PQ-RAG-0008",
+        "PQ-RAG-0010",
+        "PQ-RAG-0014",
+        "PQ-RAG-0018",
+        "PQ-RAG-0019",
+        "PQ-RAG-0020",
+        "PQ-RAG-0021",
+        "PQ-RAG-0023",
+        "PQ-RAG-0024",
+        "PQ-RAG-0025"
+      ],
+      "problem_count": 14,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-11",
+      "chapter_path": "knowledge/rag/chapters/rag-11-production-governance.md",
+      "atom_ids": [
+        "RAG-11-001",
+        "RAG-11-002",
+        "RAG-11-003",
+        "RAG-11-004",
+        "RAG-11-005",
+        "RAG-11-006",
+        "RAG-11-007",
+        "RAG-11-008",
+        "RAG-11-009",
+        "RAG-11-010",
+        "RAG-11-011",
+        "RAG-11-012",
+        "RAG-11-013",
+        "RAG-11-014",
+        "RAG-11-015",
+        "RAG-11-016",
+        "RAG-11-017",
+        "RAG-11-018",
+        "RAG-11-019"
+      ],
+      "atom_count": 19,
+      "pipeline_stage_ids": [
+        "PS-PRODUCTION-GOVERNANCE"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0002",
+        "PQ-RAG-0005",
+        "PQ-RAG-0008",
+        "PQ-RAG-0009",
+        "PQ-RAG-0013",
+        "PQ-RAG-0022",
+        "PQ-RAG-0026"
+      ],
+      "problem_count": 7,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-12",
+      "chapter_path": "knowledge/rag/chapters/rag-12-advanced-paradigms.md",
+      "atom_ids": [
+        "RAG-12-001",
+        "RAG-12-002",
+        "RAG-12-003",
+        "RAG-12-004",
+        "RAG-12-005",
+        "RAG-12-006",
+        "RAG-12-007",
+        "RAG-12-008",
+        "RAG-12-009",
+        "RAG-12-010",
+        "RAG-12-011",
+        "RAG-12-012",
+        "RAG-12-013",
+        "RAG-12-014",
+        "RAG-12-015",
+        "RAG-12-016",
+        "RAG-12-017",
+        "RAG-12-018",
+        "RAG-12-019",
+        "RAG-12-020"
+      ],
+      "atom_count": 20,
+      "pipeline_stage_ids": [
+        "PS-ADVANCED-RAG"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0005",
+        "PQ-RAG-0011",
+        "PQ-RAG-0016",
+        "PQ-RAG-0026"
+      ],
+      "problem_count": 4,
+      "link_status": "graph_backed"
+    },
+    {
+      "chapter_id": "RAG-13",
+      "chapter_path": "knowledge/rag/chapters/rag-13-project-interview.md",
+      "atom_ids": [
+        "RAG-13-002",
+        "RAG-13-003",
+        "RAG-13-004",
+        "RAG-13-005",
+        "RAG-13-006",
+        "RAG-13-007",
+        "RAG-13-008",
+        "RAG-13-009",
+        "RAG-13-010",
+        "RAG-13-011",
+        "RAG-13-012"
+      ],
+      "atom_count": 11,
+      "pipeline_stage_ids": [
+        "BB-RAG"
+      ],
+      "problem_ids": [
+        "PQ-RAG-0004",
+        "PQ-RAG-0005",
+        "PQ-RAG-0006"
+      ],
+      "problem_count": 3,
+      "link_status": "graph_backed"
     }
   ]
 }

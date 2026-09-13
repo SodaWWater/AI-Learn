@@ -1,26 +1,95 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-02",
-  "status": "formal_candidate_pending_strict_acceptance",
-  "note": "RAG-01 through RAG-03 have been reworked under the approved bilingual, graph-first, problem-driven four-part standard. Strict repository acceptance remains pending.",
-  "legacy_draft_modules": [
+  "updated_at": "2026-09-04",
+  "status": "formal_release_bounded",
+  "note": "RAG-01 through RAG-13 satisfy the bilingual, graph-first, problem-driven four-part standard and strict repository acceptance. The formal set contains 189 source-backed atoms; RAG-07-001 and RAG-13-011 remain excluded inventory_draft placeholders.",
+  "completed_modules": [
     {
       "id": "RAG-01",
       "map": "learning/rag/maps/rag-01.md",
       "chapter": "knowledge/rag/chapters/rag-01-foundations.md",
-      "review_status": "formal_candidate"
+      "review_status": "formal_bounded"
     },
     {
       "id": "RAG-02",
       "map": "learning/rag/maps/rag-02.md",
       "chapter": "knowledge/rag/chapters/rag-02-architecture-lifecycle.md",
-      "review_status": "formal_candidate"
+      "review_status": "formal_bounded"
     },
     {
       "id": "RAG-03",
       "map": "learning/rag/maps/rag-03.md",
       "chapter": "knowledge/rag/chapters/rag-03-document-parsing-governance.md",
-      "review_status": "formal_candidate"
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-04",
+      "map": "learning/rag/maps/rag-04.md",
+      "chapter": "knowledge/rag/chapters/rag-04-chunking.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-05",
+      "map": "learning/rag/maps/rag-05.md",
+      "chapter": "knowledge/rag/chapters/rag-05-embedding.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-06",
+      "map": "learning/rag/maps/rag-06.md",
+      "chapter": "knowledge/rag/chapters/rag-06-storage-indexing.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-07",
+      "map": "learning/rag/maps/rag-07.md",
+      "chapter": "knowledge/rag/chapters/rag-07-query-understanding.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-08",
+      "map": "learning/rag/maps/rag-08.md",
+      "chapter": "knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-09",
+      "map": "learning/rag/maps/rag-09.md",
+      "chapter": "knowledge/rag/chapters/rag-09-context-generation.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-10",
+      "map": "learning/rag/maps/rag-10.md",
+      "chapter": "knowledge/rag/chapters/rag-10-evaluation.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-11",
+      "map": "learning/rag/maps/rag-11.md",
+      "chapter": "knowledge/rag/chapters/rag-11-production-governance.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-12",
+      "map": "learning/rag/maps/rag-12.md",
+      "chapter": "knowledge/rag/chapters/rag-12-advanced-paradigms.md",
+      "review_status": "formal_bounded"
+    },
+    {
+      "id": "RAG-13",
+      "map": "learning/rag/maps/rag-13.md",
+      "chapter": "knowledge/rag/chapters/rag-13-project-interview.md",
+      "review_status": "formal_bounded"
     }
-  ]
+  ],
+  "formal_knowledge_set": {
+    "formal_atom_count": 189,
+    "graph_knowledge_atom_count": 191,
+    "excluded_inventory_atoms": ["RAG-07-001", "RAG-13-011"],
+    "source_backed": true,
+    "acceptance_audit": "audits/rag/p8-completion-audit.json",
+    "atom_audit": "audits/rag/atom-audit.json",
+    "reviewed_at": "2026-09-04"
+  }
 }

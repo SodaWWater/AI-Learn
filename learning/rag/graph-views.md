@@ -1,6 +1,6 @@
 # 检索增强生成（Retrieval-Augmented Generation，RAG）学习视图
 
-> 状态：`candidate / WP-P4-002 / generated / graph-first`
+> 状态：`accepted_bounded / WP-P4-002 / generated / graph-first`
 >
 > 生成器：[`scripts/generate_rag_learning_views.py`](../../scripts/generate_rag_learning_views.py)
 >

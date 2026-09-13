@@ -1,0 +1,2538 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04",
+  "status": "registered_evidence_snapshot",
+  "summary": {
+    "atoms": 191,
+    "first_party_covered": 118,
+    "first_party_gap": 71,
+    "paper_present": 101,
+    "volatile_or_active": 131,
+    "blocked_uncovered": 2,
+    "dynamic_source_count": 95,
+    "dynamic_review_required": 94,
+    "dynamic_reviewed_with_date": 94,
+    "dynamic_review_exemptions": [
+      "SRC-EU-GDPR-OFFICIAL-2016"
+    ],
+    "dynamic_all_reviewed": true
+  },
+  "atoms": [
+    {
+      "atom_id": "RAG-01-001",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-002",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-003",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-004",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-005",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-006",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-LOST-IN-THE-MIDDLE-2023"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-007",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-008",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-REALM-2020"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-009",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-REALM-2020",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-01-010",
+      "module_id": "RAG-01",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-001",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-NVIDIA-RAG-BLUEPRINT",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-002",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-NVIDIA-RAG-BLUEPRINT",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-003",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-004",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-005",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-006",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-007",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LANGSMITH-OBSERVABILITY-DOCS-2026",
+        "SRC-OPENLINEAGE-OBJECT-MODEL-1-53-0",
+        "SRC-W3C-PROV-O-2013",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-008",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-AZURE-INDEXER-CHANGE-DELETE-DETECTION-2026",
+        "SRC-CONFLUENT-SCHEMA-EVOLUTION-DOCS-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-DEBEZIUM-OUTBOX-EVENT-ROUTER-DOCS-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-009",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-MODULAR-RAG-2024",
+        "SRC-REALM-2020"
+      ]
+    },
+    {
+      "atom_id": "RAG-02-010",
+      "module_id": "RAG-02",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AZURE-INDEXER-CHANGE-DELETE-DETECTION-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-KAFKA-SOURCE-CONNECTOR-API-4-3-1",
+        "SRC-MILVUS-BACKUP-DOCS-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-001",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-002",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-003",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LITEPARSE-OFFICIAL-REPOSITORY-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-UNSTRUCTURED-PARTITIONING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-004",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026",
+        "SRC-LITEPARSE-OFFICIAL-REPOSITORY-2026",
+        "SRC-MPDOCBENCH-PARSE-2026",
+        "SRC-OMNIDOCBENCH-2025",
+        "SRC-PARSEBENCH-2026",
+        "SRC-UNSTRUCTURED-PARTITIONING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-005",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-006",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026",
+        "SRC-LITEPARSE-OFFICIAL-REPOSITORY-2026",
+        "SRC-MPDOCBENCH-PARSE-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-UNSTRUCTURED-PARTITIONING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-007",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-008",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-009",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-010",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-011",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-OPENLINEAGE-OBJECT-MODEL-1-53-0",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-SPDX-LICENSE-EXPRESSIONS-3-1-RC1",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-W3C-PROV-O-2013",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-012",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-DOCUMENT-ACCESS-CONTROL-2026",
+        "SRC-AZURE-FOUNDRY-DATA-PRIVACY-2026",
+        "SRC-AZURE-SEARCH-SECURITY-FILTER-DOCS-2026",
+        "SRC-NIST-PRIVACY-FRAMEWORK-2020",
+        "SRC-UNSTRUCTURED-PII-REDACTION-DOCS-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-013",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LITEPARSE-OFFICIAL-REPOSITORY-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-UNSTRUCTURED-PARTITIONING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-014",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-MPDOCBENCH-PARSE-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-OMNIDOCBENCH-2025",
+        "SRC-PARSEBENCH-2026",
+        "SRC-UNSTRUCTURED-PII-REDACTION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-03-015",
+      "module_id": "RAG-03",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-DOCLING-PDF-BACKEND-VISIBLE-TEXT-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-UNIDOC-BENCH-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-001",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-CHUNKING-METHODS-COST-EVALUATION-2026",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-002",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-LANGCHAIN-TEXT-SPLITTERS-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-003",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LANGCHAIN-TEXT-SPLITTERS-DOCS-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-004",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-005",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-DENSE-X-RETRIEVAL-2024",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-006",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LLAMAINDEX-SENTENCE-WINDOW-DOCS-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-007",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-LLAMAINDEX-SENTENCE-WINDOW-DOCS-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-008",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-009",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-010",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-011",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026",
+        "SRC-UNSTRUCTURED-CHUNKING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-012",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-LANGCHAIN-TEXT-SPLITTERS-DOCS-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-013",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-014",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-015",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-CHUNKING-METHODS-COST-EVALUATION-2026",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-016",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-04-017",
+      "module_id": "RAG-04",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-001",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-002",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-003",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-DENSE-PASSAGE-RETRIEVAL-2020",
+        "SRC-SENTENCE-TRANSFORMERS-HARD-NEGATIVE-DOCS-2026",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-004",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-COHERE-EMBEDDING-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-SEMANTIC-SEARCH-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-005",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-MTEB-2023",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-006",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-COHERE-EMBEDDING-DOCS-2026",
+        "SRC-MATRYOSHKA-REPRESENTATION-LEARNING-2024",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-SPLADE-2021",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-007",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-008",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-SENTENCE-TRANSFORMERS-SEMANTIC-SEARCH-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-009",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-COHERE-EMBEDDING-DOCS-2026",
+        "SRC-MATRYOSHKA-REPRESENTATION-LEARNING-2024",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-010",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-DENSE-X-RETRIEVAL-2024",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-MTEB-2023",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-VIBE-VECTOR-INDEX-BENCHMARK-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-011",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AZURE-FOUNDRY-DATA-PRIVACY-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-012",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-QDRANT-EMBEDDING-MODEL-MIGRATION-2026",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-013",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-014",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-015",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-E5-BASE-V2-MODEL-CARD-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-05-016",
+      "module_id": "RAG-05",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-COHERE-EMBEDDING-DOCS-2026",
+        "SRC-COLBERT-2020",
+        "SRC-COLPALI-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-001",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-002",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DISKANN-PAPER-2019",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-SENTENCE-TRANSFORMERS-SEMANTIC-SEARCH-2026",
+        "SRC-VIBE-VECTOR-INDEX-BENCHMARK-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-003",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-LANGCHAIN-SELF-QUERY-HANA-DOCS-2026",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-004",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-005",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DISKANN-PAPER-2019",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-HNSW-PAPER-2018",
+        "SRC-MILVUS-HNSW-DOCS-2026",
+        "SRC-PGVECTOR-OFFICIAL-REPOSITORY-2026",
+        "SRC-QDRANT-ANN-RECALL-DOCS-2026",
+        "SRC-QDRANT-INDEXING-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-006",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-HNSW-PAPER-2018",
+        "SRC-PGVECTOR-OFFICIAL-REPOSITORY-2026",
+        "SRC-QDRANT-ANN-RECALL-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-007",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLBERT-2020",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-MATRYOSHKA-REPRESENTATION-LEARNING-2024",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-008",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-009",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-010",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-DOCUMENT-ACCESS-CONTROL-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-MILVUS-CLUSTERING-COMPACTION-DOCS-2026",
+        "SRC-PGVECTOR-OFFICIAL-REPOSITORY-2026",
+        "SRC-QDRANT-INDEXING-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-011",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-FAISS-OFFICIAL-REPOSITORY-2026",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-QDRANT-INDEXING-DOCS-2026",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-012",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DISKANN-PAPER-2019",
+        "SRC-HNSW-PAPER-2018",
+        "SRC-MILVUS-CLUSTERING-COMPACTION-DOCS-2026",
+        "SRC-MILVUS-HNSW-DOCS-2026",
+        "SRC-PGVECTOR-OFFICIAL-REPOSITORY-2026",
+        "SRC-QDRANT-EMBEDDING-MODEL-MIGRATION-2026",
+        "SRC-QDRANT-INDEXING-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-SEMANTIC-SEARCH-2026",
+        "SRC-VIBE-VECTOR-INDEX-BENCHMARK-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-013",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-014",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AZURE-INDEXER-CHANGE-DELETE-DETECTION-2026",
+        "SRC-MILVUS-CLUSTERING-COMPACTION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-06-015",
+      "module_id": "RAG-06",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DISKANN-PAPER-2019",
+        "SRC-HNSW-PAPER-2018",
+        "SRC-MILVUS-HNSW-DOCS-2026",
+        "SRC-PGVECTOR-OFFICIAL-REPOSITORY-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-001",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "blocked_uncovered",
+      "source_refs": []
+    },
+    {
+      "atom_id": "RAG-07-002",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-QUERY-ROUTING-DOCS-2026",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-NOWCODER-XUNLEI-AI-INTENT-ROUTING-2026",
+        "SRC-OOD-INTENT-DETECTION-EMNLP-2025",
+        "SRC-SELF-RAG-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-003",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-HYDE-2022",
+        "SRC-QRECC-NAACL-2021",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-REWRITE-RETRIEVE-READ-EMNLP-2023",
+        "SRC-STEP-BACK-PROMPTING-2024",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-004",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-COHERE-PARALLEL-QUERY-DOCS-2026",
+        "SRC-LANGCHAIN-MULTI-QUERY-RETRIEVER-2026",
+        "SRC-LLAMAINDEX-QUERY-FUSION-RETRIEVER-2026",
+        "SRC-RAG-FUSION-2024",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-005",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-HYDE-2022",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-006",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-COHERE-PARALLEL-QUERY-DOCS-2026",
+        "SRC-IRCOT-2023",
+        "SRC-LANGCHAIN-SELF-QUERY-HANA-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-007",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-STEP-BACK-PROMPTING-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-008",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-CLUENER2020-BENCHMARK",
+        "SRC-CROSS-LANGUAGE-TEMPORAL-NORMALIZATION-2025",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-009",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-COHERE-PARALLEL-QUERY-DOCS-2026",
+        "SRC-QRECC-NAACL-2021",
+        "SRC-REWRITE-RETRIEVE-READ-EMNLP-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-010",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-AZURE-FOUNDRY-DEPLOYMENT-TYPES-2026",
+        "SRC-COHERE-QUERY-ROUTING-DOCS-2026",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-MODULAR-RAG-2024",
+        "SRC-NOWCODER-XUNLEI-AI-INTENT-ROUTING-2026",
+        "SRC-RAGROUTER-BENCH-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-011",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-COHERE-QUERY-ROUTING-DOCS-2026",
+        "SRC-HYDE-2022",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-NOWCODER-XUNLEI-AI-INTENT-ROUTING-2026",
+        "SRC-OOD-INTENT-DETECTION-EMNLP-2025",
+        "SRC-RAG-FUSION-2024",
+        "SRC-REWRITE-RETRIEVE-READ-EMNLP-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-07-012",
+      "module_id": "RAG-07",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-OOD-INTENT-DETECTION-EMNLP-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-001",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-COLBERT-2020",
+        "SRC-COLPALI-2024",
+        "SRC-DENSE-PASSAGE-RETRIEVAL-2020",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-HYDE-2022",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-LATE-CHUNKING-2025",
+        "SRC-LLAMAINDEX-SENTENCE-WINDOW-DOCS-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-002",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-BM25-FOUNDATIONS-2009",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-003",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BM25-FOUNDATIONS-2009",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-004",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-AZURE-HYBRID-QUERY-DOCS-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-SPLADE-2021",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-005",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-PARALLEL-QUERY-DOCS-2026",
+        "SRC-COHERE-QUERY-ROUTING-DOCS-2026",
+        "SRC-LANGCHAIN-MULTI-QUERY-RETRIEVER-2026",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-RAG-FUSION-2024",
+        "SRC-RECIPROCAL-RANK-FUSION-2009",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-006",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-HYBRID-RRF-RANKING-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-ELASTICSEARCH-RRF-RETRIEVER-DOCS-2026",
+        "SRC-LLAMAINDEX-QUERY-FUSION-RETRIEVER-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-RECIPROCAL-RANK-FUSION-2009",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-007",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-HYBRID-RRF-RANKING-2026",
+        "SRC-BM25-FOUNDATIONS-2009",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-ELASTICSEARCH-RRF-RETRIEVER-DOCS-2026",
+        "SRC-LLAMAINDEX-QUERY-FUSION-RETRIEVER-2026",
+        "SRC-RECIPROCAL-RANK-FUSION-2009",
+        "SRC-SCORE-NORMALIZATION-DATA-FUSION-2006",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-008",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-HYBRID-QUERY-DOCS-2026",
+        "SRC-AZURE-HYBRID-RRF-RANKING-2026",
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-LANGCHAIN-EMBEDDINGS-FILTER-2026",
+        "SRC-OPENTELEMETRY-GENAI-SEMCONV-2026",
+        "SRC-QDRANT-ANN-RECALL-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-EMBEDDING-QUANTIZATION-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-009",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-PAPER-2025",
+        "SRC-COHERE-RERANK-API-V2-2026",
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-COLBERT-2020",
+        "SRC-DENSE-PASSAGE-RETRIEVAL-2020",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-MONOT5-2020",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-RANKGPT-2024",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-TRAINING-2026",
+        "SRC-SENTENCE-TRANSFORMERS-HARD-NEGATIVE-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-010",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-AZURE-HYBRID-RRF-RANKING-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-COHERE-RERANK-API-V2-2026",
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-MMR-DIVERSITY-RERANKING-1998",
+        "SRC-MONOT5-2020",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-RANKGPT-2024",
+        "SRC-RRPO-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-TRAINING-2026",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-011",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-MMR-DIVERSITY-RERANKING-1998"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-012",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-013",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-PARALLEL-QUERY-DOCS-2026",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-IRCOT-2023",
+        "SRC-ITERATIVE-RAG-DIAGNOSTIC-2026",
+        "SRC-NOWCODER-RAG-TEN-QUESTIONS-2025",
+        "SRC-QRECC-NAACL-2021",
+        "SRC-STEP-BACK-PROMPTING-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-014",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AZURE-HYBRID-QUERY-DOCS-2026",
+        "SRC-AZURE-SEARCH-SECURITY-FILTER-DOCS-2026",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-ELASTICSEARCH-RETRIEVERS-DOCS-2026",
+        "SRC-ELASTICSEARCH-RRF-RETRIEVER-DOCS-2026",
+        "SRC-INDIRECT-PROMPT-INJECTION-WILD-2026",
+        "SRC-LANGCHAIN-EMBEDDINGS-FILTER-2026",
+        "SRC-LANGCHAIN-SELF-QUERY-HANA-DOCS-2026",
+        "SRC-MMR-DIVERSITY-RERANKING-1998",
+        "SRC-POISONEDRAG-2024"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-015",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-NOWCODER-RAG-TEN-QUESTIONS-2025",
+        "SRC-RANKGPT-2024",
+        "SRC-REWRITE-RETRIEVE-READ-EMNLP-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-08-016",
+      "module_id": "RAG-08",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-HYBRID-QUERY-DOCS-2026",
+        "SRC-AZURE-HYBRID-SEARCH-OVERVIEW-2026",
+        "SRC-COHERE-RERANK-API-V2-2026",
+        "SRC-ELASTICSEARCH-RRF-RETRIEVER-DOCS-2026",
+        "SRC-LANGCHAIN-MULTI-QUERY-RETRIEVER-2026",
+        "SRC-LLAMAINDEX-QUERY-FUSION-RETRIEVER-2026",
+        "SRC-NOWCODER-ENTERPRISE-RAG-SYSTEM-INTERVIEW-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-001",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-BGE-M3-MODEL-CARD-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-002",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-LOST-IN-THE-MIDDLE-2023",
+        "SRC-RECOMP-CONTEXT-COMPRESSION-2023",
+        "SRC-SARA-CONTEXT-COMPRESSION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-003",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+        "SRC-LOST-IN-THE-MIDDLE-2023",
+        "SRC-RRPO-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-004",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-LOST-IN-THE-MIDDLE-2023",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-005",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-LANGCHAIN-CONTEXTUAL-COMPRESSION-RETRIEVER-2026",
+        "SRC-LANGCHAIN-EMBEDDINGS-FILTER-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-LANGCHAIN-PARENT-DOCUMENT-RETRIEVER-2026",
+        "SRC-LLAMAINDEX-SENTENCE-WINDOW-DOCS-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2-2026",
+        "SRC-RECOMP-CONTEXT-COMPRESSION-2023",
+        "SRC-SARA-CONTEXT-COMPRESSION-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-006",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-EVIDENCE-BASED-GENERATION-SURVEY-2026",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-RAG-ORIGINAL-2020",
+        "SRC-SELF-RAG-2023",
+        "SRC-SUFFICIENT-CONTEXT-2024",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-007",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ALCE-CITATION-EVALUATION-2023",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-EVIDENCE-BASED-GENERATION-SURVEY-2026",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-SELF-RAG-2023",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-008",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-OWASP-LLM-TOP10-2025",
+        "SRC-RECOMP-CONTEXT-COMPRESSION-2023",
+        "SRC-SUFFICIENT-CONTEXT-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-009",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-RAGTRUTH-2024",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-010",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-DOCLING-DOCUMENT-MODEL-2026",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-QCARE-OFFICIAL-REPOSITORY-2026",
+        "SRC-SELF-RAG-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-011",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-OWASP-LLM-TOP10-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-012",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-013",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CONFLICTRAG-2026",
+        "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-NOWCODER-RAG-TEN-QUESTIONS-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-014",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-OPENAI-STRUCTURED-OUTPUTS-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-015",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-ANTHROPIC-CONTEXTUAL-RETRIEVAL",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-09-016",
+      "module_id": "RAG-09",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-001",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-TRACER-2026",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ALCE-CITATION-EVALUATION-2023",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-LOST-IN-THE-MIDDLE-2023",
+        "SRC-MTEB-2023",
+        "SRC-NIST-GENAI-PROFILE-2024",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-NOWCODER-RAG-EVALUATION-FUNNEL-2026",
+        "SRC-PARSEBENCH-2026",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-RAGCHECKER-2024",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-002",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-AI-APP-INTERN-RAG-EVAL-2026",
+        "SRC-NOWCODER-RAG-EVALUATION-FUNNEL-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-003",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-RAGTRUTH-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-004",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CLUENER2020-BENCHMARK",
+        "SRC-COHERE-RERANK-API-V2-2026",
+        "SRC-DENSE-PASSAGE-RETRIEVAL-2020",
+        "SRC-DISKANN-PAPER-2019",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-QDRANT-ANN-RECALL-DOCS-2026",
+        "SRC-QRECC-NAACL-2021",
+        "SRC-RAGCHECKER-2024",
+        "SRC-SPLADE-2021",
+        "SRC-VIBE-VECTOR-INDEX-BENCHMARK-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-005",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-BM25-FOUNDATIONS-2009",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-RECIPROCAL-RANK-FUSION-2009",
+        "SRC-SCORE-NORMALIZATION-DATA-FUSION-2006",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-006",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-COHERE-RERANK-DOCS-2026",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-LANGCHAIN-EMBEDDINGS-FILTER-2026",
+        "SRC-MONOT5-2020",
+        "SRC-RANKGPT-2024",
+        "SRC-RRPO-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-TRAINING-2026",
+        "SRC-SENTENCE-TRANSFORMERS-HARD-NEGATIVE-DOCS-2026",
+        "SRC-SENTENCE-TRANSFORMERS-RETRIEVE-RERANK-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-007",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-QCARE-OFFICIAL-REPOSITORY-2026",
+        "SRC-QCARE-RAG-EVALUATION-2026",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-RAGCHECKER-2024",
+        "SRC-SARA-CONTEXT-COMPRESSION-2026",
+        "SRC-SUFFICIENT-CONTEXT-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-008",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-RAGCHECKER-2024",
+        "SRC-RAGTRUTH-2024",
+        "SRC-SUFFICIENT-CONTEXT-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-009",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ALCE-CITATION-EVALUATION-2023",
+        "SRC-ANTHROPIC-CITATIONS-DOCS-2026",
+        "SRC-EVIDENCE-BASED-GENERATION-SURVEY-2026",
+        "SRC-GOOGLE-CHECK-GROUNDING-DOCS-2026",
+        "SRC-QCARE-OFFICIAL-REPOSITORY-2026",
+        "SRC-QCARE-RAG-EVALUATION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-010",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-011",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-LLM-AS-JUDGE-MTBENCH-2023",
+        "SRC-LLM-JUDGE-VULNERABILITIES-2025",
+        "SRC-NOWCODER-AI-APP-INTERN-RAG-EVAL-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-012",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ARES-RAG-EVALUATION-2024",
+        "SRC-CLUENER2020-BENCHMARK",
+        "SRC-CONFLICTRAG-2026",
+        "SRC-ENTERPRISE-RAG-BENCHMARK-2026",
+        "SRC-LLM-AS-JUDGE-MTBENCH-2023",
+        "SRC-LLM-JUDGE-VULNERABILITIES-2025",
+        "SRC-NOVA-RAG-CONFIDENCE-CALIBRATION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-013",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-INTENT-UNDERSTANDING-CLARIFICATION-EACL-2026",
+        "SRC-LANGSMITH-OBSERVABILITY-DOCS-2026",
+        "SRC-OOD-INTENT-DETECTION-EMNLP-2025",
+        "SRC-RAGROUTER-BENCH-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-10-014",
+      "module_id": "RAG-10",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-SURVEY-2025",
+        "SRC-AGENTIC-RAG-TRACER-2026",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CHUNKING-EMBEDDING-SENSITIVITY-2026",
+        "SRC-ENTERPRISE-RAG-BENCHMARK-2026",
+        "SRC-IRCOT-2023",
+        "SRC-ITERATIVE-RAG-DIAGNOSTIC-2026",
+        "SRC-LANGCHAIN-EMBEDDINGS-FILTER-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-LANGSMITH-OBSERVABILITY-DOCS-2026",
+        "SRC-MATRYOSHKA-REPRESENTATION-LEARNING-2024",
+        "SRC-MMR-DIVERSITY-RERANKING-1998",
+        "SRC-MONOT5-2020",
+        "SRC-MTEB-2023",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-NIST-GENAI-PROFILE-2024",
+        "SRC-NOWCODER-RAG-EVALUATION-FUNNEL-2026",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-OPENAI-STRUCTURED-OUTPUTS-DOCS-2026",
+        "SRC-OPENTELEMETRY-GENAI-SEMCONV-2026",
+        "SRC-QCARE-OFFICIAL-REPOSITORY-2026",
+        "SRC-QCARE-RAG-EVALUATION-2026",
+        "SRC-QDRANT-ANN-RECALL-DOCS-2026",
+        "SRC-QUERY-ADAPTIVE-SEMANTIC-CHUNKING-2026",
+        "SRC-RAGAS-EACL-2024",
+        "SRC-RAGCHECKER-2024",
+        "SRC-RANKGPT-2024",
+        "SRC-RECIPROCAL-RANK-FUSION-2009",
+        "SRC-SCORE-NORMALIZATION-DATA-FUSION-2006",
+        "SRC-SEMANTIC-CHUNKING-COST-NAACL-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-001",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CONFLUENT-SCHEMA-EVOLUTION-DOCS-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-DEBEZIUM-OUTBOX-EVENT-ROUTER-DOCS-2026",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-002",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CONFLUENT-SCHEMA-EVOLUTION-DOCS-2026",
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-DEBEZIUM-OUTBOX-EVENT-ROUTER-DOCS-2026",
+        "SRC-KAFKA-SOURCE-CONNECTOR-API-4-3-1",
+        "SRC-NOWCODER-ENTERPRISE-RAG-SYSTEM-INTERVIEW-2026",
+        "SRC-QDRANT-CONSISTENCY-DOCS-2026",
+        "SRC-QDRANT-INCREMENTAL-EMBEDDING-UPDATES-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-003",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-004",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-DOCUMENT-ACCESS-CONTROL-2026",
+        "SRC-QDRANT-BLUE-GREEN-DEPLOYMENT-2026",
+        "SRC-QDRANT-CONSISTENCY-DOCS-2026",
+        "SRC-QDRANT-EMBEDDING-MODEL-MIGRATION-2026",
+        "SRC-UNSTRUCTURED-PII-REDACTION-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-005",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-NOWCODER-RAG-TEN-QUESTIONS-2025"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-006",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-QDRANT-EMBEDDING-MODEL-MIGRATION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-007",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-DEBEZIUM-ARCHITECTURE-DOCS-2026",
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-LANGCHAIN-CONTEXTUAL-COMPRESSION-RETRIEVER-2026",
+        "SRC-LANGCHAIN-LLM-CHAIN-EXTRACTOR-2026",
+        "SRC-LANGCHAIN-MULTI-QUERY-RETRIEVER-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-008",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-FOUNDRY-DEPLOYMENT-TYPES-2026",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-009",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-010",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-DEBEZIUM-EXACTLY-ONCE-DOCS-2026",
+        "SRC-DEBEZIUM-FEATURES-DOCS-2026",
+        "SRC-DEBEZIUM-INCREMENTAL-SNAPSHOTS-2021",
+        "SRC-KAFKA-SOURCE-CONNECTOR-API-4-3-1",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-OPENAI-STRUCTURED-OUTPUTS-DOCS-2026",
+        "SRC-QDRANT-BLUE-GREEN-DEPLOYMENT-2026",
+        "SRC-QDRANT-CONSISTENCY-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-011",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-012",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-FOUNDRY-DATA-PRIVACY-2026",
+        "SRC-AZURE-SEARCH-SECURITY-FILTER-DOCS-2026",
+        "SRC-MCP-AUTHORIZATION-SECURITY-2026",
+        "SRC-NOWCODER-ENTERPRISE-RAG-SYSTEM-INTERVIEW-2026",
+        "SRC-OWASP-MCP-SECURITY-CHEAT-SHEET-2026",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-013",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-HYBRID-QUERY-DOCS-2026",
+        "SRC-AZURE-SEARCH-SECURITY-FILTER-DOCS-2026",
+        "SRC-INDIRECT-PROMPT-INJECTION-WILD-2026",
+        "SRC-MCP-AUTHORIZATION-SECURITY-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-POISONEDRAG-2024",
+        "SRC-QDRANT-MULTITENANCY-DOCS-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-014",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-AZURE-FOUNDRY-DATA-PRIVACY-2026",
+        "SRC-AZURE-FOUNDRY-DEPLOYMENT-TYPES-2026",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-NIST-GENAI-PROFILE-2024",
+        "SRC-NIST-PRIVACY-FRAMEWORK-2020",
+        "SRC-OPENTELEMETRY-GENAI-SEMCONV-2026",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-SPDX-LICENSE-EXPRESSIONS-3-1-RC1",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-015",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-INDIRECT-PROMPT-INJECTION-WILD-2026",
+        "SRC-MCP-AUTHORIZATION-SECURITY-2026",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-NOWCODER-AI-APP-INTERN-RAG-EVAL-2026",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025",
+        "SRC-OPENRAG-SOC-INDIRECT-INJECTION-2026",
+        "SRC-OWASP-LLM-TOP10-2025",
+        "SRC-OWASP-MCP-SECURITY-CHEAT-SHEET-2026",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-016",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-INDIRECT-PROMPT-INJECTION-WILD-2026",
+        "SRC-MCP-AUTHORIZATION-SECURITY-2026",
+        "SRC-MM-MEPA-MULTIMODAL-RAG-POISONING-2026",
+        "SRC-OPENRAG-SOC-INDIRECT-INJECTION-2026",
+        "SRC-OWASP-LLM-TOP10-2025",
+        "SRC-OWASP-MCP-SECURITY-CHEAT-SHEET-2026",
+        "SRC-POISONEDRAG-2024"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-017",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-LANGCHAIN-CONTEXTUAL-COMPRESSION-RETRIEVER-2026",
+        "SRC-LANGSMITH-OBSERVABILITY-DOCS-2026",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-NIST-GENAI-PROFILE-2024",
+        "SRC-NOWCODER-LITEPARSE-PAISMART-ENGINEERING-2026",
+        "SRC-NOWCODER-RAG-EVALUATION-FUNNEL-2026",
+        "SRC-OPENLINEAGE-OBJECT-MODEL-1-53-0",
+        "SRC-OPENTELEMETRY-GENAI-SEMCONV-2026",
+        "SRC-OWASP-RAG-SECURITY-CHEAT-SHEET-2026",
+        "SRC-W3C-PROV-O-2013",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-018",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AWS-GENAI-DATA-LIFECYCLE-GUIDANCE-2026",
+        "SRC-CHUNKING-METHODS-COST-EVALUATION-2026",
+        "SRC-COHERE-ENTERPRISE-DATA-COMMITMENTS-2025",
+        "SRC-DYNAMICRAG-2025",
+        "SRC-RANKGPT-2024",
+        "SRC-SENTENCE-TRANSFORMERS-CROSS-ENCODER-EFFICIENCY-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-11-019",
+      "module_id": "RAG-11",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-MILVUS-BACKUP-DOCS-2026",
+        "SRC-NIST-AI-INCIDENT-RESPONSE-2026",
+        "SRC-QDRANT-BLUE-GREEN-DEPLOYMENT-2026",
+        "SRC-QDRANT-CONSISTENCY-DOCS-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-001",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-002",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-003",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-MODULAR-RAG-2024",
+        "SRC-RAGROUTER-BENCH-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-004",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-SURVEY-2025",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AI-SEARCH-RAG-OVERVIEW-2026",
+        "SRC-AZURE-SEMANTIC-QUERY-REWRITE-2026",
+        "SRC-LLAMAINDEX-ROUTER-DOCS-2026",
+        "SRC-MCP-AUTHORIZATION-SECURITY-2026",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-NOWCODER-AI-APP-INTERN-RAG-EVAL-2026",
+        "SRC-OWASP-MCP-SECURITY-CHEAT-SHEET-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-005",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-ITERATIVE-RAG-DIAGNOSTIC-2026",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-RAGROUTER-BENCH-2026",
+        "SRC-SELF-RAG-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-006",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-SELF-RAG-2023",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-007",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-CORRECTIVE-RAG-2024",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-008",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-TRACER-2026",
+        "SRC-IA-RAG-TEMPORAL-2026",
+        "SRC-IRCOT-2023",
+        "SRC-ITERATIVE-RAG-DIAGNOSTIC-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-009",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-010",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-011",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-MM-MEPA-MULTIMODAL-RAG-POISONING-2026",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-012",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-COLPALI-2024",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-UNIDOC-BENCH-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-013",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-014",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-015",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-016",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-017",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-ATBENCH-AGENT-TRAJECTORY-SAFETY-2026",
+        "SRC-ENTERPRISE-DEEP-RESEARCH-TERMINATION-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-018",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-ADAPTIVE-RAG-2024",
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-SURVEY-2025",
+        "SRC-LARA-RAG-LONG-CONTEXT-2025",
+        "SRC-OPENAI-DEEP-RESEARCH-SYSTEM-CARD-2025",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-019",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENTIC-RAG-SURVEY-2025",
+        "SRC-REALM-2020",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-12-020",
+      "module_id": "RAG-12",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-GRAPHRAG-LOCAL-GLOBAL-2024",
+        "SRC-MICROSOFT-GRAPHRAG-DOCS",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-002",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AI-AGENT-INTERVIEW-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-003",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-ENTERPRISE-RAG-SYSTEM-INTERVIEW-2026"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-004",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-005",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-006",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENT-INTERVIEW-HUB-INDEX",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-USER-RAG-EXPERIENCE-PDF",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-007",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-AZURE-AGENTIC-RETRIEVAL-OVERVIEW-2026",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-NOWCODER-XUNLEI-AI-INTENT-ROUTING-2026",
+        "SRC-NVIDIA-RAG-BLUEPRINT",
+        "SRC-RAG-FUSION-2024",
+        "SRC-USER-RAG-EXPERIENCE-PDF"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-008",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-009",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG",
+        "SRC-NOWCODER-RAG-RETRIEVAL-EVOLUTION-2026",
+        "SRC-XIAOLIN-AI-LEARNING"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-010",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "stable_or_research_snapshot",
+      "source_refs": [
+        "SRC-AGENT-GUIDE"
+      ]
+    },
+    {
+      "atom_id": "RAG-13-011",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "blocked_uncovered",
+      "source_refs": []
+    },
+    {
+      "atom_id": "RAG-13-012",
+      "module_id": "RAG-13",
+      "dynamic_review_status": "required_volatile_or_active",
+      "source_refs": [
+        "SRC-AGENT-GUIDE",
+        "SRC-AGENT-INTERVIEW-HUB-INDEX",
+        "SRC-AI-AGENT-INTERVIEW-GUIDE",
+        "SRC-HEBUTBRYANT-RAG-INTERVIEW",
+        "SRC-IMRANMATIN-RAG-INTERVIEW-QUESTIONS-2026",
+        "SRC-NOWCODER-AGENT-RAG-QUESTION-BANK-2026",
+        "SRC-NOWCODER-BYTEDANCE-AI-APPLICATION-RAG"
+      ]
+    }
+  ]
+}

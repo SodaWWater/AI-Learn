@@ -1,7 +1,7 @@
 ---
 id: RAG-01
 title: RAG 基础、价值与能力边界
-status: formal_candidate
+status: formal_bounded
 reviewed_at: 2026-09-04
 freshness_class: stable
 chapter_path: knowledge/rag/chapters/rag-01-foundations.md
@@ -27,7 +27,7 @@ related_problem_ids:
 
 # RAG 基础、价值与能力边界
 
-> 章节状态：`formal_candidate`（正式候选，待全库验收）。本章只整理已登记来源和图谱原子，不把问题库存当作答案，也不宣称检索增强生成（Retrieval-Augmented Generation，RAG）全库完成。
+> 章节状态：`formal_bounded`（范围受限正式，已通过当前登记范围严格验收）。本章只整理已登记来源和图谱原子，不把问题库存当作答案，也不宣称检索增强生成（Retrieval-Augmented Generation，RAG）全库完成。
 
 ## 一、知识点概要
 
@@ -151,7 +151,7 @@ Answer
 
 ### 图谱节点
 
-本章原子和状态以 [`knowledge/rag/graph.json`](../graph.json) 为准：`RAG-01-001` 至 `RAG-01-010` 均为 `knowledge` 节点，当前状态为 `source_mapped`，审核日期为 2026-09-04。章节关系图见 [`learning/rag/maps/rag-01.md`](../../../learning/rag/maps/rag-01.md)。
+本章原子和来源映射以 [`knowledge/rag/graph.json`](../graph.json) 为准：`RAG-01-001` 至 `RAG-01-010` 均为 `knowledge` 节点并已完成来源映射；章节审核状态为 `formal_bounded`，审核日期为 2026-09-04。章节关系图见 [`learning/rag/maps/rag-01.md`](../../../learning/rag/maps/rag-01.md)。
 
 ### 来源登记
 
@@ -168,6 +168,6 @@ Answer
 
 ## 审核边界
 
-- 本章覆盖 `RAG-01` 的 10 个目录原子，但节点仍为 `source_mapped`，章节仍为 `content_draft`，需统一人工验收后才能提升状态。
-- 本章未添加新的来源、图谱节点或关系；未把 `RAG-07-011`、`RAG-13-011` 等 `inventory_draft` 节点当作已验证事实。
+- 本章覆盖 `RAG-01` 的 10 个目录原子；来源映射、语义审核、章节覆盖和模块图检查已在当前登记范围内完成，状态为 `formal_bounded`。该状态只对固定来源范围和审核日期负责，不宣称互联网永久完整。
+- 本章未添加新的来源、图谱节点或关系；未把 `RAG-07-001`、`RAG-13-011` 等 `inventory_draft` 节点当作已验证事实。
 - 研究结论、框架接口、模型能力、成本和性能随版本变化；使用前应按来源登记的固定版本复核。

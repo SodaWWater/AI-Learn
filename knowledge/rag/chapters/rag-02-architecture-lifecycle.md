@@ -1,7 +1,7 @@
 ---
 id: RAG-02
 title: RAG 系统架构与生命周期
-status: formal_candidate
+status: formal_bounded
 reviewed_at: 2026-09-04
 freshness_class: active
 atoms:
@@ -302,4 +302,4 @@ def retrieve(query):
 - `langchain-parent-document-retriever-2026`、`langchain-multi-query-retriever-2026`、`llamaindex-router-docs-2026`：已登记框架官方资料；接口属于高变化内容，示例仅在锁定审核版本后使用。
 - `xiaolin-ai-learning`、`ai-agent-interview-guide`、`agent-guide` 和用户 PDF 的相关语义单元已映射到本章原子；题库或用户材料只提供题目线索和场景，不作为技术结论唯一证据。
 
-本章状态为 `formal_candidate`：四段式正文、10 个原子、工程链接和来源边界已完成；框架 API、云产品行为、成本与性能仍需按登记版本周期复核。`RAG-07-001` 与 `RAG-13-011` 的无来源 `inventory_draft` 不被本章引用为已验证事实。
+本章状态为 `formal_bounded`：四段式正文、10 个原子、工程链接和来源边界已完成；框架 API、云产品行为、成本与性能仍需按登记版本周期复核。`RAG-07-001` 与 `RAG-13-011` 的无来源 `inventory_draft` 不被本章引用为已验证事实。

@@ -1,61 +1,52 @@
 # 本地 Agent 无偏差续作手册
 
 > 状态：`authoritative / active`  
-> 更新日期：2026-09-03  
-> 当前任务：原始资料人工语义审核与覆盖证明
+> 更新日期：2026-09-04
+> 当前任务：维护范围受限正式版本；按审核日期复核动态内容
 > 本文件解决的是“新 Agent 不读取聊天记录，也能从唯一检查点继续”的问题。
 
 ## 1. 当前已经完成什么
 
 - 4 个用户指定来源已经固定版本并登记；
 - 695 个来源单元（Source Unit）已经机械盘点；
-- 其中 653 个是待语义审核的检索增强生成（Retrieval-Augmented Generation，RAG）内容单元，42 个已经标为结构、资源或占位单元；
-- 653 个语义单元中，241 个已人工审核，412 个待人工审核；
-- `xiaolin-ai-learning` 已人工审核 127/127，来源正文、目录重复和风险标记均已形成显式去向；
+- 其中 653 个是检索增强生成（Retrieval-Augmented Generation，RAG）语义内容单元，42 个已经标为结构、资源或占位单元；
+- 653 个语义单元已全部完成人工审核，所有 695 个来源单元均有显式去向；
+- `xiaolin-ai-learning`、`ai-agent-interview-guide`、`agent-guide` 和用户 PDF 均已完成审核；
 - 用户 PDF《大模型 RAG 经验面》37/37 已人工审核完成；
 - 18 个流程节点的三轮外部检索已经完成；
 - 当前登记 170 个外部时效/一手来源和 26 条公开工程问题/面试题线索；
 - 第四轮只完成 4/18，结果保留为历史检查点，不继续剩余 14 个节点。
 
-机械盘点完成不等于语义审核完成，也不等于标准知识库完成。不得把 695 个标题已入表表述为“所有内容已经人工吸收”。
+当前正式发布集合包含 189 个有来源知识原子；`RAG-07-001` 与 `RAG-13-011` 为无来源 `inventory_draft` 库存占位，不得作为已验证结论。
 
-## 2. 用户已经确定的执行顺序
+## 2. 已完成的执行顺序与当前维护边界
 
-1. 暂停继续向外搜索；
-2. 完成 4 个原始来源的逐单元人工语义审核；
-3. 对每个语义单元记录保留、完全重复、部分重叠、跨节点或非检索增强生成内容的判断；
-4. 生成可核验的原始来源覆盖报告，证明每个单元均有去向；
-5. 使用已登记的 170 个外部来源做事实核验、时效补充和冲突校正，不再无边界扩展来源；
-6. 建立去重后的标准知识库（Canonical Knowledge Base）；
-7. 构建底层知识图谱（Knowledge Graph）；
-8. 生成完整流程前置内容和多张关系图；
-9. 按主干节点顺序生成工程问题/面试题，再生成跨节点综合问题；
-10. 按统一标准完成详细知识章节。
+1. 已暂停继续向外搜索；
+2. 已完成 4 个原始来源的逐单元人工语义审核；
+3. 已完成保留、完全重复、部分重叠、跨节点或非检索增强生成内容的判断；
+4. 已生成可核验的原始来源覆盖报告，证明每个单元均有去向；
+5. 已使用登记来源完成事实、时效和冲突核验；
+6. 已建立去重后的标准知识库和底层知识图谱；
+7. 已生成完整流程前置内容、多张关系图、问题库存和正式有界知识章节；
+8. 当前只按审核日期复核动态产品/API 行为；恢复外部搜索需用户明确授权。
 
-在第 4 步达到 100% 前，不得批量进入正式正文、思维导图或面试题页面生产。
+上述质量门已全部通过；正式学习入口为 `learning/rag/overview.md`。
 
-## 3. 当前唯一工作队列
+## 3. 当前维护队列
 
-执行顺序固定为：
+当前没有待审语义单元。维护顺序固定为：
 
-1. `xiaolin-ai-learning`：0 个待审语义单元，127/127 已完成；
-2. `ai-agent-interview-guide`：66 个待审语义单元；当前从此来源继续；
-3. `agent-guide`：346 个待审语义单元；
-4. `user-rag-experience-pdf`：0 个待审语义单元，37/37 已完成。
+1. 按 `audits/rag/dynamic-version-audit.json` 的审核日期复核动态产品/API 内容；
+2. 复核 `RAG-07-001` 与 `RAG-13-011` 是否获得合规来源；
+3. 只有用户明确授权后，才恢复外部搜索并建立下一版本工作包。
 
-查看下一批：
-
-```bash
-python scripts/review_queue.py --limit 25
-```
-
-查看汇总：
+查看当前维护状态：
 
 ```bash
 python scripts/review_queue.py --summary
 ```
 
-每批以 20～30 个单元为目标，但必须保持一个问题或连续章节的语义完整；不要为了凑数量从中间截断上下文。
+当前队列应显示待审数量为 0；如需新增来源，先登记来源、版本和许可，再创建新的审核工作包。
 
 ## 4. 审核时必须阅读正文
 
@@ -101,7 +92,7 @@ python scripts/validate_repo.py
 git diff --check
 ```
 
-普通校验通过后创建小型 Git Commit（Git 提交）检查点；拥有远端权限时推送。严格校验在待审单元清零前预期不会通过，不得为了让它变绿而伪造映射。
+普通校验通过后创建小型 Git Commit（Git 提交）检查点；拥有远端权限时推送。当前登记范围的严格校验已经通过；后续只在新增来源或版本复核时重新运行，不得为了让它变绿而伪造映射。
 
 ## 7. 明确禁止
 
@@ -134,11 +125,11 @@ git diff --check
 8. knowledge/rag/CONTENT_STANDARD.md
 9. taxonomy/rag-graph-model.json
 
-当前用户决策：停止新的外部搜索。前三轮 18/18 和第四轮 4/18 只作为已保存证据；不得继续第四轮剩余 14 个节点。当前唯一任务是按 audits/rag/manual-review-status.json 的实时数量完成待审原始资料语义单元的人工核验与覆盖证明；当前检查点为已审 241、待审 412。`xiaolin-ai-learning` 已完成 127/127，下一单元为 `ai-agent-interview-guide` 的 RU-58be80727d76。
+当前用户决策：停止新的外部搜索。前三轮 18/18 和第四轮 4/18 只作为已保存证据；不得继续第四轮剩余 14 个节点。`audits/rag/manual-review-status.json` 显示 653/653 个语义单元已审核、待审数量为 0。正式发布集合包含 189 个有来源原子，`RAG-07-001` 与 `RAG-13-011` 仅为无来源库存占位。正式学习入口为 `learning/rag/overview.md`。
 
-先运行 python scripts/review_queue.py --summary 和 python scripts/review_queue.py --limit 25，按队列从 ai-agent-interview-guide 继续。必须在仓库外按 sources/registry.json 的固定 Commit 检出来源并阅读正文及上下文；不能只根据标题判断。每批审核 20～30 个单元并保持语义边界完整。每个单元必须记录 retain、exact_duplicate、partial_overlap、cross_node 或 non_rag 之一；只有语义、条件和结论都相同才可标为 exact_duplicate。部分重叠、实现差异、反例、版本差异、工程条件和评估方法全部保留。
+先运行 `python scripts/review_queue.py --summary` 确认待审数量为 0，再按 `audits/rag/dynamic-version-audit.json` 的审核日期复核动态产品/API 内容。不得恢复外部搜索或把库存占位写成正式结论；如需新增来源或补充原子，必须先获得用户明确授权并建立下一版本工作包。
 
-每批按 docs/LOCAL_AGENT_HANDOFF.md 更新 reviewed 批次文件、catalog、manual-review-status、original-source-coverage 和 work-status；运行 python scripts/validate_repo.py、python scripts/review_queue.py --summary、git diff --check。通过后提交一个小型检查点，有远端权限时推送。不要提前进入正式章节、思维导图或面试题生产。完成一批后直接继续下一批，除非遇到正文无法读取、证据冲突无法判断、工作区存在不明修改或权限阻塞。
+维护完成后运行 `python scripts/validate_repo.py`、`python scripts/validate_repo.py --strict-rag` 和 `git diff --check`，并更新 `audits/rag/work-status.json` 与发布说明。不要重复执行已完成的来源审核、章节生成或历史搜索轮次。
 ```
 
 ## 9. Agent 中断时的交接格式

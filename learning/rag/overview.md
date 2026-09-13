@@ -1,6 +1,8 @@
 # RAG 学习总览与导航
 
-> 状态：`v0.1-building`。本页是正式学习入口，不替代原子知识审计。当前已完成总览以及 `RAG-01` 至 `RAG-03` 的关系图和正文；其余模块按同一标准继续生成。
+> 状态：`formal_release_bounded`。本页是正式学习入口，不替代原子知识审计。`RAG-01` 至 `RAG-13` 均已通过严格验收；正式集合为 189 个有来源原子，2 个无来源原子仅作库存占位。
+
+开始学习请先阅读[学习启动页](START_HERE.md)，再按本页的完整流程和模块入口推进。
 
 ## 如何阅读这些图
 
@@ -71,23 +73,23 @@ flowchart TD
 
 | 模块 | 关系图 | 标准学习正文 | 状态 |
 |---|---|---|---|
-| RAG-01 基础与边界 | [查看](maps/rag-01.md) | [查看](../../knowledge/rag/chapters/rag-01-foundations.md) | 正式候选，待严格验收 |
-| RAG-02 系统架构与生命周期 | [查看](maps/rag-02.md) | [查看](../../knowledge/rag/chapters/rag-02-architecture-lifecycle.md) | 正式候选，待严格验收 |
-| RAG-03 文档解析与数据治理 | [查看](maps/rag-03.md) | [查看](../../knowledge/rag/chapters/rag-03-document-parsing-governance.md) | 正式候选，待严格验收 |
-| RAG-04 Chunking | 待生成 | 待生成 | 来源复核中 |
-| RAG-05 Embedding | 待生成 | 待生成 | 来源复核中 |
-| RAG-06 存储与索引 | 待生成 | 待生成 | 来源复核中 |
-| RAG-07 Query 理解 | 待生成 | 待生成 | 来源复核中 |
-| RAG-08 检索、融合与重排 | 待生成 | 待生成 | 来源复核中 |
-| RAG-09 上下文与生成 | 待生成 | 待生成 | 来源复核中 |
-| RAG-10 评估 | 待生成 | 待生成 | 来源复核中 |
-| RAG-11 生产工程与治理 | 待生成 | 待生成 | 来源复核中 |
-| RAG-12 高级范式 | 待生成 | 待生成 | 来源复核中 |
-| RAG-13 项目与面试应用 | 待生成 | 待生成 | 来源复核中 |
+| RAG-01 基础与边界 | [查看](maps/rag-01.md) | [查看](../../knowledge/rag/chapters/rag-01-foundations.md) | 正式发布（有界） |
+| RAG-02 系统架构与生命周期 | [查看](maps/rag-02.md) | [查看](../../knowledge/rag/chapters/rag-02-architecture-lifecycle.md) | 正式发布（有界） |
+| RAG-03 文档解析与数据治理 | [查看](maps/rag-03.md) | [查看](../../knowledge/rag/chapters/rag-03-document-parsing-governance.md) | 正式发布（有界） |
+| RAG-04 Chunking | [查看](maps/rag-04.md) | [查看](../../knowledge/rag/chapters/rag-04-chunking.md) | 正式发布（有界） |
+| RAG-05 Embedding | [查看](maps/rag-05.md) | [查看](../../knowledge/rag/chapters/rag-05-embedding.md) | 正式发布（有界） |
+| RAG-06 存储与索引 | [查看](maps/rag-06.md) | [查看](../../knowledge/rag/chapters/rag-06-storage-indexing.md) | 正式发布（有界） |
+| RAG-07 Query 理解 | [查看](maps/rag-07.md) | [查看](../../knowledge/rag/chapters/rag-07-query-understanding.md) | 正式发布（有界），含 1 个库存占位 |
+| RAG-08 检索、融合与重排 | [查看](maps/rag-08.md) | [查看](../../knowledge/rag/chapters/rag-08-retrieval-fusion-reranking.md) | 正式发布（有界） |
+| RAG-09 上下文与生成 | [查看](maps/rag-09.md) | [查看](../../knowledge/rag/chapters/rag-09-context-generation.md) | 正式发布（有界） |
+| RAG-10 评估 | [查看](maps/rag-10.md) | [查看](../../knowledge/rag/chapters/rag-10-evaluation.md) | 正式发布（有界） |
+| RAG-11 生产工程与治理 | [查看](maps/rag-11.md) | [查看](../../knowledge/rag/chapters/rag-11-production-governance.md) | 正式发布（有界） |
+| RAG-12 高级范式 | [查看](maps/rag-12.md) | [查看](../../knowledge/rag/chapters/rag-12-advanced-paradigms.md) | 正式发布（有界） |
+| RAG-13 项目与面试应用 | [查看](maps/rag-13.md) | [查看](../../knowledge/rag/chapters/rag-13-project-interview.md) | 正式发布（有界），含 1 个库存占位 |
 
 ## 完整性说明
 
 - 原子知识是否遗漏，以 [`catalog.json`](../../knowledge/rag/catalog.json) 和来源映射审计为准。
 - 正式图中的知识 ID 可直接回查目录、正文和来源单元。
 - 图为了可读性可以把多个强相关原子放入同一机制图，但不得删除原子；模块末尾的覆盖表负责逐项核对。
-- 当前 187 个原子仍处于 `inventory_draft`，有新证据时允许新增或调整，禁止静默删除。
+- 当前目录共 191 个原子，其中 189 个进入正式发布集合，`RAG-07-001` 和 `RAG-13-011` 保留为 `inventory_draft` 占位；有新证据时允许补齐或调整，禁止静默删除。

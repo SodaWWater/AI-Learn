@@ -1,7 +1,7 @@
 ---
 id: RAG-13
 title: 项目与面试应用
-status: formal_candidate
+status: formal_bounded
 reviewed_at: 2026-09-04
 freshness_class: mixed
 chapter_path: knowledge/rag/chapters/rag-13-project-interview.md
@@ -11,7 +11,7 @@ related_problem_ids: [PQ-RAG-0004, PQ-RAG-0005, PQ-RAG-0006]
 
 # 项目与面试应用
 
-> 本章状态：`formal_candidate`（正式候选，待全库严格验收）。它教如何组织工程证据和回答路径，不生成背诵话术，也不把没有原始出处的问题标成真实公司面试题。
+> 本章状态：`formal_bounded`（范围受限正式，已通过当前登记范围严格验收）。它教如何组织工程证据和回答路径，不生成背诵话术，也不把没有原始出处的问题标成真实公司面试题。
 
 ## 一、知识点概要
 
@@ -98,8 +98,8 @@ def answer(query, user):
 
 ## 相关工程问题/面试题
 
-- [PQ-RAG-0004：VectorRAG 完整实现](../../../interview/rag/stages/project-design.md#pq-rag-0004)
-- [PQ-RAG-0005：GraphRAG 多跳实现](../../../interview/rag/stages/project-design.md#pq-rag-0005)
+- [PQ-RAG-0004：VectorRAG 完整实现](../../../interview/rag/stages/storage-indexing.md#pq-rag-0004)
+- [PQ-RAG-0005：GraphRAG 多跳实现](../../../interview/rag/stages/advanced-rag.md#pq-rag-0005)
 - [PQ-RAG-0006：VectorRAG/GraphRAG 评估](../../../interview/rag/stages/evaluation.md#pq-rag-0006)
 
 ## 相关知识节点
