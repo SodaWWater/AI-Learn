@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "421484b44b7db4b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d57f0507703ef227",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9880812f9a0cfbef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "chapters/06-memory-history-external-provider.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-memory-history-external-provider"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c9612528ca0df334",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc35fb704323bd46",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b6d4eb2bae9021e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "932b394a94788858",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a206e684a4f8b8ec",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c6b93ff22aefb5ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "7645bc8d47bde294",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "933989370fccdfff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "chapters/06-memory-history-external-provider.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "4aa6265b436baf1d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "chapters/06-memory-history-external-provider.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "d99a7f8667ebf6a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "a91b2d4f300025d1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "0e7724f22c96b286",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "chapters/06-memory-history-external-provider.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "9880812f9a0cfbef",
+  "lastOpenFiles": [
+    "附录/Codex整改清单-第6章.md",
+    "chapters/05-context-compression-session-rotation-recovery.md",
+    "chapters/06-memory-history-external-provider.md",
+    "chapters/04-context-engineering-request-assembly.md",
+    "讲解/05-压缩-讲解稿.md",
+    "附录/Codex整改清单-第4-5章.md",
+    "chapters/03-AgentLoop与Iteration-正式占位.md",
+    "reference-course/99-My idea/memory/11.memory.md",
+    "reference-course/99-My idea/memory/10.memory.md",
+    "reference-course/99-My idea/memory/08.memory.md",
+    "reference-course/99-My idea/memory/07.memory.pptx",
+    "reference-course/99-My idea/memory/05.memory.md",
+    "reference-course/99-My idea/memory/02.md",
+    "reference-course/99-My idea/memory/04.memory.md",
+    "reference-course/99-My idea/memory/03_memory.md",
+    "reference-course/99-My idea/memory/01.md",
+    "reference-course/99-My idea/AI Agent 学习指南/01.longterm memory.md",
+    "reference-course/99-My idea/AI Agent 学习指南/00.guide.md",
+    "reference-course/99-My idea/AI coding/interview_workflow.md",
+    "reference-course/99-My idea/AI coding/full_workflow.md",
+    "reference-course/99-My idea/Agent eval/01-eval.md",
+    "reference-course/99-My idea/memory",
+    "reference-course/99-My idea/AI coding",
+    "reference-course/99-My idea/AI Agent 学习指南",
+    "reference-course/99-My idea/Agent eval",
+    "reference-course/99-My idea",
+    "reference-course/09-loop-engineering/03.loop-engineering.md",
+    "reference-course/09-loop-engineering/02.loop-engineering.md",
+    "reference-course/09-loop-engineering/01.context-looop-engineering.md",
+    "reference-course/09-loop-engineering",
+    "附录/第五章源码核对.md",
+    "讲解",
+    "reference-course/15-Edge-Agent/01-Edge-agent.md",
+    "reference-course/15-Edge-Agent",
+    "reference-course/14-deepseek-harness/01.arch.md",
+    "reference-course/14-deepseek-harness",
+    "reference-course/12-hermes-agent-small/docs/architecture-whiteboard-plain.png",
+    "reference-course/11-langgraph/01-project-Complete-Agentic-AI-Course/04-LangGraph-Code/images/Screenshot 2026-08-06 211109.png",
+    "reference-course/07-llm_from_scrach/tiny model training/images/transformer block.png",
+    "reference-course/07-llm_from_scrach/tiny model training/images/transformer.png",
+    "reference-course/07-llm_from_scrach/tiny model training/images/image.png",
+    "reference-course/07-llm_from_scrach/part_9/images/GRPO_2.png",
+    "reference-course/07-llm_from_scrach/part_9/images/ppo  vs GRPO.png",
+    "reference-course/07-llm_from_scrach/part_9/images/GRPO.png",
+    "reference-course/07-llm_from_scrach/part_8/image/PPO.png",
+    "reference-course/07-llm_from_scrach/part_8/image/policy.png"
+  ]
+}
