@@ -2,7 +2,7 @@
 id: LANGGRAPH-VAULT-README
 title: LangGraph Interview Vault
 status: teaching_draft
-updated: 2026-09-15
+updated: 2026-09-16
 ---
 
 # LangGraph Interview Vault
@@ -20,21 +20,30 @@ updated: 2026-09-15
 
 - Part 1：LangGraph 全景地图 —— **已完成第一版**。
 - Part 2：一次数据分析 Agent 的完整运行旅程 —— **已完成第一版**。
-- Part 3：从零编排同一个 Agent —— 待生成。
+- Part 3：从零编排同一个 Agent —— **已完成第一版**。
 - Part 4：核心机制面试题 —— 待生成。
 - Part 5：生产级 Agent 场景题 —— 待生成。
 
-## Part 2 相比 Part 1 的讲解升级
+## Part 3 的定位
 
-Part 1 主要负责“知道有什么”。Part 2 开始要求每个机制都同时回答：
+Part 1 解决“有什么”，Part 2 解决“怎么跑”，Part 3 解决“怎么写”。
 
-1. 它在完整运行流程里的位置；
-2. 为什么这里需要它；
-3. 不使用它会怎样；
-4. 用真实业务数据时状态如何变化；
-5. 关键代码与运行时行为怎样对应。
+Part 3 会固定同一个采购经营数据分析 Agent，从业务需求开始依次完成：
 
-因此 Part 2 会大量使用整体流程图、时序图、状态快照、真实的教学数据和通俗类比。
+```text
+业务需求
+→ Graph 蓝图
+→ State Schema
+→ Node 设计
+→ Edge / Conditional Edge / Command
+→ Parallel / Send / Reducer
+→ LLM / Tool 接入
+→ compile
+→ invoke / stream
+→ Checkpointer / Thread
+```
+
+这部分不要求你先背 API，而是让每一行代码都能重新映射回 Part 1 和 Part 2 的整体图。
 
 ## 教学原则
 
@@ -43,6 +52,7 @@ Part 1 主要负责“知道有什么”。Part 2 开始要求每个机制都同
 - 图用于表达结构、运行、状态变化和调用关系，不只是装饰。
 - 专业术语使用中文工程语境 + 英文原名；代码标识符保持原样。
 - LangGraph 技术行为优先依据官方文档；业务案例只是教学载体，不反向证明框架行为。
+- 示例代码分清“教学可执行骨架”和“真实 LLM / 数据平台集成”，不把 mock 结果伪装成真实模型调用。
 
 > [!warning] 状态说明
-> 本 Vault 当前是 `teaching_draft`，不是仓库已经完成来源覆盖审计的正式 LangGraph 知识库。Part 1 与 Part 2 的框架行为按 2026-09-15 的 LangGraph 官方文档核对；后续可运行代码章节仍需锁定具体依赖版本并实际执行验证。
+> 本 Vault 当前是 `teaching_draft`，不是仓库已经完成来源覆盖审计的正式 LangGraph 知识库。Part 1～3 的 API 与运行行为按 2026-09-16 的 LangGraph 官方文档核对；配套 Part 3 代码用于学习结构，未在本仓库的锁定依赖环境中执行验证。
