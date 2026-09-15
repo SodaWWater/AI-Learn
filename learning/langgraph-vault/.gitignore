@@ -1,0 +1,4 @@
+# Obsidian 的本地窗口布局属于个人状态，不进入仓库。
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
