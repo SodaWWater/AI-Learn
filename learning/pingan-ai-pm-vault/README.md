@@ -106,6 +106,7 @@ flowchart LR
 1. [[00-总学习路线|00 总学习路线]]
 2. [[01-JD与个人经历映射|01 JD 与个人经历映射]]
 3. [[讲解/01-大模型与Agent架构|第一课：大模型与 Agent 架构]]
+4. [[讲解/02-结构化输出与Tool-Calling|第二课：结构化输出与 Tool Calling]]
 
 ## 4. 教学方式
 
@@ -128,8 +129,9 @@ flowchart LR
 - 总体 JD 拆解：已建立。
 - 学习顺序：已建立。
 - 个人经历映射：第一版已建立。
-- Part 1：从“大模型与 Agent 架构”开始。
-- 后续章节按面试时间优先级逐步生成。
+- 第一课：大模型与 Agent 架构——已建立，并结合 Hermes 的 Agent Loop、Prompt Assembly、Memory / Context 继续补充理解。
+- 第二课：结构化输出与 Tool Calling——已建立；已纳入小林面试题复习、AIPM-Wiki 产品视角、Hermes Tool Runtime，以及津药 / Personal Health Agent 的项目映射。
+- 下一技术重点：长文本处理、多轮对话、Context Engineering、RAG、幻觉抑制与 Evaluation。
 
 > [!warning] 状态说明
 > 本 Vault 当前是 `teaching_draft`，用于短周期面试准备，不等同于 AI-Learn 正式知识图谱的已审计知识章节。涉及版本、法规和具体金融业务规则时，需要进一步用官方资料核验。
