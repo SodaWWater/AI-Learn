@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-21",
+  "domain": "CLAUDE_CODE",
+  "status": "study_tree_pinned",
+  "sources": [
+    {
+      "id": "xiaolin-claudecode-index",
+      "name": "图解 Claude Code 专栏总览",
+      "url": "https://xiaolinnote.com/claudecode/",
+      "reviewed_at": "2026-09-20",
+      "source_type": "public_tutorial_index",
+      "license_status": "not_declared_on_page",
+      "copyright_note": "页面标注作者为公众号@小林coding；未发现明确再发布许可。",
+      "import_policy": "Git 仓库只保存来源定位、栏目结构和学习规划。本机 `learning/claude-code/原文/` 存有个人学习用全文副本（已 gitignore），禁止提交和再发布。",
+      "freshness_class": "dynamic_product_content",
+      "scope": "Claude Code 学习入口与专题目录",
+      "evidence_boundary": "本条目只证明页面当前展示的栏目结构和标题，不单独证明各专题中的技术结论。"
+    },
+    {
+      "id": "claude-code-best-study-tree",
+      "name": "用户指定学习树 claude-code-best/claude-code",
+      "url": "https://github.com/claude-code-best/claude-code",
+      "reviewed_at": "2026-09-21",
+      "source_type": "user_designated_study_tree",
+      "pinned_commit": "77a7934e15d69da13879112ed7db695c9ee7a52a",
+      "local_path": "learning/claude-code/ccb-src/",
+      "license_status": "not_found_in_repo_root",
+      "copyright_note": "package.json 自称 Reverse-engineered Anthropic Claude Code CLI。用户指定为专栏源码对齐树，不是 Anthropic 官方发布源。",
+      "import_policy": "本机保存钉死提交（已 gitignore），禁止再发布。源码篇讲解以本树核对专栏符号。",
+      "freshness_class": "pinned_commit",
+      "scope": "用户指定的可对照 queryLoop / QueryEngine / 内置工具实现",
+      "evidence_boundary": "用于对齐小林专栏，不代表 Anthropic 当前官方实现。与专栏摘录的签名/行数可以不同。"
+    },
+    {
+      "id": "anthropics-claude-code-official",
+      "name": "anthropics/claude-code 官方公开仓库",
+      "url": "https://github.com/anthropics/claude-code",
+      "reviewed_at": "2026-09-21",
+      "source_type": "official_public_repository",
+      "pinned_commit": "7974a70773fa229e4cc65aa1b356cc21f5c216c4",
+      "local_path": "learning/claude-code/official-src/",
+      "license_status": "all_rights_reserved",
+      "copyright_note": "© Anthropic PBC. All rights reserved. Use is subject to Anthropic Commercial Terms of Service.",
+      "import_policy": "本机保存钉死提交的公开树（已 gitignore），禁止再发布。公开树含插件、CHANGELOG、examples、mods，不含 Agent 主循环源码。",
+      "freshness_class": "pinned_commit",
+      "scope": "官方公开仓库在钉死提交上的插件、变更日志和示例",
+      "evidence_boundary": "不能证明专栏所述 query.ts / queryLoop。无 src/ 目录。源码篇不以本树为对齐对象。"
+    }
+  ]
+}

@@ -5,3 +5,12 @@ __pycache__/
 .idea/
 .vscode/
 
+# 外部专栏全文副本（个人学习，版权未授权再发布）
+learning/claude-code/原文/
+
+# 官方 Claude Code 仓库本机克隆（嵌套 git，不入库）
+learning/claude-code/official-src/
+
+# 用户指定的第三方学习树 claude-code-best/claude-code（嵌套克隆，不入库）
+learning/claude-code/ccb-src/
+

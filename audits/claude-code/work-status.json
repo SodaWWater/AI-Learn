@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-21",
+  "project": "AI-Learn",
+  "domain": "CLAUDE_CODE",
+  "status": "study_tree_pinned",
+  "current_work_item": "CC-003",
+  "work_items": [
+    {
+      "id": "CC-001",
+      "title": "登记图解 Claude Code 专栏总览并建立学习入口",
+      "status": "completed",
+      "source": "xiaolin-claudecode-index",
+      "outputs": [
+        "audits/claude-code/source-registry.json",
+        "learning/claude-code/00-专栏总览与学习路线.md",
+        "learning/claude-code/原文/"
+      ]
+    },
+    {
+      "id": "CC-002",
+      "title": "钉死 anthropics/claude-code 官方公开仓库",
+      "status": "completed",
+      "source": "anthropics-claude-code-official",
+      "outputs": [
+        "learning/claude-code/official-src/",
+        "learning/claude-code/来源与版本.md"
+      ]
+    },
+    {
+      "id": "CC-003",
+      "title": "钉死用户指定学习树 claude-code-best/claude-code 并对照专栏符号",
+      "status": "completed",
+      "source": "claude-code-best-study-tree",
+      "outputs": [
+        "learning/claude-code/ccb-src/",
+        "learning/claude-code/来源与版本.md",
+        "learning/claude-code/专栏符号对照.md"
+      ],
+      "verification": [
+        "固定提交 77a7934e15d69da13879112ed7db695c9ee7a52a",
+        "ccb-src/ 已 gitignore",
+        "存在 queryLoop / QueryEngine / ask"
+      ],
+      "unresolved": [
+        "尚未按用户指定章节逐篇讲解"
+      ],
+      "next_work_item": "按用户指定章节讲解；源码结论对照 ccb-src 与 专栏符号对照.md"
+    }
+  ]
+}
