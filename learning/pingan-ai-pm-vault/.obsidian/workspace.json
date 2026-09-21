@@ -1,55 +1,56 @@
 {
   "main": {
-    "id": "421484b44b7db4b0",
+    "id": "d456996d22e1a9f6",
     "type": "split",
     "children": [
       {
-        "id": "d57f0507703ef227",
+        "id": "1f936930f690e7bc",
         "type": "tabs",
         "children": [
           {
-            "id": "9880812f9a0cfbef",
+            "id": "9725b5806f880c08",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/03-AgentLoop与Iteration-正式占位.md",
+                "file": "讲解/03-D-幻觉治理与AI产品Evaluation.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-AgentLoop与Iteration-正式占位"
+              "title": "03-D-幻觉治理与AI产品Evaluation"
             }
           },
           {
-            "id": "34b418bdfee7c217",
+            "id": "4cb08f5f411890d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/06-memory-history-external-provider.md",
+                "file": "讲解/平安科技_AI产品经理_面试应试资料包.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06-memory-history-external-provider"
+              "title": "平安科技_AI产品经理_面试应试资料包"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "c9612528ca0df334",
+    "id": "e1c57f83bb8ed4cd",
     "type": "split",
     "children": [
       {
-        "id": "cc35fb704323bd46",
+        "id": "1a0ccdd365b8fb59",
         "type": "tabs",
         "children": [
           {
-            "id": "3b6d4eb2bae9021e",
+            "id": "a48f7fb91608792b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,7 +65,7 @@
             }
           },
           {
-            "id": "932b394a94788858",
+            "id": "3a8a59c2ad4a8661",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -81,7 +82,7 @@
             }
           },
           {
-            "id": "a206e684a4f8b8ec",
+            "id": "a9a6d11de0d1485c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -100,20 +101,20 @@
     "width": 300
   },
   "right": {
-    "id": "c6b93ff22aefb5ca",
+    "id": "077b5feb7225a022",
     "type": "split",
     "children": [
       {
-        "id": "7645bc8d47bde294",
+        "id": "4ee5011bfda98b8b",
         "type": "tabs",
         "children": [
           {
-            "id": "933989370fccdfff",
+            "id": "8dfdfb17e1d5235d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "chapters/06-memory-history-external-provider.md",
+                "file": "讲解/平安科技_AI产品经理_面试应试资料包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,12 +128,12 @@
             }
           },
           {
-            "id": "4aa6265b436baf1d",
+            "id": "375dcfdd73035285",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "chapters/06-memory-history-external-provider.md",
+                "file": "讲解/平安科技_AI产品经理_面试应试资料包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -141,7 +142,7 @@
             }
           },
           {
-            "id": "d99a7f8667ebf6a4",
+            "id": "0efea809bcdba45b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -156,7 +157,7 @@
             }
           },
           {
-            "id": "a91b2d4f300025d1",
+            "id": "e2605c8eb1ad4694",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -170,12 +171,12 @@
             }
           },
           {
-            "id": "0e7724f22c96b286",
+            "id": "8d636854e5721691",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "chapters/06-memory-history-external-provider.md",
+                "file": "讲解/平安科技_AI产品经理_面试应试资料包.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,53 +203,19 @@
       "bases:新建数据库": false
     }
   },
-  "active": "9880812f9a0cfbef",
+  "active": "4cb08f5f411890d7",
   "lastOpenFiles": [
-    "chapters/02-Turn生命周期-租约与并发隔离-正式占位.md",
-    "chapters/01-系统全貌-对象关系与运行边界-正式占位.md",
-    "chapters/04-context-engineering-request-assembly.md",
-    "chapters/06-memory-history-external-provider.md",
-    "chapters/05-context-compression-session-rotation-recovery.md",
-    "00-开始这里.md",
-    "附录/Codex整改清单-第6章.md",
-    "附录/第五章源码核对.md",
-    "附录/术语与源码索引.md",
-    "附录/Codex整改清单-第4-5章.md",
-    "附录",
-    "讲解/05-压缩-讲解稿.md",
-    "讲解",
-    "章节总览.md",
-    "来源与版本.md",
-    "chapters/03-AgentLoop与Iteration-正式占位.md",
-    "chapters",
+    "讲解/Part4-A-项目经历防守-津药与Health-Agent.md",
+    "讲解/平安科技_AI产品经理_面试应试资料包.md",
+    "00-总学习路线.md",
+    "讲解/03-D-幻觉治理与AI产品Evaluation.md",
+    "讲解/03-B-RAG生产链路与检索策略.md",
+    "讲解/3. 长文本、多轮对话、RAG 与幻觉抑制",
+    "讲解/03-A-长文本与多模态文档处理.md",
+    "讲解/03-企业信贷风险分析与尽调报告Agent.md",
+    "讲解/02-结构化输出与Tool-Calling.md",
+    "屏幕截图 2026-09-16 152827.png",
     "README.md",
-    "reference-course/99-My idea/memory/11.memory.md",
-    "reference-course/99-My idea/memory/10.memory.md",
-    "reference-course/99-My idea/memory/08.memory.md",
-    "reference-course/99-My idea/memory/07.memory.pptx",
-    "reference-course/99-My idea/memory/05.memory.md",
-    "reference-course/99-My idea/memory/02.md",
-    "reference-course/99-My idea/memory/04.memory.md",
-    "reference-course/99-My idea/memory/03_memory.md",
-    "reference-course/99-My idea/memory/01.md",
-    "reference-course/99-My idea/AI Agent 学习指南/01.longterm memory.md",
-    "reference-course/99-My idea/AI Agent 学习指南/00.guide.md",
-    "reference-course/99-My idea/AI coding/interview_workflow.md",
-    "reference-course/99-My idea/memory",
-    "reference-course/99-My idea/AI coding",
-    "reference-course/99-My idea/AI Agent 学习指南",
-    "reference-course/99-My idea/Agent eval",
-    "reference-course/99-My idea",
-    "reference-course/09-loop-engineering",
-    "reference-course/12-hermes-agent-small/docs/architecture-whiteboard-plain.png",
-    "reference-course/11-langgraph/01-project-Complete-Agentic-AI-Course/04-LangGraph-Code/images/Screenshot 2026-08-06 211109.png",
-    "reference-course/07-llm_from_scrach/tiny model training/images/transformer block.png",
-    "reference-course/07-llm_from_scrach/tiny model training/images/transformer.png",
-    "reference-course/07-llm_from_scrach/tiny model training/images/image.png",
-    "reference-course/07-llm_from_scrach/part_9/images/GRPO_2.png",
-    "reference-course/07-llm_from_scrach/part_9/images/ppo  vs GRPO.png",
-    "reference-course/07-llm_from_scrach/part_9/images/GRPO.png",
-    "reference-course/07-llm_from_scrach/part_8/image/PPO.png",
-    "reference-course/07-llm_from_scrach/part_8/image/policy.png"
+    "01-JD与个人经历映射.md"
   ]
 }
