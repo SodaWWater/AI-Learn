@@ -18,6 +18,14 @@
 - 学习树：`ccb-src/`（gitignore）
 - 官方公开仓库本机树：`official-src/`（gitignore；无 `queryLoop`）
 
-`原文/`、`ccb-src/`、`official-src/` 均 gitignore。`text/` 是清洗后的正文，随本仓库提交。
+`原文/images/`、`ccb-src/`、`official-src/` 均 gitignore。专栏正文在 [`text/`](text/)，不收录配图。
 
 建议顺序：基础入门 → 实践技巧 → 源码解析 → 提示词工程 → 行业观察。源码篇用 `ccb-src/` 对齐专栏，不要用 `official-src/` 当主循环实现。
+
+## 版权说明
+
+- 作者：公众号 [@小林coding](https://xiaolinnote.com/claudecode/)
+- 原站专栏：https://xiaolinnote.com/claudecode/
+- 原站内容版权归小林面试笔记 / 小林coding 所有
+- 本目录仅作个人学习引用，不是专栏再发布
+- 请访问原站支持作者（做法对齐 [xiaolin-ai-learning](https://github.com/SodaWWater/xiaolin-ai-learning)）

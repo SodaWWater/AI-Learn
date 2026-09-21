@@ -1,7 +1,10 @@
 # 图解 Claude Code · 正文文本
 
-来源：https://xiaolinnote.com/claudecode/  
-20 篇清洗正文（无配图）。带图全文在本机 `../原文/`。
+> 作者：公众号 [@小林coding](https://xiaolinnote.com/claudecode/)
+>
+> 原站：https://xiaolinnote.com/claudecode/
+>
+> 20 篇清洗正文，无配图。
 
 | 文件 | 标题 |
 |---|---|
@@ -25,3 +28,9 @@
 | [04-提示词工程/01-Fable5-系统提示词.md](04-提示词工程/01-Fable5-系统提示词.md) | Fable 5 |
 | [05-行业观察/01-Anthropic-40万次会话研究.md](05-行业观察/01-Anthropic-40万次会话研究.md) | 40 万次会话 |
 | [05-行业观察/02-Claude5-上下文工程.md](05-行业观察/02-Claude5-上下文工程.md) | Claude 5 上下文工程 |
+
+## 版权说明
+
+- 原站内容版权归小林面试笔记 / 小林coding 所有
+- 本学习库仅用于个人学习和复习引用
+- 请访问 https://xiaolinnote.com/claudecode/ 支持原作者

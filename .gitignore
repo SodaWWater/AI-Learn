@@ -5,8 +5,10 @@ __pycache__/
 .idea/
 .vscode/
 
-# 专栏带图全文（本机）；清洗正文在 learning/claude-code/text/
-learning/claude-code/原文/
+# 专栏配图与 zip（本机）；正文在 learning/claude-code/text/
+learning/claude-code/原文/images/
+learning/claude-code/原文/*.zip
+learning/claude-code/原文/text/
 
 # 官方 Claude Code 仓库本机克隆（嵌套 git，不入库）
 learning/claude-code/official-src/
