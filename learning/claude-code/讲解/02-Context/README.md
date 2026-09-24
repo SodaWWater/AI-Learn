@@ -160,3 +160,29 @@
 4. **代价是什么，什么时候才值得用？**
 
 这样才能真正理解为什么 Claude Code 不是“Context 快满了就总结一下”这么简单。
+
+## 当前专题状态
+
+Context 专题正文已经补齐，可按下面顺序复习：
+
+1. `01-Context总体架构与信息注入.md`
+2. `02-Context治理总图.md`
+3. `03-Tool-Result-Budget与大结果落盘.md`
+4. `04-Snip与Micro-Compact.md`
+5. `05-Context-Collapse源码边界.md`
+6. `06-Auto-Compact全量重写.md`
+7. `07-Predictive与Reactive恢复.md`
+8. `08-xiaolin文章对照与最终框架.md`
+
+如果已经读过小林文章，推荐优先阅读：**02 → 05 → 06 → 07 → 08**。这五篇主要负责建立总框架和查缺补漏；01、03、04 用于需要时回查细节。
+
+## 当前源码相对文章最值得注意的补漏
+
+- Auto-Compact Buffer 已按 Context Window 动态扩展为 13K / 30K / 50K，不再是永远固定 13K。
+- Auto-Compact 达阈值后会先尝试 Session Memory Compaction，再回退传统全量 Summary。
+- `buildPostCompactMessages()` 当前顺序包含 `messagesToKeep`，所以 Compact Framework 已支持保留 Segment，不是所有路径都绝对“一刀切”。
+- Post-Compact 还为 Skill 设置 5K/Skill、25K 总预算。
+- Tool Result Budget 会按最终 API-level User Message 聚合多个 Tool Result，并持久化 replacement decision 维持 Resume/Prompt Cache 稳定。
+- Micro-Compact 当前分 Time-based 和 Cached Microcompact；legacy 路径已经移除。
+- Context Collapse 在固定源码里只有接口/接线，核心实现是 auto-generated stub，不能把内部算法当作这份源码已验证事实。
+- `query.ts` 还有 Predictive Check，以及真实 Prompt Too Long 后的 Reactive Compact。
