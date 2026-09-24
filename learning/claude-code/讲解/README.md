@@ -25,12 +25,31 @@
 
 源码基线统一遵循 ../来源与版本.md。
 
-## 后续规划
+### 02. Context
 
-后续按相同方式扩展：
+入口：02-Context/README.md
+
+当前已写入：
+
+1. Context 总体架构与信息注入；
+2. 后续重点转入多层 Context 治理与压缩方案，不把消息生命周期单独作为主课。
+
+专题主线：
 
 ~~~text
-02-Context
+Context Assembly
+→ Tool Result Budget
+→ Snip
+→ Micro-Compact
+→ Context Collapse / Auto-Compact
+→ Predictive AutoCompact
+→ Reactive Recovery
+→ 小林文章 vs 当前源码补全
+~~~
+
+## 后续规划
+
+~~~text
 03-Memory
 04-Retrieval
 05-Skill
